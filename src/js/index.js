@@ -48,7 +48,7 @@ const getParam = function () {
 // ex. await db
 const db = async function () {
   const sqlPromise = initSqlJs(config);
-  const dataPromise = fetch("/assets/Frameworx_DB_Model_21.0.db").then(res => res.arrayBuffer());
+  const dataPromise = fetch("./assets/Frameworx_DB_Model_21.0.db").then(res => res.arrayBuffer());
   const [SQL, buf] = await Promise.all([sqlPromise, dataPromise])
   return new SQL.Database(new Uint8Array(buf));
 }()
