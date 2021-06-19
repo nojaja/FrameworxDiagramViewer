@@ -20316,7 +20316,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "../node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".orgchart { \n  background-image:none;\n  background: white; \n}\n/* excluding leaf node */\n.orgchart .node:not(:only-child)::after {\n  height: 15px;\n}\n/* excluding root node */\n.orgchart > ul > li > ul li > .node::before {\n  height: 15px;\n}\n\n.orgchart .node .content {\n  height: 50px;\n  width: 130px;\n  word-break: break-word;\n  white-space: break-spaces;\n  vertical-align: middle;\n  display: table-cell;\n  font-size: .75rem;\n  font-weight: 700;\n}\n\nh1 {\n  display: block;\n  font-size: 2em;\n  margin-block-start: 0.67em;\n  margin-block-end: 0.67em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\nh3 {\n  display: block;\n  font-size: 1.17em;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\np {\n  display: block;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n}", ""]);
+exports.push([module.i, ".orgchart { \n  background-image:none;\n  background: white; \n}\n/* excluding leaf node */\n.orgchart .node:not(:only-child)::after {\n  height: 15px;\n}\n/* excluding root node */\n.orgchart > ul > li > ul li > .node::before {\n  height: 15px;\n}\n\n.orgchart .node .content {\n  height: 50px;\n  width: 130px;\n  word-break: break-word;\n  white-space: break-spaces;\n  vertical-align: middle;\n  display: table-cell;\n  font-size: .75rem;\n  font-weight: 700;\n}\n\nh1 {\n  display: block;\n  font-size: 2em;\n  margin-block-start: 0.67em;\n  margin-block-end: 0.67em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\nh3 {\n  display: block;\n  font-size: 1.17em;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\np {\n  display: block;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n}\n\n.leftbar {\n  position: absolute;\n  top: 0px;\n  left: 0;\n  width: 10%;\n  height: 100%;\n  background-color: #323232;\n  --padding-top: 5em;\n  z-index: 0;\n}\n\n.leftbaritem {\n  padding-left: 1em;\n  font-size: 90%;\n}\n.leftbar a {\n  text-decoration: none;\n  color: white;\n}\n.content_body {\n  position: absolute;\n  top: 0px;\n  left: 11%;\n  width: 90%;\n  height: 100%;\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -63302,12 +63302,17 @@ let pageGen = async function (type,id) {
   document.getElementById("name").innerText = data.name+' '+data.title
   document.getElementById("category").innerText = `Category: ${data.category}`
   document.getElementById("maturity_level").innerText = `Maturity Level: ${data.maturity}`
-  document.getElementById("parent").innerHTML = `Parent : <a id="parentlink" data-id="${data.parent}" >${data.parent}</a>`
-  document.getElementById("parentlink").onclick = (event) => {
-    //ノードのID表示用のURLをhistoryに追加して、再描画
-    const id = event.target.attributes['data-id'].nodeValue
-    window.history.pushState( {}, document.title, `${window.location.origin}${window.location.pathname}?q=${id}&type=${type}`)
-    pageGen(type,id);
+  if(data.parent){
+    document.getElementById("parent").innerHTML = `Parent : <a id="parentlink" data-id="${data.parent}" >${data.parent}</a>`
+    document.getElementById("parentlink").onclick = (event) => {
+      //ノードのID表示用のURLをhistoryに追加して、再描画
+      console.log('onclick', data.parent,event.target.attributes['data-id'])
+      //const id = event.target.attributes['data-id'].nodeValue
+      window.history.pushState( {}, document.title, `${window.location.origin}${window.location.pathname}?q=${data.parent}&type=${type}`)
+      pageGen(type,data.parent);
+    }
+  }else{
+    document.getElementById("parent").innerHTML = ""
   }
   document.getElementById("description").innerText = data.overview
   document.getElementById("functionality").innerText = data.functionality
@@ -63508,4 +63513,4 @@ let getChildData = async function (table,id) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=map/main.117b577dac75d100d9c7.js.map
+//# sourceMappingURL=map/main.0ccddc60926973055c05.js.map
