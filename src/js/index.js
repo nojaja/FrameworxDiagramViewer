@@ -104,12 +104,17 @@ let pageGen = async function (type,id) {
   document.getElementById("name").innerText = data.name+' '+data.title
   document.getElementById("category").innerText = `Category: ${data.category}`
   document.getElementById("maturity_level").innerText = `Maturity Level: ${data.maturity}`
-  document.getElementById("parent").innerHTML = `Parent : <a id="parentlink" data-id="${data.parent}" >${data.parent}</a>`
-  document.getElementById("parentlink").onclick = (event) => {
-    //ノードのID表示用のURLをhistoryに追加して、再描画
-    const id = event.target.attributes['data-id'].nodeValue
-    window.history.pushState( {}, document.title, `${window.location.origin}${window.location.pathname}?q=${id}&type=${type}`)
-    pageGen(type,id);
+  if(data.parent){
+    document.getElementById("parent").innerHTML = `Parent : <a id="parentlink" data-id="${data.parent}" >${data.parent}</a>`
+    document.getElementById("parentlink").onclick = (event) => {
+      //ノードのID表示用のURLをhistoryに追加して、再描画
+      console.log('onclick', data.parent,event.target.attributes['data-id'])
+      //const id = event.target.attributes['data-id'].nodeValue
+      window.history.pushState( {}, document.title, `${window.location.origin}${window.location.pathname}?q=${data.parent}&type=${type}`)
+      pageGen(type,data.parent);
+    }
+  }else{
+    document.getElementById("parent").innerHTML = ""
   }
   document.getElementById("description").innerText = data.overview
   document.getElementById("functionality").innerText = data.functionality

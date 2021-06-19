@@ -3,6 +3,7 @@
 .settings/*
 old/*
 /node_modules
+/docs
 # Logs
 logs
 *.log
