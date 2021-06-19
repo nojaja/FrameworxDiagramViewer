@@ -63246,7 +63246,7 @@ const getParam = function () {
 // ex. await db
 const db = async function () {
   const sqlPromise = sql_js__WEBPACK_IMPORTED_MODULE_3___default()(config);
-  const dataPromise = fetch("/assets/Frameworx_DB_Model_21.0.db").then(res => res.arrayBuffer());
+  const dataPromise = fetch("./assets/Frameworx_DB_Model_21.0.db").then(res => res.arrayBuffer());
   const [SQL, buf] = await Promise.all([sqlPromise, dataPromise])
   return new SQL.Database(new Uint8Array(buf));
 }()
@@ -63508,4 +63508,4 @@ let getChildData = async function (table,id) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=map/main.6e57ff1c2adfe457245f.js.map
+//# sourceMappingURL=map/main.117b577dac75d100d9c7.js.map
