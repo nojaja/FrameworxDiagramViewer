@@ -47,3 +47,30 @@ p {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
+
+.leftbar {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 10%;
+  height: 100%;
+  background-color: #323232;
+  --padding-top: 5em;
+  z-index: 0;
+}
+
+.leftbaritem {
+  padding-left: 1em;
+  font-size: 90%;
+}
+.leftbar a {
+  text-decoration: none;
+  color: white;
+}
+.content_body {
+  position: absolute;
+  top: 0px;
+  left: 11%;
+  width: 90%;
+  height: 100%;
+}
