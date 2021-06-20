@@ -97,9 +97,11 @@ window.addEventListener('popstate', (event) => {
   pageGen(type,id);
 });
 
+const TABLES = ['TAM','ETOM','ODA_Functional_Blocks']
+
 //ページの描画処理
 let pageGen = async function (type,id) {
-  const table = ['TAM','ETOM','ODA_Functional_Blocks'][type]
+  const table = TABLES[type]
   const data = await getData(table,id)
   document.getElementById("name").innerText = data.name+' - '+data.title
   document.getElementById("category").innerText = `Category: ${data.category}`
@@ -120,6 +122,18 @@ let pageGen = async function (type,id) {
   document.getElementById("description").innerText = data.overview
   document.getElementById("functionality").innerText = data.functionality
   oc.init({ 'data': data });
+  document.getElementById("relationData").innerText = ""
+  for (let key in data.relationData) {
+    const table = document.createElement('h5')
+    table.innerText = key
+    document.getElementById("relationData").appendChild(table)
+    for (let index in data.relationData[key]) {
+      const relationData = data.relationData[key][index]
+      const table = document.createElement('p')
+      table.innerHTML = `<a id="parentlink" class="parentlink" data-id="${relationData.name}" >${relationData.name}</a>:${relationData.title}`
+      document.getElementById("relationData").appendChild(table)
+    }
+  }
 }
 
 //ページのデータ取得
@@ -136,6 +150,11 @@ let getData = async function (table,id) {
   if (stmt.step()) { //primary keyで検索するので結果行は1:0
     datascource = stmt.getAsObject();
     datascource.children = await getChildData(table,id) //紐づく子供の取得
+    //datascource.relationData = {}
+    //for (const relationTable of TABLES) {
+    //  datascource.relationData[relationTable] = await getRelationData(relationTable,id)
+    //}
+    datascource.relationData = await getRelationData(table,id)
   }
   return datascource
 }
@@ -150,6 +169,43 @@ let getChildData = async function (table,id) {
   //const result = stmt.getAsObject({'$id' : id});
   // Bind new values
   stmt.bind({ $id: id });
+  let children = [];
+  while (stmt.step()) { //
+    children.push(stmt.getAsObject())
+  }
+  return children
+}
+
+//ページのに関連する子要素の取得
+let getRelationData = async function (table,id) {
+  const result = {}
+  for (const relationTable of TABLES) {
+    if(table==relationTable) continue
+    const children = await getRelationChildData (table,id,relationTable)
+    if(children.length > 0)
+      result[relationTable] = children
+  }
+  console.log('getRelationData',result)
+  return result
+}
+
+//ページのに関連する子要素の取得
+let getRelationChildData = async function (fromtable,fromid,totable) {
+  
+  let db1 = await db
+  // Prepare an sql statement
+  const stmt = db1.prepare(`
+  SELECT ID as name, NAME as title FROM ${totable} WHERE ID IN(
+    SELECT TO_KEY as key FROM MAPPING WHERE TO_TABLE == $totable AND FROM_KEY == $id AND FROM_TABLE == $fromtable
+    UNION
+    SELECT FROM_KEY as key FROM MAPPING WHERE FROM_TABLE == $totable AND TO_KEY == $id AND TO_TABLE == $fromtable
+    )
+  `);
+
+  // Bind values to the parameters and fetch the results of the query
+  //const result = stmt.getAsObject({'$id' : id});
+  // Bind new values
+  stmt.bind({ $fromtable: fromtable, $id: fromid, $totable: totable });
   let children = [];
   while (stmt.step()) { //
     children.push(stmt.getAsObject())
