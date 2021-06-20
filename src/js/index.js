@@ -99,13 +99,14 @@ window.addEventListener('popstate', (event) => {
 
 //ページの描画処理
 let pageGen = async function (type,id) {
-  const table = ['TAM','ETOM'][type]
+  const table = ['TAM','ETOM','ODA_Functional_Blocks'][type]
   const data = await getData(table,id)
-  document.getElementById("name").innerText = data.name+' '+data.title
+  document.getElementById("name").innerText = data.name+' - '+data.title
   document.getElementById("category").innerText = `Category: ${data.category}`
+  document.getElementById("identifier").innerText = `Identifier: ${data.name}`
   document.getElementById("maturity_level").innerText = `Maturity Level: ${data.maturity}`
   if(data.parent){
-    document.getElementById("parent").innerHTML = `Parent : <a id="parentlink" data-id="${data.parent}" >${data.parent}</a>`
+    document.getElementById("parent").innerHTML = `Parent Identifier: <a id="parentlink" class="parentlink" data-id="${data.parent}" >${data.parent}</a>`
     document.getElementById("parentlink").onclick = (event) => {
       //ノードのID表示用のURLをhistoryに追加して、再描画
       console.log('onclick', data.parent,event.target.attributes['data-id'])
