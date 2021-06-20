@@ -20316,7 +20316,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "../node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".orgchart { \n  background-image:none;\n  background: white; \n}\n/* excluding leaf node */\n.orgchart .node:not(:only-child)::after {\n  height: 15px;\n}\n/* excluding root node */\n.orgchart > ul > li > ul li > .node::before {\n  height: 15px;\n}\n\n.orgchart .node .content {\n  height: 50px;\n  width: 130px;\n  word-break: break-word;\n  white-space: break-spaces;\n  vertical-align: middle;\n  display: table-cell;\n  font-size: .75rem;\n  font-weight: 700;\n}\n\nh1 {\n  display: block;\n  font-size: 2em;\n  margin-block-start: 0.67em;\n  margin-block-end: 0.67em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\nh3 {\n  display: block;\n  font-size: 1.17em;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\np {\n  display: block;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n}\n\n.leftbar {\n  position: absolute;\n  top: 0px;\n  left: 0;\n  width: 10%;\n  height: 100%;\n  background-color: #323232;\n  --padding-top: 5em;\n  z-index: 0;\n}\n\n.leftbaritem {\n  padding-left: 1em;\n  font-size: 90%;\n}\n.leftbar a {\n  text-decoration: none;\n  color: white;\n}\n.content_body {\n  position: absolute;\n  top: 0px;\n  left: 11%;\n  width: 90%;\n  height: 100%;\n}", ""]);
+exports.push([module.i, ".orgchart { \n  background-image:none;\n  background: white; \n}\n/* excluding leaf node */\n.orgchart .node:not(:only-child)::after {\n  height: 15px;\n}\n/* excluding root node */\n.orgchart > ul > li > ul li > .node::before {\n  height: 15px;\n}\n\n.orgchart .node .content {\n  height: 50px;\n  width: 130px;\n  word-break: break-word;\n  white-space: break-spaces;\n  vertical-align: middle;\n  display: table-cell;\n  font-size: .75rem;\n  font-weight: 700;\n}\n\nh1 {\n  display: block;\n  font-size: 2em;\n  margin-block-start: 0.67em;\n  margin-block-end: 0.67em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\nh3 {\n  display: block;\n  font-size: 1.17em;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\np {\n  display: block;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n}\n\n#parentlink {\n  color: navy;\n  cursor: pointer;\n  text-decoration: underline;\n}\n\n\n.leftbar {\n  position: absolute;\n  top: 0px;\n  left: 0;\n  width: 10%;\n  height: 100%;\n  background-color: #323232;\n  --padding-top: 5em;\n  z-index: 0;\n}\n\n.leftbaritem {\n  padding-left: 1em;\n  font-size: 90%;\n}\n.leftbar a {\n  text-decoration: none;\n  color: white;\n}\n.content_body {\n  position: absolute;\n  top: 0px;\n  left: 11%;\n  width: 90%;\n  height: 100%;\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -63295,15 +63295,18 @@ window.addEventListener('popstate', (event) => {
   pageGen(type,id);
 });
 
+const TABLES = ['TAM','ETOM','ODA_Functional_Blocks']
+
 //ページの描画処理
 let pageGen = async function (type,id) {
-  const table = ['TAM','ETOM'][type]
+  const table = TABLES[type]
   const data = await getData(table,id)
-  document.getElementById("name").innerText = data.name+' '+data.title
+  document.getElementById("name").innerText = data.name+' - '+data.title
   document.getElementById("category").innerText = `Category: ${data.category}`
+  document.getElementById("identifier").innerText = `Identifier: ${data.name}`
   document.getElementById("maturity_level").innerText = `Maturity Level: ${data.maturity}`
   if(data.parent){
-    document.getElementById("parent").innerHTML = `Parent : <a id="parentlink" data-id="${data.parent}" >${data.parent}</a>`
+    document.getElementById("parent").innerHTML = `Parent Identifier: <a id="parentlink" class="parentlink" data-id="${data.parent}" >${data.parent}</a>`
     document.getElementById("parentlink").onclick = (event) => {
       //ノードのID表示用のURLをhistoryに追加して、再描画
       console.log('onclick', data.parent,event.target.attributes['data-id'])
@@ -63317,6 +63320,18 @@ let pageGen = async function (type,id) {
   document.getElementById("description").innerText = data.overview
   document.getElementById("functionality").innerText = data.functionality
   oc.init({ 'data': data });
+  document.getElementById("relationData").innerText = ""
+  for (let key in data.relationData) {
+    const table = document.createElement('h5')
+    table.innerText = key
+    document.getElementById("relationData").appendChild(table)
+    for (let index in data.relationData[key]) {
+      const relationData = data.relationData[key][index]
+      const table = document.createElement('p')
+      table.innerHTML = `<a id="parentlink" class="parentlink" data-id="${relationData.name}" >${relationData.name}</a>:${relationData.title}`
+      document.getElementById("relationData").appendChild(table)
+    }
+  }
 }
 
 //ページのデータ取得
@@ -63333,6 +63348,11 @@ let getData = async function (table,id) {
   if (stmt.step()) { //primary keyで検索するので結果行は1:0
     datascource = stmt.getAsObject();
     datascource.children = await getChildData(table,id) //紐づく子供の取得
+    //datascource.relationData = {}
+    //for (const relationTable of TABLES) {
+    //  datascource.relationData[relationTable] = await getRelationData(relationTable,id)
+    //}
+    datascource.relationData = await getRelationData(table,id)
   }
   return datascource
 }
@@ -63354,6 +63374,42 @@ let getChildData = async function (table,id) {
   return children
 }
 
+//ページのに関連する子要素の取得
+let getRelationData = async function (table,id) {
+  const result = {}
+  for (const relationTable of TABLES) {
+    if(table==relationTable) continue
+    const children = await getRelationChildData (table,id,relationTable)
+    if(children.length > 0)
+      result[relationTable] = children
+  }
+  console.log('getRelationData',result)
+  return result
+}
+
+//ページのに関連する子要素の取得
+let getRelationChildData = async function (fromtable,fromid,totable) {
+  
+  let db1 = await db
+  // Prepare an sql statement
+  const stmt = db1.prepare(`
+  SELECT ID as name, NAME as title FROM ${totable} WHERE ID IN(
+    SELECT TO_KEY as key FROM MAPPING WHERE TO_TABLE == $totable AND FROM_KEY == $id AND FROM_TABLE == $fromtable
+    UNION
+    SELECT FROM_KEY as key FROM MAPPING WHERE FROM_TABLE == $totable AND TO_KEY == $id AND TO_TABLE == $fromtable
+    )
+  `);
+
+  // Bind values to the parameters and fetch the results of the query
+  //const result = stmt.getAsObject({'$id' : id});
+  // Bind new values
+  stmt.bind({ $fromtable: fromtable, $id: fromid, $totable: totable });
+  let children = [];
+  while (stmt.step()) { //
+    children.push(stmt.getAsObject())
+  }
+  return children
+}
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "../node_modules/jquery/dist/jquery.js")))
 
 /***/ }),
@@ -63513,4 +63569,4 @@ let getChildData = async function (table,id) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=map/main.0ccddc60926973055c05.js.map
+//# sourceMappingURL=map/main.353764cc09df3ba518af.js.map
