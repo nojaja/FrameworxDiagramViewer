@@ -65,13 +65,13 @@ document.addEventListener('DOMContentLoaded', function () {
     //'toggleSiblingsResp': false,
     'nodeContent': 'title',
     'parentNodeSymbol': '',
-    'createNode': function($node, data) {
+    'createNode': function ($node, data) {
       //各ノードのクリックイベントのハンドリング
-      $node.on('click', function() {
+      $node.on('click', function () {
         //ノードのID表示用のURLをhistoryに追加して、再描画
         const type = getParam()["type"] || '0'
-        window.history.pushState( {}, document.title, `${window.location.origin}${window.location.pathname}?q=${data.name}&type=${type}`)
-        pageGen(type,data.name);
+        window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${data.name}&type=${type}`)
+        pageGen(type, data.name);
       });
       $node.find('.leftEdge').removeClass('leftEdge');
       $node.find('.rightEdge').removeClass('rightEdge');
@@ -82,11 +82,11 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // ページの読み込み完了イベントのハンドリング
-window.addEventListener('load', async (event) => {  
+window.addEventListener('load', async (event) => {
   //初回表示時の描画
   const id = getParam()["q"] || '3.2'
   const type = getParam()["type"] || '0'
-  pageGen(type,id);
+  pageGen(type, id);
 });
 
 // ページ移動 イベントをハンドリング
@@ -94,29 +94,22 @@ window.addEventListener('popstate', (event) => {
   //移動先のパラメータで再描画
   const id = getParam()["q"] || '3.2'
   const type = getParam()["type"] || '0'
-  pageGen(type,id);
+  pageGen(type, id);
 });
 
-const TABLES = ['TAM','ETOM','ODA_Functional_Blocks']
+const TABLES = ['TAM', 'ETOM', 'ODA_Functional_Blocks']
 
 //ページの描画処理
-let pageGen = async function (type,id) {
+let pageGen = async function (type, id) {
   const table = TABLES[type]
-  const data = await getData(table,id)
-  document.getElementById("name").innerText = data.name+' - '+data.title
+  const data = await getData(table, id)
+  document.getElementById("name").innerText = data.name + ' - ' + data.title
   document.getElementById("category").innerText = `Category: ${data.category}`
   document.getElementById("identifier").innerText = `Identifier: ${data.name}`
   document.getElementById("maturity_level").innerText = `Maturity Level: ${data.maturity}`
-  if(data.parent){
+  if (data.parent) {
     document.getElementById("parent").innerHTML = `Parent Identifier: <a id="parentlink" class="parentlink" data-id="${data.parent}" >${data.parent}</a>`
-    document.getElementById("parentlink").onclick = (event) => {
-      //ノードのID表示用のURLをhistoryに追加して、再描画
-      console.log('onclick', data.parent,event.target.attributes['data-id'])
-      //const id = event.target.attributes['data-id'].nodeValue
-      window.history.pushState( {}, document.title, `${window.location.origin}${window.location.pathname}?q=${data.parent}&type=${type}`)
-      pageGen(type,data.parent);
-    }
-  }else{
+  } else {
     document.getElementById("parent").innerHTML = ""
   }
   document.getElementById("description").innerText = data.overview
@@ -134,10 +127,20 @@ let pageGen = async function (type,id) {
       document.getElementById("relationData").appendChild(table)
     }
   }
+  const elements = document.getElementsByClassName("parentlink")
+  for (let i = 0; i < elements.length; i++) {
+    elements[i].onclick = (event) => {
+      //ノードのID表示用のURLをhistoryに追加して、再描画
+      console.log('onclick', data.parent, event.target.attributes['data-id'])
+      //const id = event.target.attributes['data-id'].nodeValue
+      window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${data.parent}&type=${type}`)
+      pageGen(type, data.parent);
+    }
+  }
 }
 
 //ページのデータ取得
-let getData = async function (table,id) {
+let getData = async function (table, id) {
   let db1 = await db
   // Prepare an sql statement
   const stmt = db1.prepare(`SELECT ID as name, NAME as title, DESCRIPTION as overview, MATURITY_LEVEL as maturity, FUNCTION as functionality, PARENT as parent, TYPE as category FROM ${table} WHERE ID=$id`);
@@ -149,18 +152,18 @@ let getData = async function (table,id) {
   let datascource = {}
   if (stmt.step()) { //primary keyで検索するので結果行は1:0
     datascource = stmt.getAsObject();
-    datascource.children = await getChildData(table,id) //紐づく子供の取得
+    datascource.children = await getChildData(table, id) //紐づく子供の取得
     //datascource.relationData = {}
     //for (const relationTable of TABLES) {
     //  datascource.relationData[relationTable] = await getRelationData(relationTable,id)
     //}
-    datascource.relationData = await getRelationData(table,id)
+    datascource.relationData = await getRelationData(table, id)
   }
   return datascource
 }
 
 //ページのに関連する子要素の取得
-let getChildData = async function (table,id) {
+let getChildData = async function (table, id) {
   let db1 = await db
   // Prepare an sql statement
   const stmt = db1.prepare(`SELECT ID as name, NAME as title FROM ${table} WHERE PARENT=$id`);
@@ -177,21 +180,19 @@ let getChildData = async function (table,id) {
 }
 
 //ページのに関連する子要素の取得
-let getRelationData = async function (table,id) {
+let getRelationData = async function (table, id) {
   const result = {}
   for (const relationTable of TABLES) {
-    if(table==relationTable) continue
-    const children = await getRelationChildData (table,id,relationTable)
-    if(children.length > 0)
+    if (table == relationTable) continue
+    const children = await getRelationChildData(table, id, relationTable)
+    if (children.length > 0)
       result[relationTable] = children
   }
-  console.log('getRelationData',result)
   return result
 }
 
 //ページのに関連する子要素の取得
-let getRelationChildData = async function (fromtable,fromid,totable) {
-  
+let getRelationChildData = async function (fromtable, fromid, totable) {
   let db1 = await db
   // Prepare an sql statement
   const stmt = db1.prepare(`

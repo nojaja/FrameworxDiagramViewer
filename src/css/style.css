@@ -48,7 +48,7 @@ p {
   margin-inline-end: 0px;
 }
 
-#parentlink {
+.parentlink {
   color: navy;
   cursor: pointer;
   text-decoration: underline;

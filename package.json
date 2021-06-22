@@ -12,9 +12,9 @@
   "author": "nojaja <free.riccia@gmail.com> (https://github.com/nojaja)",
   "license": "MIT",
   "dependencies": {
-    "sql.js": "^1.5.0",
     "jquery": "^3.6.0",
-    "orgchart": "^3.1.1"
+    "orgchart": "^3.1.1",
+    "sql.js": "^1.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.3",
