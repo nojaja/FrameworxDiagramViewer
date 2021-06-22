@@ -20,6 +20,8 @@
   display: table-cell;
   font-size: .75rem;
   font-weight: 700;
+  position: relative;
+  left: 0px;
 }
 
 h1 {

@@ -17,7 +17,8 @@ module.exports = {
   },
   context: src,
   entry: {
-    'main': './js/index.js'
+    'main': './js/index.js',
+    'serviceWorker': './js/serviceWorker/ws.js'
   },
   output: {
 		globalObject: 'self',

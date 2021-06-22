@@ -1,23 +1,33 @@
-    <h1 id="name">{{data.name}} - {{data.title}}</h1>
-    <h4 id="category">Category: {{data.category}}</h4>
-    <h4 id="identifier">Identifier: {{data.name}}</h4>
-    <h4 id="maturity_level">Maturity Level: {{data.maturity}}</h4>
+# {{data.name}} - {{data.title}}
+
+```orgchart
+{{{data.json}}}
+```
+## Category: {{data.category}}
+## Identifier: {{data.name}}
+## Maturity Level: {{data.maturity}}
     
-    {{#if data.parent}}
-    <h4 id="parent">Parent Identifier: <a id="parentlink" class="parentlink" data-id="{{data.parent}}" >{{data.parent}}</a></h4>
-    {{/if}}
+{{#if data.parent}}
+## Parent Identifier: <a id="parentlink" class="parentlink" data-id="{{data.parent}}" >{{data.parent}}</a>
+{{/if}}
     
-    <div id="chart-container"></div>
-    <h3>Overview</h3>
-    <p id="description">{{data.overview}}</p>
-    <h3>Functionality</h3>
-    <p id="functionality">{{data.functionality}}</p>
-    <h3>RelationData</h3>
-    <p id="relationData">
-    {{#each data.relationData}}
-        {{@key}}<br />
-        {{#each this}}
-            <a class="parentlink" data-id="{{this.name}}" >{{this.name}}</a>:{{this.title}}<br />
-        {{/each}}
-    {{/each}}
-    </p>
+<div id="chart-container"></div>
+
+## Overview
+
+{{data.overview}}
+
+## Functionality
+
+{{data.functionality}}
+
+## RelationData
+
+{{#each data.relationData}}
+
+### {{@key}}
+
+{{#each this}}
+<a class="parentlink" data-id="{{this.name}}" >{{this.name}}</a>:{{this.title}}<br />
+{{/each}}
+{{/each}}

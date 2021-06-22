@@ -1,32 +1,30 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title></title>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('serviceWorker.bundle.js').then(function(registraion) {
+        registraion.update();
+      });
+    }
+  </script>
 </head>
 
 <body>
-  <div class="leftbar">
-    <p class="leftbaritem"><a href="./?q=1&type=0" class="leftlink">Application Framework (TAM)</a></p>
-    <p class="leftbaritem"><a href="./?q=1&type=1" class="leftlink">Business Process Framework (eTOM)</a></p>
-    <p class="leftbaritem"><a href="./?q=ODA&type=2" class="leftlink">ODA The Functional Blocks</a></p>
-  </div>
-  <div id="content_body" class="content_body">
-    <h1 id="name"></h1>
-    <h4 id="category"></h4>
-    <h4 id="identifier"></h4>
-    <h4 id="maturity_level"></h4>
-    <h4 id="parent"></h4>
-
-    <div id="chart-container"></div>
-    <h3>Overview</h3>
-    <p id="description"></p>
-    <h3>Functionality</h3>
-    <p id="functionality"></p>
-    <h3>RelationData</h3>
-    <p id="relationData"></p>
-  </div>
+  <nav>
+    <p class="leftbaritem"></p><a href="./?q=1&type=0" class="leftlink">Application Framework (TAM)</a>
+    <p class="leftbaritem"><a href="./?q=1&type=1" class="leftlink">Business Process Framework (eTOM)</a>
+    <p class="leftbaritem"><a href="./?q=ODA&type=2" class="leftlink">ODA The Functional Blocks</a>
+  </nav>
+  <div id="app"></div>
 </body>
 
+<!--
+<div id="chart-container"></div>
+-->
 </html>
