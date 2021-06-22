@@ -3,6 +3,7 @@ import OrgChart from 'orgchart';
 import 'orgchart/dist/css/jquery.orgchart.min.css'
 import '../css/style.css'
 import initSqlJs from "sql.js";
+import Handlebars from "handlebars";
 
 /**
  * GB929F_Functional_Framework_Functional_Decomposition_v21.0.0.xlsx
@@ -98,35 +99,27 @@ window.addEventListener('popstate', (event) => {
 });
 
 const TABLES = ['TAM', 'ETOM', 'ODA_Functional_Blocks']
+const pageCache = {}
 
 //ページの描画処理
 let pageGen = async function (type, id) {
   const table = TABLES[type]
-  const data = await getData(table, id)
-  document.getElementById("name").innerText = data.name + ' - ' + data.title
-  document.getElementById("category").innerText = `Category: ${data.category}`
-  document.getElementById("identifier").innerText = `Identifier: ${data.name}`
-  document.getElementById("maturity_level").innerText = `Maturity Level: ${data.maturity}`
-  if (data.parent) {
-    document.getElementById("parent").innerHTML = `Parent Identifier: <a id="parentlink" class="parentlink" data-id="${data.parent}" >${data.parent}</a>`
-  } else {
-    document.getElementById("parent").innerHTML = ""
-  }
-  document.getElementById("description").innerText = data.overview
-  document.getElementById("functionality").innerText = data.functionality
-  oc.init({ 'data': data });
-  document.getElementById("relationData").innerText = ""
-  for (let key in data.relationData) {
-    const table = document.createElement('h5')
-    table.innerText = key
-    document.getElementById("relationData").appendChild(table)
-    for (let index in data.relationData[key]) {
-      const relationData = data.relationData[key][index]
-      const table = document.createElement('p')
-      table.innerHTML = `<a id="parentlink" class="parentlink" data-id="${relationData.name}" >${relationData.name}</a>:${relationData.title}`
-      document.getElementById("relationData").appendChild(table)
+
+  let getPageTemplate = async function (table) {
+    //table単位でページテンプレートを読み込み
+    if (!pageCache[table]) {
+      const response = await (await fetch("./assets/" + table + ".tmp", { method: "get" })).text();
+      pageCache[table] = Handlebars.compile(response);
     }
+    return pageCache[table]
   }
+
+  const data = await getData(table, id)
+  getPageTemplate(table).then(template => {
+    data.chartContainer = oc.init({ 'data': data }).$chartContainer[0]
+    document.getElementById("content_body").innerHTML = template({ data: data })
+    document.getElementById("chart-container").appendChild(data.chartContainer)
+
   const elements = document.getElementsByClassName("parentlink")
   for (let i = 0; i < elements.length; i++) {
     elements[i].onclick = (event) => {
@@ -137,6 +130,7 @@ let pageGen = async function (type, id) {
       pageGen(type, data.parent);
     }
   }
+  })
 }
 
 //ページのデータ取得
