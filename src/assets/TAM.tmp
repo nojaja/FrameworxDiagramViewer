@@ -1,0 +1,23 @@
+    <h1 id="name">{{data.name}} - {{data.title}}</h1>
+    <h4 id="category">Category: {{data.category}}</h4>
+    <h4 id="identifier">Identifier: {{data.name}}</h4>
+    <h4 id="maturity_level">Maturity Level: {{data.maturity}}</h4>
+    
+    {{#if data.parent}}
+    <h4 id="parent">Parent Identifier: <a id="parentlink" class="parentlink" data-id="{{data.parent}}" data-type="{{data.table}}" >{{data.parent}}</a></h4>
+    {{/if}}
+
+    {{#oc data}}{{/oc}}
+    <h3>Overview</h3>
+    <p id="description">{{data.overview}}</p>
+    <h3>Functionality</h3>
+    <p id="functionality">{{data.functionality}}</p>
+    <h3>RelationData</h3>
+    <p id="relationData">
+    {{#each data.relationData}}
+        {{@key}}<br />
+        {{#each this}}
+            <a class="parentlink" data-id="{{this.name}}" data-type="{{this.table}}" >{{this.name}}</a>:{{this.title}}<br />
+        {{/each}}
+    {{/each}}
+    </p>
