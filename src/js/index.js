@@ -35,6 +35,9 @@ document.addEventListener('DOMContentLoaded', function () {
       $node.on('click', function () {
         //ノードのID表示用のURLをhistoryに追加して、再描画
         const type = getParam()["type"] || '0'
+        console.log($node)
+        $node.attr('data-q',data.name)
+        $node.attr('data-type',type)
         window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${data.name}&type=${type}`)
         pageGen(type, data.name);
       });
@@ -65,10 +68,9 @@ window.addEventListener('popstate', (event) => {
 const pageCache = {}
 
 //ページの描画処理
-let pageGen = async function (type, id) {
-  const table = dao.TABLES[type]
-
+let pageGen = async function (table, id) {
   let getPageTemplate = async function (table) {
+    if(dao.checkTable(table)) throw new Error(table + ' TABLES not exist')
     //table単位でページテンプレートを読み込み
     if (!pageCache[table]) {
       const response = await (await fetch("./assets/" + table + ".tmp", { method: "get" })).text();
@@ -79,18 +81,41 @@ let pageGen = async function (type, id) {
 
   const data = await dao.getData(table, id)
   const template = await getPageTemplate(table)
-
   document.getElementById("content_body").innerHTML = template({ data: data })
-  data.chartContainer = oc.init({ 'data': data }).$chartContainer[0]
-  document.getElementById("chart-container").appendChild(data.chartContainer)
+
+  //リンクイベント作成
   const elements = document.getElementsByClassName("parentlink")
   for (let i = 0; i < elements.length; i++) {
     elements[i].onclick = (event) => {
       //ノードのID表示用のURLをhistoryに追加して、再描画
-      console.log('onclick', data.parent, event.target.attributes['data-id'])
-      //const id = event.target.attributes['data-id'].nodeValue
-      window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${data.parent}&type=${type}`)
-      pageGen(type, data.parent);
+      const id = event.target.attributes['data-id'].nodeValue
+      const type = event.target.attributes['data-type'].nodeValue
+      window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${id}&type=${type}`)
+      pageGen(type, id);
+    }
+  }
+  //組織図のクリックイベント作成
+  const node_elements = document.getElementsByClassName("node")
+  for (let i = 0; i < node_elements.length; i++) {
+    node_elements[i].onclick = (event) => {
+      //ノードのID表示用のURLをhistoryに追加して、再描画
+      const id = event.target.parentNode.attributes['data-id'].nodeValue
+      const type = event.target.parentNode.attributes['data-type'].nodeValue
+      window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${id}&type=${type}`)
+      pageGen(type, id);
     }
   }
 }
+
+Handlebars.registerHelper("oc", function(context, options) {
+  const chartContainer = oc.init({ 
+    'data': context ,
+    'createNode': function ($node, data) {
+        console.log('createNode',$node, data)
+        const type = getParam()["type"] || '0'
+        $node.attr('data-id',data.name)
+        $node.attr('data-type',type)
+      }
+    }).$chartContainer[0]
+  return new Handlebars.SafeString(chartContainer.outerHTML)
+});

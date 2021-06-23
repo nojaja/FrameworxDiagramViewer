@@ -43,9 +43,14 @@ export class Dao {
         const [SQL, buf] = await Promise.all([sqlPromise, dataPromise])
         return new SQL.Database(new Uint8Array(buf));
     }
+    
+    checkTable (table){
+        return (this.TABLES.indexOf(table) == -1)? true :false
+    }
 
     //ページのデータ取得
     async getData (table, id) {
+        if(this.checkTable(table)) throw new Error(table + 'TABLES not exist')
         this.db = this.db || await this.database()
         // Prepare an sql statement
         const stmt = this.db.prepare(`SELECT ID as name, NAME as title, DESCRIPTION as overview, MATURITY_LEVEL as maturity, FUNCTION as functionality, PARENT as parent, TYPE as category FROM ${table} WHERE ID=$id`);
@@ -57,11 +62,8 @@ export class Dao {
         let datascource = {}
         if (stmt.step()) { //primary keyで検索するので結果行は1:0
             datascource = stmt.getAsObject();
+            datascource.table = table
             datascource.children = await this.getChildData(table, id) //紐づく子供の取得
-            //datascource.relationData = {}
-            //for (const relationTable of TABLES) {
-            //  datascource.relationData[relationTable] = await getRelationData(relationTable,id)
-            //}
             datascource.relationData = await this.getRelationData(table, id)
         }
         return datascource
@@ -69,6 +71,7 @@ export class Dao {
 
     //ページのに関連する子要素の取得
     async getChildData (table, id) {
+        if(this.checkTable(table)) throw new Error(table + 'TABLES not exist')
         this.db = this.db || await this.database()
         // Prepare an sql statement
         const stmt = this.db.prepare(`SELECT ID as name, NAME as title FROM ${table} WHERE PARENT=$id`);
@@ -79,13 +82,16 @@ export class Dao {
         stmt.bind({ $id: id });
         let children = [];
         while (stmt.step()) { //
-            children.push(stmt.getAsObject())
+            const ret = stmt.getAsObject()
+            ret.table = table
+            children.push(ret)
         }
         return children
     }
 
     //ページのに関連する子要素の取得
     async getRelationData (table, id) {
+        if(this.checkTable(table)) throw new Error(table + 'TABLES not exist')
         const result = {}
         for (const relationTable of this.TABLES) {
             if (table == relationTable) continue
@@ -98,6 +104,8 @@ export class Dao {
 
     //ページのに関連する子要素の取得
     async getRelationChildData (fromtable, fromid, totable) {
+        if(this.checkTable(fromtable)) throw new Error(fromtable + 'TABLES not exist')
+        if(this.checkTable(totable)) throw new Error(totable + 'TABLES not exist')
         this.db = this.db || await this.database()
         // Prepare an sql statement
         const stmt = this.db.prepare(`
@@ -114,7 +122,9 @@ export class Dao {
         stmt.bind({ $fromtable: fromtable, $id: fromid, $totable: totable });
         let children = [];
         while (stmt.step()) { //
-            children.push(stmt.getAsObject())
+            const ret = stmt.getAsObject()
+            ret.table = totable
+            children.push(ret)
         }
         return children
     }
