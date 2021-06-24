@@ -31,7 +31,7 @@ export class Dao {
             //locateFile: filename => `/dist/${filename}`
             locateFile: file => './sql-wasm.wasm'
         }
-        this.TABLES = ['TAM', 'ETOM', 'ODA_Functional_Blocks']
+        this.TABLES = ['TAM', 'eTOM', 'ODA_Functional_Blocks', 'End_to_End_Business_Flows', 'Open_APIs', 'Legacy_Systems']
     }
 
     //SQLiteの読み込み
