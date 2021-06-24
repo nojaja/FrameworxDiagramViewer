@@ -12,12 +12,13 @@
     <p id="description">{{data.overview}}</p>
     <h3>Functionality</h3>
     <p id="functionality">{{data.functionality}}</p>
-    <h3>RelationData</h3>
+    <h3>Relation Data</h3>
     <p id="relationData">
     {{#each data.relationData}}
-        {{@key}}<br />
+        <b>{{@key}}</b><br />
         {{#each this}}
             <a class="parentlink" data-id="{{this.name}}" data-type="{{this.table}}" >{{this.name}}</a>:{{this.title}}<br />
         {{/each}}
+        <br />
     {{/each}}
     </p>

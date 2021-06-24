@@ -1,10 +1,7 @@
-    <h1 id="name">{{data.name}} - {{data.title}}</h1>
-    <h4 id="category">Category: {{data.category}}</h4>
-    <h4 id="identifier">Identifier: {{data.name}}</h4>
-    <h4 id="maturity_level">Maturity Level: {{data.maturity}}</h4>
-    
+    <h1 id="name">{{data.title}}</h1>
+
     {{#if data.parent}}
-    <h4 id="parent">Parent Identifier: <a id="parentlink" class="parentlink" data-id="{{data.parent}}" data-type="{{data.table}}" >{{data.parent}}</a></h4>
+    <h4 id="parent">Parent : <a id="parentlink" class="parentlink" data-id="{{data.parent}}" data-type="{{data.table}}" >{{data.parent}}</a></h4>
     {{/if}}
 
     {{#oc data}}{{/oc}}

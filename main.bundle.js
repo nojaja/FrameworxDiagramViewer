@@ -68303,7 +68303,7 @@ class Dao {
             //locateFile: filename => `/dist/${filename}`
             locateFile: file => './sql-wasm.wasm'
         }
-        this.TABLES = ['TAM', 'ETOM', 'ODA_Functional_Blocks']
+        this.TABLES = ['TAM', 'eTOM', 'ODA_Functional_Blocks', 'End_to_End_Business_Flows', 'Open_APIs', 'Legacy_Systems']
     }
 
     //SQLiteの読み込み
@@ -68461,7 +68461,6 @@ document.addEventListener('DOMContentLoaded', function () {
       $node.on('click', function () {
         //ノードのID表示用のURLをhistoryに追加して、再描画
         const type = getParam()["type"] || '0'
-        console.log($node)
         $node.attr('data-q',data.name)
         $node.attr('data-type',type)
         window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${data.name}&type=${type}`)
@@ -68510,26 +68509,32 @@ let pageGen = async function (table, id) {
   document.getElementById("content_body").innerHTML = template({ data: data })
 
   //リンクイベント作成
-  const elements = document.getElementsByClassName("parentlink")
-  for (let i = 0; i < elements.length; i++) {
-    elements[i].onclick = (event) => {
-      //ノードのID表示用のURLをhistoryに追加して、再描画
-      const id = event.target.attributes['data-id'].nodeValue
-      const type = event.target.attributes['data-type'].nodeValue
-      window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${id}&type=${type}`)
-      pageGen(type, id);
-    }
+  const parentlink_elements = document.getElementsByClassName("parentlink")
+  for (let i = 0; i < parentlink_elements.length; i++) {
+    parentlink_elements[i].onclick = function (parentlink_element) {
+      return (event) => {
+        //ノードのID表示用のURLをhistoryに追加して、再描画
+        const id = parentlink_element.dataset.id
+        const type = parentlink_element.dataset.type
+        window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${id}&type=${type}`)
+        pageGen(type, id);
+      }
+    } (parentlink_elements[i])
   }
+
+
   //組織図のクリックイベント作成
   const node_elements = document.getElementsByClassName("node")
   for (let i = 0; i < node_elements.length; i++) {
-    node_elements[i].onclick = (event) => {
-      //ノードのID表示用のURLをhistoryに追加して、再描画
-      const id = event.target.parentNode.attributes['data-id'].nodeValue
-      const type = event.target.parentNode.attributes['data-type'].nodeValue
-      window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${id}&type=${type}`)
-      pageGen(type, id);
-    }
+    node_elements[i].onclick = function (node_element) {
+      return (event) => {
+        //ノードのID表示用のURLをhistoryに追加して、再描画
+        const id = node_element.dataset.id
+        const type = node_element.dataset.type
+        window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${id}&type=${type}`)
+        pageGen(type, id);
+      }
+    } (node_elements[i])
   }
 }
 
@@ -68537,10 +68542,8 @@ handlebars__WEBPACK_IMPORTED_MODULE_3___default.a.registerHelper("oc", function(
   const chartContainer = oc.init({ 
     'data': context ,
     'createNode': function ($node, data) {
-        console.log('createNode',$node, data)
-        const type = getParam()["type"] || '0'
         $node.attr('data-id',data.name)
-        $node.attr('data-type',type)
+        $node.attr('data-type',data.table)
       }
     }).$chartContainer[0]
   return new handlebars__WEBPACK_IMPORTED_MODULE_3___default.a.SafeString(chartContainer.outerHTML)
@@ -68704,4 +68707,4 @@ handlebars__WEBPACK_IMPORTED_MODULE_3___default.a.registerHelper("oc", function(
 /***/ })
 
 /******/ });
-//# sourceMappingURL=map/main.62c3befb24d242996c50.js.map
+//# sourceMappingURL=map/main.4f96c23a34239a8c906d.js.map
