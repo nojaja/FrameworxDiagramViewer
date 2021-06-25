@@ -48,12 +48,14 @@ p {
   margin-inline-end: 0px;
 }
 
-.parentlink {
-  color: navy;
+.elementlink {
   cursor: pointer;
-  text-decoration: underline;
 }
 
+.parentlink {
+  color: navy;
+  text-decoration: underline;
+}
 
 .leftbar {
   position: absolute;

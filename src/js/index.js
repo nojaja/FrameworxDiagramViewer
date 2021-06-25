@@ -83,9 +83,9 @@ let pageGen = async function (table, id) {
   document.getElementById("content_body").innerHTML = template({ data: data })
 
   //リンクイベント作成
-  const parentlink_elements = document.getElementsByClassName("parentlink")
-  for (let i = 0; i < parentlink_elements.length; i++) {
-    parentlink_elements[i].onclick = function (parentlink_element) {
+  const elementlinks = document.getElementsByClassName("elementlink")
+  for (let i = 0; i < elementlinks.length; i++) {
+    elementlinks[i].onclick = function (parentlink_element) {
       return (event) => {
         //ノードのID表示用のURLをhistoryに追加して、再描画
         const id = parentlink_element.dataset.id
@@ -93,7 +93,7 @@ let pageGen = async function (table, id) {
         window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${id}&type=${type}`)
         pageGen(type, id);
       }
-    } (parentlink_elements[i])
+    } (elementlinks[i])
   }
 
 

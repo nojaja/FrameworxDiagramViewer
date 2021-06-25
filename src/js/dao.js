@@ -107,19 +107,25 @@ export class Dao {
         if(this.checkTable(fromtable)) throw new Error(fromtable + 'TABLES not exist')
         if(this.checkTable(totable)) throw new Error(totable + 'TABLES not exist')
         this.db = this.db || await this.database()
+
+        
+        const ids = fromid.split('.').map( (currentValue, index, array) => {
+            return `'${array.slice(0,index+1).join('.')}'`
+         } ).join();
+
         // Prepare an sql statement
         const stmt = this.db.prepare(`
         SELECT ID as name, NAME as title FROM ${totable} WHERE ID IN(
-        SELECT TO_KEY as key FROM MAPPING WHERE TO_TABLE == $totable AND FROM_KEY == $id AND FROM_TABLE == $fromtable
+        SELECT TO_KEY as key FROM MAPPING WHERE TO_TABLE == $totable AND FROM_KEY IN (${ids}) AND FROM_TABLE == $fromtable
         UNION
-        SELECT FROM_KEY as key FROM MAPPING WHERE FROM_TABLE == $totable AND TO_KEY == $id AND TO_TABLE == $fromtable
+        SELECT FROM_KEY as key FROM MAPPING WHERE FROM_TABLE == $totable AND TO_KEY IN (${ids}) AND TO_TABLE == $fromtable
         )
         `);
 
         // Bind values to the parameters and fetch the results of the query
         //const result = stmt.getAsObject({'$id' : id});
         // Bind new values
-        stmt.bind({ $fromtable: fromtable, $id: fromid, $totable: totable });
+        stmt.bind({ $fromtable: fromtable, $totable: totable });
         let children = [];
         while (stmt.step()) { //
             const ret = stmt.getAsObject()
