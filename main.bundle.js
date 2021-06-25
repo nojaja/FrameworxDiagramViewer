@@ -20316,7 +20316,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "../node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".orgchart { \n  background-image:none;\n  background: white; \n}\n/* excluding leaf node */\n.orgchart .node:not(:only-child)::after {\n  height: 15px;\n}\n/* excluding root node */\n.orgchart > ul > li > ul li > .node::before {\n  height: 15px;\n}\n\n.orgchart .node .content {\n  height: 50px;\n  width: 130px;\n  word-break: break-word;\n  white-space: break-spaces;\n  vertical-align: middle;\n  display: table-cell;\n  font-size: .75rem;\n  font-weight: 700;\n}\n\nh1 {\n  display: block;\n  font-size: 2em;\n  margin-block-start: 0.67em;\n  margin-block-end: 0.67em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\nh3 {\n  display: block;\n  font-size: 1.17em;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\np {\n  display: block;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n}\n\n.parentlink {\n  color: navy;\n  cursor: pointer;\n  text-decoration: underline;\n}\n\n\n.leftbar {\n  position: absolute;\n  top: 0px;\n  left: 0;\n  width: 20%;\n  height: 100%;\n  background-color: #323232;\n  --padding-top: 5em;\n  z-index: 0;\n}\n\n.leftbaritem {\n  padding-left: 1em;\n  font-size: 90%;\n}\n.leftbar a {\n  text-decoration: none;\n  color: white;\n}\n.content_body {\n  position: absolute;\n  top: 0px;\n  left: 21%;\n  width: 75%;\n  height: 100%;\n}", ""]);
+exports.push([module.i, ".orgchart { \n  background-image:none;\n  background: white; \n}\n/* excluding leaf node */\n.orgchart .node:not(:only-child)::after {\n  height: 15px;\n}\n/* excluding root node */\n.orgchart > ul > li > ul li > .node::before {\n  height: 15px;\n}\n\n.orgchart .node .content {\n  height: 50px;\n  width: 130px;\n  word-break: break-word;\n  white-space: break-spaces;\n  vertical-align: middle;\n  display: table-cell;\n  font-size: .75rem;\n  font-weight: 700;\n}\n\nh1 {\n  display: block;\n  font-size: 2em;\n  margin-block-start: 0.67em;\n  margin-block-end: 0.67em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\nh3 {\n  display: block;\n  font-size: 1.17em;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\np {\n  display: block;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n}\n\n.elementlink {\n  cursor: pointer;\n}\n\n.parentlink {\n  color: navy;\n  text-decoration: underline;\n}\n\n.leftbar {\n  position: absolute;\n  top: 0px;\n  left: 0;\n  width: 20%;\n  height: 100%;\n  background-color: #323232;\n  --padding-top: 5em;\n  z-index: 0;\n}\n\n.leftbaritem {\n  padding-left: 1em;\n  font-size: 90%;\n}\n.leftbar a {\n  text-decoration: none;\n  color: white;\n}\n.content_body {\n  position: absolute;\n  top: 0px;\n  left: 21%;\n  width: 75%;\n  height: 100%;\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -68379,19 +68379,25 @@ class Dao {
         if(this.checkTable(fromtable)) throw new Error(fromtable + 'TABLES not exist')
         if(this.checkTable(totable)) throw new Error(totable + 'TABLES not exist')
         this.db = this.db || await this.database()
+
+        
+        const ids = fromid.split('.').map( (currentValue, index, array) => {
+            return `'${array.slice(0,index+1).join('.')}'`
+         } ).join();
+
         // Prepare an sql statement
         const stmt = this.db.prepare(`
         SELECT ID as name, NAME as title FROM ${totable} WHERE ID IN(
-        SELECT TO_KEY as key FROM MAPPING WHERE TO_TABLE == $totable AND FROM_KEY == $id AND FROM_TABLE == $fromtable
+        SELECT TO_KEY as key FROM MAPPING WHERE TO_TABLE == $totable AND FROM_KEY IN (${ids}) AND FROM_TABLE == $fromtable
         UNION
-        SELECT FROM_KEY as key FROM MAPPING WHERE FROM_TABLE == $totable AND TO_KEY == $id AND TO_TABLE == $fromtable
+        SELECT FROM_KEY as key FROM MAPPING WHERE FROM_TABLE == $totable AND TO_KEY IN (${ids}) AND TO_TABLE == $fromtable
         )
         `);
 
         // Bind values to the parameters and fetch the results of the query
         //const result = stmt.getAsObject({'$id' : id});
         // Bind new values
-        stmt.bind({ $fromtable: fromtable, $id: fromid, $totable: totable });
+        stmt.bind({ $fromtable: fromtable, $totable: totable });
         let children = [];
         while (stmt.step()) { //
             const ret = stmt.getAsObject()
@@ -68509,9 +68515,9 @@ let pageGen = async function (table, id) {
   document.getElementById("content_body").innerHTML = template({ data: data })
 
   //リンクイベント作成
-  const parentlink_elements = document.getElementsByClassName("parentlink")
-  for (let i = 0; i < parentlink_elements.length; i++) {
-    parentlink_elements[i].onclick = function (parentlink_element) {
+  const elementlinks = document.getElementsByClassName("elementlink")
+  for (let i = 0; i < elementlinks.length; i++) {
+    elementlinks[i].onclick = function (parentlink_element) {
       return (event) => {
         //ノードのID表示用のURLをhistoryに追加して、再描画
         const id = parentlink_element.dataset.id
@@ -68519,7 +68525,7 @@ let pageGen = async function (table, id) {
         window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${id}&type=${type}`)
         pageGen(type, id);
       }
-    } (parentlink_elements[i])
+    } (elementlinks[i])
   }
 
 
@@ -68707,4 +68713,4 @@ handlebars__WEBPACK_IMPORTED_MODULE_3___default.a.registerHelper("oc", function(
 /***/ })
 
 /******/ });
-//# sourceMappingURL=map/main.4f96c23a34239a8c906d.js.map
+//# sourceMappingURL=map/main.dfecb9b80191c8795111.js.map
