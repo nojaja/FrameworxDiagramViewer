@@ -1,7 +1,7 @@
     <h1 id="name">{{data.title}}</h1>
 
     {{#if data.parent}}
-    <h4 id="parent">Parent : <a id="parentlink" class="parentlink" data-id="{{data.parent}}" data-type="{{data.table}}" >{{data.parent}}</a></h4>
+    <h4 id="parent">Parent : <a class="parentlink elementlink" data-id="{{data.parent}}" data-type="{{data.table}}" >{{data.parent}}</a></h4>
     {{/if}}
 
     {{#oc data}}{{/oc}}
@@ -14,7 +14,7 @@
     {{#each data.relationData}}
         <b>{{@key}}</b><br />
         {{#each this}}
-            <a class="parentlink" data-id="{{this.name}}" data-type="{{this.table}}" >{{this.name}}</a>:{{this.title}}<br />
+            <a class="parentlink elementlink" data-id="{{this.name}}" data-type="{{this.table}}" >{{this.name}}</a>:{{this.title}}<br />
         {{/each}}
         <br />
     {{/each}}
