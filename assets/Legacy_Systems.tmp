@@ -13,9 +13,9 @@
 
     {{#oc data}}{{/oc}}
     <h3>Overview</h3>
-    <p id="description">{{data.overview}}</p>
+    <p id="description">{{breaklines data.overview}}</p>
     <h3>Functionality</h3>
-    <p id="functionality">{{data.functionality}}</p>
+    <p id="functionality">{{breaklines data.functionality}}</p>
     <h3>Relation Data</h3>
     <p id="relationData">
     {{#each data.relationData}}

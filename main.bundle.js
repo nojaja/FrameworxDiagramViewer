@@ -20316,7 +20316,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "../node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".orgchart { \n  background-image:none;\n  background: white; \n}\n/* excluding leaf node */\n.orgchart .node:not(:only-child)::after {\n  height: 15px;\n}\n/* excluding root node */\n.orgchart > ul > li > ul li > .node::before {\n  height: 15px;\n}\n\n.orgchart .node .content {\n  height: 50px;\n  width: 130px;\n  word-break: break-word;\n  white-space: break-spaces;\n  vertical-align: middle;\n  display: table-cell;\n  font-size: .75rem;\n  font-weight: 700;\n}\n\nh1 {\n  display: block;\n  font-size: 2em;\n  margin-block-start: 0.67em;\n  margin-block-end: 0.67em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\nh3 {\n  display: block;\n  font-size: 1.17em;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\np {\n  display: block;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n}\n\n.elementlink {\n  cursor: pointer;\n}\n\n.parentlink {\n  color: navy;\n  text-decoration: underline;\n}\n\n.leftbar {\n  position: absolute;\n  top: 0px;\n  left: 0;\n  width: 20%;\n  height: 100%;\n  background-color: #323232;\n  --padding-top: 5em;\n  z-index: 0;\n}\n\n.leftbaritem {\n  padding-left: 1em;\n  font-size: 90%;\n}\n.leftbar a {\n  text-decoration: none;\n  color: white;\n}\n.content_body {\n  position: absolute;\n  top: 0px;\n  left: 21%;\n  width: 75%;\n  height: 100%;\n}", ""]);
+exports.push([module.i, ".orgchart { \n  background-image:none;\n  background: white; \n}\n/* excluding leaf node */\n.orgchart .node:not(:only-child)::after {\n  height: 15px;\n}\n/* excluding root node */\n.orgchart > ul > li > ul li > .node::before {\n  height: 15px;\n}\n\n.orgchart .node .content {\n  height: 50px;\n  width: 130px;\n  word-break: break-word;\n  white-space: break-spaces;\n  vertical-align: middle;\n  display: table-cell;\n  font-size: .75rem;\n  font-weight: 700;\n}\n\n.orgchart .node[data-domain=\"Market Sales Domain\"] .title {\n  background-color: rgb(247,161,162);\n  border: 1px solid rgba(217,83,79,.8);\n}\n.orgchart .node[data-domain=\"Customer Domain\"] .title {\n  background-color: rgb(246,236,19);\n  border: 1px solid rgba(217,83,79,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Product Domain\"] .title {\n  background-color: rgb(255,209,115);\n  border: 1px solid rgba(217,83,79,.8);\n}\n.orgchart .node[data-domain=\"Resource Domain\"] .title {\n  background-color: rgb(125,196,112);\n  border: 1px solid rgba(217,83,79,.8);\n}\n.orgchart .node[data-domain=\"Service Domain\"] .title {\n  background-color: rgb(188,230,247);\n  border: 1px solid rgba(217,83,79,.8);\n}\n.orgchart .node[data-domain=\"Business Partner Domain\"] .title {\n  background-color: rgb(188,188,217);\n  border: 1px solid rgba(217,83,79,.8);\n}\n.orgchart .node[data-domain=\"Enterprise Domain\"] .title {\n  background-color: rgb(211,211,211);\n  border: 1px solid rgba(217,83,79,.8);\n}\n.orgchart .node[data-domain=\"Common Domain\"] .title {\n  background-color: rgb(255,153,204);\n  border: 1px solid rgba(217,83,79,.8);\n}\n.orgchart .node[data-domain=\"Integration Domain\"] .title {\n  background-color: rgb(210,180,140);\n  border: 1px solid rgba(217,83,79,.8);\n}\nh1 {\n  display: block;\n  font-size: 2em;\n  margin-block-start: 0.67em;\n  margin-block-end: 0.67em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\nh3 {\n  display: block;\n  font-size: 1.17em;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\np {\n  display: block;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n}\n\n.elementlink {\n  cursor: pointer;\n}\n\n.parentlink {\n  color: navy;\n  text-decoration: underline;\n}\n\n.leftbar {\n  position: absolute;\n  top: 0px;\n  left: 0;\n  width: 20%;\n  height: 100%;\n  background-color: #323232;\n  --padding-top: 5em;\n  z-index: 0;\n}\n\n.leftbaritem {\n  padding-left: 1em;\n  font-size: 90%;\n}\n.leftbar a {\n  text-decoration: none;\n  color: white;\n}\n.content_body {\n  position: absolute;\n  top: 0px;\n  left: 21%;\n  width: 75%;\n  height: 100%;\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -68270,6 +68270,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Dao", function() { return Dao; });
 /* harmony import */ var sql_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! sql.js */ "../node_modules/sql.js/dist/sql-wasm.js");
 /* harmony import */ var sql_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(sql_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var handlebars__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! handlebars */ "../node_modules/handlebars/dist/cjs/handlebars.js");
+/* harmony import */ var handlebars__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(handlebars__WEBPACK_IMPORTED_MODULE_1__);
+
 
 
 
@@ -68294,7 +68297,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class Dao {
-    constructor() {
+    constructor(datafile_url,tables,prepares) {
         //SQLiteの設定
         this.config = {
             // Required to load the wasm binary asynchronously. Of course, you can host it wherever you want
@@ -68303,7 +68306,15 @@ class Dao {
             //locateFile: filename => `/dist/${filename}`
             locateFile: file => './sql-wasm.wasm'
         }
-        this.TABLES = ['TAM', 'eTOM', 'ODA_Functional_Blocks', 'End_to_End_Business_Flows', 'Open_APIs', 'Legacy_Systems']
+        this.datafile_url = datafile_url || "./assets/Frameworx_DB_Model_21.0.db"
+        this.tables = tables || ['TAM', 'eTOM', 'ODA_Functional_Blocks', 'End_to_End_Business_Flows', 'Open_APIs', 'Legacy_Systems']
+        this.prepares = prepares
+        console.log("Dao constructor",datafile_url,tables,prepares)
+        this.preparesTemplate = {}
+        for (const querName in this.prepares) {
+          console.log('querName:' + querName + ' :' + this.prepares[querName]);
+          this.preparesTemplate[querName] = handlebars__WEBPACK_IMPORTED_MODULE_1___default.a.compile(this.prepares[querName]);
+        }
     }
 
     //SQLiteの読み込み
@@ -68311,100 +68322,110 @@ class Dao {
     // ex. await database
     async database () {
         const sqlPromise = sql_js__WEBPACK_IMPORTED_MODULE_0___default()(this.config);
-        const dataPromise = fetch("./assets/Frameworx_DB_Model_21.0.db").then(res => res.arrayBuffer());
+        const dataPromise = fetch(this.datafile_url).then(res => res.arrayBuffer());
         const [SQL, buf] = await Promise.all([sqlPromise, dataPromise])
         return new SQL.Database(new Uint8Array(buf));
     }
     
-    checkTable (table){
-        return (this.TABLES.indexOf(table) == -1)? true :false
+    tableExists (table){
+        if(this.tables[table.toLowerCase()]) return true
+        return false
+    }
+    getTableInfo (table){
+        return (this.tables[table.toLowerCase()]) 
     }
 
     //ページのデータ取得
-    async getData (table, id) {
-        if(this.checkTable(table)) throw new Error(table + 'TABLES not exist')
+    async getPageData (table, id) {
+        if(!this.tableExists(table)) throw new Error(this.getTableInfo(table).tableName + ' TABLES not exist')
         this.db = this.db || await this.database()
-        // Prepare an sql statement
-        const stmt = this.db.prepare(`SELECT ID as name, NAME as title, DESCRIPTION as overview, MATURITY_LEVEL as maturity, FUNCTION as functionality, PARENT as parent, TYPE as category FROM ${table} WHERE ID=$id`);
+        try {
+            // Prepare an sql statement
+            const stmt = this.db.prepare(this.preparesTemplate.PageData({ table: this.getTableInfo(table).tableName }));
 
-        // Bind values to the parameters and fetch the results of the query
-        //const result = stmt.getAsObject({'$id' : id});
-        // Bind new values
-        stmt.bind({ $id: id });
-        let datascource = {}
-        if (stmt.step()) { //primary keyで検索するので結果行は1:0
-            datascource = stmt.getAsObject();
-            datascource.table = table
-            datascource.children = await this.getChildData(table, id) //紐づく子供の取得
-            datascource.relationData = await this.getRelationData(table, id)
+            // Bind values to the parameters and fetch the results of the query
+            //const result = stmt.getAsObject({'$id' : id});
+            // Bind new values
+            stmt.bind({ $id: id });
+            let datascource = {}
+            if (stmt.step()) { //primary keyで検索するので結果行は1:0
+                datascource = stmt.getAsObject();
+                datascource.table = table
+                datascource.children = await this.getChildData(table, id) //紐づく子供の取得
+                datascource.relationData = await this.getRelationData(table, id)
+            }
+            return datascource
+        } catch (error) {
+            console.error("getPageData",this.preparesTemplate.PageData({ table: this.getTableInfo(table).tableName}),error)
         }
-        return datascource
     }
 
     //ページのに関連する子要素の取得
     async getChildData (table, id) {
-        if(this.checkTable(table)) throw new Error(table + 'TABLES not exist')
+        if(!this.tableExists(table)) throw new Error(this.getTableInfo(table).tableName + ' TABLES not exist')
         this.db = this.db || await this.database()
-        // Prepare an sql statement
-        const stmt = this.db.prepare(`SELECT ID as name, NAME as title FROM ${table} WHERE PARENT=$id`);
+        
+        try {
+            // Prepare an sql statement
+            const stmt = this.db.prepare(this.preparesTemplate.ChildData({ table: this.getTableInfo(table).tableName }))
 
-        // Bind values to the parameters and fetch the results of the query
-        //const result = stmt.getAsObject({'$id' : id});
-        // Bind new values
-        stmt.bind({ $id: id });
-        let children = [];
-        while (stmt.step()) { //
-            const ret = stmt.getAsObject()
-            ret.table = table
-            children.push(ret)
+            // Bind values to the parameters and fetch the results of the query
+            //const result = stmt.getAsObject({'$id' : id});
+            // Bind new values
+            stmt.bind({ $id: id });
+            let children = [];
+            while (stmt.step()) { //
+                const ret = stmt.getAsObject()
+                ret.table = table
+                children.push(ret)
+            }
+            return children
+        } catch (error) {
+            console.error("getChildData",this.preparesTemplate.ChildData({ table: this.getTableInfo(table).tableName}),error)
         }
-        return children
     }
 
     //ページのに関連する子要素の取得
     async getRelationData (table, id) {
-        if(this.checkTable(table)) throw new Error(table + 'TABLES not exist')
+        if(!this.tableExists(table)) throw new Error(this.getTableInfo(table).tableName + ' TABLES not exist')
         const result = {}
-        for (const relationTable of this.TABLES) {
-            if (table == relationTable) continue
+        for (const relationTable in this.tables) {
+            if (this.getTableInfo(table).tableName == this.getTableInfo(relationTable).tableName) continue
             const children = await this.getRelationChildData(table, id, relationTable)
             if (children.length > 0)
-                result[relationTable] = children
+                result[this.getTableInfo(relationTable).caption] = children
         }
         return result
     }
 
     //ページのに関連する子要素の取得
     async getRelationChildData (fromtable, fromid, totable) {
-        if(this.checkTable(fromtable)) throw new Error(fromtable + 'TABLES not exist')
-        if(this.checkTable(totable)) throw new Error(totable + 'TABLES not exist')
+        if(!this.tableExists(fromtable)) throw new Error(this.getTableInfo(fromtable).tableName + ' TABLES not exist')
+        if(!this.tableExists(totable)) throw new Error(this.getTableInfo(totable).tableName+ ' TABLES not exist')
         this.db = this.db || await this.database()
 
-        
         const ids = fromid.split('.').map( (currentValue, index, array) => {
             return `'${array.slice(0,index+1).join('.')}'`
          } ).join();
 
-        // Prepare an sql statement
-        const stmt = this.db.prepare(`
-        SELECT ID as name, NAME as title FROM ${totable} WHERE ID IN(
-        SELECT TO_KEY as key FROM MAPPING WHERE TO_TABLE == $totable AND FROM_KEY IN (${ids}) AND FROM_TABLE == $fromtable
-        UNION
-        SELECT FROM_KEY as key FROM MAPPING WHERE FROM_TABLE == $totable AND TO_KEY IN (${ids}) AND TO_TABLE == $fromtable
-        )
-        `);
+        try {
+            // Prepare an sql statement
+            const stmt = this.db.prepare(this.preparesTemplate.RelationChildData({ totable: this.getTableInfo(totable).tableName, ids,ids}))
 
-        // Bind values to the parameters and fetch the results of the query
-        //const result = stmt.getAsObject({'$id' : id});
-        // Bind new values
-        stmt.bind({ $fromtable: fromtable, $totable: totable });
-        let children = [];
-        while (stmt.step()) { //
-            const ret = stmt.getAsObject()
-            ret.table = totable
-            children.push(ret)
+            // Bind values to the parameters and fetch the results of the query
+            //const result = stmt.getAsObject({'$id' : id});
+            // Bind new values
+            stmt.bind({ $fromtable: this.getTableInfo(fromtable).tableName, $totable: this.getTableInfo(totable).tableName });
+            let children = [];
+            while (stmt.step()) { //
+                const ret = stmt.getAsObject()
+                ret.table = totable
+                children.push(ret)
+            }
+            return children
+        } catch (error) {
+            console.error("getRelationChildData",this.preparesTemplate.RelationChildData({ totable: this.getTableInfo(totable).tableName, ids,ids}),error)
         }
-        return children
     }
 }
 
@@ -68437,19 +68458,60 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const dao = new _dao_js__WEBPACK_IMPORTED_MODULE_4__["default"]()
+const pageCache = {}
+
+
+//setting loader
+let setting = null
+const getSetting = async function () {
+  if(!setting){
+    await fetch("./assets/setting.json", {
+      method: "get"
+    }).then(async (response) => {
+      if (response.status === 200) {
+        console.log(response); // => "OK"
+        setting = await response.json()
+        console.log(setting)
+        return setting
+      } else {
+        console.log(response.statusText); // => Error Message
+        return {}
+      }
+    }).catch((response) => {
+      console.log(response); // => "TypeError: ~"
+      return {}
+    });
+  }
+  return setting
+}
 
 //GETパラメータの取得
-const getParam = function () {
+const getParam = async function (key) {
   const arg = new Object();
   const pair = location.search.substring(1).split("&");
   for (let i = 0; pair[i]; i++) {
     let kv = pair[i].split("=");
-    arg[kv[0]] = kv[1];
+    if(key==kv[0]) return kv[1]
+    //arg[kv[0]] = kv[1];
   }
-  return arg
+  return (await getSetting()).default[key]
 }
 
+const language_promise = async function(){
+  const language = (window.navigator.languages && window.navigator.languages[0]) ||
+  window.navigator.language ||
+  window.navigator.userLanguage ||
+  window.navigator.browserLanguage;
+  const languages = (await getSetting()).languages
+  return (languages.indexOf(language) != -1)? language :"en"
+}()
+
+const dao_promise = async function () {
+  const language = await language_promise
+  const dbconf = (await getSetting()).database[language]
+  console.log("dbconf",dbconf)
+  return new _dao_js__WEBPACK_IMPORTED_MODULE_4__["default"](dbconf.url,dbconf.tables,dbconf.prepares)
+}()
 
 let oc; //階層チャート
 //View///////////////////////////////////////////////////
@@ -68466,9 +68528,10 @@ document.addEventListener('DOMContentLoaded', function () {
       //各ノードのクリックイベントのハンドリング
       $node.on('click', function () {
         //ノードのID表示用のURLをhistoryに追加して、再描画
-        const type = getParam()["type"] || '0'
+        const type = getParam("type")
         $node.attr('data-q',data.name)
         $node.attr('data-type',type)
+        $node.attr('data-domain',data.domain)
         window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${data.name}&type=${type}`)
         pageGen(type, data.name);
       });
@@ -68483,34 +68546,35 @@ document.addEventListener('DOMContentLoaded', function () {
 // ページの読み込み完了イベントのハンドリング
 window.addEventListener('load', async (event) => {
   //初回表示時の描画
-  const id = getParam()["q"] || '3.2'
-  const type = getParam()["type"] || '0'
+  const id = await getParam("q")
+  const type = await getParam("type")
   pageGen(type, id);
 });
 
 // ページ移動 イベントをハンドリング
-window.addEventListener('popstate', (event) => {
+window.addEventListener('popstate', async (event) => {
   //移動先のパラメータで再描画
-  const id = getParam()["q"] || '3.2'
-  const type = getParam()["type"] || '0'
+  const id = await getParam("q")
+  const type = await getParam("type")
   pageGen(type, id);
 });
 
-const pageCache = {}
-
 //ページの描画処理
 let pageGen = async function (table, id) {
+  const dao = await dao_promise
+  const language = await language_promise
+  
   let getPageTemplate = async function (table) {
-    if(dao.checkTable(table)) throw new Error(table + ' TABLES not exist')
+    if(!dao.tableExists(table)) throw new Error(table + ' TABLES not exist')
     //table単位でページテンプレートを読み込み
     if (!pageCache[table]) {
-      const response = await (await fetch("./assets/" + table + ".tmp", { method: "get" })).text();
+      const response = await (await fetch("./assets/" + table + "_" + language + ".tmp", { method: "get" })).text();
       pageCache[table] = handlebars__WEBPACK_IMPORTED_MODULE_3___default.a.compile(response);
     }
     return pageCache[table]
   }
 
-  const data = await dao.getData(table, id)
+  const data = await dao.getPageData(table, id)
   const template = await getPageTemplate(table)
   document.getElementById("content_body").innerHTML = template({ data: data })
 
@@ -68550,9 +68614,16 @@ handlebars__WEBPACK_IMPORTED_MODULE_3___default.a.registerHelper("oc", function(
     'createNode': function ($node, data) {
         $node.attr('data-id',data.name)
         $node.attr('data-type',data.table)
+        $node.attr('data-domain',data.domain)
       }
     }).$chartContainer[0]
   return new handlebars__WEBPACK_IMPORTED_MODULE_3___default.a.SafeString(chartContainer.outerHTML)
+});
+
+handlebars__WEBPACK_IMPORTED_MODULE_3___default.a.registerHelper("breaklines", function(text) {
+  text = handlebars__WEBPACK_IMPORTED_MODULE_3___default.a.Utils.escapeExpression(text);
+  text = text.replace(/(\r\n|\n|\r)/gm, "<br />");
+  return new handlebars__WEBPACK_IMPORTED_MODULE_3___default.a.SafeString(text);
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "../node_modules/jquery/dist/jquery.js")))
 
@@ -68713,4 +68784,4 @@ handlebars__WEBPACK_IMPORTED_MODULE_3___default.a.registerHelper("oc", function(
 /***/ })
 
 /******/ });
-//# sourceMappingURL=map/main.dfecb9b80191c8795111.js.map
+//# sourceMappingURL=map/main.11307437f9486744822c.js.map
