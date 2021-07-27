@@ -1,20 +1,22 @@
     <h1 id="name">{{data.name}} - {{data.title}}</h1>
-    <h4 id="category">Category: {{data.category}}</h4>
-    <h4 id="identifier">Identifier: {{data.name}}</h4>
-    <h4 id="maturity_level">Maturity Level: {{data.maturity}}</h4>
+    <h4 id="category">カテゴリー: {{data.category}}</h4>
+    <h4 id="identifier">ID: {{data.name}}</h4>
+    <h4 id="maturity_level">完成度: {{data.maturity}}</h4>
     
     {{#if data.parent}}
-    <h4 id="parent">Parent Identifier: <a class="parentlink elementlink" data-id="{{data.parent}}" data-type="{{data.table}}" >{{data.parent}}</a></h4>
+    <h4 id="parent">上位ID: <a class="parentlink elementlink" data-id="{{data.parent}}" data-type="{{data.table}}" >{{data.parent}}</a></h4>
     {{else}}
-    <img src="./assets/TAM_Overview.drawio.svg">
+        {{#each data.children}}
+        <a class="parentlink elementlink" data-id="{{name}}" data-type="{{table}}" >{{name}}</a>:{{title}}<br />
+        {{/each}}
     {{/if}}
 
     {{#oc data}}{{/oc}}
-    <h3>Overview</h3>
+    <h3>概要</h3>
     <p id="description">{{breaklines data.overview}}</p>
-    <h3>Functionality</h3>
+    <h3>機能性</h3>
     <p id="functionality">{{breaklines data.functionality}}</p>
-    <h3>Relation Data</h3>
+    <h3>関連要素</h3>
     <p id="relationData">
     {{#each data.relationData}}
         <b>{{@key}}</b><br />
