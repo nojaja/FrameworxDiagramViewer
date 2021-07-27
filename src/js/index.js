@@ -5,19 +5,59 @@ import '../css/style.css'
 import Handlebars from "handlebars";
 import Dao from "./dao.js";
 
-const dao = new Dao()
+const pageCache = {}
+
+
+//setting loader
+let setting = null
+const getSetting = async function () {
+  if(!setting){
+    await fetch("./assets/setting.json", {
+      method: "get"
+    }).then(async (response) => {
+      if (response.status === 200) {
+        console.log(response); // => "OK"
+        setting = await response.json()
+        console.log(setting)
+        return setting
+      } else {
+        console.log(response.statusText); // => Error Message
+        return {}
+      }
+    }).catch((response) => {
+      console.log(response); // => "TypeError: ~"
+      return {}
+    });
+  }
+  return setting
+}
 
 //GETパラメータの取得
-const getParam = function () {
+const getParam = async function (key) {
   const arg = new Object();
   const pair = location.search.substring(1).split("&");
   for (let i = 0; pair[i]; i++) {
     let kv = pair[i].split("=");
-    arg[kv[0]] = kv[1];
+    if(key==kv[0]) return kv[1]
+    //arg[kv[0]] = kv[1];
   }
-  return arg
+  return (await getSetting()).default[key]
 }
 
+const language_promise = async function(){
+  const language = (window.navigator.languages && window.navigator.languages[0]) ||
+  window.navigator.language ||
+  window.navigator.userLanguage ||
+  window.navigator.browserLanguage;
+  const languages = (await getSetting()).languages
+  return (languages.indexOf(language) != -1)? language :"en"
+}()
+
+const dao_promise = async function () {
+  const dbconf = (await getSetting()).database
+  console.log("dbconf",dbconf)
+  return new Dao(dbconf.url,dbconf.tables,dbconf.prepares)
+}()
 
 let oc; //階層チャート
 //View///////////////////////////////////////////////////
@@ -34,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
       //各ノードのクリックイベントのハンドリング
       $node.on('click', function () {
         //ノードのID表示用のURLをhistoryに追加して、再描画
-        const type = getParam()["type"] || '0'
+        const type = getParam("type")
         $node.attr('data-q',data.name)
         $node.attr('data-type',type)
         window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${data.name}&type=${type}`)
@@ -51,34 +91,36 @@ document.addEventListener('DOMContentLoaded', function () {
 // ページの読み込み完了イベントのハンドリング
 window.addEventListener('load', async (event) => {
   //初回表示時の描画
-  const id = getParam()["q"] || '3.2'
-  const type = getParam()["type"] || 'TAM'
+  const id = await getParam("q")
+  const type = await getParam("type")
   pageGen(type, id);
 });
 
 // ページ移動 イベントをハンドリング
-window.addEventListener('popstate', (event) => {
+window.addEventListener('popstate', async (event) => {
   //移動先のパラメータで再描画
-  const id = getParam()["q"] || '3.2'
-  const type = getParam()["type"] || 'TAM'
+  const id = await getParam("q")
+  const type = await getParam("type")
   pageGen(type, id);
 });
 
-const pageCache = {}
-
 //ページの描画処理
 let pageGen = async function (table, id) {
+  const dao = await dao_promise
+  const language = await language_promise
+  
+  console.log("language",language)
   let getPageTemplate = async function (table) {
     if(dao.checkTable(table)) throw new Error(table + ' TABLES not exist')
     //table単位でページテンプレートを読み込み
     if (!pageCache[table]) {
-      const response = await (await fetch("./assets/" + table + ".tmp", { method: "get" })).text();
+      const response = await (await fetch("./assets/" + table + "_" + language + ".tmp", { method: "get" })).text();
       pageCache[table] = Handlebars.compile(response);
     }
     return pageCache[table]
   }
 
-  const data = await dao.getData(table, id)
+  const data = await dao.getPageData(table, id)
   const template = await getPageTemplate(table)
   document.getElementById("content_body").innerHTML = template({ data: data })
 
@@ -121,4 +163,10 @@ Handlebars.registerHelper("oc", function(context, options) {
       }
     }).$chartContainer[0]
   return new Handlebars.SafeString(chartContainer.outerHTML)
+});
+
+Handlebars.registerHelper("breaklines", function(text) {
+  text = Handlebars.Utils.escapeExpression(text);
+  text = text.replace(/(\r\n|\n|\r)/gm, "<br />");
+  return new Handlebars.SafeString(text);
 });

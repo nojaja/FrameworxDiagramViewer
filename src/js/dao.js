@@ -1,5 +1,6 @@
 
 import initSqlJs from "sql.js";
+import Handlebars from "handlebars";
 
 /**
  * GB929F_Functional_Framework_Functional_Decomposition_v21.0.0.xlsx
@@ -22,7 +23,7 @@ import initSqlJs from "sql.js";
 
 
 export class Dao {
-    constructor() {
+    constructor(datafile_url,tables,prepares) {
         //SQLiteの設定
         this.config = {
             // Required to load the wasm binary asynchronously. Of course, you can host it wherever you want
@@ -31,7 +32,15 @@ export class Dao {
             //locateFile: filename => `/dist/${filename}`
             locateFile: file => './sql-wasm.wasm'
         }
-        this.TABLES = ['TAM', 'eTOM', 'ODA_Functional_Blocks', 'End_to_End_Business_Flows', 'Open_APIs', 'Legacy_Systems']
+        this.datafile_url = datafile_url || "./assets/Frameworx_DB_Model_21.0.db"
+        this.tables = tables || ['TAM', 'eTOM', 'ODA_Functional_Blocks', 'End_to_End_Business_Flows', 'Open_APIs', 'Legacy_Systems']
+        this.prepares = prepares
+        console.log("Dao constructor",datafile_url,tables,prepares)
+        this.preparesTemplate = {}
+        for (let querName in this.prepares) {
+          console.log('querName:' + querName + ' :' + this.prepares[querName]);
+          this.preparesTemplate[querName] = Handlebars.compile(this.prepares[querName]);
+        }
     }
 
     //SQLiteの読み込み
@@ -39,61 +48,70 @@ export class Dao {
     // ex. await database
     async database () {
         const sqlPromise = initSqlJs(this.config);
-        const dataPromise = fetch("./assets/Frameworx_DB_Model_21.0.db").then(res => res.arrayBuffer());
+        const dataPromise = fetch(this.datafile_url).then(res => res.arrayBuffer());
         const [SQL, buf] = await Promise.all([sqlPromise, dataPromise])
         return new SQL.Database(new Uint8Array(buf));
     }
     
     checkTable (table){
-        return (this.TABLES.indexOf(table) == -1)? true :false
+        return (this.tables.indexOf(table) == -1)? true :false
     }
 
     //ページのデータ取得
-    async getData (table, id) {
+    async getPageData (table, id) {
         if(this.checkTable(table)) throw new Error(table + 'TABLES not exist')
         this.db = this.db || await this.database()
-        // Prepare an sql statement
-        const stmt = this.db.prepare(`SELECT ID as name, NAME as title, DESCRIPTION as overview, MATURITY_LEVEL as maturity, FUNCTION as functionality, PARENT as parent, TYPE as category FROM ${table} WHERE ID=$id`);
+        try {
+            // Prepare an sql statement
+            const stmt = this.db.prepare(this.preparesTemplate.PageData({ table: table }));
 
-        // Bind values to the parameters and fetch the results of the query
-        //const result = stmt.getAsObject({'$id' : id});
-        // Bind new values
-        stmt.bind({ $id: id });
-        let datascource = {}
-        if (stmt.step()) { //primary keyで検索するので結果行は1:0
-            datascource = stmt.getAsObject();
-            datascource.table = table
-            datascource.children = await this.getChildData(table, id) //紐づく子供の取得
-            datascource.relationData = await this.getRelationData(table, id)
+            // Bind values to the parameters and fetch the results of the query
+            //const result = stmt.getAsObject({'$id' : id});
+            // Bind new values
+            stmt.bind({ $id: id });
+            let datascource = {}
+            if (stmt.step()) { //primary keyで検索するので結果行は1:0
+                datascource = stmt.getAsObject();
+                datascource.table = table
+                datascource.children = await this.getChildData(table, id) //紐づく子供の取得
+                datascource.relationData = await this.getRelationData(table, id)
+            }
+            return datascource
+        } catch (error) {
+            console.error("getRelationChildData",this.preparesTemplate.RelationChildData({ totable: totable, ids,ids}),error)
         }
-        return datascource
     }
 
     //ページのに関連する子要素の取得
     async getChildData (table, id) {
         if(this.checkTable(table)) throw new Error(table + 'TABLES not exist')
         this.db = this.db || await this.database()
-        // Prepare an sql statement
-        const stmt = this.db.prepare(`SELECT ID as name, NAME as title FROM ${table} WHERE PARENT=$id`);
+        
+        try {
+            // Prepare an sql statement
+            const stmt = this.db.prepare(this.preparesTemplate.ChildData({ table: table }))
 
-        // Bind values to the parameters and fetch the results of the query
-        //const result = stmt.getAsObject({'$id' : id});
-        // Bind new values
-        stmt.bind({ $id: id });
-        let children = [];
-        while (stmt.step()) { //
-            const ret = stmt.getAsObject()
-            ret.table = table
-            children.push(ret)
+            // Bind values to the parameters and fetch the results of the query
+            //const result = stmt.getAsObject({'$id' : id});
+            // Bind new values
+            stmt.bind({ $id: id });
+            let children = [];
+            while (stmt.step()) { //
+                const ret = stmt.getAsObject()
+                ret.table = table
+                children.push(ret)
+            }
+            return children
+        } catch (error) {
+            console.error("getRelationChildData",this.preparesTemplate.RelationChildData({ totable: totable, ids,ids}),error)
         }
-        return children
     }
 
     //ページのに関連する子要素の取得
     async getRelationData (table, id) {
         if(this.checkTable(table)) throw new Error(table + ' TABLES not exist')
         const result = {}
-        for (const relationTable of this.TABLES) {
+        for (const relationTable of this.tables) {
             if (table == relationTable) continue
             const children = await this.getRelationChildData(table, id, relationTable)
             if (children.length > 0)
@@ -108,31 +126,28 @@ export class Dao {
         if(this.checkTable(totable)) throw new Error(totable + ' TABLES not exist')
         this.db = this.db || await this.database()
 
-        
         const ids = fromid.split('.').map( (currentValue, index, array) => {
             return `'${array.slice(0,index+1).join('.')}'`
          } ).join();
 
-        // Prepare an sql statement
-        const stmt = this.db.prepare(`
-        SELECT ID as name, NAME as title FROM ${totable} WHERE ID IN(
-        SELECT TO_KEY as key FROM MAPPING WHERE TO_TABLE == $totable AND FROM_KEY IN (${ids}) AND FROM_TABLE == $fromtable
-        UNION
-        SELECT FROM_KEY as key FROM MAPPING WHERE FROM_TABLE == $totable AND TO_KEY IN (${ids}) AND TO_TABLE == $fromtable
-        )
-        `);
+        try {
+            // Prepare an sql statement
+            const stmt = this.db.prepare(this.preparesTemplate.RelationChildData({ totable: totable, ids,ids}))
 
-        // Bind values to the parameters and fetch the results of the query
-        //const result = stmt.getAsObject({'$id' : id});
-        // Bind new values
-        stmt.bind({ $fromtable: fromtable, $totable: totable });
-        let children = [];
-        while (stmt.step()) { //
-            const ret = stmt.getAsObject()
-            ret.table = totable
-            children.push(ret)
+            // Bind values to the parameters and fetch the results of the query
+            //const result = stmt.getAsObject({'$id' : id});
+            // Bind new values
+            stmt.bind({ $fromtable: fromtable, $totable: totable });
+            let children = [];
+            while (stmt.step()) { //
+                const ret = stmt.getAsObject()
+                ret.table = totable
+                children.push(ret)
+            }
+            return children
+        } catch (error) {
+            console.error("getRelationChildData",this.preparesTemplate.RelationChildData({ totable: totable, ids,ids}),error)
         }
-        return children
     }
 }
 

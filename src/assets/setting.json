@@ -1,0 +1,25 @@
+{
+    "languages":[
+        "ja"
+    ],
+    "default": {
+        "q": "3.2",
+        "type": "TAM"
+    },
+    "database": {
+        "url": "./assets/Frameworx_DB_Model_21.0.db",
+        "tables": [
+            "TAM",
+            "eTOM",
+            "ODA_Functional_Blocks",
+            "End_to_End_Business_Flows",
+            "Open_APIs",
+            "Legacy_Systems"
+        ],
+        "prepares": {
+            "PageData": "SELECT ID as name, NAME as title, DESCRIPTION as overview, MATURITY_LEVEL as maturity, FUNCTION as functionality, PARENT as parent, TYPE as category FROM {{{table}}} WHERE ID=$id",
+            "ChildData": "SELECT ID as name, NAME as title FROM {{{table}}} WHERE PARENT=$id",
+            "RelationChildData":"SELECT ID as name, NAME as title FROM {{{totable}}} WHERE ID IN(SELECT TO_KEY as key FROM MAPPING WHERE TO_TABLE == $totable AND FROM_KEY IN ({{{ids}}}) AND FROM_TABLE == $fromtable UNION SELECT FROM_KEY as key FROM MAPPING WHERE FROM_TABLE == $totable AND TO_KEY IN ({{{ids}}}) AND TO_TABLE == $fromtable)"
+        }
+    }
+}
