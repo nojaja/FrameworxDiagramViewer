@@ -115,7 +115,7 @@ let pageGen = async function (table, id) {
     if(!dao.tableExists(table)) throw new Error(table + ' TABLES not exist')
     //table単位でページテンプレートを読み込み
     if (!pageCache[table]) {
-      const response = await (await fetch("./assets/" + table + "_" + language + ".tmp", { method: "get" })).text();
+      const response = await (await fetch("./assets/" + dao.getTableInfo(table).tableName + "_" + language + ".tmp", { method: "get" })).text();
       pageCache[table] = Handlebars.compile(response);
     }
     return pageCache[table]
