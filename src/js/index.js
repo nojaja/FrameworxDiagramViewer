@@ -78,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const type = getParam("type")
         $node.attr('data-q',data.name)
         $node.attr('data-type',type)
+        $node.attr('data-domain',data.domain)
         window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${data.name}&type=${type}`)
         pageGen(type, data.name);
       });
@@ -110,7 +111,6 @@ let pageGen = async function (table, id) {
   const dao = await dao_promise
   const language = await language_promise
   
-  console.log("language",language)
   let getPageTemplate = async function (table) {
     if(!dao.tableExists(table)) throw new Error(table + ' TABLES not exist')
     //table単位でページテンプレートを読み込み
@@ -161,6 +161,8 @@ Handlebars.registerHelper("oc", function(context, options) {
     'createNode': function ($node, data) {
         $node.attr('data-id',data.name)
         $node.attr('data-type',data.table)
+        console.log("oc",data)
+        $node.attr('data-domain',data.domain)
       }
     }).$chartContainer[0]
   return new Handlebars.SafeString(chartContainer.outerHTML)

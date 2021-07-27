@@ -22,6 +22,33 @@
   font-weight: 700;
 }
 
+.orgchart .node[data-domain="Market Sales Domain"] .title {
+  background-color: rgb(247,161,162);
+}
+.orgchart .node[data-domain="Customer Domain"] .title {
+  background-color: rgb(246,236,19);
+}
+.orgchart .node[data-domain="Product Domain"] .title {
+  background-color: rgb(255,209,115);
+}
+.orgchart .node[data-domain="Resource Domain"] .title {
+  background-color: rgb(125,196,112);
+}
+.orgchart .node[data-domain="Service Domain"] .title {
+  background-color: rgb(188,230,247);
+}
+.orgchart .node[data-domain="Business Partner Domain"] .title {
+  background-color: rgb(188,188,217);
+}
+.orgchart .node[data-domain="Enterprise Domain"] .title {
+  background-color: rgb(211,211,211);
+}
+.orgchart .node[data-domain="Common Domain"] .title {
+  background-color: rgb(255,153,204);
+}
+.orgchart .node[data-domain="Integration Domain"] .title {
+  background-color: rgb(210,180,140);
+}
 h1 {
   display: block;
   font-size: 2em;
