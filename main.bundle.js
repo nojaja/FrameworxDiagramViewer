@@ -68568,7 +68568,7 @@ let pageGen = async function (table, id) {
     if(!dao.tableExists(table)) throw new Error(table + ' TABLES not exist')
     //table単位でページテンプレートを読み込み
     if (!pageCache[table]) {
-      const response = await (await fetch("./assets/" + table + "_" + language + ".tmp", { method: "get" })).text();
+      const response = await (await fetch("./assets/" + dao.getTableInfo(table).tableName + "_" + language + ".tmp", { method: "get" })).text();
       pageCache[table] = handlebars__WEBPACK_IMPORTED_MODULE_3___default.a.compile(response);
     }
     return pageCache[table]
@@ -68784,4 +68784,4 @@ handlebars__WEBPACK_IMPORTED_MODULE_3___default.a.registerHelper("breaklines", f
 /***/ })
 
 /******/ });
-//# sourceMappingURL=map/main.11307437f9486744822c.js.map
+//# sourceMappingURL=map/main.70b0b3b63161b0fabca6.js.map
