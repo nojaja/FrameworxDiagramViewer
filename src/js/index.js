@@ -161,7 +161,6 @@ Handlebars.registerHelper("oc", function(context, options) {
     'createNode': function ($node, data) {
         $node.attr('data-id',data.name)
         $node.attr('data-type',data.table)
-        console.log("oc",data)
         $node.attr('data-domain',data.domain)
       }
     }).$chartContainer[0]
