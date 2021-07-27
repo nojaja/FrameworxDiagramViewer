@@ -37,7 +37,7 @@ export class Dao {
         this.prepares = prepares
         console.log("Dao constructor",datafile_url,tables,prepares)
         this.preparesTemplate = {}
-        for (let querName in this.prepares) {
+        for (const querName in this.prepares) {
           console.log('querName:' + querName + ' :' + this.prepares[querName]);
           this.preparesTemplate[querName] = Handlebars.compile(this.prepares[querName]);
         }
@@ -53,17 +53,21 @@ export class Dao {
         return new SQL.Database(new Uint8Array(buf));
     }
     
-    checkTable (table){
-        return (this.tables.indexOf(table) == -1)? true :false
+    tableExists (table){
+        if(this.tables[table.toLowerCase()]) return true
+        return false
+    }
+    getTableInfo (table){
+        return (this.tables[table.toLowerCase()]) 
     }
 
     //ページのデータ取得
     async getPageData (table, id) {
-        if(this.checkTable(table)) throw new Error(table + 'TABLES not exist')
+        if(!this.tableExists(table)) throw new Error(this.getTableInfo(table).tableName + ' TABLES not exist')
         this.db = this.db || await this.database()
         try {
             // Prepare an sql statement
-            const stmt = this.db.prepare(this.preparesTemplate.PageData({ table: table }));
+            const stmt = this.db.prepare(this.preparesTemplate.PageData({ table: this.getTableInfo(table).tableName }));
 
             // Bind values to the parameters and fetch the results of the query
             //const result = stmt.getAsObject({'$id' : id});
@@ -78,18 +82,18 @@ export class Dao {
             }
             return datascource
         } catch (error) {
-            console.error("getRelationChildData",this.preparesTemplate.RelationChildData({ totable: totable, ids,ids}),error)
+            console.error("getPageData",this.preparesTemplate.PageData({ table: this.getTableInfo(table).tableName}),error)
         }
     }
 
     //ページのに関連する子要素の取得
     async getChildData (table, id) {
-        if(this.checkTable(table)) throw new Error(table + 'TABLES not exist')
+        if(!this.tableExists(table)) throw new Error(this.getTableInfo(table).tableName + ' TABLES not exist')
         this.db = this.db || await this.database()
         
         try {
             // Prepare an sql statement
-            const stmt = this.db.prepare(this.preparesTemplate.ChildData({ table: table }))
+            const stmt = this.db.prepare(this.preparesTemplate.ChildData({ table: this.getTableInfo(table).tableName }))
 
             // Bind values to the parameters and fetch the results of the query
             //const result = stmt.getAsObject({'$id' : id});
@@ -103,27 +107,27 @@ export class Dao {
             }
             return children
         } catch (error) {
-            console.error("getRelationChildData",this.preparesTemplate.RelationChildData({ totable: totable, ids,ids}),error)
+            console.error("getChildData",this.preparesTemplate.ChildData({ table: this.getTableInfo(table).tableName}),error)
         }
     }
 
     //ページのに関連する子要素の取得
     async getRelationData (table, id) {
-        if(this.checkTable(table)) throw new Error(table + ' TABLES not exist')
+        if(!this.tableExists(table)) throw new Error(this.getTableInfo(table).tableName + ' TABLES not exist')
         const result = {}
-        for (const relationTable of this.tables) {
-            if (table == relationTable) continue
+        for (const relationTable in this.tables) {
+            if (this.getTableInfo(table).tableName == this.getTableInfo(relationTable).tableName) continue
             const children = await this.getRelationChildData(table, id, relationTable)
             if (children.length > 0)
-                result[relationTable] = children
+                result[this.getTableInfo(relationTable).caption] = children
         }
         return result
     }
 
     //ページのに関連する子要素の取得
     async getRelationChildData (fromtable, fromid, totable) {
-        if(this.checkTable(fromtable)) throw new Error(fromtable + ' TABLES not exist')
-        if(this.checkTable(totable)) throw new Error(totable + ' TABLES not exist')
+        if(!this.tableExists(fromtable)) throw new Error(this.getTableInfo(fromtable).tableName + ' TABLES not exist')
+        if(!this.tableExists(totable)) throw new Error(this.getTableInfo(totable).tableName+ ' TABLES not exist')
         this.db = this.db || await this.database()
 
         const ids = fromid.split('.').map( (currentValue, index, array) => {
@@ -132,12 +136,12 @@ export class Dao {
 
         try {
             // Prepare an sql statement
-            const stmt = this.db.prepare(this.preparesTemplate.RelationChildData({ totable: totable, ids,ids}))
+            const stmt = this.db.prepare(this.preparesTemplate.RelationChildData({ totable: this.getTableInfo(totable).tableName, ids,ids}))
 
             // Bind values to the parameters and fetch the results of the query
             //const result = stmt.getAsObject({'$id' : id});
             // Bind new values
-            stmt.bind({ $fromtable: fromtable, $totable: totable });
+            stmt.bind({ $fromtable: this.getTableInfo(fromtable).tableName, $totable: this.getTableInfo(totable).tableName });
             let children = [];
             while (stmt.step()) { //
                 const ret = stmt.getAsObject()
@@ -146,7 +150,7 @@ export class Dao {
             }
             return children
         } catch (error) {
-            console.error("getRelationChildData",this.preparesTemplate.RelationChildData({ totable: totable, ids,ids}),error)
+            console.error("getRelationChildData",this.preparesTemplate.RelationChildData({ totable: this.getTableInfo(totable).tableName, ids,ids}),error)
         }
     }
 }

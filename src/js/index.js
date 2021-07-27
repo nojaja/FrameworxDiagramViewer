@@ -54,7 +54,8 @@ const language_promise = async function(){
 }()
 
 const dao_promise = async function () {
-  const dbconf = (await getSetting()).database
+  const language = await language_promise
+  const dbconf = (await getSetting()).database[language]
   console.log("dbconf",dbconf)
   return new Dao(dbconf.url,dbconf.tables,dbconf.prepares)
 }()
@@ -111,7 +112,7 @@ let pageGen = async function (table, id) {
   
   console.log("language",language)
   let getPageTemplate = async function (table) {
-    if(dao.checkTable(table)) throw new Error(table + ' TABLES not exist')
+    if(!dao.tableExists(table)) throw new Error(table + ' TABLES not exist')
     //table単位でページテンプレートを読み込み
     if (!pageCache[table]) {
       const response = await (await fetch("./assets/" + table + "_" + language + ".tmp", { method: "get" })).text();
