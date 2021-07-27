@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
 window.addEventListener('load', async (event) => {
   //初回表示時の描画
   const id = getParam()["q"] || '3.2'
-  const type = getParam()["type"] || '0'
+  const type = getParam()["type"] || 'TAM'
   pageGen(type, id);
 });
 
@@ -60,7 +60,7 @@ window.addEventListener('load', async (event) => {
 window.addEventListener('popstate', (event) => {
   //移動先のパラメータで再描画
   const id = getParam()["q"] || '3.2'
-  const type = getParam()["type"] || '0'
+  const type = getParam()["type"] || 'TAM'
   pageGen(type, id);
 });
 

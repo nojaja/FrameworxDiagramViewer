@@ -91,7 +91,7 @@ export class Dao {
 
     //ページのに関連する子要素の取得
     async getRelationData (table, id) {
-        if(this.checkTable(table)) throw new Error(table + 'TABLES not exist')
+        if(this.checkTable(table)) throw new Error(table + ' TABLES not exist')
         const result = {}
         for (const relationTable of this.TABLES) {
             if (table == relationTable) continue
@@ -104,8 +104,8 @@ export class Dao {
 
     //ページのに関連する子要素の取得
     async getRelationChildData (fromtable, fromid, totable) {
-        if(this.checkTable(fromtable)) throw new Error(fromtable + 'TABLES not exist')
-        if(this.checkTable(totable)) throw new Error(totable + 'TABLES not exist')
+        if(this.checkTable(fromtable)) throw new Error(fromtable + ' TABLES not exist')
+        if(this.checkTable(totable)) throw new Error(totable + ' TABLES not exist')
         this.db = this.db || await this.database()
 
         
