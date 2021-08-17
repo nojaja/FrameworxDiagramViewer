@@ -2,9 +2,12 @@
 import OrgChart from 'orgchart';
 import 'orgchart/dist/css/jquery.orgchart.min.css'
 import '../css/style.css'
-import Handlebars from "handlebars";
+import _Handlebars from "handlebars";
+import promisedHandlebars from "promised-handlebars";
 import Dao from "./dao.js";
 
+
+const Handlebars = promisedHandlebars(require('handlebars'), { Promise: Promise })
 const pageCache = {}
 
 
@@ -123,7 +126,7 @@ let pageGen = async function (table, id) {
 
   const data = await dao.getPageData(table, id)
   const template = await getPageTemplate(table)
-  document.getElementById("content_body").innerHTML = template({ data: data })
+  document.getElementById("content_body").innerHTML = await template({ data: data })
 
   //リンクイベント作成
   const elementlinks = document.getElementsByClassName("elementlink")
@@ -171,4 +174,10 @@ Handlebars.registerHelper("breaklines", function(text) {
   text = Handlebars.Utils.escapeExpression(text);
   text = text.replace(/(\r\n|\n|\r)/gm, "<br />");
   return new Handlebars.SafeString(text);
+});
+
+Handlebars.registerHelper("svg", async function(svgfilepath) {
+  svgfilepath = Handlebars.Utils.escapeExpression(svgfilepath);
+  const response = await (await fetch("./assets/" + svgfilepath, { method: "get" })).text();
+  return new Handlebars.SafeString(response);
 });
