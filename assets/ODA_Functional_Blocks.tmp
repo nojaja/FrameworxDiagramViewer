@@ -5,6 +5,8 @@
     
     {{#if data.parent}}
     <h4 id="parent">Parent Identifier: <a class="parentlink elementlink" data-id="{{data.parent}}" data-type="{{data.table}}" >{{data.parent}}</a></h4>
+    {{else}}
+    {{svg 'ODA_Functional_Blocks_Overview_ja.drawio.svg'}}
     {{/if}}
 
     {{#oc data}}{{/oc}}
@@ -16,9 +18,21 @@
     <p id="relationData">
     {{#each data.relationData}}
         <b>{{@key}}</b><br />
-        {{#each this}}
-            <a class="parentlink elementlink" data-id="{{this.name}}" data-type="{{this.table}}" >{{this.name}}</a>:{{this.title}}<br />
-        {{/each}}
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th><th>名称</th>
+                </tr>
+            </thead>
+            <tbody>
+            {{#each this}}
+                <tr>
+                    <td><a class="parentlink elementlink" data-id="{{this.name}}" data-type="{{this.table}}" >{{this.name}}</a></td>
+                    <td>{{this.title}}</td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
         <br />
     {{/each}}
     </p>

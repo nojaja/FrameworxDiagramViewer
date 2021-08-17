@@ -20316,7 +20316,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "../node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".orgchart { \n  background-image:none;\n  background: white; \n}\n/* excluding leaf node */\n.orgchart .node:not(:only-child)::after {\n  height: 15px;\n  background-color: rgba(0,0,0,.8);\n}\n/* excluding root node */\n.orgchart > ul > li > ul li > .node::before {\n  height: 15px;\n  background-color: rgba(0,0,0,.8);\n}\n\n.orgchart .hierarchy::before {\n  border-top: 2px solid rgba(0,0,0,.8);\n}\n\n.orgchart .node .title {\n  background-color: rgba(0,0,0,.8);\n}\n\n.orgchart .node .content {\n  height: 50px;\n  width: 130px;\n  word-break: break-word;\n  white-space: break-spaces;\n  vertical-align: middle;\n  display: table-cell;\n  font-size: .75rem;\n  font-weight: 700;\n  border: 1px solid rgba(0,0,0,.8);\n  --background: linear-gradient(to bottom right, #f1f1f1, #afafaf);\n  background-color: #ffffe0;\n  box-shadow: 5px 5px 5px 0 rgb(0 0 0 / 50%);\n}\n\n.orgchart .node[data-domain=\"Market Sales Domain\"] .title {\n  background-color: rgb(247,161,162);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Customer Domain\"] .title {\n  background-color: rgb(246,236,19);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Product Domain\"] .title {\n  background-color: rgb(255,209,115);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Resource Domain\"] .title {\n  background-color: rgb(125,196,112);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Service Domain\"] .title {\n  background-color: rgb(188,230,247);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Business Partner Domain\"] .title {\n  background-color: rgb(188,188,217);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Enterprise Domain\"] .title {\n  background-color: rgb(211,211,211);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Common Domain\"] .title {\n  background-color: rgb(255,153,204);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Integration Domain\"] .title {\n  background-color: rgb(210,180,140);\n  border: 1px solid rgba(0,0,0,.8);\n}\nh1 {\n  display: block;\n  font-size: 2em;\n  margin-block-start: 0.67em;\n  margin-block-end: 0.67em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\nh3 {\n  display: block;\n  font-size: 1.17em;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\np {\n  display: block;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n}\n\n.elementlink {\n  cursor: pointer;\n}\n\n.parentlink {\n  color: navy;\n  text-decoration: underline;\n}\n\n.leftbar {\n  position: absolute;\n  top: 0px;\n  left: 0;\n  width: 20%;\n  height: 100%;\n  background-color: #323232;\n  --padding-top: 5em;\n  z-index: 0;\n}\n\n.leftbaritem {\n  padding-left: 1em;\n  font-size: 90%;\n}\n.leftbar a {\n  text-decoration: none;\n  color: white;\n}\n.content_body {\n  position: absolute;\n  top: 0px;\n  left: 21%;\n  width: 75%;\n  height: 100%;\n}", ""]);
+exports.push([module.i, ".orgchart { \n  background-image:none;\n  background: white; \n}\n/* excluding leaf node */\n.orgchart .node:not(:only-child)::after {\n  height: 15px;\n  background-color: rgba(0,0,0,.8);\n}\n/* excluding root node */\n.orgchart > ul > li > ul li > .node::before {\n  height: 15px;\n  background-color: rgba(0,0,0,.8);\n}\n\n.orgchart .hierarchy::before {\n  border-top: 2px solid rgba(0,0,0,.8);\n}\n\n.orgchart .node .title {\n  background-color: rgba(0,0,0,.8);\n}\n\n.orgchart .node .content {\n  height: 50px;\n  width: 130px;\n  word-break: break-word;\n  white-space: break-spaces;\n  vertical-align: middle;\n  display: table-cell;\n  font-size: .75rem;\n  font-weight: 700;\n  border: 1px solid rgba(0,0,0,.8);\n  --background: linear-gradient(to bottom right, #f1f1f1, #afafaf);\n  background-color: #ffffe0;\n  box-shadow: 5px 5px 5px 0 rgb(0 0 0 / 50%);\n}\n\n.orgchart .node[data-domain=\"Market Sales Domain\"] .title {\n  background-color: rgb(247,161,162);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Customer Domain\"] .title {\n  background-color: rgb(246,236,19);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Product Domain\"] .title {\n  background-color: rgb(255,209,115);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Resource Domain\"] .title {\n  background-color: rgb(125,196,112);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Service Domain\"] .title {\n  background-color: rgb(188,230,247);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Business Partner Domain\"] .title {\n  background-color: rgb(188,188,217);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Enterprise Domain\"] .title {\n  background-color: rgb(211,211,211);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Common Domain\"] .title {\n  background-color: rgb(255,153,204);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Integration Domain\"] .title {\n  background-color: rgb(210,180,140);\n  border: 1px solid rgba(0,0,0,.8);\n}\nh1 {\n  display: block;\n  font-size: 2em;\n  margin-block-start: 0.67em;\n  margin-block-end: 0.67em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\nh3 {\n  display: block;\n  font-size: 1.17em;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\np {\n  display: block;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n}\n\n.elementlink {\n  cursor: pointer;\n}\n\n.parentlink {\n  color: navy;\n  text-decoration: underline;\n}\n\n.leftbar {\n  position: absolute;\n  top: 0px;\n  left: 0;\n  width: 20%;\n  height: 100%;\n  background-color: #323232;\n  --padding-top: 5em;\n  z-index: 0;\n}\n\n.leftbaritem {\n  padding-left: 1em;\n  font-size: 90%;\n}\n.leftbar a {\n  text-decoration: none;\n  color: white;\n}\n.content_body {\n  position: absolute;\n  top: 0px;\n  left: 21%;\n  width: 75%;\n  height: 100%;\n}\n\ntable {\n  border-color: grey;\n  border-collapse: collapse;\n  border-spacing: 0;\n  display: block;\n  margin-bottom: 1rem;\n  overflow: auto;\n}\nthead {\n  display: table-header-group;\n  vertical-align: middle;\n  border-color: inherit;\n}\ntbody {\n  display: table-row-group;\n  vertical-align: middle;\n  border-color: inherit;\n}\ntr {\n  border-top: 1px solid #ccc;\n  display: table-row;\n}\ntr:nth-child(2n) {\n  background-color: #f8f8f8;\n}\nth {\n  border: 1px solid #ddd;\n  padding: 6px 13px;\n  font-weight: 700;\n}\ntd {\n  border: 1px solid #ddd;\n  padding: 6px 13px;\n  display: table-cell;\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -20425,6 +20425,111 @@ function toComment(sourceMap) {
   var data = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(base64);
   return "/*# ".concat(data, " */");
 }
+
+/***/ }),
+
+/***/ "../node_modules/deep-aplus/index.js":
+/*!*******************************************!*\
+  !*** ../node_modules/deep-aplus/index.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/*!
+ * deep-aplus <https://github.com/nknapp/deep-aplus>
+ *
+ * Copyright (c) 2016 Nils Knappmeier.
+ * Released under the MIT license.
+ */
+
+
+
+var isPlainObject = __webpack_require__(/*! lodash.isplainobject */ "../node_modules/lodash.isplainobject/index.js")
+
+module.exports = deepAPlus
+
+/**
+ * Creates a `deep(value)`-function using the provided constructor to
+ * create the resulting promise and promises for intermediate steps.
+ * The `deep` function returns a promise for the resolution of an arbitrary
+ * structure passed as parameter
+ * @param {function} Promise class in which promises are created
+ * @returns {function(*):Promise} a function that returns a promise (of the provided class)
+ *   for a whole object structure
+ * @public
+ * @module
+ */
+
+function deepAPlus (Promise) {
+  function handleArray (arr) {
+    return new Promise(function (resolve, reject) {
+      var counter = arr.length
+      if (arr.length === 0) {
+        return resolve([])
+      }
+      var result = []
+      arr.forEach(function (element, index) {
+        handleAny(element).then(function (value) {
+          result[index] = value
+          counter--
+          if (counter === 0) {
+            resolve(result)
+          }
+        }, function (err) {
+          reject(err)
+        })
+      })
+    })
+  }
+
+  function handleObject (obj) {
+    var keys = Object.keys(obj)
+    var values = keys.map(function (key) {
+      return obj[key]
+    })
+    return handleArray(values).then(function (valueResults) {
+      var result = {}
+      for (var i = 0; i < keys.length; i++) {
+        result[keys[i]] = valueResults[i]
+      }
+      return result
+    })
+  }
+
+  /**
+   * Check if this is something like a promise (taken from the Q-module)
+   * @param {*} obj the object to check for being a promise
+   * @returns {boolean} true, if the object is a promise
+   * @private
+   */
+  function isPromiseAlike (obj) {
+    return obj === Object(obj) && typeof obj.then === 'function'
+  }
+
+  /**
+   * Return a promise for an object, array, or other value, with all internal promises resolved.
+   * @param {*} obj
+   * @returns {Promise<*>}
+   * @private
+   */
+  function handleAny (obj) {
+    if (isPromiseAlike(obj)) {
+      return obj.then(handleAny)
+    } else if (isPlainObject(obj)) {
+      return handleObject(obj)
+    } else if (Object.prototype.toString.call(obj) === '[object Array]') {
+      return handleArray(obj)
+    } else {
+      return new Promise(function (resolve, reject) {
+        return resolve(obj)
+      })
+    }
+  }
+
+  return handleAny
+}
+
 
 /***/ }),
 
@@ -54101,6 +54206,156 @@ return jQuery;
 
 /***/ }),
 
+/***/ "../node_modules/lodash.isplainobject/index.js":
+/*!*****************************************************!*\
+  !*** ../node_modules/lodash.isplainobject/index.js ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/**
+ * lodash (Custom Build) <https://lodash.com/>
+ * Build: `lodash modularize exports="npm" -o ./`
+ * Copyright jQuery Foundation and other contributors <https://jquery.org/>
+ * Released under MIT license <https://lodash.com/license>
+ * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
+ * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
+ */
+
+/** `Object#toString` result references. */
+var objectTag = '[object Object]';
+
+/**
+ * Checks if `value` is a host object in IE < 9.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a host object, else `false`.
+ */
+function isHostObject(value) {
+  // Many host objects are `Object` objects that can coerce to strings
+  // despite having improperly defined `toString` methods.
+  var result = false;
+  if (value != null && typeof value.toString != 'function') {
+    try {
+      result = !!(value + '');
+    } catch (e) {}
+  }
+  return result;
+}
+
+/**
+ * Creates a unary function that invokes `func` with its argument transformed.
+ *
+ * @private
+ * @param {Function} func The function to wrap.
+ * @param {Function} transform The argument transform.
+ * @returns {Function} Returns the new function.
+ */
+function overArg(func, transform) {
+  return function(arg) {
+    return func(transform(arg));
+  };
+}
+
+/** Used for built-in method references. */
+var funcProto = Function.prototype,
+    objectProto = Object.prototype;
+
+/** Used to resolve the decompiled source of functions. */
+var funcToString = funcProto.toString;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/** Used to infer the `Object` constructor. */
+var objectCtorString = funcToString.call(Object);
+
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var objectToString = objectProto.toString;
+
+/** Built-in value references. */
+var getPrototype = overArg(Object.getPrototypeOf, Object);
+
+/**
+ * Checks if `value` is object-like. A value is object-like if it's not `null`
+ * and has a `typeof` result of "object".
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+ * @example
+ *
+ * _.isObjectLike({});
+ * // => true
+ *
+ * _.isObjectLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isObjectLike(_.noop);
+ * // => false
+ *
+ * _.isObjectLike(null);
+ * // => false
+ */
+function isObjectLike(value) {
+  return !!value && typeof value == 'object';
+}
+
+/**
+ * Checks if `value` is a plain object, that is, an object created by the
+ * `Object` constructor or one with a `[[Prototype]]` of `null`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.8.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a plain object, else `false`.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ * }
+ *
+ * _.isPlainObject(new Foo);
+ * // => false
+ *
+ * _.isPlainObject([1, 2, 3]);
+ * // => false
+ *
+ * _.isPlainObject({ 'x': 0, 'y': 0 });
+ * // => true
+ *
+ * _.isPlainObject(Object.create(null));
+ * // => true
+ */
+function isPlainObject(value) {
+  if (!isObjectLike(value) ||
+      objectToString.call(value) != objectTag || isHostObject(value)) {
+    return false;
+  }
+  var proto = getPrototype(value);
+  if (proto === null) {
+    return true;
+  }
+  var Ctor = hasOwnProperty.call(proto, 'constructor') && proto.constructor;
+  return (typeof Ctor == 'function' &&
+    Ctor instanceof Ctor && funcToString.call(Ctor) == objectCtorString);
+}
+
+module.exports = isPlainObject;
+
+
+/***/ }),
+
 /***/ "../node_modules/md5.js/index.js":
 /*!***************************************!*\
   !*** ../node_modules/md5.js/index.js ***!
@@ -59296,6 +59551,474 @@ process.chdir = function (dir) {
     throw new Error('process.chdir is not supported');
 };
 process.umask = function() { return 0; };
+
+
+/***/ }),
+
+/***/ "../node_modules/promised-handlebars/index.js":
+/*!****************************************************!*\
+  !*** ../node_modules/promised-handlebars/index.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(global) {/*!
+ * promised-handlebars <https://github.com/nknapp/promised-handlebars>
+ *
+ * Copyright (c) 2015 Nils Knappmeier.
+ * Released under the MIT license.
+ */
+
+
+
+var deepAplus = __webpack_require__(/*! deep-aplus */ "../node_modules/deep-aplus/index.js")
+var createMarkers = __webpack_require__(/*! ./lib/markers */ "../node_modules/promised-handlebars/lib/markers.js")
+var utils = __webpack_require__(/*! ./lib/utils */ "../node_modules/promised-handlebars/lib/utils.js")
+
+// Basic utility functions
+var values = utils.values
+var wrap = utils.wrap
+var mapValues = utils.mapValues
+var anyApplies = utils.anyApplies
+var isPromiseAlike = utils.isPromiseAlike
+
+module.exports = promisedHandlebars
+
+/**
+ * Returns a new Handlebars instance that
+ * * allows helpers to return promises
+ * * creates `compiled` templates that always
+ *   return a promise for the resulting string.
+ *   The promise is fulfilled after all helper-promsises
+ *   are resolved.
+ *
+ * @param {Handlebars} Handlebars the Handlebars engine to wrap
+ * @param {object=} options optional parameters
+ * @param {string=} options.placeholder the placeholder to be used in the template-output before inserting
+ *   the promised results. This placeholder may not occur in the template or any partial. Neither
+ *   my any helper generate the placeholder in to the result. Errors or wrong replacement will
+ *   happen otherwise.
+ * @param {Promise=} options.Promise the promise implementation to use. Defaults to global.Promise
+ * @returns {Handlebars} a modified Handlebars object
+ */
+function promisedHandlebars (Handlebars, options) {
+  options = options || {}
+  options.placeholder = options.placeholder || '\u0001'
+
+  var Promise = options.Promise || global.Promise
+  if (!Promise) {
+    throw new Error('promised-handlebars: Promise is undefined. Please specify options.Promise or set global.Promise.')
+  }
+
+  var deep = deepAplus(Promise)
+  var Markers = createMarkers(Promise)
+
+  var engine = Handlebars.create()
+  var markers = null
+
+  // Wrap `registerHelper` with a custom function
+  engine.registerHelper = wrap(engine.registerHelper, function registerHelperWrapper (oldRegisterHelper, args) {
+    if (typeof args[0] === 'string' && typeof args[1] === 'function') {
+      var name = args[0]
+      var helper = args[1]
+      // Called like "registerHelper(name, helper)"
+      oldRegisterHelper.call(engine, name, wrap(helper, helperWrapper))
+    } else if (args.length === 1 && typeof args[0] === 'object') {
+      // Called like "registerHelper({ name: helper })
+      oldRegisterHelper.call(engine, mapValues(args[0], function (helper) {
+        return wrap(helper, helperWrapper)
+      }))
+    }
+  })
+  // Re-register all built-in-helpers to ensure that their methods are wrapped
+  engine.registerHelper(engine.helpers)
+
+  // Wrap the `compile` function, so that it wraps the compiled-template
+  // with `prepareAndResolveMarkers`
+  engine.compile = wrap(engine.compile, function compileWrapper (oldCompile, args) {
+    var fn = oldCompile.apply(engine, args)
+    return wrap(fn, prepareAndResolveMarkers)
+    // Wrap the compiled function
+  })
+
+  /**
+   * Wrapper for templates, partials and block-helper callbacks
+   *
+   * 1) the `markers` variable is initialized with a new instance of Markers
+   * 2) a promise is returned instead of a string
+   * 3) promise placeholder-values are replaced with the promise-results
+   *    in the returned promise
+   */
+  function prepareAndResolveMarkers (fn, args) {
+    if (markers) {
+      // The Markers-object has already been created for this cycle of the event loop:
+      // Just run the wraped function
+      return fn.apply(this, args)
+    }
+    try {
+      // No Markers yet. This is the initial call or some call that occured during a promise resolution
+      // Create markers, apply the function and resolve placeholders (i.e. promises) created during the
+      // function execution
+      markers = new Markers(engine, options.placeholder)
+      var resultWithPlaceholders = fn.apply(this, args)
+      return markers.resolve(resultWithPlaceholders)
+    } finally {
+      // Reset promises for the next execution run
+      markers = null
+    }
+  }
+
+  /**
+   * Wrapper for helper methods:
+   * * Call the helper after resolving parameters (if any promises are passed)
+   * * Wrap `options.fn` and `options.inverse` to return promises (if needed)
+   * * Convert helper results markers if they are promises.
+   */
+  function helperWrapper (fn, args) {
+    var _this = this
+    var options = args[args.length - 1]
+    var hash = options.hash
+
+    // "fn" and "inverse" return strings. They must be able to handle promises
+    // just as the compiled template and partials
+    options.fn = options.fn && wrap(options.fn, prepareAndResolveMarkers)
+    options.inverse = options.inverse && wrap(options.inverse, prepareAndResolveMarkers)
+
+    // If there are any promises in the helper args or in the hash,
+    // the evaluation of the helper cannot start before these promises are resolved.
+    var promisesInArgs = anyApplies(args, isPromiseAlike)
+    var promisesInHash = anyApplies(values(hash), isPromiseAlike)
+
+    if (!promisesInArgs && !promisesInHash) {
+      // No promises in hash or args. Act a normal as possible.
+      var result = fn.apply(_this, args)
+      return isPromiseAlike(result) ? markers.asMarker(result) : result
+    }
+
+    var promise = deep(args).then(function (resolvedArgs) {
+      // We need "markers", because we are in a new event-loop-cycle now.
+      return prepareAndResolveMarkers(function () {
+        return fn.apply(_this, resolvedArgs)
+      })
+    })
+    return markers.asMarker(promise)
+  }
+
+  engine.Promise = Promise
+
+  return engine
+}
+
+
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "../node_modules/webpack/buildin/global.js")))
+
+/***/ }),
+
+/***/ "../node_modules/promised-handlebars/lib/markers.js":
+/*!**********************************************************!*\
+  !*** ../node_modules/promised-handlebars/lib/markers.js ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/*!
+ * promised-handlebars <https://github.com/nknapp/promised-handlebars>
+ *
+ * Copyright (c) 2015 Nils Knappmeier.
+ * Released under the MIT license.
+ */
+
+
+
+var isPromiseAlike = __webpack_require__(/*! ./utils */ "../node_modules/promised-handlebars/lib/utils.js").isPromiseAlike
+var createReplaceP = __webpack_require__(/*! ./replaceP */ "../node_modules/promised-handlebars/lib/replaceP.js")
+
+/**
+ * Returns a `Markers` constructor that uses a specific Promise constructor
+ * @param Promise a Promise constructor
+ * @return {Markers} the Markers class
+ */
+module.exports = function createMarkersClass (Promise) {
+  var replaceP = createReplaceP(Promise)
+
+  /**
+   * A class the handles the creation and resolution of markers in the Handlebars output.
+   * Markes are used as placeholders in the output string for promises returned by helpers.
+   * They are replaced as soon as the promises are resolved.
+   * @param {Handlebars} engine a Handlebars instance (needed for the `escapeExpression` function)
+   * @param {string} prefix the prefix to identify placeholders (this prefix should never occur in the template).
+   * @constructor
+   */
+  function Markers (engine, prefix) {
+    /**
+     * This array stores the promises created in the current event-loop cycle
+     * @type {Promise[]}
+     */
+    this.promiseStore = []
+    this.engine = engine
+    this.prefix = prefix
+    // one line from substack's quotemeta-package
+    var placeHolderRegexEscaped = String(this.prefix).replace(/(\W)/g, '\\$1')
+    this.regex = new RegExp(placeHolderRegexEscaped + '(\\d+)(>|&gt;)', 'g')
+  }
+
+  /**
+   * Add a promise the the store and return a placeholder.
+   * A placeholder consists of
+   * * The configured prefix (or \u0001), followed by
+   * * the index in the array
+   * * ">"
+
+   * @param {Promise} promise the promise
+   * @return {Promise} a new promise with a toString-method returning the placeholder
+   */
+  Markers.prototype.asMarker = function asMarker (promise) {
+    // The placeholder: "prefix" for identification, index of promise in the store for retrieval, '>' for escaping
+    var placeholder = this.prefix + this.promiseStore.length + '>'
+    // Create a new promise, don't modify the input
+    var result = Promise.resolve(promise)
+    result.toString = function () {
+      return placeholder
+    }
+    this.promiseStore.push(promise)
+    return result
+  }
+
+  /**
+   * Replace the placeholder found in a string by the resolved promise values.
+   * The input may be Promise, in which case it will be resolved first.
+   * Non-string values are returned directly since they cannot contain placeholders.
+   * String values are search for placeholders, which are then replaced by their resolved values.
+   * If the '>' part of the placeholder has been escaped (i.e. as '&gt;') the resolved value
+   * will be escaped as well.
+   *
+   * @param {Promise<any>} input the string with placeholders
+   * @return {Promise<string>} a promise for the string with resolved placeholders
+   */
+  Markers.prototype.resolve = function resolve (input) {
+    var self = this
+    return Promise.resolve(input).then(function (output) {
+      if (typeof output !== 'string') {
+        // Make sure that non-string values (e.g. numbers) are not converted to a string.
+        return output
+      }
+      return Promise.all(self.promiseStore)
+        .then(function (promiseResults) {
+          /**
+           * Replace placeholders in a string. Looks for placeholders
+           * in the replacement string recursively.
+           * @param {string|Promise|Handlebars.SafeString} string
+           * @returns {Promise<string>}
+           */
+          function replacePlaceholdersRecursivelyIn (string) {
+            if (isPromiseAlike(string)) {
+              return string.then(function (string) {
+                return replacePlaceholdersRecursivelyIn(string)
+              })
+            }
+            if (typeof string.toHTML === 'function' && string.string) {
+              // This is a Handlebars.SafeString or something like it
+              return replacePlaceholdersRecursivelyIn(string.string)
+            }
+
+            // Must be a string, or something that can be converted to a string
+            return replaceP(String(string), self.regex, function (match, index, gt) {
+              // Check whether promise result must be escaped
+              var resolvedValue = promiseResults[ index ]
+              var result = gt === '>' ? resolvedValue : self.engine.escapeExpression(resolvedValue)
+              return replacePlaceholdersRecursivelyIn(result)
+            })
+          }
+
+          // Promises are fulfilled. Insert real values into the result.
+          return replacePlaceholdersRecursivelyIn(output)
+        })
+    })
+  }
+
+  return Markers
+}
+
+
+/***/ }),
+
+/***/ "../node_modules/promised-handlebars/lib/replaceP.js":
+/*!***********************************************************!*\
+  !*** ../node_modules/promised-handlebars/lib/replaceP.js ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/*!
+ * promised-handlebars <https://github.com/nknapp/promised-handlebars>
+ *
+ * Copyright (c) 2015 Nils Knappmeier.
+ * Released under the MIT license.
+ */
+
+
+
+/**
+ * Creates a String.prototype.replace function with support for Promises using a specific Promise constructor.
+ *
+ * @param {function(new:Promise)} Promise a promise constructor
+ * @returns {function(string, RegExp, function)} an equivalent for String.prototype.replace which
+ *  can handle promises
+ */
+module.exports = function createReplaceP (Promise) {
+  var deepAPlus = __webpack_require__(/*! deep-aplus */ "../node_modules/deep-aplus/index.js")(Promise)
+  /**
+   * Similar to String.prototype.replace, but it returns a promise instead of a string
+   * and it can handle promises returned by the replacer
+   *
+   * @param {string} string the source string
+   * @param {RegExp} regex the part/pattern to be replaced
+   * @param {function(string, string..., number, string):(Promise<string>|string)|string} replacer the replacement function or string
+   * @return {Promise<string>} a promise the resolves to the replaced string
+   */
+  return function replaceP (string, regex, replacer) {
+    if (typeof replacer === 'string') {
+      return Promise.resolve(string.replace(regex, replacer))
+    }
+    if (typeof replacer === 'function') {
+      var parts = []
+      var lastIndex = 0
+
+      // Use "replace" just to iterate all matches conveniently
+      string.replace(regex, function () {
+        var replacerArgs = Array.prototype.slice.apply(arguments)
+        var offset = replacerArgs[replacerArgs.length - 2] // prior to last argument is the offset
+
+        // From last match (or start) up to next match
+        parts.push(string.substr(lastIndex, offset - lastIndex))
+
+        var replacementP = deepAPlus(replacer.apply(this, replacerArgs))
+          .then(function (replacement) {
+            return String(replacement)
+          })
+
+        // Next match
+        parts.push(replacementP)
+
+        // Prepare next iteration (switch to first character after match)
+        lastIndex = offset + replacerArgs[0].length
+      })
+
+      // Last match up to end
+      parts.push(string.substr(lastIndex))
+
+      return Promise.all(parts).then(function (resolvedParts) {
+        return resolvedParts.join('')
+      })
+    }
+  }
+}
+
+
+/***/ }),
+
+/***/ "../node_modules/promised-handlebars/lib/utils.js":
+/*!********************************************************!*\
+  !*** ../node_modules/promised-handlebars/lib/utils.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/*!
+ * promised-handlebars <https://github.com/nknapp/promised-handlebars>
+ *
+ * Copyright (c) 2015 Nils Knappmeier.
+ * Released under the MIT license.
+ */
+
+
+
+module.exports = {
+  wrap: wrap,
+  mapValues: mapValues,
+  values: values,
+  anyApplies: anyApplies,
+  toArray: toArray,
+  isPromiseAlike: isPromiseAlike
+}
+
+/**
+ * Wrap a function with a wrapper function
+ * @param {function} fn the original function
+ * @param {function(function,array)} wrapperFunction the wrapper-function
+ *   receiving `fn` as first parameter and the arguments as second
+ * @returns {function} a function that calls the wrapper with
+ *   the original function and the arguments
+ */
+function wrap (fn, wrapperFunction) {
+  return function () {
+    return wrapperFunction.call(this, fn, toArray(arguments))
+  }
+}
+
+/**
+ * Apply the mapFn to all values of the object and return a new object with the applied values
+ * @param obj the input object
+ * @param {function(any, string, object): any} mapFn the map function (receives the value, the key and the whole object as parameter)
+ * @returns {object} an object with the same keys as the input object
+ */
+function mapValues (obj, mapFn) {
+  return Object.keys(obj).reduce(function (result, key) {
+    result[key] = mapFn(obj[key], key, obj)
+    return result
+  }, {})
+}
+
+/**
+ * Return the values of the object
+ * @param {object} obj an object
+ * @returns {Array} the values of the object
+ */
+function values (obj) {
+  return Object.keys(obj).map(function (key) {
+    return obj[key]
+  })
+}
+
+/**
+ * Check if the predicate is true for any element of the array
+ * @param {Array} array
+ * @param {function(any):boolean} predicate
+ * @returns {boolean}
+ */
+function anyApplies (array, predicate) {
+  for (var i = 0; i < array.length; i++) {
+    if (predicate(array[i])) {
+      return true
+    }
+  }
+  return false
+}
+
+/**
+ * Convert arrayLike-objects (like 'arguments') to an array
+ * @param arrayLike
+ * @returns {Array.<T>}
+ */
+function toArray (arrayLike) {
+  return Array.prototype.slice.call(arrayLike)
+}
+
+/**
+ * Test an object to see if it is a Promise
+ * @param   {Object}  obj The object to test
+ * @returns {Boolean}     Whether it's a PromiseA like object
+ */
+function isPromiseAlike (obj) {
+  if (obj == null) {
+    return false
+  }
+  return (typeof obj === 'object') && (typeof obj.then === 'function')
+}
 
 
 /***/ }),
@@ -68450,7 +69173,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _css_style_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_css_style_css__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var handlebars__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! handlebars */ "../node_modules/handlebars/dist/cjs/handlebars.js");
 /* harmony import */ var handlebars__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(handlebars__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _dao_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./dao.js */ "./js/dao.js");
+/* harmony import */ var promised_handlebars__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! promised-handlebars */ "../node_modules/promised-handlebars/index.js");
+/* harmony import */ var promised_handlebars__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(promised_handlebars__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _dao_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./dao.js */ "./js/dao.js");
 
 
 
@@ -68458,6 +69183,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+const Handlebars = promised_handlebars__WEBPACK_IMPORTED_MODULE_4___default()(__webpack_require__(/*! handlebars */ "../node_modules/handlebars/dist/cjs/handlebars.js"), { Promise: Promise })
 const pageCache = {}
 
 
@@ -68510,7 +69238,7 @@ const dao_promise = async function () {
   const language = await language_promise
   const dbconf = (await getSetting()).database[language]
   console.log("dbconf",dbconf)
-  return new _dao_js__WEBPACK_IMPORTED_MODULE_4__["default"](dbconf.url,dbconf.tables,dbconf.prepares)
+  return new _dao_js__WEBPACK_IMPORTED_MODULE_5__["default"](dbconf.url,dbconf.tables,dbconf.prepares)
 }()
 
 let oc; //階層チャート
@@ -68569,14 +69297,14 @@ let pageGen = async function (table, id) {
     //table単位でページテンプレートを読み込み
     if (!pageCache[table]) {
       const response = await (await fetch("./assets/" + dao.getTableInfo(table).tableName + "_" + language + ".tmp", { method: "get" })).text();
-      pageCache[table] = handlebars__WEBPACK_IMPORTED_MODULE_3___default.a.compile(response);
+      pageCache[table] = Handlebars.compile(response);
     }
     return pageCache[table]
   }
 
   const data = await dao.getPageData(table, id)
   const template = await getPageTemplate(table)
-  document.getElementById("content_body").innerHTML = template({ data: data })
+  document.getElementById("content_body").innerHTML = await template({ data: data })
 
   //リンクイベント作成
   const elementlinks = document.getElementsByClassName("elementlink")
@@ -68608,7 +69336,7 @@ let pageGen = async function (table, id) {
   }
 }
 
-handlebars__WEBPACK_IMPORTED_MODULE_3___default.a.registerHelper("oc", function(context, options) {
+Handlebars.registerHelper("oc", function(context, options) {
   const chartContainer = oc.init({ 
     'data': context ,
     'createNode': function ($node, data) {
@@ -68617,13 +69345,19 @@ handlebars__WEBPACK_IMPORTED_MODULE_3___default.a.registerHelper("oc", function(
         $node.attr('data-domain',data.domain)
       }
     }).$chartContainer[0]
-  return new handlebars__WEBPACK_IMPORTED_MODULE_3___default.a.SafeString(chartContainer.outerHTML)
+  return new Handlebars.SafeString(chartContainer.outerHTML)
 });
 
-handlebars__WEBPACK_IMPORTED_MODULE_3___default.a.registerHelper("breaklines", function(text) {
-  text = handlebars__WEBPACK_IMPORTED_MODULE_3___default.a.Utils.escapeExpression(text);
+Handlebars.registerHelper("breaklines", function(text) {
+  text = Handlebars.Utils.escapeExpression(text);
   text = text.replace(/(\r\n|\n|\r)/gm, "<br />");
-  return new handlebars__WEBPACK_IMPORTED_MODULE_3___default.a.SafeString(text);
+  return new Handlebars.SafeString(text);
+});
+
+Handlebars.registerHelper("svg", async function(svgfilepath) {
+  svgfilepath = Handlebars.Utils.escapeExpression(svgfilepath);
+  const response = await (await fetch("./assets/" + svgfilepath, { method: "get" })).text();
+  return new Handlebars.SafeString(response);
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "../node_modules/jquery/dist/jquery.js")))
 
@@ -68784,4 +69518,4 @@ handlebars__WEBPACK_IMPORTED_MODULE_3___default.a.registerHelper("breaklines", f
 /***/ })
 
 /******/ });
-//# sourceMappingURL=map/main.59eaf8c663a2bb9b5fa2.js.map
+//# sourceMappingURL=map/main.25596d957175514649c2.js.map

@@ -137,3 +137,39 @@ p {
   width: 75%;
   height: 100%;
 }
+
+table {
+  border-color: grey;
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: block;
+  margin-bottom: 1rem;
+  overflow: auto;
+}
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+tr {
+  border-top: 1px solid #ccc;
+  display: table-row;
+}
+tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+th {
+  border: 1px solid #ddd;
+  padding: 6px 13px;
+  font-weight: 700;
+}
+td {
+  border: 1px solid #ddd;
+  padding: 6px 13px;
+  display: table-cell;
+}

@@ -1,27 +1,29 @@
-<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1131px" height="341px" viewBox="-0.5 -0.5 1131 341" content="&lt;mxfile&gt;&lt;diagram id=&quot;KcuXynSdZvINTarW33k4&quot; name=&quot;ページ1&quot;&gt;7ZpLk6M2EIB/DcdM8QYfB2w2OWxla3zIWWM0WFmQiBB+5NdHAmELBDOzu+BJrddU+dGtZ3/djeiy4cTF6RMF5f4zSWFu2GZ6Mpy1YduW6Tj8Q0jOrcT3vFaQUZTKRlfBFv0Lu55SWqMUVr2GjJCcobIv3BGM4Y71ZIBScuw3eyF5f9YSZFATbHcg16V/oZTtW2loB1f57xBl+25my1+1mgJ0jeVOqj1IyVERORvDiSkhrP1WnGKYC+N1dmn7JRPay8IoxOw9Hey2wwHktdybYfs57xq9ED6CMGFOaKPx/6nFqiLDdszmpYrMip2ldTqhGOC3qmH3yBtYXnlSe/iZ+LSsB66LSVEQbIi1tpM/067BmhQA4U7ON9Kuq1VKG16mtimpcQrF3iyuPu4Rg9sS7IT2yF2Ry/asyKUa0J10LZf/OkDKEEf8mKMMcxkjovkLyvP4YgInSVarOJabk50t77IS1e4ShRgWnhSR5PAJkgIyeuZNjlcXsjq/2Cvu47hSCKTbZpe+V7L8i4Q7Dtq5LeiG8ID1llHAYHZuopW/PUGQIgyramG65jTdAcUB7bWXuIn7g3Q7rSMhKrRtb4S27c9A2/142n+WkONGBN8C7xDk+4I52gRJNA9eJ9Tx+mPBPAte76Oztimy9h84g1nLWM3b3zvo/yvTr+3IDefO9JcDkKV7y3Kp35/0lqoE+F3ArDFgSj7/DDA/8xSwAdbxa0e/Gb/Xc/nGFJdsp8hlUHBbMEq+QkVjPYprJuIdx3OX+XX+zli2cGbgH0zyT9Hh+/H3nUhP+r37OygEI/xclUpPzUeGhz+lYbPUvnSW1ffHbZfZvvOu27osCWWvL2MovWtHt8M3Hd02l3L0cKFEl9S5MPKv9DZF3V29nd5Gz7pzUF/dLr09VlVNAeYYfzSD3bW7+N4Hukt39Jo9S0TcxAhnbRVjcCN5ggeI+XS/Tkpv+UZove0b4Uy+QZ7/FtVB28zBM8zlifuhgUS/Qq5ItiCH1YCa2T2o2KpXqbuSHrcMwwKlqRhWx/guXJhgqDNPAg7Qnums6/QJBjrBMBh71vl2gPynZDgR63rVy3swrmVGNe7iumJ8QjpF+5XMfqvwXQa9v4m5nRZBb408587FXoetF73cKdhfKEnrJvTvi3WytoKlWLvLxbnOWq+A+VOst5Ae0G547/3pWQfr2A3MhViPVDuXY63Xr4Ip1k+wIjW9P9hRvPGTYBnYl2C7CWy9WBU+TNWPVGRRXclak/kFUIabG/nPjz2K16uFsPu3xK6XblZTMb7BDNKSogreAeF1cy1D2DGXy+L85/VPDI1O+SuIs/kP&lt;/diagram&gt;&lt;/mxfile&gt;">
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1131px" height="341px" viewBox="-0.5 -0.5 1131 341" content="&lt;mxfile&gt;&lt;diagram id=&quot;KcuXynSdZvINTarW33k4&quot; name=&quot;ページ1&quot;&gt;7Zpbk6I4FMc/jY9rAUHAR0GZ3YeumWpna5/TkkamIWFC8LKffgIEDTfpsUHHmpEqLycnITn/X3ISyglwosMnCuPtE/FQONEU7zABy4mmqQoA/COzHAvLzBQGnwaecDob1sH/qKwprGngoaTiyAgJWRBXjRuCMdqwig1SSvZVt1cSVu8aQx81DOsNDJvW/wKPbQurpZln+98o8LflnVVjXpREsHQWI0m20CN7yQRWE+BQQljxLTo4KMyCV8alqOd2lJ46RhFmLRX+TRD9/PIti4mmhPCF65I7TTQj5P72K8Esj1tIaF5ifE+zrtgTDSj5SzYpCTuKkJTGrIG/klywBXdQZ/FBrmH42aeqTnmZQ6KI4EnWweLmL7R0WJIIBri0894X/SoKiyGGAX4r+j7NR+d+579UPn4DRjH3Ysc469nXxVPhX0ZIOwX5FLzzKDRKUuyhzFXlbey3AUPrGG6y0j1Hmdu2LApFMaQbgabOf+0QZQFHZBEGPuY2RjL31yAMnVM0gevO544j4iQqq7PToGTdhJRZs+ggmUTfPyESIUaP3GV/RlAtudpK+AFdGKHA3j/VPZPBv4iAlD8lVtphE3N2B8MU3QCjnJ8aSWtGIUP+MV8A+Nszgl6AUZJcZOfjgivdgteErQGwnLm6q39Q8LIUCF0lALRZCwCa8fMANNTW76/25xhxuQOCbyFvXcj3zW97Zbr2MPICqymv0Ta/r5H3F0kESpYI/sE+8gth5VRwbaNXJw+lN3nM7po8lpqtW0Mnj9OeTG3SdtNsYnSuL0kM8btwUNtwkFLEE8R8ZxahHIeSjqL1YdePC5JeTg8rJbuEn2QXU47HglHyhqQSdZFdA0FQSnssk0kTCdC2AIEB8ovZqb8X7K6XvwpRM49UtgzF7McvSSzVbDBS361KjnlXq9ZBel9tt+hm8c6rrtM4JpRd7kbd+luDrlm9oGvKWKBbIy10bhpmQf6zvHWprs/7l7fW7fMQqs9vt7wtkiSlEHMZP7qC/da4GLM74lLuxgZfJWwe4gD7xWOXWiJ5RjuE+e3+7JT62LDUfjasgdggLcc0MM1Fom+IF7hrGKKkpppSHoM6zzug97ijykEY9bwTBZ6XNdtU/V3qYoJRExHX5HprA22NQVVwsym4Zbadlq46LBHpoNR1Up9NJ+dHp/LUdNKE8ZvQLiAuLP7NGd5KzqyfHPDY5Bgrhw9hFHLUloP2gOjUz9ld+Ohd+HyhxEtz75Ho0fvp0R+bHnepmmPRo4+68LyXHqOLnjWiu2BT30IMSI/RT8/NntKNQo/trAzXHImelkfKd6DH7KLnGSUkpWPiY/bjYzw0PubS0U1lHHzE1Lo3Pta061GdDIGdJuKxnvIFUobzDdFwIFn9IJkPDZLt2M5yPhJIxi8B0rxrHVphhmhMgwQNysy8nxnroZlZ5tc4zADlprmLm87/wsndpf8ygdUP&lt;/diagram&gt;&lt;/mxfile&gt;">
     <defs/>
     <g>
-        <rect x="0" y="0" width="120" height="340" rx="4.8" ry="4.8" fill="#ff99cc" stroke="#000000" pointer-events="all"/>
-        <g transform="translate(-0.5 -0.5)">
-            <switch>
-                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 7px; margin-left: 1px;">
-                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
-                            <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
-                                <font color="#000000" style="font-size: 15px">
-                                    11. Common
-                                    <br/>
-                                    Domain
-                                </font>
+        <a xlink:href="./?q=11&amp;type=TAM">
+            <rect x="0" y="0" width="120" height="340" rx="4.8" ry="4.8" fill="#ff99cc" stroke="#000000" pointer-events="all"/>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 7px; margin-left: 1px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                    <font color="#000000" style="font-size: 15px">
+                                        11. Common
+                                        <br/>
+                                        Domain
+                                    </font>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </foreignObject>
-                <text x="60" y="22" fill="#000000" font-family="Helvetica" font-size="15px" text-anchor="middle">
-                    11. Common...
-                </text>
-            </switch>
-        </g>
+                    </foreignObject>
+                    <text x="60" y="22" fill="#000000" font-family="Helvetica" font-size="15px" text-anchor="middle">
+                        11. Common...
+                    </text>
+                </switch>
+            </g>
+        </a>
         <rect x="130" y="0" width="250" height="260" fill="#d5f4f4" stroke="#000000" pointer-events="all"/>
         <g transform="translate(-0.5 -0.5)">
             <switch>
@@ -60,27 +62,29 @@
                 </text>
             </switch>
         </g>
-        <rect x="1010" y="0" width="120" height="340" rx="4.8" ry="4.8" fill="#d2b48c" stroke="#000000" pointer-events="all"/>
-        <g transform="translate(-0.5 -0.5)">
-            <switch>
-                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 7px; margin-left: 1011px;">
-                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
-                            <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
-                                <font color="#000000" style="font-size: 15px">
-                                    10. Ingegration
-                                    <br style="font-size: 15px"/>
-                                    Domain
-                                </font>
+        <a xlink:href="./?q=10&amp;type=TAM">
+            <rect x="1010" y="0" width="120" height="340" rx="4.8" ry="4.8" fill="#d2b48c" stroke="#000000" pointer-events="all"/>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 7px; margin-left: 1011px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                    <font color="#000000" style="font-size: 15px">
+                                        10. Ingegration
+                                        <br style="font-size: 15px"/>
+                                        Domain
+                                    </font>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </foreignObject>
-                <text x="1070" y="22" fill="#000000" font-family="Helvetica" font-size="15px" text-anchor="middle">
-                    10. Ingegration...
-                </text>
-            </switch>
-        </g>
+                    </foreignObject>
+                    <text x="1070" y="22" fill="#000000" font-family="Helvetica" font-size="15px" text-anchor="middle">
+                        10. Ingegration...
+                    </text>
+                </switch>
+            </g>
+        </a>
         <rect x="140" y="25" width="130" height="230" rx="5.2" ry="5.2" fill="#e0e0e0" stroke="#1a1a1a" pointer-events="all"/>
         <g transform="translate(-0.5 -0.5)">
             <switch>
@@ -187,149 +191,163 @@
                 </text>
             </switch>
         </g>
-        <rect x="130" y="75" width="870" height="30" rx="1.2" ry="1.2" fill="#f7a1a2" stroke="none" pointer-events="all"/>
-        <g transform="translate(-0.5 -0.5)">
-            <switch>
-                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 868px; height: 1px; padding-top: 90px; margin-left: 131px;">
-                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
-                            <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
-                                3. Market/Sales Management Domain
+        <a xlink:href="./?q=3&amp;type=TAM">
+            <rect x="130" y="75" width="870" height="30" rx="1.2" ry="1.2" fill="#f7a1a2" stroke="none" pointer-events="all"/>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 868px; height: 1px; padding-top: 90px; margin-left: 131px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                    3. Market/Sales Management Domain
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </foreignObject>
-                <text x="565" y="95" fill="#000000" font-family="Helvetica" font-size="15px" text-anchor="middle">
-                    3. Market/Sales Management Domain
-                </text>
-            </switch>
-        </g>
-        <rect x="130" y="110" width="870" height="30" rx="1.2" ry="1.2" fill="#f6ec13" stroke="none" pointer-events="all"/>
-        <g transform="translate(-0.5 -0.5)">
-            <switch>
-                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 868px; height: 1px; padding-top: 125px; margin-left: 131px;">
-                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
-                            <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
-                                5.
-                                <span>
-                                    Customer Management Domain
-                                    <br/>
-                                </span>
+                    </foreignObject>
+                    <text x="565" y="95" fill="#000000" font-family="Helvetica" font-size="15px" text-anchor="middle">
+                        3. Market/Sales Management Domain
+                    </text>
+                </switch>
+            </g>
+        </a>
+        <a xlink:href="./?q=5&amp;type=TAM">
+            <rect x="130" y="110" width="870" height="30" rx="1.2" ry="1.2" fill="#f6ec13" stroke="none" pointer-events="all"/>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 868px; height: 1px; padding-top: 125px; margin-left: 131px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                    5.
+                                    <span>
+                                        Customer Management Domain
+                                        <br/>
+                                    </span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </foreignObject>
-                <text x="565" y="130" fill="#000000" font-family="Helvetica" font-size="15px" text-anchor="middle">
-                    5. Customer Management Domain&#xa;
-                </text>
-            </switch>
-        </g>
-        <rect x="130" y="145" width="870" height="30" rx="1.2" ry="1.2" fill="#ffd173" stroke="none" pointer-events="all"/>
-        <g transform="translate(-0.5 -0.5)">
-            <switch>
-                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 868px; height: 1px; padding-top: 160px; margin-left: 131px;">
-                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
-                            <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
-                                4.
-                                <span>
-                                    Product Management Domain
-                                    <br/>
-                                </span>
+                    </foreignObject>
+                    <text x="565" y="130" fill="#000000" font-family="Helvetica" font-size="15px" text-anchor="middle">
+                        5. Customer Management Domain&#xa;
+                    </text>
+                </switch>
+            </g>
+        </a>
+        <a xlink:href="./?q=4&amp;type=TAM">
+            <rect x="130" y="145" width="870" height="30" rx="1.2" ry="1.2" fill="#ffd173" stroke="none" pointer-events="all"/>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 868px; height: 1px; padding-top: 160px; margin-left: 131px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                    4.
+                                    <span>
+                                        Product Management Domain
+                                        <br/>
+                                    </span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </foreignObject>
-                <text x="565" y="165" fill="#000000" font-family="Helvetica" font-size="15px" text-anchor="middle">
-                    4. Product Management Domain&#xa;
-                </text>
-            </switch>
-        </g>
-        <rect x="130" y="180" width="870" height="30" rx="1.2" ry="1.2" fill="#7dc470" stroke="none" pointer-events="all"/>
-        <g transform="translate(-0.5 -0.5)">
-            <switch>
-                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 868px; height: 1px; padding-top: 195px; margin-left: 131px;">
-                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
-                            <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
-                                6.
-                                <span>
-                                    Service Management Domain
-                                    <br/>
-                                </span>
+                    </foreignObject>
+                    <text x="565" y="165" fill="#000000" font-family="Helvetica" font-size="15px" text-anchor="middle">
+                        4. Product Management Domain&#xa;
+                    </text>
+                </switch>
+            </g>
+        </a>
+        <a xlink:href="./?q=6&amp;type=TAM">
+            <rect x="130" y="180" width="870" height="30" rx="1.2" ry="1.2" fill="#bce6f7" stroke="none" pointer-events="all"/>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 868px; height: 1px; padding-top: 195px; margin-left: 131px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                    6.
+                                    <span>
+                                        Service Management Domain
+                                        <br/>
+                                    </span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </foreignObject>
-                <text x="565" y="200" fill="#000000" font-family="Helvetica" font-size="15px" text-anchor="middle">
-                    6. Service Management Domain&#xa;
-                </text>
-            </switch>
-        </g>
-        <rect x="130" y="215" width="870" height="30" rx="1.2" ry="1.2" fill="#bce6f7" stroke="none" pointer-events="all"/>
-        <g transform="translate(-0.5 -0.5)">
-            <switch>
-                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 868px; height: 1px; padding-top: 230px; margin-left: 131px;">
-                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
-                            <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
-                                7.
-                                <span>
-                                    Resource Management Domain
-                                    <br/>
-                                </span>
+                    </foreignObject>
+                    <text x="565" y="200" fill="#000000" font-family="Helvetica" font-size="15px" text-anchor="middle">
+                        6. Service Management Domain&#xa;
+                    </text>
+                </switch>
+            </g>
+        </a>
+        <a xlink:href="./?q=7&amp;type=TAM">
+            <rect x="130" y="215" width="870" height="30" rx="1.2" ry="1.2" fill="#7dc470" stroke="none" pointer-events="all"/>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 868px; height: 1px; padding-top: 230px; margin-left: 131px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                    7.
+                                    <span>
+                                        Resource Management Domain
+                                        <br/>
+                                    </span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </foreignObject>
-                <text x="565" y="235" fill="#000000" font-family="Helvetica" font-size="15px" text-anchor="middle">
-                    7. Resource Management Domain&#xa;
-                </text>
-            </switch>
-        </g>
-        <rect x="130" y="265" width="870" height="30" rx="1.2" ry="1.2" fill="#bcbcd9" stroke="none" pointer-events="all"/>
-        <g transform="translate(-0.5 -0.5)">
-            <switch>
-                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 868px; height: 1px; padding-top: 280px; margin-left: 131px;">
-                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
-                            <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
-                                8.
-                                <span>
-                                    Business Partner Domain
-                                    <br/>
-                                </span>
+                    </foreignObject>
+                    <text x="565" y="235" fill="#000000" font-family="Helvetica" font-size="15px" text-anchor="middle">
+                        7. Resource Management Domain&#xa;
+                    </text>
+                </switch>
+            </g>
+        </a>
+        <a xlink:href="./?q=8&amp;type=TAM">
+            <rect x="130" y="265" width="870" height="30" rx="1.2" ry="1.2" fill="#bcbcd9" stroke="none" pointer-events="all"/>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 868px; height: 1px; padding-top: 280px; margin-left: 131px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                    8.
+                                    <span>
+                                        Business Partner Domain
+                                        <br/>
+                                    </span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </foreignObject>
-                <text x="565" y="285" fill="#000000" font-family="Helvetica" font-size="15px" text-anchor="middle">
-                    8. Business Partner Domain&#xa;
-                </text>
-            </switch>
-        </g>
-        <rect x="130" y="300" width="870" height="30" rx="1.2" ry="1.2" fill="#d3d3d3" stroke="none" pointer-events="all"/>
-        <g transform="translate(-0.5 -0.5)">
-            <switch>
-                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
-                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 868px; height: 1px; padding-top: 315px; margin-left: 131px;">
-                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
-                            <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
-                                9.
-                                <span>
-                                    Enterprise Domain
-                                    <br/>
-                                </span>
+                    </foreignObject>
+                    <text x="565" y="285" fill="#000000" font-family="Helvetica" font-size="15px" text-anchor="middle">
+                        8. Business Partner Domain&#xa;
+                    </text>
+                </switch>
+            </g>
+        </a>
+        <a xlink:href="./?q=9&amp;type=TAM">
+            <rect x="130" y="300" width="870" height="30" rx="1.2" ry="1.2" fill="#d3d3d3" stroke="none" pointer-events="all"/>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 868px; height: 1px; padding-top: 315px; margin-left: 131px;">
+                            <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                                <div style="display: inline-block; font-size: 15px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                    9.
+                                    <span>
+                                        Enterprise Domain
+                                        <br/>
+                                    </span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </foreignObject>
-                <text x="565" y="320" fill="#000000" font-family="Helvetica" font-size="15px" text-anchor="middle">
-                    9. Enterprise Domain&#xa;
-                </text>
-            </switch>
-        </g>
+                    </foreignObject>
+                    <text x="565" y="320" fill="#000000" font-family="Helvetica" font-size="15px" text-anchor="middle">
+                        9. Enterprise Domain&#xa;
+                    </text>
+                </switch>
+            </g>
+        </a>
     </g>
     <switch>
         <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>

@@ -33,7 +33,7 @@
                 "end_to_end_business_flows":{"tableName":"End_to_End_Business_Flows","caption":"End to End Business Flows"},
                 "open_apis":{"tableName":"Open_APIs","caption":"Open APIs"},
                 "legacy_systems":{"tableName":"Legacy_Systems","caption":"現行システム"},
-                "functions":{"tableName":"Functions","caption":"機能性"}
+                "functions":{"tableName":"Functions","caption":"所有機能"}
             },
             "prepares": {
                 "PageData": "SELECT ID as name, NAME as title, DESCRIPTION as overview, MATURITY_LEVEL as maturity, FUNCTION as functionality, PARENT as parent, TYPE as category, DOMAIN as domain FROM {{{table}}} WHERE ID=$id",
