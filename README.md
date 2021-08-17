@@ -36,7 +36,8 @@ CREATE TABLE Open_APIs (ID PRIMARY KEY, LEVEL integer, PARENT , NAME , TYPE , FU
 CREATE TABLE Legacy_Systems (ID PRIMARY KEY, LEVEL integer, PARENT , NAME , TYPE , FUNCID , CATEGORY , DESCRIPTION , FUNCTION , MATURITY_LEVEL , DEV_OWNER , OPE_OWNER , SYSTEM_OWNER , SYSTEM_DOCUMENT );
 ```
 
-3. insert Data
+3. insert Data  
+
 [GB929F_Application_Framework_Functional_Decomposition_v21.0](https://docs.google.com/spreadsheets/d/1cp_RM2HgvJQa1mxKcuwfQjgU51xM05jYYSMKmw8WZmc/edit?usp=sharing)  
 [GB921_Business_Process_Framework_Processes_v21.0](https://docs.google.com/spreadsheets/d/1tONFHSG063GqTjbpQe-8XtLZh-zazxqr3T9b1gTPMUU/edit?usp=sharing)  
 [GB921E_End_to_End_Business_Flows_v20.0.1](https://docs.google.com/spreadsheets/d/1Bf-ZWoKFnIdlczZ6U0uIjGth8E-Krb2_0gB9skkMs3w/edit?usp=sharing)  
@@ -45,12 +46,16 @@ CREATE TABLE Legacy_Systems (ID PRIMARY KEY, LEVEL integer, PARENT , NAME , TYPE
 [Legacy_Systems](https://docs.google.com/spreadsheets/d/1P4WQxQnO-gbPkVZ2d85T9I0dClw9Lm3rQ_cvSmyYz88/edit?usp=sharing)  
 [mapping](https://docs.google.com/spreadsheets/d/1Qr4PD75e1VRMx_4Lk09ibswxMdJakM-TKNvpWBcHNtI/edit?usp=sharing)  
 
-4. start
+4. Migration Data
+if Old→New version
+ [Migration sql](https://docs.google.com/spreadsheets/d/1P4WQxQnO-gbPkVZ2d85T9I0dClw9Lm3rQ_cvSmyYz88/edit#gid=736809744)
+ 
+5. start
 ```sh
 $ npm start
 ```
 
-5. open browser
+6. open browser
 ```
 http://localhost:8080
 ```
