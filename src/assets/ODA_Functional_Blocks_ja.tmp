@@ -6,7 +6,7 @@
     {{#if data.parent}}
     <h4 id="parent">上位ID: <a class="parentlink elementlink" data-id="{{data.parent}}" data-type="{{data.table}}" >{{data.parent}}</a></h4>
     {{else}}
-    <img src="./assets/ODA_Functional_Blocks_Overview_ja.drawio.svg">
+    {{svg 'ODA_Functional_Blocks_Overview_ja.drawio.svg'}}
     {{/if}}
 
     {{#oc data}}{{/oc}}
