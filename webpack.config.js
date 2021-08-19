@@ -6,6 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyFilePlugin = require('copy-webpack-plugin')
 const WriteFilePlugin = require('write-file-webpack-plugin')
 const HardSourceWebpackPlugin = require('hard-source-webpack-plugin')
+const zlib = require('zlib');
 
 module.exports = {
   mode: process.env.NODE_ENV === 'production' ? 'development' : 'production',
@@ -49,7 +50,7 @@ module.exports = {
     fs: 'empty'
   },
   plugins: [
-    new HardSourceWebpackPlugin(),
+    //new HardSourceWebpackPlugin(),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
@@ -71,6 +72,11 @@ module.exports = {
             },
             {
               context: 'assets/',
+              from: '*.json',
+              to: dist
+            },
+            {
+              context: 'assets/',
               from: '_locales/**/*.*',
               to: dist
             },
@@ -84,12 +90,22 @@ module.exports = {
                 to: dist
             },
             {
-                from: 'assets/*/*.*',
-                to: dist
+                from: 'assets/*.*',
+                to: dist,
+                globOptions: {
+                  dot: true,
+                  gitignore: true,
+                  ignore: ["**/*.db","**/*.json"]
+                }
             },
             {
-                from: 'assets/*.*',
-                to: dist
+                from: 'assets/*.db',
+                to: dist+"/assets/[name].[ext].gz",
+                transform(content, absoluteFrom) {
+                  console.log(absoluteFrom)
+                  const gz = zlib.gzipSync(content);// 圧縮
+                  return gz;
+                }
             }
         ],
         { copyUnmodified: true }
