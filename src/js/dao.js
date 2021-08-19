@@ -1,6 +1,7 @@
 
 import initSqlJs from "sql.js";
 import Handlebars from "handlebars";
+import zlib from "zlib";
 
 /**
  * GB929F_Functional_Framework_Functional_Decomposition_v21.0.0.xlsx
@@ -48,7 +49,12 @@ export class Dao {
     // ex. await database
     async database () {
         const sqlPromise = initSqlJs(this.config);
-        const dataPromise = fetch(this.datafile_url).then(res => res.arrayBuffer());
+        const dataPromise = fetch(this.datafile_url).then(async res => (this.datafile_url.match(/\.gz$/))? 
+        new Promise((resolve, reject) => {
+            res.arrayBuffer().then((value) => {
+                resolve(zlib.unzipSync(Buffer.from(value)))
+            });
+        }) : await res.arrayBuffer() );
         const [SQL, buf] = await Promise.all([sqlPromise, dataPromise])
         return new SQL.Database(new Uint8Array(buf));
     }

@@ -15,7 +15,7 @@ const pageCache = {}
 let setting = null
 const getSetting = async function () {
   if(!setting){
-    await fetch("./assets/setting.json", {
+    await fetch("./setting.json", {
       method: "get"
     }).then(async (response) => {
       if (response.status === 200) {
