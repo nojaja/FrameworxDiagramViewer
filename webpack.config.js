@@ -66,6 +66,15 @@ module.exports = {
         [
             { from: '../node_modules/sql.js/dist/sql-wasm.wasm', to: dist },
             {
+                from: '../node_modules/sql.js/dist/sql-wasm.wasm',
+                to: dist+"/[name].[ext].gz",
+                transform(content, absoluteFrom) {
+                  console.log(absoluteFrom)
+                  const gz = zlib.gzipSync("data:application/octet-stream;base64," + content.toString('base64'));// 圧縮
+                  return gz;
+                }
+            },
+            {
               context: 'assets/',
               from: '*.json',
               to: dist
