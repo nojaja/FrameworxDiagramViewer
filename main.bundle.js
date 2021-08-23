@@ -77297,14 +77297,7 @@ __webpack_require__.r(__webpack_exports__);
 
 class Dao {
     constructor(datafile_url,tables,prepares) {
-        //SQLiteの設定
-        this.config = {
-            // Required to load the wasm binary asynchronously. Of course, you can host it wherever you want
-            // You can omit locateFile completely when running in node
-            //locateFile: file => `https://sql.js.org/dist/${file}`
-            //locateFile: filename => `/dist/${filename}`
-            locateFile: file => './sql-wasm.wasm'
-        }
+
         this.datafile_url = datafile_url || "./assets/Frameworx_DB_Model_21.0.db"
         this.tables = tables || ['TAM', 'eTOM', 'ODA_Functional_Blocks', 'End_to_End_Business_Flows', 'Open_APIs', 'Legacy_Systems']
         this.prepares = prepares
@@ -77320,6 +77313,21 @@ class Dao {
     // return {Promise} db
     // ex. await database
     async database () {
+        
+        const sqlwasmPromise = fetch('./sql-wasm.wasm.gz').then(async res => new Promise((resolve, reject) => {
+            res.arrayBuffer().then((value) => {
+                resolve(zlib__WEBPACK_IMPORTED_MODULE_2___default.a.unzipSync(Buffer.from(value)).toString())
+            });
+        }));
+        const [sqlwasm] = await Promise.all([sqlwasmPromise])
+        //SQLiteの設定
+        this.config = {
+            // Required to load the wasm binary asynchronously. Of course, you can host it wherever you want
+            // You can omit locateFile completely when running in node
+            //locateFile: file => `https://sql.js.org/dist/${file}`
+            //locateFile: filename => `/dist/${filename}`
+            locateFile: file => sqlwasm
+        }
         const sqlPromise = sql_js__WEBPACK_IMPORTED_MODULE_0___default()(this.config);
         const dataPromise = fetch(this.datafile_url).then(async res => (this.datafile_url.match(/\.gz$/))? 
         new Promise((resolve, reject) => {
@@ -77803,4 +77811,4 @@ Handlebars.registerHelper("svg", async function(svgfilepath) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=map/main.de9784b1049947d70f72.js.map
+//# sourceMappingURL=map/main.4289ba6d0ce08f2c4957.js.map
