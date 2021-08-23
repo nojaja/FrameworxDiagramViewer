@@ -5,7 +5,7 @@ import '../css/style.css'
 import _Handlebars from "handlebars";
 import promisedHandlebars from "promised-handlebars";
 import Dao from "./dao.js";
-
+import DefaultSetting from "../assets/default_setting.json";
 
 const Handlebars = promisedHandlebars(require('handlebars'), { Promise: Promise })
 const pageCache = {}
@@ -36,7 +36,7 @@ const getSetting = async function () {
 }
 
 //GETパラメータの取得
-const getParam = async function (key) {
+const getParam = function (key) {
   const arg = new Object();
   const pair = location.search.substring(1).split("&");
   for (let i = 0; pair[i]; i++) {
@@ -44,22 +44,24 @@ const getParam = async function (key) {
     if(key==kv[0]) return kv[1]
     //arg[kv[0]] = kv[1];
   }
-  return (await getSetting()).default[key]
+  return DefaultSetting.default[key]
 }
 
-const language_promise = async function(){
+const language = function(){
   const language = (window.navigator.languages && window.navigator.languages[0]) ||
   window.navigator.language ||
   window.navigator.userLanguage ||
   window.navigator.browserLanguage;
-  const languages = (await getSetting()).languages
+  const languages = DefaultSetting.languages
+  console.log(languages)
   return (languages.indexOf(language) != -1)? language :"en"
 }()
 
 const dao_promise = async function () {
-  const language = await language_promise
-  const dbconf = (await getSetting()).database[language]
-  console.log("dbconf",dbconf)
+  const _setting = await getSetting()
+  console.log("dao_promise_setting",_setting)
+  const dbconf = _setting.database[language]
+  console.log("dao_promise_dbconf",dbconf)
   return new Dao(dbconf.url,dbconf.tables,dbconf.prepares)
 }()
 
@@ -112,7 +114,6 @@ window.addEventListener('popstate', async (event) => {
 //ページの描画処理
 let pageGen = async function (table, id) {
   const dao = await dao_promise
-  const language = await language_promise
   
   let getPageTemplate = async function (table) {
     if(!dao.tableExists(table)) throw new Error(table + ' TABLES not exist')
