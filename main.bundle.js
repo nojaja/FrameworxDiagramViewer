@@ -21877,7 +21877,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "../node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".orgchart { \n  background-image:none;\n  background: white; \n}\n/* excluding leaf node */\n.orgchart .node:not(:only-child)::after {\n  height: 15px;\n  background-color: rgba(0,0,0,.8);\n}\n/* excluding root node */\n.orgchart > ul > li > ul li > .node::before {\n  height: 15px;\n  background-color: rgba(0,0,0,.8);\n}\n\n.orgchart .hierarchy::before {\n  border-top: 2px solid rgba(0,0,0,.8);\n}\n\n.orgchart .node .title {\n  background-color: rgba(0,0,0,.8);\n}\n\n.orgchart .node .content {\n  height: 50px;\n  width: 130px;\n  word-break: break-word;\n  white-space: break-spaces;\n  vertical-align: middle;\n  display: table-cell;\n  font-size: .75rem;\n  font-weight: 700;\n  border: 1px solid rgba(0,0,0,.8);\n  --background: linear-gradient(to bottom right, #f1f1f1, #afafaf);\n  background-color: #ffffe0;\n  box-shadow: 5px 5px 5px 0 rgb(0 0 0 / 50%);\n}\n\n.orgchart .node[data-domain=\"Market Sales Domain\"] .title {\n  background-color: rgb(247,161,162);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Customer Domain\"] .title {\n  background-color: rgb(246,236,19);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Product Domain\"] .title {\n  background-color: rgb(255,209,115);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Resource Domain\"] .title {\n  background-color: rgb(125,196,112);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Service Domain\"] .title {\n  background-color: rgb(188,230,247);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Business Partner Domain\"] .title {\n  background-color: rgb(188,188,217);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Enterprise Domain\"] .title {\n  background-color: rgb(211,211,211);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Common Domain\"] .title {\n  background-color: rgb(255,153,204);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Integration Domain\"] .title {\n  background-color: rgb(210,180,140);\n  border: 1px solid rgba(0,0,0,.8);\n}\nh1 {\n  display: block;\n  font-size: 2em;\n  margin-block-start: 0.67em;\n  margin-block-end: 0.67em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\nh3 {\n  display: block;\n  font-size: 1.17em;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\np {\n  display: block;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n}\n\n.elementlink {\n  cursor: pointer;\n}\n\n.parentlink {\n  color: navy;\n  text-decoration: underline;\n}\n\n.leftbar {\n  position: absolute;\n  top: 0px;\n  left: 0;\n  width: 20%;\n  height: 100%;\n  background-color: #323232;\n  --padding-top: 5em;\n  z-index: 0;\n}\n\n.leftbaritem {\n  padding-left: 1em;\n  font-size: 90%;\n}\n.leftbar a {\n  text-decoration: none;\n  color: white;\n}\n.content_body {\n  position: absolute;\n  top: 0px;\n  left: 21%;\n  width: 75%;\n  height: 100%;\n}\n\ntable {\n  border-color: grey;\n  border-collapse: collapse;\n  border-spacing: 0;\n  display: block;\n  margin-bottom: 1rem;\n  overflow: auto;\n}\nthead {\n  display: table-header-group;\n  vertical-align: middle;\n  border-color: inherit;\n}\ntbody {\n  display: table-row-group;\n  vertical-align: middle;\n  border-color: inherit;\n}\ntr {\n  border-top: 1px solid #ccc;\n  display: table-row;\n}\ntr:nth-child(2n) {\n  background-color: #f8f8f8;\n}\nth {\n  border: 1px solid #ddd;\n  padding: 6px 13px;\n  font-weight: 700;\n}\ntd {\n  border: 1px solid #ddd;\n  padding: 6px 13px;\n  display: table-cell;\n}", ""]);
+exports.push([module.i, ".orgchart { \n  background-image:none;\n  background: white; \n}\n/* excluding leaf node */\n.orgchart .node:not(:only-child)::after {\n  height: 15px;\n  background-color: rgba(0,0,0,.8);\n}\n/* excluding root node */\n.orgchart > ul > li > ul li > .node::before {\n  height: 15px;\n  background-color: rgba(0,0,0,.8);\n}\n\n.orgchart .hierarchy::before {\n  border-top: 2px solid rgba(0,0,0,.8);\n}\n\n.orgchart .node .title {\n  background-color: rgba(0,0,0,.8);\n}\n\n.orgchart .node .content {\n  height: 50px;\n  width: 130px;\n  word-break: break-word;\n  white-space: break-spaces;\n  vertical-align: middle;\n  display: table-cell;\n  font-size: .75rem;\n  font-weight: 700;\n  border: 1px solid rgba(0,0,0,.8);\n  --background: linear-gradient(to bottom right, #f1f1f1, #afafaf);\n  background-color: #ffffe0;\n  box-shadow: 5px 5px 5px 0 rgb(0 0 0 / 50%);\n}\n\n.orgchart .node[data-domain=\"Market Sales Domain\"] .title {\n  background-color: rgb(247,161,162);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Customer Domain\"] .title {\n  background-color: rgb(246,236,19);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Product Domain\"] .title {\n  background-color: rgb(255,209,115);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Resource Domain\"] .title {\n  background-color: rgb(188,230,247);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Service Domain\"] .title {\n  background-color: rgb(125,196,112);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Business Partner Domain\"] .title {\n  background-color: rgb(188,188,217);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Enterprise Domain\"] .title {\n  background-color: rgb(211,211,211);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Common Domain\"] .title {\n  background-color: rgb(255,153,204);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Integration Domain\"] .title {\n  background-color: rgb(210,180,140);\n  border: 1px solid rgba(0,0,0,.8);\n}\nh1 {\n  display: block;\n  font-size: 2em;\n  margin-block-start: 0.67em;\n  margin-block-end: 0.67em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\nh3 {\n  display: block;\n  font-size: 1.17em;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\np {\n  display: block;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n}\n\n.elementlink {\n  cursor: pointer;\n}\n\n.parentlink {\n  color: navy;\n  text-decoration: underline;\n}\n\n.leftbar {\n  position: absolute;\n  top: 0px;\n  left: 0;\n  width: 20%;\n  height: 100%;\n  background-color: #323232;\n  --padding-top: 5em;\n  z-index: 0;\n}\n\n.leftbaritem {\n  padding-left: 1em;\n  font-size: 90%;\n}\n.leftbar a {\n  text-decoration: none;\n  color: white;\n}\n.content_body {\n  position: absolute;\n  top: 0px;\n  left: 21%;\n  width: 75%;\n  height: 100%;\n}\n\ntable {\n  border-color: grey;\n  border-collapse: collapse;\n  border-spacing: 0;\n  display: block;\n  margin-bottom: 1rem;\n  overflow: auto;\n}\nthead {\n  display: table-header-group;\n  vertical-align: middle;\n  border-color: inherit;\n}\ntbody {\n  display: table-row-group;\n  vertical-align: middle;\n  border-color: inherit;\n}\ntr {\n  border-top: 1px solid #ccc;\n  display: table-row;\n}\ntr:nth-child(2n) {\n  background-color: #f8f8f8;\n}\nth {\n  border: 1px solid #ddd;\n  padding: 6px 13px;\n  font-weight: 700;\n}\ntd {\n  border: 1px solid #ddd;\n  padding: 6px 13px;\n  display: table-cell;\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -77214,6 +77214,17 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./assets/default_setting.json":
+/*!*************************************!*\
+  !*** ./assets/default_setting.json ***!
+  \*************************************/
+/*! exports provided: languages, default */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"languages\":[\"ja\"],\"default\":{\"q\":\"3.2\",\"type\":\"TAM\"}}");
+
+/***/ }),
+
 /***/ "./css/style.css":
 /*!***********************!*\
   !*** ./css/style.css ***!
@@ -77447,6 +77458,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var promised_handlebars__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! promised-handlebars */ "../node_modules/promised-handlebars/index.js");
 /* harmony import */ var promised_handlebars__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(promised_handlebars__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _dao_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./dao.js */ "./js/dao.js");
+/* harmony import */ var _assets_default_setting_json__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../assets/default_setting.json */ "./assets/default_setting.json");
+var _assets_default_setting_json__WEBPACK_IMPORTED_MODULE_6___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../assets/default_setting.json */ "./assets/default_setting.json", 1);
 
 
 
@@ -77485,7 +77498,7 @@ const getSetting = async function () {
 }
 
 //GETパラメータの取得
-const getParam = async function (key) {
+const getParam = function (key) {
   const arg = new Object();
   const pair = location.search.substring(1).split("&");
   for (let i = 0; pair[i]; i++) {
@@ -77493,22 +77506,24 @@ const getParam = async function (key) {
     if(key==kv[0]) return kv[1]
     //arg[kv[0]] = kv[1];
   }
-  return (await getSetting()).default[key]
+  return _assets_default_setting_json__WEBPACK_IMPORTED_MODULE_6__.default[key]
 }
 
-const language_promise = async function(){
+const language = function(){
   const language = (window.navigator.languages && window.navigator.languages[0]) ||
   window.navigator.language ||
   window.navigator.userLanguage ||
   window.navigator.browserLanguage;
-  const languages = (await getSetting()).languages
+  const languages = _assets_default_setting_json__WEBPACK_IMPORTED_MODULE_6__.languages
+  console.log(languages)
   return (languages.indexOf(language) != -1)? language :"en"
 }()
 
 const dao_promise = async function () {
-  const language = await language_promise
-  const dbconf = (await getSetting()).database[language]
-  console.log("dbconf",dbconf)
+  const _setting = await getSetting()
+  console.log("dao_promise_setting",_setting)
+  const dbconf = _setting.database[language]
+  console.log("dao_promise_dbconf",dbconf)
   return new _dao_js__WEBPACK_IMPORTED_MODULE_5__["default"](dbconf.url,dbconf.tables,dbconf.prepares)
 }()
 
@@ -77561,7 +77576,6 @@ window.addEventListener('popstate', async (event) => {
 //ページの描画処理
 let pageGen = async function (table, id) {
   const dao = await dao_promise
-  const language = await language_promise
   
   let getPageTemplate = async function (table) {
     if(!dao.tableExists(table)) throw new Error(table + ' TABLES not exist')
@@ -77789,4 +77803,4 @@ Handlebars.registerHelper("svg", async function(svgfilepath) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=map/main.5345fbf0f7485921bf01.js.map
+//# sourceMappingURL=map/main.de9784b1049947d70f72.js.map

@@ -7,7 +7,7 @@
         "type": "TAM"
     },
     "database": {
-        "us":{
+        "en":{
             "url": "./assets/Frameworx_DB_Model_21.0.db.gz",
             "tables": {
                 "tam":{"tableName":"TAM","caption":"Application Framework (TAM)"},

@@ -1,0 +1,9 @@
+{
+    "languages":[
+        "ja"
+    ],
+    "default": {
+        "q": "3.2",
+        "type": "TAM"
+    }
+}
