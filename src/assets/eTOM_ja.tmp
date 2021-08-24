@@ -2,7 +2,7 @@
     <h4 id="type">Business Process Framework (eTOM)</h4>
     <h4 id="category">カテゴリー: {{data.category}}</h4>
     <h4 id="identifier">ID: {{data.name}}</h4>
-    <h4 id="maturity_level">完成度: {{data.maturity}}</h4>
+    <h4 id="maturity_level">成熟度: {{data.maturity}}</h4>
     
     {{#if data.parent}}
     <h4 id="parent">上位ID: <a class="parentlink elementlink" data-id="{{data.parent}}" data-type="{{data.table}}" >{{data.parent}}</a></h4>

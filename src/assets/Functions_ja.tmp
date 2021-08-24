@@ -2,7 +2,7 @@
     <h4 id="type">Functionality</h4>
     <h4 id="category">カテゴリー: {{data.category}}</h4>
     <h4 id="identifier">ID: {{data.name}}</h4>
-    <h4 id="maturity_level">完成度: {{data.maturity}}</h4>
+    <h4 id="maturity_level">成熟度: {{data.maturity}}</h4>
    
     <h3>概要</h3>
     <p id="description">{{breaklines data.overview}}</p>
