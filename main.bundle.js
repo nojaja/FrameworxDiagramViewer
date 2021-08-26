@@ -77597,7 +77597,10 @@ let pageGen = async function (table, id) {
 
   const data = await dao.getPageData(table, id)
   const template = await getPageTemplate(table)
+  console.log("pageGen1",data)
   document.getElementById("content_body").innerHTML = await template({ data: data })
+  console.log("pageGen2",await template({ data: data }))
+  console.log("pageGen3",document.getElementById("content_body").innerHTML)
 
   //リンクイベント作成
   const elementlinks = document.getElementsByClassName("elementlink")
@@ -77811,4 +77814,4 @@ Handlebars.registerHelper("svg", async function(svgfilepath) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=map/main.4289ba6d0ce08f2c4957.js.map
+//# sourceMappingURL=map/main.a5937286083cdf931d80.js.map
