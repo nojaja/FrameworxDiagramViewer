@@ -6,7 +6,7 @@
     {{#if data.parent}}
     <h4 id="parent">Parent Identifier: <a class="parentlink elementlink" data-id="{{data.parent}}" data-type="{{data.table}}" >{{data.parent}}</a></h4>
     {{else}}
-    {{svg 'TAM_Overview.drawio.svg'}}
+    {{svg 'TAM_Overview_en.drawio.svg'}}
     {{/if}}
 
     {{#oc data}}{{/oc}}

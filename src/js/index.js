@@ -127,10 +127,7 @@ let pageGen = async function (table, id) {
 
   const data = await dao.getPageData(table, id)
   const template = await getPageTemplate(table)
-  console.log("pageGen1",data)
   document.getElementById("content_body").innerHTML = await template({ data: data })
-  console.log("pageGen2",await template({ data: data }))
-  console.log("pageGen3",document.getElementById("content_body").innerHTML)
 
   //リンクイベント作成
   const elementlinks = document.getElementsByClassName("elementlink")
