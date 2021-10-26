@@ -20,7 +20,7 @@ Pre-order feasibility check verifies whether the requested product can be offere
 Pre-order feasibility check would not generally involve the reservation of resources prior to issuance of customer order.
 However, there might be a reservation of some critical resources, depending on the operator‘s policies and procedures.
 ",,,,
-UP,2,2,"Usage-to-Paymen
+UP,2,2,"Usage-to-Payment
 ",,,"This process deals with all activities related to the handling of the product/service usage.
 The accuracy of pricing is ensured, and all usage data is captured and duly processed for billing information requests and bill generation.
 ",,,"This scenario is relevant for products offered to the mass customer base.

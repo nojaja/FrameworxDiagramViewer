@@ -179,6 +179,18 @@ Handlebars.registerHelper("breaklines", function(text) {
 
 Handlebars.registerHelper("svg", async function(svgfilepath) {
   svgfilepath = Handlebars.Utils.escapeExpression(svgfilepath);
+  if(svgfilepath.lastIndexOf('.svg')==-1)svgfilepath=svgfilepath+'.svg';
   const response = await (await fetch("./assets/" + svgfilepath, { method: "get" })).text();
   return new Handlebars.SafeString(response);
+});
+
+Handlebars.registerHelper("bpmnsvg", async function(svgfilepath) {
+  svgfilepath = Handlebars.Utils.escapeExpression(svgfilepath);
+  if(svgfilepath.lastIndexOf('.bpmn.svg')==-1)svgfilepath=svgfilepath+'.bpmn.svg';
+  const response = await (await fetch("./assets/" + svgfilepath, { method: "get" })).text();
+  return new Handlebars.SafeString(response);
+});
+
+Handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {
+  return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
 });
