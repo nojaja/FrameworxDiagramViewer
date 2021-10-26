@@ -6,7 +6,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyFilePlugin = require('copy-webpack-plugin')
 const WriteFilePlugin = require('write-file-webpack-plugin')
 const HardSourceWebpackPlugin = require('hard-source-webpack-plugin')
-const zlib = require('zlib');
+const zlib = require('zlib')
+const initdb = require('./Initdb.js')
 
 module.exports = {
   mode: process.env.NODE_ENV === 'production' ? 'development' : 'production',
@@ -69,7 +70,6 @@ module.exports = {
                 from: '../node_modules/sql.js/dist/sql-wasm.wasm',
                 to: dist+"/[name].[ext].gz",
                 transform(content, absoluteFrom) {
-                  console.log(absoluteFrom)
                   const gz = zlib.gzipSync("data:application/octet-stream;base64," + content.toString('base64'));// 圧縮
                   return gz;
                 }
@@ -108,12 +108,14 @@ module.exports = {
                 }
             },
             {
-                from: 'assets/*.db',
-                to: dist+"/assets/[name].[ext].gz",
+                from: 'assets/datas/*.json',
+                to: dist+"/assets/[name].db.gz",
                 transform(content, absoluteFrom) {
-                  console.log(absoluteFrom)
-                  const gz = zlib.gzipSync(content);// 圧縮
-                  return gz;
+                  return initdb.init(require(absoluteFrom)).then(function (savedata) {
+                          const gz = zlib.gzipSync(savedata);// 圧縮
+                          return gz;
+                        }
+                    );
                 }
             }
         ],

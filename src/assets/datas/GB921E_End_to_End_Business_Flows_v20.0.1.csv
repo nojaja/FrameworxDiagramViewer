@@ -1,0 +1,174 @@
+ID,LEVEL,PARENT,NAME,TYPE,ORIGINAL_ID,DESCRIPTION,FUNCTION,BRIEF_DESCRIPTION,ASSUMPTIONS,DOMAIN,CATEGORY,MATURITY_LEVEL,FRAMEWORX_STATUS
+1,1,,End-to-End Business Streams,,,"Generally, a service provider can be structured into core business processes, as well as control and support processes. One perspective that can be useful for the core business processes is to view these as consisting of the Customer Centric processes and three additional process areas: Customer, Product and Network. These can be seen to represent process domains arranged as end-to-end business streams which show a focus across the Service Provider for the area of business activity concerned. Note that the use of the terms “process domains” and “end-to-end business streams” here is just intended to explain this broad business context and is not a new element of structure or terminology within the core Business Process Framework.
+In this model, the Customer Centric processes are characterized as being initiated by the customer and ending at the customer. Additionally, the processes involved include all other core processes, which are not directly initiated by a customer (e.g. marketing campaign, product lifecycle management, network operations).
+
+The Customer Centric processes have several interactions with the other three process areas/domains. For instance, they might be initiated by relevant activities in the sense of CRM at the Customer domain, and interactions may include trouble solving in the Network domain and the Product domain.
+",,,,,,,
+2,1,1,Customer Centric Process Flows,,,顧客視点で通信業者との関係性を定義しており、顧客のアクションからプロセスが始まり、顧客の要望を満たすことでプロセスが終了する,受付、サービス提供、サービス利用、請求情報等,,,,,,
+RA,2,2,Request-to-Answer,,,"・This process comprises of activities relevant to managing customer requests across all communication channels (customer interfaces).
+・Specific information requests or product requests from the customer are qualified and addressed.
+・This could lead to the preparation of a pre-sales offer if the customer shows interest in a particular product.
+",,,"The offer preparation may or may not lead to a reservation of resources in advance.
+Resources might be reserved for some special products or customers depending on the operator‘s policies and procedures.
+If the offer is accepted by the customer, the next process ‘Order to Payment‘ is triggered.
+",,,,
+OP,2,2,Order-to-Payment,,,"This process deals with all activities which convert the customer request or an accepted offer into a ‘Ready for use’ product.
+This process involves capturing customer order information, triggering the relevant provisioning process and handing over the order to the Service layer.
+Once the product is successfully provisioned, the customer order is closed, and the customer satisfaction is validated.
+",,,"This scenario is relevant for products offered to the mass customer base.
+Pre-order feasibility check verifies whether the requested product can be offered to the customer based on the service / resource availability, the product portfolio, and the customer’s configuration.
+Pre-order feasibility check would not generally involve the reservation of resources prior to issuance of customer order.
+However, there might be a reservation of some critical resources, depending on the operator‘s policies and procedures.
+",,,,
+UP,2,2,"Usage-to-Payment
+",,,"This process deals with all activities related to the handling of the product/service usage.
+The accuracy of pricing is ensured, and all usage data is captured and duly processed for billing information requests and bill generation.
+",,,"This scenario is relevant for products offered to the mass customer base.
+The process elements ‘Mediate Resource Usage Records‘ and ‘Guide Resource Usage Records‘ are not always applicable.
+‘Perform Rating’ element is usually under the Customer layer for customized products, and under the Service layer for standardized products.
+",,,,
+RC,2,2,Request-to-Change,,,"This process deals with all activities which convert the customer‘s change request into a ‘Ready for use’ product.
+This process involves capturing customer order information, triggering the relevant provisioning process and handing over the order to the Service layer.
+Once the product is successfully provisioned, the customer order is closed, and the customer satisfaction is validated.
+",,,"This scenario is relevant for products offered to the mass customer base.
+Pre-order feasibility check verifies whether the requested change can be implemented for the customer based on the service / resource availability, the product portfolio, and the customer’s configuration.
+Pre-order feasibility check would not generally involve the reservation of resources prior to issuance of customer order.
+However, there might be a reservation of some critical resources, depending on the operator‘s policies and procedures.
+",,,,
+TC,2,2,Termination-to-Confirmation,,,"This process deals with all activities related to the execution of customer‘s termination request.
+This process involves retention activities, capturing customer order information, triggering the relevant provisioning process and handing over the order to the Service layer.
+Once the product is successfully terminated, the customer order is closed, and the customer satisfaction is validated.
+",,,"This scenario is relevant for products offered to the mass customer base.
+This process includes the termination of a customer order or a product.
+Pre-order feasibility check verifies whether the requested termination can be executed based on the customer’s current configuration.
+",,,,
+PS,2,2,Problem-to-Solution,,,"This process deals with a technical complaint (problem) initiated by the customer, analyses it to identify the source of the issue, initiates resolution, monitors progress and closes the trouble ticket.
+The basis for a problem is an unplanned interruption to a product / service or reduction in the quality of a product/service. (In comparison, the process “complaint-to-solution” deals with customer inquiries in which the customer is not pleased with a product or handling speed of an inquiry etc.).
+",,,"This scenario is relevant only for technical complaints which are termed as ‘problems’.
+Problems such as no outgoing call or sms and faulty handset, may be resolved at first level support or re-directed to other layers
+Non-technical complaints will be dealt by another scenario ‚Complaint-to-Solution‘.
+",,,,
+CS,2,2,Complaint-to-Solution,,,"This process deals with a complaint (problem) initiated by the customer, analyses it to identify the source of the issue, initiates resolution, monitors progress and closes the trouble ticket.
+A complaint is a customer inquiry in which the customer is not pleased with a product or the handling speed of an inquiry etc.
+",,,"This scenario is relevant only for non-technical complaints which are termed as ‘complaints’.
+Complaints such as over-due provisioning, quality of customer service and bill adjustments will fall under the scope of this process.
+",,,,
+3,1,1,Network Centric Process Flows,,,"This section includes sample process-flows (eTOM level 3) relevant to the Network Centric focus. The process-flows for the six network end-to-end processes show how to apply the Operations, Strategy and Enterprise domains of eTOM to a service provider.",,,,,,,
+PA,2,3,Production Order-to-Acceptance,,,"This scenario manages the provisioning and termination process, starting from the feasibility check and ending with the activation of services and resources.
+The order processing includes the verification of service specifications, the availability check for the services and resources, and the identification of critical and uncritical resources.
+The reservation or cancellation of critical resources then takes place, followed by the completion of the suborder with relevant parameters.
+In the end, an overall acceptance test is executed.
+",,,"This scenario is relevant for products offered to the mass customer base.
+This process can be fully automated, but in some cases manual activities are also in scope.
+The processes capacity management, service- and resource lifecycle management manage the requirements of this process.
+The feasibility check considers service-, resource- and workforce capacities.
+The result of the feasibility check is binding for the offer against the customer.
+An order cancellation is not possible at all times. After a certain time period has elapsed, the cancellation of the order cannot be executed.
+",,,,
+TS,2,3,"Trouble Ticket-to-Solution
+",,,"This process is either triggered internally through a service or resource alarm, or externally, through a trouble ticket generated based on a complaint of a customer.
+The process covers the qualification, classification and the elimination of the service or resource trouble.
+The analysis of trouble includes the verification of trouble ticket or request, and a delta analysis based on reference and actual values.
+Once the root cause is identified, the trouble eliminated and the acceptance test completed, the trouble ticket is closed.
+",,,"This scenario is relevant for products offered to the mass customer base.
+This process can be fully automated, but in some cases manual activities are also in scope.
+This scenario considers the trouble ticket handling triggered by the customer and the event-based handling triggered by the network.
+The source which opens a ticket is also responsible for closing it.
+An error database is established and can be enhanced quickly and easily.
+The assurance and fulfillment processes work with the same data and Information.
+",,,,
+UU,2,3,"Usage-to-Usage Data
+",,,"This process focuses on the enabling of usage, the collection of usage records and the monitoring of performance criteria.
+It takes into consideration the authentication and authorization of the user, including the initiation of subsequently following steps and the providing of self-service.
+During the usage, the collection of usage data records starts.
+After the records pass through the mediation, matching and rating steps, the bill is produced and distributed to the customer.
+",,,"This scenario is relevant for products offered to the mass customer base.
+After the authentication and authorization of the user, the usage is enabled when no connection restrictions exist.
+During the usage, the customer is provided with the option for self-service or other activities.
+The process elements ‘Mediate Resource Usage Records‘ and ‘Guide Resource Usage Records‘ are not always applicable.
+‘Perform Rating‘ element is usually under the Customer layer for customized products, and under the Service layer for standardized products.
+",,,,
+CAM,2,3,"Capacity Management
+",,,"This process aims to ensure the timely and cost-efficient provisioning of the accurate capacity of services and components.
+There is a collection and qualification of capacity information and the analysis of capacity needs to guarantee adequate levels of capacity for support of operations.
+This process can be nearly automated, but in some cases manual activities are also in scope. Data collection and analysis can leverage big data analytics and machine learning algorithms to improve efficiency and accuracy. It may require collecting information from other domains’ processes such as Market, Sales domain or Product domain processes.
+This process may require aligning with other domains such as Market, Sales domain, Product domain, Service domain, etc. through “Domain Orchestration” process to provide more precise capacity planning.
+Future forecast of business demands regarding capacity may leverage AI to provide more accurate capacity demand.
+The scope of capacity management is specified, including the definition of KPIs and measurement methods.
+After the planning and design phase, the implementation plan is developed and executed.
+Lastly, the results of capacity management are handed over to operations and performance is continuously monitored.
+",,,"KPIs and performance measurement features are designed and established.
+Type of capacity which required to be managed and capacity period are pre-defined. 
+The resource, sales & marketing, product and service relevant data is available and usable.
+This process scenario is integrated in the network expansion planning process and aims to support rolling expansion planning (quarterly, monthly, etc.) requirements.
+The process scenario manages the requirements of the fulfillment process.
+This scenario is not technically independent.
+This scenario takes into consideration the capacity and availability management as per ITIL V3.
+",,,,
+SLM,2,3,"Service Lifecycle Management
+",,,"This process defines, plans, designs and implements all services in order to support the introduction, operations and retirement of market products.
+The process starts with the evaluation of market trends, service specific needs and the definition of the service development and exit strategy.
+This is followed by the creation of the business plan and definition of the service architecture and other strategic documents.
+The design and development of service solutions are in line with the strategic goals and required service capabilities.
+After the implementation and a successful testing phase, the service is handed over to operations.
+",,,"The product portfolio requirements are defined as per the input from Product Marketing.
+A result of the Service Lifecycle Process may act as an input for the fulfillment process
+Further results of this scenario are requirements for the capacity management process.
+Direct links between products and services are modeled and stored in the product catalog.
+This scenario does not take into consideration the retirement phase.
+In some cases, migration scenarios are needed.
+",,,,
+RLM,2,3,"Resource Lifecycle Management
+",,,"This process defines, plans, designs and implements all resources in order to support the introduction, operations and retirement of market products.
+The process starts with the evaluation of market trends, resource specific needs and the definition of the resource development and exit strategy.
+This is followed by the creation of the business plan and definition of the resource architecture and other strategic documents.
+The design and development of resource solutions are in line with the strategic goals and required resource capabilities.
+After the implementation and a successful testing phase, the resource is handed over to operations. 
+",,,"The product portfolio requirements are defined as per the input from Product Marketing.
+A result of the Resource Lifecycle Process may act as an input for the fulfillment process
+Further results of this scenario are requirements for the capacity management process.
+Direct links between products, services and resources are modeled and stored in the product catalog.
+This scenario does not take into consideration the retirement phase.
+In some cases, migration scenarios are needed.
+",,,,
+4,1,1,NetworkCentricProcesses,,,"This section includes sample process-flows (eTOM level 3) relevant to the Product Centric focus. The process flows for the six Product Centric end-to-end processes recommend how to apply the Strategy, Infrastructure and Product domain of eTOM to a service provider.
+The described examples of end-to-end processes from the product domain are based on Detecon project experience and telco best practices from various operators, and focuses on the following processes:
+Idea-to-Business Plan
+Idea-to-Business Proposal
+Business Proposal-to-Launch
+Assessment-to-Relaunch
+Assessment-to-Retirement
+Market Strategy-to-Campaign
+",,,,,,,
+4.1,2,4,Idea-to-Business Plan,,,"This process shows the strategic part of portfolio management, starting with monitoring of market trends (external perspective) and gathering product information (internal perspective) and ending with an approved business plan.
+A high-level analysis of Customer Experience Management goals, service requirements and partnership requirements deliver inputs to the product portfolio strategy.
+An approval of investment in enhancement of available service capabilities may also be part of the process flow
+A product portfolio strategy and related business plans are outputs of this process and are the framework for the following management of product offerings 
+",,,,,,,
+4.2,2,4,Idea-to-Business Proposal,,,"The process describes the activities related to the management of single product offerings, starting with idea generation and with an approved business proposal (incl. product blueprint, forecasts & financial figures)
+The main purpose of this process is to develop (high-level) product specifications and assess the feasibility of launching the product
+At the end of this process a product committee (or a similar decision making body) takes a Go/No-Go decision for commercial product launch
+",,,,,,,
+4.3,2,4,Business Proposal-to-Launch,,,"The process describes the activities related to the preparation of product launch, starting with the Go-decision and ending with the commercial launch.
+The definition of related service requirements, resources and, if involved, third party services is an essential part of this process.
+Service Lifecycle Management and Resource Lifecycle Management are very important interfaces to this process and need to be synchronized carefully
+",,,,,,,
+4.4,2,4,Assessment-to-Relaunch,,,"The goal of this process is the continuous improvement and enhancement of the existing product offerings as a reaction to customer needs or internal commercial, technical or financial decisions
+The activities include assessment of product offering performance, identification of issues and updating required aspects like product specification, configuration, etc.
+The outcome of the process is a relaunched product offering with enhanced specifications
+",,,,,,,
+4.5,2,4,Assessment-to-Retirement,,,"This process describes the activities related to the retirement of product offerings, which have been identified as unviable.
+The correct identification of the impact caused by the product exit and the right exit strategy are the most important issues.
+Definition of released service and resource capacity is also part of the process; the management of these capacities is executed in Service Lifecycle Management and Resource Lifecycle Management processes
+",,,,,,,
+4.6,2,4,Market Strategy-to-Campaign,,,"The process flow includes activities related to the establishing market strategy and execution of single marketing campaigns.
+Portfolio strategy, product delivery feedback and customer feedback are the most critical inputs to the process.
+",,,,,,,
+5,1,1,Engaged Party Flows,,,"This section includes sample process-flows (eTOM level 3) relevant to the Engaged Party Flows. The process-flows show how to apply the Engaged Party Domain, a part of eTOM to six phases of procurement process.
+We look at addressing the “Effective management of procurement process using Business Process Framework (eTOM)”.There are various processes in industry to carry out procurement, but doing it in a standard, well known, flexible approach will have a good value addition throughout procurement lifecycle.
+Hence, we choose to decompose and identify standard business process from Engaged Party of Business Process Framework which can be easily mapped to various phases of procurement process. We may not be able to get one-to-one mapping of procurement phase against eTOM processes, however we can identify the applicable group of processes.
+",,,,,,,
+5.1,2,5,Procurement using Engaged Party,,,"Procurement process is a key activity for any organization which gets complex and challenging with growing need for value addition. Likewise, there is always parallel need of standard, easy to adopt, industry-neutral process definition for procurement. The example defined in this document tries to address this and provide best practice that can be derived from business process framework.
+The idea behind this case study is to provide a road map and best practices organizations can use during procurement process using standards defined in Frameworx.
+As mentioned, this section decomposes/ identifies process involved till Level 3 of business process framework that can be mapped to various phases of procurement process.
+",,,"In the scope of this example, process involving performance and problem reporting of external parties is not considered. This can be included as part of next versions of document. This case study was originally based on Frameworx 14.5 Model and was updated according to the latest 16.0 Model. Engaged party domain is considered throughout the case study (since the Supply partner domain was replaced with Engaged party domain). This process can be fully automated, but in some cases manual activities are also in scope.",,,,

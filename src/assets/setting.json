@@ -19,7 +19,7 @@
                 "functions":{"tableName":"Functions","caption":"Functionality"}
             },
             "prepares": {
-                "PageData": "SELECT ID as name, NAME as title, DESCRIPTION as overview, MATURITY_LEVEL as maturity, FUNCTION as functionality, PARENT as parent, TYPE as category, DOMAIN as domain FROM {{{table}}} WHERE ID=$id",
+                "PageData": "SELECT ID as name, NAME as title, LEVEL, DESCRIPTION as overview, MATURITY_LEVEL as maturity, FUNCTION as functionality, PARENT as parent, TYPE as category, DOMAIN as domain FROM {{{table}}} WHERE ID=$id",
                 "ChildData": "SELECT ID as name, NAME as title, DOMAIN as domain FROM {{{table}}} WHERE PARENT=$id",
                 "RelationChildData":"SELECT ID as name, NAME as title FROM {{{totable}}} WHERE ID IN(SELECT TO_KEY as key FROM MAPPING WHERE TO_TABLE == $totable AND FROM_KEY IN ({{{ids}}}) AND FROM_TABLE == $fromtable UNION SELECT FROM_KEY as key FROM MAPPING WHERE FROM_TABLE == $totable AND TO_KEY IN ({{{ids}}}) AND TO_TABLE == $fromtable)"
             }
@@ -36,7 +36,7 @@
                 "functions":{"tableName":"Functions","caption":"所有機能"}
             },
             "prepares": {
-                "PageData": "SELECT ID as name, NAME as title, DESCRIPTION as overview, MATURITY_LEVEL as maturity, FUNCTION as functionality, PARENT as parent, TYPE as category, DOMAIN as domain FROM {{{table}}} WHERE ID=$id",
+                "PageData": "SELECT ID as name, NAME as title, LEVEL, DESCRIPTION as overview, MATURITY_LEVEL as maturity, FUNCTION as functionality, PARENT as parent, TYPE as category, DOMAIN as domain FROM {{{table}}} WHERE ID=$id",
                 "ChildData": "SELECT ID as name, NAME as title, DOMAIN as domain FROM {{{table}}} WHERE PARENT=$id",
                 "RelationChildData":"SELECT ID as name, NAME as title FROM {{{totable}}} WHERE ID IN(SELECT TO_KEY as key FROM MAPPING WHERE TO_TABLE == $totable AND FROM_KEY IN ({{{ids}}}) AND FROM_TABLE == $fromtable UNION SELECT FROM_KEY as key FROM MAPPING WHERE FROM_TABLE == $totable AND TO_KEY IN ({{{ids}}}) AND TO_TABLE == $fromtable)"
             }

@@ -1,0 +1,98 @@
+ID,LEVEL,PARENT,BlockName,TYPE,ORIGINAL_ID,"Definition & Scope
+",FUNCTION,characterized as,DOMAIN,CATEGORY,MATURITY_LEVEL,FRAMEWORX_STATUS
+DI,1,ODA,Decoupling & Integration,(1) ODA The Functional Blocks Type,,"The Decoupling & Integration (D&I) Block is about governing and managing separation of functional borders based on well-established ""families"" of closely interrelated services as well as the integration between them. D&I gathers non-business functions that are needed at design and runtime to enable the combinations of services that the business requires.
+The Decoupling & Integration Block ensures that services provided by ODA can be combined in a flexible way, without restriction imposed by a process pattern derived from a given stack of blocks.
+Note: Where in traditional architectures functional layers are supposed to communicate only with adjacent ones (e.g., BSS with OSS, OSS with Network but not BSS directly with Network). ""Decoupling"" within ODA emphasizes that ODA Function Blocks are not behaving like layers and tightly coupled together. This ensures that the functional architecture by itself doesn't preclude any combination of services.
+",,,,,1,1
+EM,1,ODA,"Engagement Management
+",(1) ODA The Functional Blocks Type,,"The Engagement Management (EGM) Block represents the interaction point between the enterprise and its ecosystem, which can be through different channels for different experiences.  EGM provides the capabilities to assure a digital, secure and accurate interaction of all these stakeholders, providing digital and omnichannel capabilities through the configuration of the different journeys reusing the processes and functionalities provided by the platform.
+Its scope includes interactions between users and processes handled by other functions such as from the Intelligence Management, Party Management, Core Commerce Management or Production Blocks. “Users” from the perspective of EGM, may be machines and things (IoT context), humans (prospects, customers, users, employees, of people working on behalf of partners and suppliers - 3rd parties) that collaborate and integrate their own solutions to the ecosystem, providers of different services (retailers, salespeople, technical providers).
+",,"・Handling relationship between external and internal actors (including 3rd party systems, connected objects, …) and other ODA blocks.
+・Managing the presentation layer according to the channel, the device to allow multi and cross-channel user journeys over multiple types of devices.
+・Tailoring interactions using contextual information from back ends (360°view, process states).
+・Relying on Processes, Functions and Data stored in the other ODA blocks (this is what enables reuse, cross channel and multi device).
+・""Powering"" customer / user journeys (what users see of the ongoing back end processes).
+・Holding no business process (eTOM), no functions (functional Framework) and no operational data (SID)
+・Holding technical functions – and data related to these functions and to their execution (context)
+・Interacting with other ODA blocks only through Event or Process APIs (new APIs - definition ongoing), or read data through current standard TMF Open API 
+",,,1,1
+PM,1,ODA,Party Management,(1) ODA The Functional Blocks Type,,The Party Management (PM) Block handles all interactions and data associated with entities or actors that are involved or likely to get involved with the enterprise. Party roles and behaviors are not dependent on industry specifics. This block includes support for identification processes which are required to validate parties and management of Party relationships.,,"・Party Management deals with ""WHO"" & ""WHY""
+・It handles Persons and Organizations (called Party) involved in business processes. These Parties can be Customers, Business Partners or Employees.
+・In charge of Party oriented processes, functions and repositories such as:
+　・Party, Party Information and Privacy Management, Party Roles and Rights Management  
+　・Party Interaction Management
+　・Billing Account Management and Bill Production
+　・Party Financial Management activities : payment, bill inquiry, dunning, …
+　・Market and Party Strategy activities
+　・etc.
+・Party Management is not Telco specific, as any type of digital industry has now this kind of needs.
+",,,1,1
+CCM,1,ODA,"Core Commerce Management
+",(1) ODA The Functional Blocks Type,,"The Core Commerce Management (CCM) Block represents the part of the enterprise that is concerned with enabling profitable exchange of goods and services. It includes all those activities which directly or indirectly facilitate that exchange such as marketing & sales, sourcing and procurement, strategic (buying & selling) portfolio plans (commercial rules), life-cycle product management, offer management, new business development - for all types of business engagements - B2B, B2C, C2C, B2B2X etc. It is responsible for formalizing business models, revenue generation and business assurance processes.",,"・Core Commerce Management deals with ""WHAT""
+・It handles the catalogue of Product Offerings and Products marketed by the telco operator for all types of business (B2C, B2B, B2B2X, …)
+・Core Commerce Management is in charge of Product Offerings and Products Catalogue oriented processes, functions and repositories such as :
+　・Product Offerings and Products Catalogue Management
+　・Order Handling, from Order Capture & Configuration to the global orchestration of the Customer Order Delivery
+　・Rating of any types of charges and Bill items Calculation
+　・Business Partners Revenue Sharing & Settlement
+　・Product Assurance
+　・Product Strategy activities
+　・Etc.
+・Core Commerce Management is independent from technical concerns - managed by Production – to be able to decouple commercial and technical evolution
+・Core Commerce Management Block functionalities
+",,,1,1
+P,1,ODA,Production,(1) ODA The Functional Blocks Type,,"The Production Block is responsible for the delivery and lifecycle management of Customer Facing Services (CFS) and Resource Facing Services (RFS) regardless of the technology type (e.g., physical, virtual, connectivity, end point, etc.) or the operational domain or factory where it originates, including third parties.
+The Production Block exposes its service capabilities in a way that is commonly known as Network as a Service (NaaS) for consumption by other ODA function blocks. For example, the Core Commerce Management Block uses them to create products and offers, while the Engagement Management Block uses them to allow customers to recharge their balance or order a new video on demand. The Production block may also expose devices (e.g., smartphone) and application capabilities (e.g., email).
+The scope of the Production block includes the exposure of its service capability definitions and the dynamic run-time decision of how the service(s) supporting Products and Customer will be created, delivered, used, maintained, assured, and repaired.  It provides end-to-end management of operational functions for services and resources to support the commercial success of the ecosystem - including activities that span multiple enterprises such as the management of installation, deployment, and operations of technologies, performance and quality.
+The Production Block does not need to know the details of a product nor the customer, contract owner, or payer requesting its exposed service capabilities. It assumes responsibility for the delivery of the CFS/RFS, as well as for operating the usage functions up to a committed quality of service - including applying policy control and  balance management and supplying the Core Commerce Management Block with usage data records to perform rating on offers.
+
+Business Processes in the Production Function
+The Production Block's business processes are based on a tactical operating model with no business architecture lock-in.
+The business processes are derived from eTOM level 2 business process elements. The processes descriptions are derived from the following eTOM Groupings: Service Development and Management, Service Management and Operations, Resource Development and Management and Resource Management and Operations
+",,"・Production deals with ""HOW ""
+・Production is in charge of Services and Resources oriented processes, functions and repositories such as:
+　・Definition and lifecycle of the telco capabilities that can be exposed as Services (CFS) to define Products and Offers to commercialize (in Core Commerce Management)
+　・Definition and lifecycle of the technical solutions available for these services (RFS), based on all type of technology (physical, virtual, …) or all network, service platforms, IT systems, … capabilities, directly managed by the telco operator or available by means of a Business Partner
+　・Infrastructure Deployment and Operations management
+　・Delivery of services and resources
+　・Usage of services, including usage control and real-time balance management
+　・Problem and Performance Management
+　・Service & Resource Strategy activities
+　・etc.",,,1,1
+IM,1,ODA,Intelligence Management,(1) ODA The Functional Blocks Type,,"Analytical processes use operational data (reference data) and events produced by operational processes or captured from the environment during an interaction with the enterprise (for instance, events related to the activity of a user on a portal, events generated by operating connected object or devices).
+Analytical processes use operational data along with events received from operational processes to produce analyses, correlations and aggregations that yield a representation of operational reality. Analytical processes encompass activity or budget follow-up, as well as revenue assurance or fraud detection, based on traffic analysis.
+Analytical processes can use very large amounts of data and in turn produce their own data (e.g., all kinds of KPI) for which they are entirely responsible  and which they may make available to other systems (either for display, or as input data for further processing).
+Therefore, analytical processes are distinct from operational processes but interact with them through event exchanges and data sharing. Big and Fast data capabilities are expected to further develop such interactions and enhance operational processes.
+
+",,,,,1,1
+ODA,0,,ODA The Functional Blocks ,(1) ODA The Functional Blocks Type,,"The Functional Architecture of ODA 
+The ODA Function Blocks define the key functional grouping that logically establish related family of information systems objects. Through functional decomposition of the key capabilities of a digital business/digital enterprise, the Functional Architecture establishes a Level 0 Functional grouping that enables achieves business and operational agility.
+The Functional Architecture is modeled to represent digital enterprise business operation, using functions that correspond to the interactions that go beyond the traditional pipe-line business model. Each of the ODA Function Blocks is an enterprise level group of functions with a collection of coherent processes continuously performed to enable digital business.
+
+
+As a Level-0 Functional Architecture, the Function Blocks can be used to quickly develop various information systems operating models of a specific enterprise based on its mission - while maintaining alignment integration to the overall vision of a digital enterprise.
+",,,,,1,1
+DI.001,2,DI,Normalized APIs,(2) ODA Core functionalities Type,,"Catalog of API's - Management of API catalog and documentations, including links to catalogs of partners",,,,,1,1
+DI.002,2,DI,Message Routing,(2) ODA Core functionalities Type,,"API Routing - Route API calls to endpoint, API Mediation",,,,,1,1
+EM.001,2,EM,Front-ends (UIs),(2) ODA Core functionalities Type,,Portals and application interfaces that are rendered for interactions.,,,,,1,1
+EM.002,2,EM,Journey Management,(2) ODA Core functionalities Type,,"Configure and adapt interactions to different types of Parties, Channels etc.",,,,,1,1
+EM.003,2,EM,Access to content,(2) ODA Core functionalities Type,,"Access in read only to data contained in different repositories, according to Party rights. It can include access through Front-Ends or via APIs.",,,,,1,1
+EM.004,2,EM,Content Aggregation,(2) ODA Core functionalities Type,,"Collects information from multiple internal and / or external sources, including digital body language, and transcodes them for a single presentation format, storing document references.",,,,,1,1
+EM.005,2,EM,Content Organization,(2) ODA Core functionalities Type,,Classifies or categorizes data according to predefined ranking plans,,,,,1,1
+EM.006,2,EM,Personalization of content,(2) ODA Core functionalities Type,,"Collects user’s preferences and personalization criteria. Adapt contents and renders them based on context, user, interfaces, and according to user’s preferences and personalization criteria.",,,,,1,1
+EM.007,2,EM,Filtering of content,(2) ODA Core functionalities Type,,Provides select capabilities for content based on engagement context and criteria.,,,,,1,1
+EM.008,2,EM,Information Services,(2) ODA Core functionalities Type,,"Selective notification of information or alerts based on events (including social listening) towards the appropriate Actors, channel and device.",,,,,1,1
+EM.009,2,EM,User Interface Orchestration,(2) ODA Core functionalities Type,,"Defines, formats and structures the sequence of user interfaces (UIs) needed by a process.",,,,,1,1
+EM.010,2,EM,Integration,(2) ODA Core functionalities Type,,Integrating internal systems/software/devices with external systems/software/devices - this includes social network platforms etc.,,,,,1,1
+EM.011,2,EM,API HUB,(2) ODA Core functionalities Type,,Exposes standardized API to Partners and external systems. Manages security and checks Access right policies.,,,,,1,1
+EM.012,2,EM,Authentication and Authorization*,(2) ODA Core functionalities Type,,"Correctly authenticates and authorizes a Party, including role management.",,,,,1,1
+EM.013,2,EM,User-interaction lifecycle management*,(2) ODA Core functionalities Type,,"Manage Party interactions with the different services (provide consent, configure services, etc.) as well as their relationship with other users (create groups and share services)",,,,,1,1
+IM.001,2,IM,Insight Management,(2) ODA Core functionalities Type,,"Insight Management integrates data in the Engagement Management Block, Party Management Block, Core Commerce Management Block and Production Block, to find new relationships and patterns by analyzing historical data, assessing current situation, applying business rules, predicting outcomes, and proposing the next best action.",,,,,1,1
+IM.002,2,IM,Autonomic Manager Elements,(2) ODA Core functionalities Type,,"The Autonomic Manager Element's function or Decision Making Element (DE) is to drive control-loops meant to configure and adapt (i.e., regulate) the behavior or state of an ODA resource. Autonomic Management can be implemented to run as an “engine”. (Reference - Generic Autonomic Network Architecture ""GANA"".http://www.etsi.org/deliver/etsi_ts/103100_103199/10319502/01.01.01_60/ts_10319502v010101p.pdf).",,,,,1,1
+IM.003,2,IM,Algorithm Management,(2) ODA Core functionalities Type,,"This function provides the environment to develop and deploy patterns or rules or outcome based ""recipes"" for business and operational actions performed by Parties or the Autonomic Manager. It gives developers the ability to edit, compose, integrate, package, train and deploy AI-based microservices. (Reference - https://docs.acumos.org/en/latest/)",,,,,1,1
+IM.004,2,IM,Analytic Models,(2) ODA Core functionalities Type,,"Analytics models provide input for Insight Management, functions based on analytic processes (Reference GB979D Big Data Analytics Big Data Repository). Analytic models do not change any operational data but provide functionality to discover, acquire, translate and communicate data and knowledge (synthesized from raw data), relevant to making decisions, feeding decisions or for autonomics. A Cognitive Autonomic Manager (in ETSI GANA Model terms, a Cognitive Decision Element (DE)) as a Deployable AI Model, employs in its operations.",,,,,1,1
+IM.005,2,IM,Data Lake,(2) ODA Core functionalities Type,,"The Data Lake function, acquires, manages or prepares data for use by ODA and the enterprise. It includes a data collector function and can translate data from multiple sources in order to create federated information or data models (Data processing and Data storage shall be separated).",,,,,1,1
+IM.006,2,IM,Knowledge Plane,(2) ODA Core functionalities Type,,Knowledge Plane references include ETSI GANA (Generic Autonomic Network Architecture) Knowledge Plane specified in ETSI TS 103 195-2 but not limited to it.,,,,,1,1
+IM.007,2,IM,Governance Function (Dashboard ),(2) ODA Core functionalities Type,,"It is an instrument that allows the CSP defining Business Policies, Objective /Goal and Intent specifications to be enforced and executed to ensure an optimal operation and achievement of desired objectives and services while keeping control of activation / deactivation of deployed DEs (AI Models), conflicts resolution that may happen and all associated accountability and responsibility aspects",,,,,1,1
+IM.008,2,IM,Training Data Repository,(2) ODA Core functionalities Type,,"Various Datasets (e.g., Data extracted from an ODA Data Lake) must be considered in populating the Data Training Repository in order to produce clean and accurate Data and also synthesize knowledge from the data and make the data/knowledge available for AI Model (e.g., Cognitive Autonomic Manager Element/ Cognitive Decision Element (DE)) training and testing processes",,,,,1,1
+IM.009,2,IM,Testing and Evaluation,(2) ODA Core functionalities Type,,"Testing and Evaluation System/Component for Testing and Evaluation of the Performance and Quality of “Decision-Making capability” of Cognitive Autonomic Manager Element (DE) as an AI Model, against the expected /predicted targets (prescribed by the CSP) in the CSP’s Testing Environment before declaring and certifying the AI Model (DE) as “operation ready” and “deployable Al Model (DE)” for injection into a Network Element/Function (NE/NF) in the ODA Production or any other ODA Functional Bock or for operationalizing it in the ODA Knowledge Plane (KP) if it is a Knowledge Plane Level DE.",,,,,1,1

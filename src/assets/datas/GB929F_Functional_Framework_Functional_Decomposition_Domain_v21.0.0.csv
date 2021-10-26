@@ -1,0 +1,51 @@
+Frameworx Application,Overview,Application Identifier,Category,Frameworx Function (contained by),Frameworx Domain (Horizontal),Maturity Level,Frameworx Status,LV1,LV2,LV3,LV4,LV5,LEVEL,PARENT,Status,,,,,,
+Market/Sales Management,"The Market/Sales Domain includes data and contract operations that support the sales and marketing activities needed to gain business from customers and potential customers. On the Sales side, this includes sales contacts/leads/prospects through to the sales-force and sales statistics. Market includes market strategy and plans, market segments, competitors and their products, through to campaign formulation.",3,,,Market Sales Domain,4,Released,3,,,,,0,1,1,,,,,,
+Product Management Domain,"Product Management is the organization’s approach to the process of developing, managing and marketing its products offerings to the customer. Product Management is about identifying what products to sell, what they are comprised of, who they are sold to, how they are sold, supported and serviced, how they perform in the market and how they are managed through to retirement. Product Management contains four key facets:
+
+Product Strategy / Proposition Management
+Product Catalog Management
+Product Lifecycle Management
+Product Performance Management",4,,,Product Domain,4,Released,4,,,,,0,1,1,,,,,,
+Customer Management Domain,"Customer Relationship Management (CRM) processes and functions are defined by the Business Process Framework (TMF GB 921) as the process grouping that considers the fundamental knowledge of customers needs and includes all functionalities necessary for the acquisition, enhancement and retention of a relationship with a customer.
+
+The customer as defined by the e-TOM e-business reference model is responsible for ordering, using and (usually) paying for service products. The customer may represent an end-customer, where the product provided by the value network is consumed, or a wholesale customer that resells the product provided, generally with some added value. The customer may also be a corporate customer that potentially has many contact people, departments, sites, services and billing accounts with the service provider.
+
+CRM encompasses the end to end lifecycle of the customer, from customer initiation/acquisition, sales, ordering and service activation, customer care and support, proactive campaigns, cross sell/up sell and retention/loyalty. CRM needs to involve all the touch points and channels to the customer, including contact center, retail stores, dealers, self service, and field service, as well as via any media (phone, face to face, web, mobile device, Chat, Email, SMS, mail, the customer’s bill, etc.).
+
+As an example, the following diagram describes the typical work flow of customer service representatives (CSRs) of Communication Service Providers (Diagram Figure 7: Typical work flow of Customer Service Representatives).
+
+Another significant component of CRM evolves around marketing activities. This includes retention management, cross-selling, up-selling and direct marketing for the purpose of selling to customers. CRM also includes the collection of customer information and its application to personalize, customize and integrate delivery of service to a customer, as well as to identify opportunities for increasing the value of the customer to the enterprise.
+
+In the Telecom Applications Map, a number of systems and applications provide these functions. Typically an operator may have the following applications:",5,,,Customer Domain,4,Released,5,,,,,0,1,1,,,,,,
+Service Management Domain,"This group of applications supports and enables the processes that focus on the knowledge of services (e.g. voice; data, content services, etc.) and includes all functionality necessary for the management and operations of communications and information services required by or proposed to customers. The focus is on service delivery and management as opposed to the management of the underlying network and information technology. Some of the functions involve short-term service capacity planning; the application of a service design to specific customers or managing service improvement initiatives. These functions are closely connected with the day-to-day customer experience.
+
+These processes are accountable to meet, at a minimum, targets set for service quality, including process performance and customer satisfaction at a service level, as well as service cost. The applications that an operator may have in the Service Management and Operations area are:",6,,,Service Domain,4,Released,6,,,,,0,1,1,,,,,,
+Resource Management Domain,"This horizontal functional process grouping maintains knowledge of resources (application, computing and network infrastructures) and is responsible for managing all these resources (e.g. networks, IT systems, servers, routers, etc.) utilized to deliver and support services required by or proposed to customers. It also includes all functionalities responsible for the direct management of all such resources (network elements, computers, servers, etc.) utilized within the enterprise. These processes are responsible for ensuring that the network and information technologies infrastructure supports the end-to-end delivery of the required services. The purpose of these processes is to ensure that infrastructure runs smoothly, is accessible to services and employees, is maintained and is responsive to the needs, whether directly or indirectly, of services, customers and employees. RM&O also has the basic function to assemble information about the resources (e.g. from network elements and/or element management systems), and then integrate, correlate, and in many cases, summarize that data to pass on the relevant information to Service Management systems, or to take action in the appropriate resource.
+
+In an ebusiness world, application and computing management are as important as management of the network resources. Moreover, network, computing and applications resources must increasingly be managed in a joint and integrated fashion. To cope with these needs, the Business Process Framework framework includes the Resource Management & Operations process grouping (together with the corresponding Resource Development & Management grouping within SIP), to provide integrated management across these three sets of resources: applications, computing and network. These areas also encompass processes involved with traditional Network Element Management, since these processes are actually critical components of any resource management process, as opposed to a separate process layer.
+
+The RM&O processes thus manage the complete service provider network and sub-network and information technology infrastructures.
+
+The Business Process Framework framework differentiates day-to-day operations and support from planning and development, and other strategy and lifecycle processes. This better depicts the structure of an enterprise, especially in an ebusiness era.",7,,,Resource Domain,4,Released,7,,,,,0,1,1,,,,,,
+Business Partner Domain,"The Business Partner domain represents roles, information and activities carried out by parties (e.g. individuals / organizations) playing roles that are involved in the strategic planning, definition, development, operational aspects and all types of contact with Business Partners (e.g. Suppliers, Partners, etc.) with which an enterprise collaborates in order to operate their business. Activities include management of Business Partner: strategies, capabilities, value propositions, relationships, profiles, data, privacy, security, interactions, communications, tenders, agreements, orders, requisitions, supplies, accounts, balances, inventories, reconciliations, service level agreements (SLAs), training, problems, cases, invoices, payments, revenues, disputes, collections, loyalty, performance, usage statistics, analytics and support of Business Partners as they supply, acquire, use, support, purchase, pay for and are supported for goods and services (products) that they provide and / or obtain from an enterprise.",8,,,Business Partner Domain,4,Released,8,,,,,0,1,1,,,,,,
+Enterprise Domain,"Introduction
+
+Enterprises need to manage themselves and the Application Map has identified the following application areas:
+
+
+Revenue Assurance Management
+HR Management
+Financial Management
+Asset Management
+Security management
+Knowledge Management
+Fraud Management
+Regulatory & Compliance Management
+Supply Chain Management
+
+Mostly these functions are quite generic across many industry sectors and are not peculiar to the Communication industry.
+
+Within Knowledge Management the communications industry has some very specific needs around the general title of ‘Enterprise Information Applications or ‘Business intelligence’.",9,,,Enterprise Domain,4,Released,9,,,,,0,1,1,,,,,,
+Integration Domain,"The Integration domain represents business-agnostic roles, information and activities (e.g. infrastructure, middleware, protocols) that support the integration and implementation of Frameworx concepts (e.g. business entities, business processes, functions, logical applications, interfaces, metrics, etc.).",10,,,Integration Domain,4,Released,10,,,,,0,1,1,,,,,,
+Common Domain,"The Common domain represents business roles, information and activities (e.g. business entities, business processes, functions, logical applications, interfaces, metrics, etc.) that support other Frameworx domains and are not specific to (i.e. are generic) or “owned by” any particular domain, or are referenced or utilized from two or more other domains.",11,,,Common Domain,4,Released,11,,,,,0,1,1,,,,,,
+Application Framework,,1,,,,4,Released,1,,,,,0,,1,,,,2,.,2

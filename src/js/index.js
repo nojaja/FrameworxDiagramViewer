@@ -127,10 +127,7 @@ let pageGen = async function (table, id) {
 
   const data = await dao.getPageData(table, id)
   const template = await getPageTemplate(table)
-  console.log("pageGen1",data)
   document.getElementById("content_body").innerHTML = await template({ data: data })
-  console.log("pageGen2",await template({ data: data }))
-  console.log("pageGen3",document.getElementById("content_body").innerHTML)
 
   //リンクイベント作成
   const elementlinks = document.getElementsByClassName("elementlink")
@@ -182,6 +179,18 @@ Handlebars.registerHelper("breaklines", function(text) {
 
 Handlebars.registerHelper("svg", async function(svgfilepath) {
   svgfilepath = Handlebars.Utils.escapeExpression(svgfilepath);
+  if(svgfilepath.lastIndexOf('.svg')==-1)svgfilepath=svgfilepath+'.svg';
   const response = await (await fetch("./assets/" + svgfilepath, { method: "get" })).text();
   return new Handlebars.SafeString(response);
+});
+
+Handlebars.registerHelper("bpmnsvg", async function(svgfilepath) {
+  svgfilepath = Handlebars.Utils.escapeExpression(svgfilepath);
+  if(svgfilepath.lastIndexOf('.bpmn.svg')==-1)svgfilepath=svgfilepath+'.bpmn.svg';
+  const response = await (await fetch("./assets/" + svgfilepath, { method: "get" })).text();
+  return new Handlebars.SafeString(response);
+});
+
+Handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {
+  return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
 });
