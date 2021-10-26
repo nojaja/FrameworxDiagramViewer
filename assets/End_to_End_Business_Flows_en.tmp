@@ -7,6 +7,12 @@
     {{#oc data}}{{/oc}}
     <h3>Overview</h3>
     <p id="description">{{breaklines data.overview}}</p>
+    
+    {{#ifEquals data.LEVEL "2"}}
+    <h3>Flow</h3>
+    {{bpmnsvg data.title}}
+    {{/ifEquals}}
+
     <h3>Functionality</h3>
     <p id="functionality">{{breaklines data.functionality}}</p>
     <h3>Relation Data</h3>

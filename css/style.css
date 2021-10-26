@@ -130,6 +130,19 @@ p {
   text-decoration: none;
   color: white;
 }
+.leftbar .title {
+  text-decoration: none;
+  color: white;
+  background-color: #161616;
+  font-weight: bold;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  position: inherit;
+  bottom: -10px;
+  width: 100%;
+}
+
 .content_body {
   position: absolute;
   top: 0px;

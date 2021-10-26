@@ -7,6 +7,12 @@
     {{#oc data}}{{/oc}}
     <h3>概要</h3>
     <p id="description">{{breaklines data.overview}}</p>
+
+    {{#ifEquals data.LEVEL "2"}}
+    <h3>フロー</h3>
+    {{bpmnsvg data.title}}
+    {{/ifEquals}}
+
     <h3>機能性</h3>
     <p id="functionality">{{breaklines data.functionality}}</p>
     <h3>関連要素</h3>

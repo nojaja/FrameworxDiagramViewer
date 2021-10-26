@@ -1,17 +1,12 @@
+
+    {{#if data.parent}}
     <h1 id="name">{{data.name}} - {{data.title}}</h1>
     <h4 id="category">カテゴリー: {{data.category}}</h4>
     <h4 id="identifier">ID: {{data.name}}</h4>
     <h4 id="maturity_level">成熟度: {{data.maturity}}</h4>
     
-    {{#if data.parent}}
     <h4 id="parent">上位ID: <a class="parentlink elementlink" data-id="{{data.parent}}" data-type="{{data.table}}" >{{data.parent}}</a></h4>
     {{#oc data}}{{/oc}}
-    {{else}}
-        {{#each data.children}}
-        <a class="parentlink elementlink" data-id="{{name}}" data-type="{{table}}" >{{name}}</a>:{{title}}<br />
-        {{/each}}
-    {{/if}}
-
     <h3>概要</h3>
     <p id="description">{{breaklines data.overview}}</p>
     <h3>機能性</h3>
@@ -38,3 +33,22 @@
         <br />
     {{/each}}
     </p>
+    {{else}}
+    <h1 id="name">システム一覧</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th><th>名称</th>
+                </tr>
+            </thead>
+            <tbody>
+            {{#each data.children}}
+                <tr>
+                    <td><a class="parentlink elementlink" data-id="{{name}}" data-type="{{table}}" >{{name}}</a></td>
+                    <td>{{title}}</td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    {{/if}}
+
