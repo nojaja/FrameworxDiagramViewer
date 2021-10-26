@@ -1,0 +1,18 @@
+{
+    "data": [
+        {
+            "type": "sql",
+            "sql": "CREATE TABLE hello (a int, b char);"
+        },
+        {
+            "type": "sql",
+            "file": "/tests/CREATE_TABLE.sql"
+        },
+        {
+            "type": "csv",
+            "table": "ETOM",
+            "sql": "INSERT INTO {{table}} VALUES ({{{values.ProcessIdentifier}}},{{{values.LEVEL}}},{{{values.PARENT}}},{{{values.FrameworxProcess}}},{{{values.Category}}},{{{values.OriginalProcessIdentifier}}},{{{values.ExtendedDescription}}},'',{{{values.BriefDescription}}},{{{values.FrameworxDomain}}},{{{values.VerticalGroup}}},{{{values.MaturityLevel}}},{{{values.FrameworxStatus}}} )",
+            "file": "/tests/ETOM.csv"
+        }
+    ]
+}
