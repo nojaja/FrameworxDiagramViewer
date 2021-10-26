@@ -35,7 +35,19 @@
     </p>
     {{else}}
     <h1 id="name">System List</h1>
-        {{#each data.children}}
-        <a class="parentlink elementlink" data-id="{{name}}" data-type="{{table}}" >{{name}}</a>:{{title}}<br />
-        {{/each}}
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th><th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+            {{#each data.children}}
+                <tr>
+                    <td><a class="parentlink elementlink" data-id="{{name}}" data-type="{{table}}" >{{name}}</a></td>
+                    <td>{{title}}</td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
     {{/if}}
