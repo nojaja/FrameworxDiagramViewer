@@ -77511,7 +77511,7 @@ const getParam = function (key) {
   const pair = location.search.substring(1).split("&");
   for (let i = 0; pair[i]; i++) {
     let kv = pair[i].split("=");
-    if(key==kv[0]) return kv[1]
+    if(key==kv[0]) return decodeURI(kv[1])
     //arg[kv[0]] = kv[1];
   }
   return _assets_default_setting_json__WEBPACK_IMPORTED_MODULE_6__.default[key]
@@ -77823,4 +77823,4 @@ Handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=map/main.5685aa3b27163ff284cf.js.map
+//# sourceMappingURL=map/main.7f35ef5413a4b4069c42.js.map
