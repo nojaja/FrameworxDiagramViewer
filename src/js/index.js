@@ -41,7 +41,7 @@ const getParam = function (key) {
   const pair = location.search.substring(1).split("&");
   for (let i = 0; pair[i]; i++) {
     let kv = pair[i].split("=");
-    if(key==kv[0]) return kv[1]
+    if(key==kv[0]) return decodeURI(kv[1])
     //arg[kv[0]] = kv[1];
   }
   return DefaultSetting.default[key]
