@@ -10,7 +10,7 @@
     
     {{#ifEquals data.LEVEL "2"}}
     <h3>Flow</h3>
-    {{bpmnsvg data.title}}
+    {{bpmnsvg data.name}}
     {{/ifEquals}}
 
     <h3>Functionality</h3>
