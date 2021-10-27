@@ -77657,7 +77657,10 @@ Handlebars.registerHelper("svg", async function(svgfilepath) {
 Handlebars.registerHelper("bpmnsvg", async function(svgfilepath) {
   svgfilepath = Handlebars.Utils.escapeExpression(svgfilepath);
   if(svgfilepath.lastIndexOf('.bpmn.svg')==-1)svgfilepath=svgfilepath+'.bpmn.svg';
-  const response = await (await fetch("./assets/" + svgfilepath, { method: "get" })).text();
+
+  const api_call = await fetch("./assets/" + svgfilepath, { method: "get" });
+  const response = (api_call.status !== 200)? 'no image': await api_call.text()
+  //const response = await (await fetch("./assets/" + svgfilepath, { method: "get" })).text();
   return new Handlebars.SafeString(response);
 });
 
@@ -77823,4 +77826,4 @@ Handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=map/main.7f35ef5413a4b4069c42.js.map
+//# sourceMappingURL=map/main.01376daa51ee6d401180.js.map
