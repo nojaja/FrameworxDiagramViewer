@@ -4,6 +4,7 @@
     ],
     "default": {
         "q": "3.2",
-        "type": "TAM"
+        "type": "TAM",
+        "bpmn-modeler-url": "https://nojaja.github.io/bpmn-modeler/?q="
     }
 }
