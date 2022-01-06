@@ -20,7 +20,7 @@
   "devDependencies": {
     "@babel/core": "^7.14.3",
     "@babel/preset-env": "^7.14.4",
-    "@fortawesome/fontawesome-free": "^5.15.3",
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "babel-jest": "^26.6.3",
     "copy-webpack-plugin": "^5.1.2",
     "crc-32": "^1.2.0",

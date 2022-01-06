@@ -61,13 +61,13 @@
         {
             "type": "csv",
             "table": "MAPPING",
-            "sql": "{{#notEmpty values.FROM_KEY}}INSERT INTO {{table}} VALUES ({{{values.FROM_TABLE}}},{{{values.FROM_KEY}}},{{{values.TO_TABLE}}},{{{values.TO_KEY}}});{{/notEmpty}}",
+            "sql": "{{#notEmpty values.FROM_KEY}}INSERT INTO {{table}} VALUES ({{{values.FROM_TABLE}}},{{{values.FROM_KEY}}},{{{values.TO_TABLE}}},{{{values.TO_KEY}}},{{{values.SOURCE}}},{{{values.MATURITY_LEVEL}}},{{{values.MEMO}}});{{/notEmpty}}",
             "file": "/src/assets/datas/MAPPING.csv"
         },
         {
             "type": "csv",
             "table": "MAPPING",
-            "sql": "{{#notEmpty values.FROM_KEY}}INSERT INTO {{table}} VALUES ({{{values.FROM_TABLE}}},{{{values.FROM_KEY}}},{{{values.TO_TABLE}}},{{{values.TO_KEY}}});{{/notEmpty}}",
+            "sql": "{{#notEmpty values.FROM_KEY}}INSERT INTO {{table}} VALUES ({{{values.FROM_TABLE}}},{{{values.FROM_KEY}}},{{{values.TO_TABLE}}},{{{values.TO_KEY}}},{{{values.SOURCE}}},{{{values.MATURITY_LEVEL}}},{{{values.MEMO}}});{{/notEmpty}}",
             "file": "/src/assets/datas/TAM_Functions_Mapping_21.0.csv"
         }
     ]

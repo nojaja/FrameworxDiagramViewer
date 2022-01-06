@@ -2,6 +2,9 @@
 import OrgChart from 'orgchart';
 import 'orgchart/dist/css/jquery.orgchart.min.css'
 import '../css/style.css'
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/solid';
+import '@fortawesome/fontawesome-free/js/regular';
 import _Handlebars from "handlebars";
 import promisedHandlebars from "promised-handlebars";
 import Dao from "./dao.js";
