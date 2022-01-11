@@ -2,6 +2,9 @@
 import OrgChart from 'orgchart';
 import 'orgchart/dist/css/jquery.orgchart.min.css'
 import '../css/style.css'
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/solid';
+import '@fortawesome/fontawesome-free/js/regular';
 import _Handlebars from "handlebars";
 import promisedHandlebars from "promised-handlebars";
 import Dao from "./dao.js";
@@ -131,31 +134,56 @@ let pageGen = async function (table, id) {
 
   //リンクイベント作成
   const elementlinks = document.getElementsByClassName("elementlink")
-  for (let i = 0; i < elementlinks.length; i++) {
-    elementlinks[i].onclick = function (parentlink_element) {
-      return (event) => {
-        //ノードのID表示用のURLをhistoryに追加して、再描画
-        const id = parentlink_element.dataset.id
-        const type = parentlink_element.dataset.type
-        window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${id}&type=${type}`)
-        pageGen(type, id);
-      }
-    } (elementlinks[i])
-  }
+  createDataset2ClickEvent(elementlinks)
 
 
   //組織図のクリックイベント作成
   const node_elements = document.getElementsByClassName("node")
-  for (let i = 0; i < node_elements.length; i++) {
-    node_elements[i].onclick = function (node_element) {
+  createDataset2ClickEvent(node_elements)
+
+  
+  //SVGリンクイベント作成
+  const atags = document.querySelectorAll("svg a")
+  createSVGATag2ClickEvent(atags)
+  
+
+}
+
+function createSVGATag2ClickEvent(elements){
+  for (let i = 0; i < elements.length; i++) {
+    elements[i].onclick = function (node_element) {
+      return (event) => {
+        //ノードのID表示用のURLをhistoryに追加して、再描画
+        const url = new URL(node_element.href.baseVal,window.location)
+        let param = new Object;
+        let pair=url.search.substring(1).split('&');
+        for(let i=0;pair[i];i++) {
+            let kv = pair[i].split('=');
+            param[kv[0]]=kv[1];
+        }
+
+        const id = param['q']
+        const type = param['type']
+
+        window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${id}&type=${type}`)
+        pageGen(type, id);
+        return false
+      }
+    } (elements[i])
+  }
+}
+function createDataset2ClickEvent(elements){
+  for (let i = 0; i < elements.length; i++) {
+    elements[i].onclick = function (node_element) {
       return (event) => {
         //ノードのID表示用のURLをhistoryに追加して、再描画
         const id = node_element.dataset.id
         const type = node_element.dataset.type
         window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${id}&type=${type}`)
         pageGen(type, id);
+        return  false
       }
-    } (node_elements[i])
+    } (elements[i])
   }
 }
 
@@ -185,11 +213,13 @@ Handlebars.registerHelper("svg", async function(svgfilepath) {
 });
 
 Handlebars.registerHelper("bpmnsvg", async function(svgfilepath) {
+  const _setting = await getSetting()
   svgfilepath = Handlebars.Utils.escapeExpression(svgfilepath);
   if(svgfilepath.lastIndexOf('.bpmn.svg')==-1)svgfilepath=svgfilepath+'.bpmn.svg';
 
   const api_call = await fetch("./assets/" + svgfilepath, { method: "get" });
-  const response = (api_call.status !== 200)? 'no image': await api_call.text()
+  const response = (api_call.status !== 200)? 'no image': await api_call.text() 
+    + "<br /><a href='"+_setting.default['bpmn-modeler-url']+window.location.href.split('?')[0]+"assets/"+svgfilepath+"' target='_blank'>open BPMN-Modeler</a>"
   //const response = await (await fetch("./assets/" + svgfilepath, { method: "get" })).text();
   return new Handlebars.SafeString(response);
 });
