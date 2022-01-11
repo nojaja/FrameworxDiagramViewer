@@ -186,3 +186,34 @@ td {
   padding: 6px 13px;
   display: table-cell;
 }
+
+.message span.remark {
+  display: none;
+}
+.message:hover span.remark {
+  background: none repeat scroll 0 0 #EEFFEE;
+  border: 1px solid #CCCCCC;
+  color: #000000;
+  display: block;
+  margin: 0.5em;
+  padding: 0.5em;
+  position: absolute;
+  top: -20px;
+  left: 10px;
+}
+
+.maturity_level_5 {
+  color: royalblue;
+}
+.maturity_level_4 {
+  color: royalblue;
+}
+.maturity_level_3 {
+  color: forestgreen;
+}
+.maturity_level_2 {
+  color: forestgreen;
+}
+.maturity_level_1 {
+  color: darkorange;
+}
