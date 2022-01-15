@@ -1,74 +1,63 @@
 {
     "data": [
         {
-            "type": "sql",
-            "file": "/src/assets/datas/CREATE_TABLE.sql"
+            "action": "Execute-SQL",
+            "file": "./src/assets/datas/CREATE_TABLE.sql"
         },
         {
-            "type": "csv",
-            "table": "ETOM",
-            "sql": "INSERT INTO {{table}} VALUES ({{{values.ProcessIdentifier}}},{{{values.LEVEL}}},{{{values.PARENT}}},{{{values.FrameworxProcess}}},{{{values.Category}}},{{{values.OriginalProcessIdentifier}}},{{{values.ExtendedDescription}}},'',{{{values.BriefDescription}}},{{{values.FrameworxDomain}}},{{{values.VerticalGroup}}},{{{values.MaturityLevel}}},{{{values.FrameworxStatus}}});",
-            "file": "/src/assets/datas/GB921_Business_Process_Framework_Processes_v21.0.csv"
+            "action": "Import-CSV",
+            "sql": "INSERT INTO ETOM VALUES ($ProcessIdentifier ,$LEVEL ,$PARENT ,$FrameworxProcess ,$Category ,$OriginalProcessIdentifier ,$ExtendedDescription ,'',$BriefDescription ,$FrameworxDomain ,$VerticalGroup ,$MaturityLevel ,$FrameworxStatus );",
+            "file": "./src/assets/datas/GB921_Business_Process_Framework_Processes_v21.0.csv"
         },
         {
-            "type": "csv",
-            "table": "ETOM",
-            "sql": "INSERT INTO {{table}} VALUES ({{{values.ProcessIdentifier}}},{{{values.LEVEL}}},{{{values.PARENT}}},{{{values.FrameworxProcess}}},{{{values.Category}}},{{{values.OriginalProcessIdentifier}}},{{{values.ExtendedDescription}}},'',{{{values.BriefDescription}}},{{{values.FrameworxDomain}}},{{{values.VerticalGroup}}},{{{values.MaturityLevel}}},{{{values.FrameworxStatus}}});",
-            "file": "/src/assets/datas/GB921_Business_Process_Framework_Processes_domain_v21.0.csv"
+            "action": "Import-CSV",
+            "sql": "INSERT INTO ETOM VALUES ($ProcessIdentifier ,$LEVEL ,$PARENT ,$FrameworxProcess ,$Category ,$OriginalProcessIdentifier ,$ExtendedDescription ,'',$BriefDescription ,$FrameworxDomain ,$VerticalGroup ,$MaturityLevel ,$FrameworxStatus );",
+            "file": "./src/assets/datas/GB921_Business_Process_Framework_Processes_domain_v21.0.csv"
         },
         {
-            "type": "csv",
-            "table": "TAM",
-            "sql": "INSERT INTO {{table}} VALUES ({{{values.ApplicationIdentifier}}},{{{values.LEVEL}}},{{{values.PARENT}}},{{{values.FrameworxApplication}}},{{{values.Category}}},'',{{{values.Overview}}},{{{values.FrameworxFunction}}},'',{{{values.FrameworxDomain}}},'',{{{values.MaturityLevel}}},{{{values.Status}}});",
-            "file": "/src/assets/datas/GB929F_Functional_Framework_Functional_Decomposition_v21.0.0.csv"
+            "action": "Import-CSV",
+            "sql": "INSERT INTO TAM VALUES ($ApplicationIdentifier ,$LEVEL ,$PARENT ,$FrameworxApplication ,$Category ,'',$Overview ,$FrameworxFunction ,'',$FrameworxDomain ,'',$MaturityLevel ,$Status );",
+            "file": "./src/assets/datas/GB929F_Functional_Framework_Functional_Decomposition_v21.0.0.csv"
         },
         {
-            "type": "csv",
-            "table": "TAM",
-            "sql": "INSERT INTO {{table}} VALUES ({{{values.ApplicationIdentifier}}},{{{values.LEVEL}}},{{{values.PARENT}}},{{{values.FrameworxApplication}}},{{{values.Category}}},'',{{{values.Overview}}},{{{values.FrameworxFunction}}},'',{{{values.FrameworxDomain}}},'',{{{values.MaturityLevel}}},{{{values.Status}}});",
-            "file": "/src/assets/datas/GB929F_Functional_Framework_Functional_Decomposition_Domain_v21.0.0.csv"
+            "action": "Import-CSV",
+            "sql": "INSERT INTO TAM VALUES ($ApplicationIdentifier ,$LEVEL ,$PARENT ,$FrameworxApplication ,$Category ,'',$Overview ,$FrameworxFunction ,'',$FrameworxDomain ,'',$MaturityLevel ,$Status );",
+            "file": "./src/assets/datas/GB929F_Functional_Framework_Functional_Decomposition_Domain_v21.0.0.csv"
         },
         {
-            "type": "csv",
-            "table": "Functions",
-            "sql": "INSERT INTO {{table}} VALUES ({{{values.FunctionIdentifier}}},'1','',{{{values.FrameworxFunction}}},'','',{{{values.FrameworxDomain}}},{{{values.VerticalGroup}}},{{{values.Description}}},'1','','',{{{values.Issue}}});",
-            "file": "/src/assets/datas/GB929F_Functional_Framework_Functional_Decomposition_Functions_v21.0.0.csv"
+            "action": "Import-CSV",
+            "sql": "INSERT INTO Functions VALUES ($FunctionIdentifier ,'1','',$FrameworxFunction ,'','',$FrameworxDomain ,$VerticalGroup ,$Description ,'1','','',$Issue );",
+            "file": "./src/assets/datas/GB929F_Functional_Framework_Functional_Decomposition_Functions_v21.0.0.csv"
         },
         {
-            "type": "csv",
-            "table": "ODA_Functional_Blocks",
-            "sql": "INSERT INTO {{table}} VALUES ({{{values.ID}}},{{{values.LEVEL}}},{{{values.PARENT}}},{{{values.BlockName}}},{{{values.TYPE}}},{{{values.ORIGINAL_ID}}},{{{values.DefinitionScope}}},'',{{{values.characterizedas}}},{{{values.DOMAIN}}},{{{values.CATEGORY}}},{{{values.MATURITY_LEVEL}}},{{{values.FRAMEWORX_STATUS}}});",
-            "file": "/src/assets/datas/GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0.csv"
+            "action": "Import-CSV",
+            "sql": "INSERT INTO ODA_Functional_Blocks VALUES ($ID ,$LEVEL ,$PARENT ,$BlockName ,$TYPE ,$ORIGINAL_ID ,$DefinitionScope ,'',$characterizedas ,$DOMAIN ,$CATEGORY ,$MATURITY_LEVEL ,$FRAMEWORX_STATUS );",
+            "file": "./src/assets/datas/GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0.csv"
         },
         {
-            "type": "csv",
-            "table": "End_to_End_Business_Flows",
-            "sql": "INSERT INTO {{table}} VALUES ({{{values.ID}}},{{{values.LEVEL}}},{{{values.PARENT}}},{{{values.NAME}}},{{{values.TYPE}}},{{{values.ORIGINAL_ID}}},{{{values.DESCRIPTION}}},{{{values.FUNCTION}}},{{{values.BRIEF_DESCRIPTION}}},{{{values.ASSUMPTIONS}}},{{{values.DOMAIN}}},{{{values.CATEGORY}}},{{{values.MATURITY_LEVEL}}},{{{values.FRAMEWORX_STATUS}}});",
-            "file": "/src/assets/datas/GB921E_End_to_End_Business_Flows_v20.0.1.csv"
+            "action": "Import-CSV",
+            "sql": "INSERT INTO End_to_End_Business_Flows VALUES ($ID ,$LEVEL ,$PARENT ,$NAME ,$TYPE ,$ORIGINAL_ID ,$DESCRIPTION ,$FUNCTION ,$BRIEF_DESCRIPTION ,$ASSUMPTIONS ,$DOMAIN ,$CATEGORY ,$MATURITY_LEVEL ,$FRAMEWORX_STATUS );",
+            "file": "./src/assets/datas/GB921E_End_to_End_Business_Flows_v20.0.1.csv"
         },
         {
-            "type": "csv",
-            "table": "Open_APIs",
-            "sql": "INSERT INTO {{table}} VALUES ({{{values.ID}}},{{{values.LEVEL}}},{{{values.PARENT}}},{{{values.NAME}}},{{{values.TYPE}}},{{{values.FUNCID}}},{{{values.CATEGORY}}},{{{values.DESCRIPTION}}},{{{values.FUNCTION}}},{{{values.MATURITY_LEVEL}}},{{{values.SWAGGER}}},{{{values.SPECIFICATION}}},{{{values.CONFORMANCE_PROFILE}}},{{{values.CTK}}},{{{values.SAMPLEIMPLEMENTATIONCODE}}},{{{values.POSTMANCOLLECTION}}},{{{values.RELEASE}}},{{{values.VERSION}}},'',{{{values.LIFECYCLESTATUS}}});",
-            "file": "/src/assets/datas/TM_Forum_Open_APIs.csv"
+            "action": "Import-CSV",
+            "sql": "INSERT INTO Open_APIs VALUES ($ID ,$LEVEL ,$PARENT ,$NAME ,$TYPE ,$FUNCID ,$CATEGORY ,$DESCRIPTION ,$FUNCTION ,$MATURITY_LEVEL ,$SWAGGER ,$SPECIFICATION ,$CONFORMANCE_PROFILE ,$CTK ,$SAMPLEIMPLEMENTATIONCODE ,$POSTMANCOLLECTION ,$RELEASE ,$VERSION ,'',$LIFECYCLESTATUS );",
+            "file": "./src/assets/datas/TM_Forum_Open_APIs.csv"
         },
         {
-            "type": "csv",
-            "table": "Legacy_Systems",
-            "sql": "INSERT INTO {{table}} VALUES ({{{values.ID}}},{{{values.LEVEL}}},{{{values.PARENT}}},{{{values.NAME}}},{{{values.TYPE}}},{{{values.FUNCID}}},{{{values.CATEGORY}}},{{{values.DESCRIPTION}}},{{{values.FUNCTION}}},{{{values.DOMAIN}}},{{{values.MATURITY_LEVEL}}},{{{values.DEV_OWNER}}},{{{values.OPE_OWNER}}},{{{values.SYSTEM_OWNER}}},{{{values.SYSTEM_DOCUMENT}}});",
-            "file": "/src/assets/datas/Legacy_Systems.csv"
+            "action": "Import-CSV",
+            "sql": "INSERT INTO Legacy_Systems VALUES ($ID ,$LEVEL ,$PARENT ,$NAME ,$TYPE ,$FUNCID ,$CATEGORY ,$DESCRIPTION ,$FUNCTION ,$DOMAIN ,$MATURITY_LEVEL ,$DEV_OWNER ,$OPE_OWNER ,$SYSTEM_OWNER ,$SYSTEM_DOCUMENT );",
+            "file": "./src/assets/datas/Legacy_Systems.csv"
         },
         {
-            "type": "csv",
-            "table": "MAPPING",
-            "sql": "{{#notEmpty values.FROM_KEY}}INSERT INTO {{table}} VALUES ({{{values.FROM_TABLE}}},{{{values.FROM_KEY}}},{{{values.TO_TABLE}}},{{{values.TO_KEY}}},{{{values.SOURCE}}},{{{values.MATURITY_LEVEL}}},{{{values.MEMO}}});{{/notEmpty}}",
-            "file": "/src/assets/datas/MAPPING.csv"
+            "action": "Import-CSV",
+            "sql": "INSERT INTO MAPPING VALUES ($FROM_TABLE ,$FROM_KEY ,$TO_TABLE ,$TO_KEY ,$SOURCE ,$MATURITY_LEVEL ,$MEMO );",
+            "file": "./src/assets/datas/MAPPING.csv"
         },
         {
-            "type": "csv",
-            "table": "MAPPING",
-            "sql": "{{#notEmpty values.FROM_KEY}}INSERT INTO {{table}} VALUES ({{{values.FROM_TABLE}}},{{{values.FROM_KEY}}},{{{values.TO_TABLE}}},{{{values.TO_KEY}}},{{{values.SOURCE}}},{{{values.MATURITY_LEVEL}}},{{{values.MEMO}}});{{/notEmpty}}",
-            "file": "/src/assets/datas/TAM_Functions_Mapping_21.0.csv"
+            "action": "Import-CSV",
+            "sql": "INSERT INTO MAPPING VALUES ($FROM_TABLE ,$FROM_KEY ,$TO_TABLE ,$TO_KEY ,$SOURCE ,$MATURITY_LEVEL ,$MEMO );",
+            "file": "./src/assets/datas/TAM_Functions_Mapping_21.0.csv"
         }
     ]
 }
