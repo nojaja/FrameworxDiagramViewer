@@ -81539,16 +81539,13 @@ let pageGen = async function (table, id) {
   const elementlinks = document.getElementsByClassName("elementlink")
   createDataset2ClickEvent(elementlinks)
 
-
   //組織図のクリックイベント作成
   const node_elements = document.getElementsByClassName("node")
   createDataset2ClickEvent(node_elements)
-
   
   //SVGリンクイベント作成
   const atags = document.querySelectorAll("svg a")
   createSVGATag2ClickEvent(atags)
-  
 
 }
 
@@ -81789,4 +81786,4 @@ Handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=map/main.4a6b1b2d1b1fd30c4a33.js.map
+//# sourceMappingURL=map/main.09912735ee281c8ca2d7.js.map
