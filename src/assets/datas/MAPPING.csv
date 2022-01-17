@@ -89,141 +89,141 @@ ODA_Functional_Blocks,IM,eTOM,1.5.9,GB1022,4,
 ODA_Functional_Blocks,IM,eTOM,1.5.13,GB1022,4,
 ODA_Functional_Blocks,IM,eTOM,1.6.6,GB1022,4,
 ODA_Functional_Blocks,IM,eTOM,1.6.11,GB1022,4,
-End_to_End_Business_Flows,Request-to-Answer,eTOM,1.1.9,GB921E,4,
-End_to_End_Business_Flows,Request-to-Answer,eTOM,1.1.10,GB921E,4,
-End_to_End_Business_Flows,Request-to-Answer,eTOM,1.1.11,GB921E,4,
-End_to_End_Business_Flows,Request-to-Answer,eTOM,1.3.3,GB921E,4,
-End_to_End_Business_Flows,Request-to-Answer,eTOM,1.3.4,GB921E,4,
-End_to_End_Business_Flows,Request-to-Answer,eTOM,1.3.5,GB921E,4,
-End_to_End_Business_Flows,Order-to-Payment,eTOM,1.1.11,GB921E,4,
-End_to_End_Business_Flows,Order-to-Payment,eTOM,1.3.3,GB921E,4,
-End_to_End_Business_Flows,Order-to-Payment,eTOM,1.3.4,GB921E,4,
-End_to_End_Business_Flows,Order-to-Payment,eTOM,1.3.9,GB921E,4,
-End_to_End_Business_Flows,Order-to-Payment,eTOM,1.4.5,GB921E,4,
-End_to_End_Business_Flows,Order-to-Payment,eTOM,1.5.6,GB921E,4,
-End_to_End_Business_Flows,Order-to-Payment,eTOM,1.6.8,GB921E,4,
-End_to_End_Business_Flows,Usage-to-Payment,eTOM,1.3.5,GB921E,4,
-End_to_End_Business_Flows,Order-to-Payment,eTOM,1.3.8,GB921E,4,
-End_to_End_Business_Flows,Order-to-Payment,eTOM,1.3.9,GB921E,4,
-End_to_End_Business_Flows,Order-to-Payment,eTOM,1.3.12,GB921E,4,
-End_to_End_Business_Flows,Order-to-Payment,eTOM,1.3.13,GB921E,4,
-End_to_End_Business_Flows,Order-to-Payment,eTOM,1.4.8,GB921E,4,
-End_to_End_Business_Flows,Order-to-Payment,eTOM,1.5.10,GB921E,4,
-End_to_End_Business_Flows,Request-to-Change,eTOM,1.1.11,GB921E,4,
-End_to_End_Business_Flows,Request-to-Change,eTOM,1.3.3,GB921E,4,
-End_to_End_Business_Flows,Request-to-Change,eTOM,1.3.4,GB921E,4,
-End_to_End_Business_Flows,Request-to-Change,eTOM,1.3.5,GB921E,4,
-End_to_End_Business_Flows,Request-to-Change,eTOM,1.3.9,GB921E,4,
-End_to_End_Business_Flows,Request-to-Change,eTOM,1.4.5,GB921E,4,
-End_to_End_Business_Flows,Request-to-Change,eTOM,1.5.6,GB921E,4,
-End_to_End_Business_Flows,Request-to-Change,eTOM,1.6.8,GB921E,4,
-End_to_End_Business_Flows,Termination-to-Confirmation,eTOM,1.1.11,GB921E,4,
-End_to_End_Business_Flows,Termination-to-Confirmation,eTOM,1.3.3,GB921E,4,
-End_to_End_Business_Flows,Termination-to-Confirmation,eTOM,1.3.4,GB921E,4,
-End_to_End_Business_Flows,Termination-to-Confirmation,eTOM,1.3.5,GB921E,4,
-End_to_End_Business_Flows,Termination-to-Confirmation,eTOM,1.3.9,GB921E,4,
-End_to_End_Business_Flows,Termination-to-Confirmation,eTOM,1.4.5,GB921E,4,
-End_to_End_Business_Flows,Termination-to-Confirmation,eTOM,1.5.6,GB921E,4,
-End_to_End_Business_Flows,Termination-to-Confirmation,eTOM,1.6.8,GB921E,4,
-End_to_End_Business_Flows,Problem-to-Solution,eTOM,1.1.11,GB921E,4,
-End_to_End_Business_Flows,Problem-to-Solution,eTOM,1.3.4,GB921E,4,
-End_to_End_Business_Flows,Problem-to-Solution,eTOM,1.3.5,GB921E,4,
-End_to_End_Business_Flows,Problem-to-Solution,eTOM,1.3.7,GB921E,4,
-End_to_End_Business_Flows,Problem-to-Solution,eTOM,1.3.9,GB921E,4,
-End_to_End_Business_Flows,Problem-to-Solution,eTOM,1.4.6,GB921E,4,
-End_to_End_Business_Flows,Problem-to-Solution,eTOM,1.5.8,GB921E,4,
-End_to_End_Business_Flows,Problem-to-Solution,eTOM,1.6.10,GB921E,4,
-End_to_End_Business_Flows,Complaint-to-Solution,eTOM,1.1.11,GB921E,4,
-End_to_End_Business_Flows,Complaint-to-Solution,eTOM,1.3.4,GB921E,4,
-End_to_End_Business_Flows,Complaint-to-Solution,eTOM,1.3.5,GB921E,4,
-End_to_End_Business_Flows,Complaint-to-Solution,eTOM,1.3.7,GB921E,4,
-End_to_End_Business_Flows,Complaint-to-Solution,eTOM,1.3.9,GB921E,4,
-End_to_End_Business_Flows,Production Order-to-Acceptance,eTOM,1.4.5,GB921E,4,
-End_to_End_Business_Flows,Production Order-to-Acceptance,eTOM,1.5.6,GB921E,4,
-End_to_End_Business_Flows,Production Order-to-Acceptance,eTOM,1.6.8,GB921E,4,
-End_to_End_Business_Flows,Trouble Ticket-to-Solution,eTOM,1.4.6,GB921E,4,
-End_to_End_Business_Flows,Trouble Ticket-to-Solution,eTOM,1.5.8,GB921E,4,
-End_to_End_Business_Flows,Trouble Ticket-to-Solution,eTOM,1.6.10,GB921E,4,
-End_to_End_Business_Flows,Trouble Ticket-to-Solution,eTOM,1.4.6,GB921E,4,
-End_to_End_Business_Flows,Usage-to-Usage Data,eTOM,1.3.9,GB921E,4,
-End_to_End_Business_Flows,Usage-to-Usage Data,eTOM,1.3.12,GB921E,4,
-End_to_End_Business_Flows,Usage-to-Usage Data,eTOM,1.3.13,GB921E,4,
-End_to_End_Business_Flows,Usage-to-Usage Data,eTOM,1.4.8,GB921E,4,
-End_to_End_Business_Flows,Usage-to-Usage Data,eTOM,1.5.10,GB921E,4,
-End_to_End_Business_Flows,Capacity Management,eTOM,1.1.1,GB921E,4,
-End_to_End_Business_Flows,Capacity Management,eTOM,1.1.2,GB921E,4,
-End_to_End_Business_Flows,Capacity Management,eTOM,1.1.3,GB921E,4,
-End_to_End_Business_Flows,Capacity Management,eTOM,1.2.1,GB921E,4,
-End_to_End_Business_Flows,Capacity Management,eTOM,1.4.1,GB921E,4,
-End_to_End_Business_Flows,Capacity Management,eTOM,1.4.2,GB921E,4,
-End_to_End_Business_Flows,Capacity Management,eTOM,1.4.3,GB921E,4,
-End_to_End_Business_Flows,Capacity Management,eTOM,1.5.1,GB921E,4,
-End_to_End_Business_Flows,Capacity Management,eTOM,1.5.2,GB921E,4,
-End_to_End_Business_Flows,Capacity Management,eTOM,1.5.3,GB921E,4,
-End_to_End_Business_Flows,Capacity Management,eTOM,1.6.3,GB921E,4,
-End_to_End_Business_Flows,Capacity Management,eTOM,1.8.2,GB921E,4,
-End_to_End_Business_Flows,Capacity Management,eTOM,1.8.5,GB921E,4,
-End_to_End_Business_Flows,Capacity Management,eTOM,1.1.12,GB921E,4,
-End_to_End_Business_Flows,Capacity Management,eTOM,1.1.13,GB921E,4,
-End_to_End_Business_Flows,Capacity Management,eTOM,1.4.4,GB921E,4,
-End_to_End_Business_Flows,Capacity Management,eTOM,1.4.7,GB921E,4,
-End_to_End_Business_Flows,Capacity Management,eTOM,1.5.4,GB921E,4,
-End_to_End_Business_Flows,Capacity Management,eTOM,1.5.7,GB921E,4,
-End_to_End_Business_Flows,Capacity Management,eTOM,1.5.9,GB921E,4,
-End_to_End_Business_Flows,Capacity Management,eTOM,1.6.11,GB921E,4,
-End_to_End_Business_Flows,Capacity Management,eTOM,1.8.2,GB921E,4,
-End_to_End_Business_Flows,Service Lifecycle Management,eTOM,1.2.1,GB921E,4,
-End_to_End_Business_Flows,Service Lifecycle Management,eTOM,1.4.1,GB921E,4,
-End_to_End_Business_Flows,Service Lifecycle Management,eTOM,1.4.2,GB921E,4,
-End_to_End_Business_Flows,Service Lifecycle Management,eTOM,1.4.3,GB921E,4,
-End_to_End_Business_Flows,Service Lifecycle Management,eTOM,1.4.4,GB921E,4,
-End_to_End_Business_Flows,Service Lifecycle Management,eTOM,1.4.7,GB921E,4,
-End_to_End_Business_Flows,Service Lifecycle Management,eTOM,1.6.1,GB921E,4,
-End_to_End_Business_Flows,Service Lifecycle Management,eTOM,1.6.2,GB921E,4,
-End_to_End_Business_Flows,Service Lifecycle Management,eTOM,1.6.3,GB921E,4,
-End_to_End_Business_Flows,Resource Lifecycle Management,eTOM,1.2.1,GB921E,4,
-End_to_End_Business_Flows,Resource Lifecycle Management,eTOM,1.4.1,GB921E,4,
-End_to_End_Business_Flows,Resource Lifecycle Management,eTOM,1.5.1,GB921E,4,
-End_to_End_Business_Flows,Resource Lifecycle Management,eTOM,1.5.2,GB921E,4,
-End_to_End_Business_Flows,Resource Lifecycle Management,eTOM,1.5.3,GB921E,4,
-End_to_End_Business_Flows,Resource Lifecycle Management,eTOM,1.5.4,GB921E,4,
-End_to_End_Business_Flows,Resource Lifecycle Management,eTOM,1.5.9,GB921E,4,
-End_to_End_Business_Flows,Resource Lifecycle Management,eTOM,1.6.1,GB921E,4,
-End_to_End_Business_Flows,Resource Lifecycle Management,eTOM,1.6.2,GB921E,4,
-End_to_End_Business_Flows,Resource Lifecycle Management,eTOM,1.6.3,GB921E,4,
-End_to_End_Business_Flows,Idea-to-Business Plan,eTOM,1.1.1.17,GB921E,4,
-End_to_End_Business_Flows,Idea-to-Business Plan,eTOM,1.1.2.1,GB921E,4,
-End_to_End_Business_Flows,Idea-to-Business Plan,eTOM,1.1.3.15,GB921E,4,
-End_to_End_Business_Flows,Idea-to-Business Plan,eTOM,1.1.4.1,GB921E,4,
-End_to_End_Business_Flows,Idea-to-Business Plan,eTOM,1.1.6.1,GB921E,4,
-End_to_End_Business_Flows,Idea-to-Business Proposal,eTOM,1.1.1.17,GB921E,4,
-End_to_End_Business_Flows,Idea-to-Business Proposal,eTOM,1.1.2.1,GB921E,4,
-End_to_End_Business_Flows,Idea-to-Business Proposal,eTOM,1.1.2.8,GB921E,4,
-End_to_End_Business_Flows,Idea-to-Business Proposal,eTOM,1.1.3.15,GB921E,4,
-End_to_End_Business_Flows,Idea-to-Business Proposal,eTOM,1.1.4.1,GB921E,4,
-End_to_End_Business_Flows,Idea-to-Business Proposal,eTOM,1.1.6.2,GB921E,4,
-End_to_End_Business_Flows,Business Proposal-to-Launch,eTOM,1.1.2.10,GB921E,4,
-End_to_End_Business_Flows,Business Proposal-to-Launch,eTOM,1.1.3.15,GB921E,4,
-End_to_End_Business_Flows,Business Proposal-to-Launch,eTOM,1.1.4.3,GB921E,4,
-End_to_End_Business_Flows,Business Proposal-to-Launch,eTOM,1.1.5.3,GB921E,4,
-End_to_End_Business_Flows,Business Proposal-to-Launch,eTOM,1.1.6.4,GB921E,4,
-End_to_End_Business_Flows,Assessment-to-Relaunch,eTOM,1.1.2.10,GB921E,4,
-End_to_End_Business_Flows,Assessment-to-Relaunch,eTOM,1.1.3.15,GB921E,4,
-End_to_End_Business_Flows,Assessment-to-Relaunch,eTOM,1.1.4.3,GB921E,4,
-End_to_End_Business_Flows,Assessment-to-Relaunch,eTOM,1.1.5.3,GB921E,4,
-End_to_End_Business_Flows,Assessment-to-Relaunch,eTOM,1.1.6.4,GB921E,4,
-End_to_End_Business_Flows,Assessment-to-Retirement,eTOM,1.1.2.10,GB921E,4,
-End_to_End_Business_Flows,Assessment-to-Retirement,eTOM,1.1.3.15,GB921E,4,
-End_to_End_Business_Flows,Assessment-to-Retirement,eTOM,1.1.4.3,GB921E,4,
-End_to_End_Business_Flows,Assessment-to-Retirement,eTOM,1.1.5.3,GB921E,4,
-End_to_End_Business_Flows,Assessment-to-Retirement,eTOM,1.1.6.4,GB921E,4,
-End_to_End_Business_Flows,Market Strategy-to-Campaign,eTOM,1.1.1.1,GB921E,4,
-End_to_End_Business_Flows,Market Strategy-to-Campaign,eTOM,1.1.3.15,GB921E,4,
-End_to_End_Business_Flows,Market Strategy-to-Campaign,eTOM,1.1.1.17,GB921E,4,
-End_to_End_Business_Flows,Market Strategy-to-Campaign,eTOM,1.1.1.18,GB921E,4,
-End_to_End_Business_Flows,Market Strategy-to-Campaign,eTOM,1.1.1.15,GB921E,4,
-End_to_End_Business_Flows,Market Strategy-to-Campaign,eTOM,1.1.1.14,GB921E,4,
-End_to_End_Business_Flows,Market Strategy-to-Campaign,eTOM,1.1.2.2,GB921E,4,
+End_to_End_Business_Flows,Request-to-Answer,eTOM,1.1.9,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Request-to-Answer,eTOM,1.1.10,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Request-to-Answer,eTOM,1.1.11,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Request-to-Answer,eTOM,1.3.3,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Request-to-Answer,eTOM,1.3.4,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Request-to-Answer,eTOM,1.3.5,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Order-to-Payment,eTOM,1.1.11,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Order-to-Payment,eTOM,1.3.3,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Order-to-Payment,eTOM,1.3.4,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Order-to-Payment,eTOM,1.3.9,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Order-to-Payment,eTOM,1.4.5,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Order-to-Payment,eTOM,1.5.6,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Order-to-Payment,eTOM,1.6.8,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Usage-to-Payment,eTOM,1.3.5,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Order-to-Payment,eTOM,1.3.8,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Order-to-Payment,eTOM,1.3.9,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Order-to-Payment,eTOM,1.3.12,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Order-to-Payment,eTOM,1.3.13,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Order-to-Payment,eTOM,1.4.8,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Order-to-Payment,eTOM,1.5.10,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Request-to-Change,eTOM,1.1.11,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Request-to-Change,eTOM,1.3.3,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Request-to-Change,eTOM,1.3.4,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Request-to-Change,eTOM,1.3.5,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Request-to-Change,eTOM,1.3.9,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Request-to-Change,eTOM,1.4.5,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Request-to-Change,eTOM,1.5.6,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Request-to-Change,eTOM,1.6.8,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Termination-to-Confirmation,eTOM,1.1.11,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Termination-to-Confirmation,eTOM,1.3.3,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Termination-to-Confirmation,eTOM,1.3.4,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Termination-to-Confirmation,eTOM,1.3.5,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Termination-to-Confirmation,eTOM,1.3.9,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Termination-to-Confirmation,eTOM,1.4.5,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Termination-to-Confirmation,eTOM,1.5.6,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Termination-to-Confirmation,eTOM,1.6.8,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Problem-to-Solution,eTOM,1.1.11,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Problem-to-Solution,eTOM,1.3.4,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Problem-to-Solution,eTOM,1.3.5,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Problem-to-Solution,eTOM,1.3.7,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Problem-to-Solution,eTOM,1.3.9,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Problem-to-Solution,eTOM,1.4.6,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Problem-to-Solution,eTOM,1.5.8,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Problem-to-Solution,eTOM,1.6.10,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Complaint-to-Solution,eTOM,1.1.11,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Complaint-to-Solution,eTOM,1.3.4,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Complaint-to-Solution,eTOM,1.3.5,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Complaint-to-Solution,eTOM,1.3.7,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Complaint-to-Solution,eTOM,1.3.9,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Production Order-to-Acceptance,eTOM,1.4.5,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Production Order-to-Acceptance,eTOM,1.5.6,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Production Order-to-Acceptance,eTOM,1.6.8,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Trouble Ticket-to-Solution,eTOM,1.4.6,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Trouble Ticket-to-Solution,eTOM,1.5.8,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Trouble Ticket-to-Solution,eTOM,1.6.10,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Trouble Ticket-to-Solution,eTOM,1.4.6,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Usage-to-Usage Data,eTOM,1.3.9,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Usage-to-Usage Data,eTOM,1.3.12,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Usage-to-Usage Data,eTOM,1.3.13,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Usage-to-Usage Data,eTOM,1.4.8,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Usage-to-Usage Data,eTOM,1.5.10,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Capacity Management,eTOM,1.1.1,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Capacity Management,eTOM,1.1.2,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Capacity Management,eTOM,1.1.3,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Capacity Management,eTOM,1.2.1,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Capacity Management,eTOM,1.4.1,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Capacity Management,eTOM,1.4.2,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Capacity Management,eTOM,1.4.3,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Capacity Management,eTOM,1.5.1,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Capacity Management,eTOM,1.5.2,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Capacity Management,eTOM,1.5.3,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Capacity Management,eTOM,1.6.3,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Capacity Management,eTOM,1.8.2,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Capacity Management,eTOM,1.8.5,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Capacity Management,eTOM,1.1.12,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Capacity Management,eTOM,1.1.13,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Capacity Management,eTOM,1.4.4,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Capacity Management,eTOM,1.4.7,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Capacity Management,eTOM,1.5.4,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Capacity Management,eTOM,1.5.7,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Capacity Management,eTOM,1.5.9,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Capacity Management,eTOM,1.6.11,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Capacity Management,eTOM,1.8.2,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Service Lifecycle Management,eTOM,1.2.1,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Service Lifecycle Management,eTOM,1.4.1,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Service Lifecycle Management,eTOM,1.4.2,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Service Lifecycle Management,eTOM,1.4.3,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Service Lifecycle Management,eTOM,1.4.4,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Service Lifecycle Management,eTOM,1.4.7,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Service Lifecycle Management,eTOM,1.6.1,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Service Lifecycle Management,eTOM,1.6.2,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Service Lifecycle Management,eTOM,1.6.3,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Resource Lifecycle Management,eTOM,1.2.1,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Resource Lifecycle Management,eTOM,1.4.1,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Resource Lifecycle Management,eTOM,1.5.1,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Resource Lifecycle Management,eTOM,1.5.2,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Resource Lifecycle Management,eTOM,1.5.3,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Resource Lifecycle Management,eTOM,1.5.4,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Resource Lifecycle Management,eTOM,1.5.9,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Resource Lifecycle Management,eTOM,1.6.1,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Resource Lifecycle Management,eTOM,1.6.2,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Resource Lifecycle Management,eTOM,1.6.3,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Idea-to-Business Plan,eTOM,1.1.17,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Idea-to-Business Plan,eTOM,1.2.1,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Idea-to-Business Plan,eTOM,1.3.15,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Idea-to-Business Plan,eTOM,1.4.1,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Idea-to-Business Plan,eTOM,1.6.1,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Idea-to-Business Proposal,eTOM,1.1.17,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Idea-to-Business Proposal,eTOM,1.2.1,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Idea-to-Business Proposal,eTOM,1.2.8,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Idea-to-Business Proposal,eTOM,1.3.15,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Idea-to-Business Proposal,eTOM,1.4.1,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Idea-to-Business Proposal,eTOM,1.6.2,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Business Proposal-to-Launch,eTOM,1.2.10,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Business Proposal-to-Launch,eTOM,1.3.15,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Business Proposal-to-Launch,eTOM,1.4.3,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Business Proposal-to-Launch,eTOM,1.5.3,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Business Proposal-to-Launch,eTOM,1.6.4,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Assessment-to-Relaunch,eTOM,1.2.10,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Assessment-to-Relaunch,eTOM,1.3.15,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Assessment-to-Relaunch,eTOM,1.4.3,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Assessment-to-Relaunch,eTOM,1.5.3,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Assessment-to-Relaunch,eTOM,1.6.4,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Assessment-to-Retirement,eTOM,1.2.10,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Assessment-to-Retirement,eTOM,1.3.15,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Assessment-to-Retirement,eTOM,1.4.3,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Assessment-to-Retirement,eTOM,1.5.3,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Assessment-to-Retirement,eTOM,1.6.4,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Market Strategy-to-Campaign,eTOM,1.1.1,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Market Strategy-to-Campaign,eTOM,1.3.15,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Market Strategy-to-Campaign,eTOM,1.1.17,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Market Strategy-to-Campaign,eTOM,1.1.18,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Market Strategy-to-Campaign,eTOM,1.1.15,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Market Strategy-to-Campaign,eTOM,1.1.14,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
+End_to_End_Business_Flows,Market Strategy-to-Campaign,eTOM,1.2.2,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level3 MAPより
 ODA_Functional_Blocks,PM,Open_APIs,TMF632,GB1022,4,
 ODA_Functional_Blocks,PM,Open_APIs,TMF629,GB1022,4,
 ODA_Functional_Blocks,PM,Open_APIs,TMF644,GB1022,4,
