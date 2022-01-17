@@ -136,16 +136,13 @@ let pageGen = async function (table, id) {
   const elementlinks = document.getElementsByClassName("elementlink")
   createDataset2ClickEvent(elementlinks)
 
-
   //組織図のクリックイベント作成
   const node_elements = document.getElementsByClassName("node")
   createDataset2ClickEvent(node_elements)
-
   
   //SVGリンクイベント作成
   const atags = document.querySelectorAll("svg a")
   createSVGATag2ClickEvent(atags)
-  
 
 }
 

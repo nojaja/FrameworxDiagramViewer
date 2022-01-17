@@ -7,7 +7,8 @@ const CopyFilePlugin = require('copy-webpack-plugin')
 const WriteFilePlugin = require('write-file-webpack-plugin')
 const HardSourceWebpackPlugin = require('hard-source-webpack-plugin')
 const zlib = require('zlib')
-const initdb = require('./Initdb.js')
+const Initdb  = require('db-initializer-sqlite3')
+const initdb = new Initdb()
 
 module.exports = {
   mode: process.env.NODE_ENV === 'production' ? 'development' : 'production',
@@ -65,7 +66,6 @@ module.exports = {
     }),
     new CopyFilePlugin(
         [
-            { from: '../node_modules/sql.js/dist/sql-wasm.wasm', to: dist },
             {
                 from: '../node_modules/sql.js/dist/sql-wasm.wasm',
                 to: dist+"/[name].[ext].gz",

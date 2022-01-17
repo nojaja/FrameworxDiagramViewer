@@ -27,6 +27,7 @@
     "cross-env": "^7.0.3",
     "css-loader": "^3.6.0",
     "csv-parse": "^4.16.3",
+    "db-initializer-sqlite3": "^1.0.3",
     "file-loader": "^6.2.0",
     "hard-source-webpack-plugin": "^0.13.1",
     "html-loader": "^1.3.2",
