@@ -58,6 +58,20 @@
             "action": "Import-CSV",
             "sql": "INSERT INTO MAPPING VALUES ($FROM_TABLE ,$FROM_KEY ,$TO_TABLE ,$TO_KEY ,$SOURCE ,$MATURITY_LEVEL ,$MEMO );",
             "file": "./src/assets/datas/TAM_Functions_Mapping_21.0.csv"
+        },
+        {
+            "action": "Execute-SQL",
+            "sql": "INSERT INTO SID_ABE VALUES ('top' ,0 ,'', 'SID Models' ,'','' ,'' ,'','','','','','');"
+        },
+        {
+            "action": "Import-CSV",
+            "sql": "INSERT INTO SID_ABE VALUES ($ID ,$LEVEL ,$PARENT, $NAME ,'','' ,$DESCRIPTION ,'','',$DOMAIN,'','','');",
+            "file": "./src/assets/datas/Information_Framework_SID_Excel_Format_v21.0_ABES.csv"
+        },
+        {
+            "action": "Import-CSV",
+            "sql": "INSERT INTO MAPPING VALUES ($FROM_TABLE ,$FROM_KEY ,$TO_TABLE ,$TO_KEY ,$SOURCE ,$MATURITY_LEVEL ,$MEMO );",
+            "file": "./src/assets/datas/Information_Framework_SID_Excel_Format_v21.0_Mapping.csv"
         }
     ]
 }

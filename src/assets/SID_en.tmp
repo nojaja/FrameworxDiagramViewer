@@ -1,20 +1,15 @@
-    <h1 id="name">{{data.name}} - {{data.title}}</h1>
-    <h4 id="type">Application Framework (TAM)</h4>
-    <h4 id="category">Category: {{data.category}}</h4>
+    <h1 id="name">{{data.title}}</h1>
+    <h4 id="type">Information_Framework (SID)</h4>
+    <h4 id="domain">Domain: {{data.domain}}</h4>
     <h4 id="identifier">Identifier: {{data.name}}</h4>
-    <h4 id="maturity_level">Maturity Level: {{data.maturity}}</h4>
     
     {{#if data.parent}}
     <h4 id="parent">Parent Identifier: <a class="parentlink elementlink" data-id="{{data.parent}}" data-type="{{data.table}}" >{{data.parent}}</a></h4>
-    {{else}}
-    {{svg 'TAM_Overview_en.drawio.svg'}}
     {{/if}}
 
     {{#oc data}}{{/oc}}
     <h3>Overview</h3>
     <p id="description">{{breaklines data.overview}}</p>
-    <h3>Functionality</h3>
-    <p id="functionality">{{breaklines data.functionality}}</p>
     <h3>Relation Data</h3>
     <p id="relationData">
     {{#each data.relationData}}
