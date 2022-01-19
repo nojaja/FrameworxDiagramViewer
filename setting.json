@@ -7,12 +7,23 @@
         "type": "TAM",
         "bpmn-modeler-url": "https://nojaja.github.io/bpmn-modeler/?q="
     },
+    "logic":{
+        "tam":"getPageData",
+        "etom":"getPageData",
+        "sid":"getPageData",
+        "oda_functional_blocks":"getPageData",
+        "end_to_end_business_flows":"getPageData",
+        "open_apis":"getPageData",
+        "legacy_systems":"getPageData",
+        "functions":"getPageData"
+    },
     "database": {
         "en":{
             "url": "./assets/Frameworx_DB_Model_21.0.db.gz",
             "tables": {
                 "tam":{"tableName":"TAM","caption":"Application Framework (TAM)"},
                 "etom":{"tableName":"eTOM","caption":"Business Process Framework (eTOM)"},
+                "sid":{"tableName":"SID_ABE","caption":"Information_Framework (SID)"},
                 "oda_functional_blocks":{"tableName":"ODA_Functional_Blocks","caption":"ODA Functional Blocks"},
                 "end_to_end_business_flows":{"tableName":"End_to_End_Business_Flows","caption":"End to End Business Flows"},
                 "open_apis":{"tableName":"Open_APIs","caption":"Open APIs"},
@@ -30,6 +41,7 @@
             "tables": {
                 "tam":{"tableName":"TAM","caption":"Application Framework (TAM)"},
                 "etom":{"tableName":"eTOM","caption":"Business Process Framework (eTOM)"},
+                "sid":{"tableName":"SID_ABE","caption":"Information_Framework (SID)"},
                 "oda_functional_blocks":{"tableName":"ODA_Functional_Blocks","caption":"ODA Functional Blocks"},
                 "end_to_end_business_flows":{"tableName":"End_to_End_Business_Flows","caption":"End to End Business Flows"},
                 "open_apis":{"tableName":"Open_APIs","caption":"Open APIs"},
@@ -37,6 +49,9 @@
                 "functions":{"tableName":"Functions","caption":"所有機能"}
             },
             "prepares": {
+                "test": "select sql from sqlite_master where type='table';",
+                "test2": "select * from TAM",
+                "sid": "select * from SID_ABE",
                 "PageData": "SELECT ID as name, NAME as title, LEVEL, DESCRIPTION as overview, MATURITY_LEVEL as maturity, FUNCTION as functionality, PARENT as parent, TYPE as category, DOMAIN as domain FROM {{{table}}} WHERE ID=$id",
                 "ChildData": "SELECT ID as name, NAME as title, DOMAIN as domain FROM {{{table}}} WHERE PARENT=$id",
                 "RelationChildData":"SELECT {{{totable}}}.ID as name, NAME as title, MAP.SOURCE as source, MAP.MATURITY_LEVEL as maturity_level, MAP.MEMO as memo FROM (SELECT TO_KEY as ID, SOURCE, MATURITY_LEVEL, MEMO FROM MAPPING WHERE TO_TABLE == $totable AND FROM_KEY IN ({{{ids}}}) AND FROM_TABLE == $fromtable UNION SELECT FROM_KEY as ID, SOURCE, MATURITY_LEVEL, MEMO FROM MAPPING WHERE FROM_TABLE == $totable AND TO_KEY IN ({{{ids}}}) AND TO_TABLE == $fromtable) as MAP INNER JOIN {{{totable}}} ON {{{totable}}}.ID == MAP.ID"

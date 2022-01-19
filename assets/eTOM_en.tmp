@@ -1,4 +1,5 @@
     <h1 id="name">{{data.name}} - {{data.title}}</h1>
+    <h4 id="type">Business Process Framework (eTOM)</h4>
     <h4 id="category">Category: {{data.category}}</h4>
     <h4 id="identifier">Identifier: {{data.name}}</h4>
     <h4 id="maturity_level">Maturity Level: {{data.maturity}}</h4>

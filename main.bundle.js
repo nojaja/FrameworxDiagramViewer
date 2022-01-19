@@ -81223,24 +81223,29 @@ __webpack_require__.r(__webpack_exports__);
 
 
 class Dao {
-    constructor(datafile_url,tables,prepares) {
+    constructor(datafile_url, tables, prepares) {
 
         this.datafile_url = datafile_url || "./assets/Frameworx_DB_Model_21.0.db"
         this.tables = tables || ['TAM', 'eTOM', 'ODA_Functional_Blocks', 'End_to_End_Business_Flows', 'Open_APIs', 'Legacy_Systems']
         this.prepares = prepares
-        console.log("Dao constructor",datafile_url,tables,prepares)
+        console.log("Dao constructor", datafile_url, tables, prepares)
         this.preparesTemplate = {}
         for (const querName in this.prepares) {
-          console.log('querName:' + querName + ' :' + this.prepares[querName]);
-          this.preparesTemplate[querName] = handlebars__WEBPACK_IMPORTED_MODULE_1___default.a.compile(this.prepares[querName]);
+            console.log('querName:' + querName + ' :' + this.prepares[querName]);
+            this.preparesTemplate[querName] = handlebars__WEBPACK_IMPORTED_MODULE_1___default.a.compile(this.prepares[querName]);
         }
+    }
+
+    //有効期限が最大1日になるようなクエリ文字列生成
+    cacheExpire() {
+        return Math.round(Date.now() / 100000000).toString()
     }
 
     //SQLiteの読み込み
     // return {Promise} db
     // ex. await database
-    async database () {
-        
+    async database() {
+
         const sqlwasmPromise = fetch('./sql-wasm.wasm.gz').then(async res => new Promise((resolve, reject) => {
             res.arrayBuffer().then((value) => {
                 resolve(zlib__WEBPACK_IMPORTED_MODULE_2___default.a.unzipSync(Buffer.from(value)).toString())
@@ -81256,27 +81261,27 @@ class Dao {
             locateFile: file => sqlwasm
         }
         const sqlPromise = sql_js__WEBPACK_IMPORTED_MODULE_0___default()(this.config);
-        const dataPromise = fetch(this.datafile_url).then(async res => (this.datafile_url.match(/\.gz$/))? 
-        new Promise((resolve, reject) => {
-            res.arrayBuffer().then((value) => {
-                resolve(zlib__WEBPACK_IMPORTED_MODULE_2___default.a.unzipSync(Buffer.from(value)))
-            });
-        }) : await res.arrayBuffer() );
+        const dataPromise = fetch(this.datafile_url + "?t=" + this.cacheExpire()).then(async res => (this.datafile_url.match(/\.gz$/)) ?
+            new Promise((resolve, reject) => {
+                res.arrayBuffer().then((value) => {
+                    resolve(zlib__WEBPACK_IMPORTED_MODULE_2___default.a.unzipSync(Buffer.from(value)))
+                });
+            }) : await res.arrayBuffer());
         const [SQL, buf] = await Promise.all([sqlPromise, dataPromise])
         return new SQL.Database(new Uint8Array(buf));
     }
-    
-    tableExists (table){
-        if(this.tables[table.toLowerCase()]) return true
+
+    tableExists(table) {
+        if (this.tables[table.toLowerCase()]) return true
         return false
     }
-    getTableInfo (table){
-        return (this.tables[table.toLowerCase()]) 
+    getTableInfo(table) {
+        return (this.tables[table.toLowerCase()])
     }
 
     //ページのデータ取得
-    async getPageData (table, id) {
-        if(!this.tableExists(table)) throw new Error(this.getTableInfo(table).tableName + ' TABLES not exist')
+    async getPageData(table, id) {
+        if (!this.tableExists(table)) throw new Error(this.getTableInfo(table).tableName + ' TABLES not exist')
         this.db = this.db || await this.database()
         try {
             // Prepare an sql statement
@@ -81295,15 +81300,15 @@ class Dao {
             }
             return datascource
         } catch (error) {
-            console.error("getPageData",this.preparesTemplate.PageData({ table: this.getTableInfo(table).tableName}),error)
+            console.error("getPageData", this.preparesTemplate.PageData({ table: this.getTableInfo(table).tableName }), error)
         }
     }
 
     //ページのに関連する子要素の取得
-    async getChildData (table, id) {
-        if(!this.tableExists(table)) throw new Error(this.getTableInfo(table).tableName + ' TABLES not exist')
+    async getChildData(table, id) {
+        if (!this.tableExists(table)) throw new Error(this.getTableInfo(table).tableName + ' TABLES not exist')
         this.db = this.db || await this.database()
-        
+
         try {
             // Prepare an sql statement
             const stmt = this.db.prepare(this.preparesTemplate.ChildData({ table: this.getTableInfo(table).tableName }))
@@ -81320,13 +81325,13 @@ class Dao {
             }
             return children
         } catch (error) {
-            console.error("getChildData",this.preparesTemplate.ChildData({ table: this.getTableInfo(table).tableName}),error)
+            console.error("getChildData", this.preparesTemplate.ChildData({ table: this.getTableInfo(table).tableName }), error)
         }
     }
 
     //ページのに関連する子要素の取得
-    async getRelationData (table, id) {
-        if(!this.tableExists(table)) throw new Error(this.getTableInfo(table).tableName + ' TABLES not exist')
+    async getRelationData(table, id) {
+        if (!this.tableExists(table)) throw new Error(this.getTableInfo(table).tableName + ' TABLES not exist')
         const result = {}
         for (const relationTable in this.tables) {
             if (this.getTableInfo(table).tableName == this.getTableInfo(relationTable).tableName) continue
@@ -81338,18 +81343,18 @@ class Dao {
     }
 
     //ページのに関連する子要素の取得
-    async getRelationChildData (fromtable, fromid, totable) {
-        if(!this.tableExists(fromtable)) throw new Error(this.getTableInfo(fromtable).tableName + ' TABLES not exist')
-        if(!this.tableExists(totable)) throw new Error(this.getTableInfo(totable).tableName+ ' TABLES not exist')
+    async getRelationChildData(fromtable, fromid, totable) {
+        if (!this.tableExists(fromtable)) throw new Error(this.getTableInfo(fromtable).tableName + ' TABLES not exist')
+        if (!this.tableExists(totable)) throw new Error(this.getTableInfo(totable).tableName + ' TABLES not exist')
         this.db = this.db || await this.database()
 
-        const ids = fromid.split('.').map( (currentValue, index, array) => {
-            return `'${array.slice(0,index+1).join('.')}'`
-         } ).join();
+        const ids = fromid.split('.').map((currentValue, index, array) => {
+            return `'${array.slice(0, index + 1).join('.')}'`
+        }).join();
 
         try {
             // Prepare an sql statement
-            const stmt = this.db.prepare(this.preparesTemplate.RelationChildData({ totable: this.getTableInfo(totable).tableName, ids,ids}))
+            const stmt = this.db.prepare(this.preparesTemplate.RelationChildData({ totable: this.getTableInfo(totable).tableName, ids, ids }))
 
             // Bind values to the parameters and fetch the results of the query
             //const result = stmt.getAsObject({'$id' : id});
@@ -81363,9 +81368,35 @@ class Dao {
             }
             return children
         } catch (error) {
-            console.error("getRelationChildData",this.preparesTemplate.RelationChildData({ totable: this.getTableInfo(totable).tableName, ids,ids}),error)
+            console.error("getRelationChildData", this.preparesTemplate.RelationChildData({ totable: this.getTableInfo(totable).tableName, ids, ids }), error)
         }
     }
+
+
+    //クエリ実行
+    async getResult(querName, parameters, callback) {
+        this.db = this.db || await this.database()
+        try {
+            // Prepare an sql statement
+            const stmt = this.db.prepare(this.prepares[querName])
+            stmt.bind(parameters);
+            let row = 0
+            let ret = ""
+            while (stmt.step()) {
+                ret = ret + await callback({ row: row, columnNames: stmt.getColumnNames(), context: stmt.get() });
+                row++
+            }
+
+            //stmt解放
+            stmt.free()
+
+            return ret;
+
+        } catch (error) {
+            console.error("getResult", querName, parameters, error)
+        }
+    }
+
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Dao);
@@ -81520,18 +81551,20 @@ window.addEventListener('popstate', async (event) => {
 //ページの描画処理
 let pageGen = async function (table, id) {
   const dao = await dao_promise
-  
+  const _setting = await getSetting()
+
   let getPageTemplate = async function (table) {
-    if(!dao.tableExists(table)) throw new Error(table + ' TABLES not exist')
+    //if(!dao.tableExists(table)) throw new Error(table + ' TABLES not exist')
     //table単位でページテンプレートを読み込み
     if (!pageCache[table]) {
-      const response = await (await fetch("./assets/" + dao.getTableInfo(table).tableName + "_" + language + ".tmp", { method: "get" })).text();
+      const response = await (await fetch("./assets/" + table + "_" + language + ".tmp", { method: "get" })).text();
       pageCache[table] = Handlebars.compile(response);
     }
     return pageCache[table]
   }
-
-  const data = await dao.getPageData(table, id)
+  //表示ロジックの取得
+  const logic = _setting.logic[table.toLowerCase()];
+  const data = (logic == "getPageData")? await dao.getPageData(table, id) : {}
   const template = await getPageTemplate(table)
   document.getElementById("content_body").innerHTML = await template({ data: data })
 
@@ -81587,6 +81620,7 @@ function createDataset2ClickEvent(elements){
   }
 }
 
+//tree表示する
 Handlebars.registerHelper("oc", function(context, options) {
   const chartContainer = oc.init({ 
     'data': context ,
@@ -81599,12 +81633,14 @@ Handlebars.registerHelper("oc", function(context, options) {
   return new Handlebars.SafeString(chartContainer.outerHTML)
 });
 
+// 改行をBRに変換する
 Handlebars.registerHelper("breaklines", function(text) {
   text = Handlebars.Utils.escapeExpression(text);
   text = text.replace(/(\r\n|\n|\r)/gm, "<br />");
   return new Handlebars.SafeString(text);
 });
 
+//SVGファイルを埋め込み表示する
 Handlebars.registerHelper("svg", async function(svgfilepath) {
   svgfilepath = Handlebars.Utils.escapeExpression(svgfilepath);
   if(svgfilepath.lastIndexOf('.svg')==-1)svgfilepath=svgfilepath+'.svg';
@@ -81612,6 +81648,7 @@ Handlebars.registerHelper("svg", async function(svgfilepath) {
   return new Handlebars.SafeString(response);
 });
 
+//bpmnsvgファイルを埋め込み表示する、editorへのリンクを作成する
 Handlebars.registerHelper("bpmnsvg", async function(svgfilepath) {
   const _setting = await getSetting()
   svgfilepath = Handlebars.Utils.escapeExpression(svgfilepath);
@@ -81626,6 +81663,18 @@ Handlebars.registerHelper("bpmnsvg", async function(svgfilepath) {
 
 Handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {
   return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+});
+
+//settingのpreparesに定義されたクエリを実行する
+Handlebars.registerHelper("sql", async function(querName,parameters, options) {
+  const id = await getParam("q")
+  const type = await getParam("type")
+
+  const dao = await dao_promise
+  const _parameters = parameters || {}
+  _parameters['$id'] = id
+  _parameters['$type'] = type
+  return await dao.getResult(querName,_parameters,options.fn)
 });
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "../node_modules/jquery/dist/jquery.js")))
 
@@ -81786,4 +81835,4 @@ Handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=map/main.09912735ee281c8ca2d7.js.map
+//# sourceMappingURL=map/main.82a7d2839398b7126670.js.map
