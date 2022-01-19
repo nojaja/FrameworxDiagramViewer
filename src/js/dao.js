@@ -24,24 +24,29 @@ import zlib from "zlib";
 
 
 export class Dao {
-    constructor(datafile_url,tables,prepares) {
+    constructor(datafile_url, tables, prepares) {
 
         this.datafile_url = datafile_url || "./assets/Frameworx_DB_Model_21.0.db"
         this.tables = tables || ['TAM', 'eTOM', 'ODA_Functional_Blocks', 'End_to_End_Business_Flows', 'Open_APIs', 'Legacy_Systems']
         this.prepares = prepares
-        console.log("Dao constructor",datafile_url,tables,prepares)
+        console.log("Dao constructor", datafile_url, tables, prepares)
         this.preparesTemplate = {}
         for (const querName in this.prepares) {
-          console.log('querName:' + querName + ' :' + this.prepares[querName]);
-          this.preparesTemplate[querName] = Handlebars.compile(this.prepares[querName]);
+            console.log('querName:' + querName + ' :' + this.prepares[querName]);
+            this.preparesTemplate[querName] = Handlebars.compile(this.prepares[querName]);
         }
+    }
+
+    //有効期限が最大1日になるようなクエリ文字列生成
+    cacheExpire() {
+        return Math.round(Date.now() / 100000000).toString()
     }
 
     //SQLiteの読み込み
     // return {Promise} db
     // ex. await database
-    async database () {
-        
+    async database() {
+
         const sqlwasmPromise = fetch('./sql-wasm.wasm.gz').then(async res => new Promise((resolve, reject) => {
             res.arrayBuffer().then((value) => {
                 resolve(zlib.unzipSync(Buffer.from(value)).toString())
@@ -57,27 +62,27 @@ export class Dao {
             locateFile: file => sqlwasm
         }
         const sqlPromise = initSqlJs(this.config);
-        const dataPromise = fetch(this.datafile_url).then(async res => (this.datafile_url.match(/\.gz$/))? 
-        new Promise((resolve, reject) => {
-            res.arrayBuffer().then((value) => {
-                resolve(zlib.unzipSync(Buffer.from(value)))
-            });
-        }) : await res.arrayBuffer() );
+        const dataPromise = fetch(this.datafile_url + "?t=" + this.cacheExpire()).then(async res => (this.datafile_url.match(/\.gz$/)) ?
+            new Promise((resolve, reject) => {
+                res.arrayBuffer().then((value) => {
+                    resolve(zlib.unzipSync(Buffer.from(value)))
+                });
+            }) : await res.arrayBuffer());
         const [SQL, buf] = await Promise.all([sqlPromise, dataPromise])
         return new SQL.Database(new Uint8Array(buf));
     }
-    
-    tableExists (table){
-        if(this.tables[table.toLowerCase()]) return true
+
+    tableExists(table) {
+        if (this.tables[table.toLowerCase()]) return true
         return false
     }
-    getTableInfo (table){
-        return (this.tables[table.toLowerCase()]) 
+    getTableInfo(table) {
+        return (this.tables[table.toLowerCase()])
     }
 
     //ページのデータ取得
-    async getPageData (table, id) {
-        if(!this.tableExists(table)) throw new Error(this.getTableInfo(table).tableName + ' TABLES not exist')
+    async getPageData(table, id) {
+        if (!this.tableExists(table)) throw new Error(this.getTableInfo(table).tableName + ' TABLES not exist')
         this.db = this.db || await this.database()
         try {
             // Prepare an sql statement
@@ -96,15 +101,15 @@ export class Dao {
             }
             return datascource
         } catch (error) {
-            console.error("getPageData",this.preparesTemplate.PageData({ table: this.getTableInfo(table).tableName}),error)
+            console.error("getPageData", this.preparesTemplate.PageData({ table: this.getTableInfo(table).tableName }), error)
         }
     }
 
     //ページのに関連する子要素の取得
-    async getChildData (table, id) {
-        if(!this.tableExists(table)) throw new Error(this.getTableInfo(table).tableName + ' TABLES not exist')
+    async getChildData(table, id) {
+        if (!this.tableExists(table)) throw new Error(this.getTableInfo(table).tableName + ' TABLES not exist')
         this.db = this.db || await this.database()
-        
+
         try {
             // Prepare an sql statement
             const stmt = this.db.prepare(this.preparesTemplate.ChildData({ table: this.getTableInfo(table).tableName }))
@@ -121,13 +126,13 @@ export class Dao {
             }
             return children
         } catch (error) {
-            console.error("getChildData",this.preparesTemplate.ChildData({ table: this.getTableInfo(table).tableName}),error)
+            console.error("getChildData", this.preparesTemplate.ChildData({ table: this.getTableInfo(table).tableName }), error)
         }
     }
 
     //ページのに関連する子要素の取得
-    async getRelationData (table, id) {
-        if(!this.tableExists(table)) throw new Error(this.getTableInfo(table).tableName + ' TABLES not exist')
+    async getRelationData(table, id) {
+        if (!this.tableExists(table)) throw new Error(this.getTableInfo(table).tableName + ' TABLES not exist')
         const result = {}
         for (const relationTable in this.tables) {
             if (this.getTableInfo(table).tableName == this.getTableInfo(relationTable).tableName) continue
@@ -139,18 +144,18 @@ export class Dao {
     }
 
     //ページのに関連する子要素の取得
-    async getRelationChildData (fromtable, fromid, totable) {
-        if(!this.tableExists(fromtable)) throw new Error(this.getTableInfo(fromtable).tableName + ' TABLES not exist')
-        if(!this.tableExists(totable)) throw new Error(this.getTableInfo(totable).tableName+ ' TABLES not exist')
+    async getRelationChildData(fromtable, fromid, totable) {
+        if (!this.tableExists(fromtable)) throw new Error(this.getTableInfo(fromtable).tableName + ' TABLES not exist')
+        if (!this.tableExists(totable)) throw new Error(this.getTableInfo(totable).tableName + ' TABLES not exist')
         this.db = this.db || await this.database()
 
-        const ids = fromid.split('.').map( (currentValue, index, array) => {
-            return `'${array.slice(0,index+1).join('.')}'`
-         } ).join();
+        const ids = fromid.split('.').map((currentValue, index, array) => {
+            return `'${array.slice(0, index + 1).join('.')}'`
+        }).join();
 
         try {
             // Prepare an sql statement
-            const stmt = this.db.prepare(this.preparesTemplate.RelationChildData({ totable: this.getTableInfo(totable).tableName, ids,ids}))
+            const stmt = this.db.prepare(this.preparesTemplate.RelationChildData({ totable: this.getTableInfo(totable).tableName, ids, ids }))
 
             // Bind values to the parameters and fetch the results of the query
             //const result = stmt.getAsObject({'$id' : id});
@@ -164,9 +169,35 @@ export class Dao {
             }
             return children
         } catch (error) {
-            console.error("getRelationChildData",this.preparesTemplate.RelationChildData({ totable: this.getTableInfo(totable).tableName, ids,ids}),error)
+            console.error("getRelationChildData", this.preparesTemplate.RelationChildData({ totable: this.getTableInfo(totable).tableName, ids, ids }), error)
         }
     }
+
+
+    //クエリ実行
+    async getResult(querName, parameters, callback) {
+        this.db = this.db || await this.database()
+        try {
+            // Prepare an sql statement
+            const stmt = this.db.prepare(this.prepares[querName])
+            stmt.bind(parameters);
+            let row = 0
+            let ret = ""
+            while (stmt.step()) {
+                ret = ret + await callback({ row: row, columnNames: stmt.getColumnNames(), context: stmt.get() });
+                row++
+            }
+
+            //stmt解放
+            stmt.free()
+
+            return ret;
+
+        } catch (error) {
+            console.error("getResult", querName, parameters, error)
+        }
+    }
+
 }
 
 export default Dao

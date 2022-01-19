@@ -117,18 +117,20 @@ window.addEventListener('popstate', async (event) => {
 //ページの描画処理
 let pageGen = async function (table, id) {
   const dao = await dao_promise
-  
+  const _setting = await getSetting()
+
   let getPageTemplate = async function (table) {
-    if(!dao.tableExists(table)) throw new Error(table + ' TABLES not exist')
+    //if(!dao.tableExists(table)) throw new Error(table + ' TABLES not exist')
     //table単位でページテンプレートを読み込み
     if (!pageCache[table]) {
-      const response = await (await fetch("./assets/" + dao.getTableInfo(table).tableName + "_" + language + ".tmp", { method: "get" })).text();
+      const response = await (await fetch("./assets/" + table + "_" + language + ".tmp", { method: "get" })).text();
       pageCache[table] = Handlebars.compile(response);
     }
     return pageCache[table]
   }
-
-  const data = await dao.getPageData(table, id)
+  //表示ロジックの取得
+  const logic = _setting.logic[table.toLowerCase()];
+  const data = (logic == "getPageData")? await dao.getPageData(table, id) : {}
   const template = await getPageTemplate(table)
   document.getElementById("content_body").innerHTML = await template({ data: data })
 
@@ -184,6 +186,7 @@ function createDataset2ClickEvent(elements){
   }
 }
 
+//tree表示する
 Handlebars.registerHelper("oc", function(context, options) {
   const chartContainer = oc.init({ 
     'data': context ,
@@ -196,12 +199,14 @@ Handlebars.registerHelper("oc", function(context, options) {
   return new Handlebars.SafeString(chartContainer.outerHTML)
 });
 
+// 改行をBRに変換する
 Handlebars.registerHelper("breaklines", function(text) {
   text = Handlebars.Utils.escapeExpression(text);
   text = text.replace(/(\r\n|\n|\r)/gm, "<br />");
   return new Handlebars.SafeString(text);
 });
 
+//SVGファイルを埋め込み表示する
 Handlebars.registerHelper("svg", async function(svgfilepath) {
   svgfilepath = Handlebars.Utils.escapeExpression(svgfilepath);
   if(svgfilepath.lastIndexOf('.svg')==-1)svgfilepath=svgfilepath+'.svg';
@@ -209,6 +214,7 @@ Handlebars.registerHelper("svg", async function(svgfilepath) {
   return new Handlebars.SafeString(response);
 });
 
+//bpmnsvgファイルを埋め込み表示する、editorへのリンクを作成する
 Handlebars.registerHelper("bpmnsvg", async function(svgfilepath) {
   const _setting = await getSetting()
   svgfilepath = Handlebars.Utils.escapeExpression(svgfilepath);
@@ -223,4 +229,16 @@ Handlebars.registerHelper("bpmnsvg", async function(svgfilepath) {
 
 Handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {
   return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+});
+
+//settingのpreparesに定義されたクエリを実行する
+Handlebars.registerHelper("sql", async function(querName,parameters, options) {
+  const id = await getParam("q")
+  const type = await getParam("type")
+
+  const dao = await dao_promise
+  const _parameters = parameters || {}
+  _parameters['$id'] = id
+  _parameters['$type'] = type
+  return await dao.getResult(querName,_parameters,options.fn)
 });
