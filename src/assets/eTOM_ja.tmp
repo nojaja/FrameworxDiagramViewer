@@ -1,19 +1,19 @@
     <h1 id="name">{{data.name}} - {{data.title}}</h1>
-    <h4 id="type">Business Process Framework (eTOM)</h4>
-    <h4 id="category">カテゴリー: {{data.category}}</h4>
-    <h4 id="identifier">ID: {{data.name}}</h4>
-    <h4 id="maturity_level">成熟度: {{data.maturity}}</h4>
+    <h4 id="type" translate="no">Business Process Framework (eTOM)</h4>
+    <h4 id="category" translate="no">カテゴリー: {{data.category}}</h4>
+    <h4 id="identifier" translate="no">ID: {{data.name}}</h4>
+    <h4 id="maturity_level" translate="no">成熟度: {{data.maturity}}</h4>
     
     {{#if data.parent}}
-    <h4 id="parent">上位ID: <a class="parentlink elementlink" data-id="{{data.parent}}" data-type="{{data.table}}" >{{data.parent}}</a></h4>
+    <h4 id="parent" translate="no">上位ID: <a class="parentlink elementlink" data-id="{{data.parent}}" data-type="{{data.table}}" >{{data.parent}}</a></h4>
     {{else}}
     {{svg 'eTOM_Overview_ja.drawio.svg'}}
     {{/if}}
 
     {{#oc data}}{{/oc}}
-    <h3>概要</h3>
+    <h3 translate="no">概要</h3>
     <p id="description">{{breaklines data.overview}}</p>
-    <h3>関連要素</h3>
+    <h3 translate="no">関連要素</h3>
     <p id="relationData">
     {{#each data.relationData}}
         <b>{{@key}}</b><br />
@@ -49,7 +49,7 @@
     {{/each}}
     </p>
 
-    <div>
+    <div translate="no">
         <h4>出典元アイコン凡例</h4>
         TMForum 公式ドキュメント
         <span class="message fa-stack maturity_level_4" style="font-size: 0.6em;" >
