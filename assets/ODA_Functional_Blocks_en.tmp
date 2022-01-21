@@ -1,20 +1,20 @@
     <h1 id="name">{{data.name}} - {{data.title}}</h1>
-    <h4 id="category">Category: {{data.category}}</h4>
-    <h4 id="identifier">Identifier: {{data.name}}</h4>
-    <h4 id="maturity_level">Maturity Level: {{data.maturity}}</h4>
+    <h4 id="category" translate="no">Category: {{data.category}}</h4>
+    <h4 id="identifier" translate="no">Identifier: {{data.name}}</h4>
+    <h4 id="maturity_level" translate="no">Maturity Level: {{data.maturity}}</h4>
     
     {{#if data.parent}}
-    <h4 id="parent">Parent Identifier: <a class="parentlink elementlink" data-id="{{data.parent}}" data-type="{{data.table}}" >{{data.parent}}</a></h4>
+    <h4 id="parent" translate="no">Parent Identifier: <a class="parentlink elementlink" data-id="{{data.parent}}" data-type="{{data.table}}" >{{data.parent}}</a></h4>
     {{else}}
     {{svg 'ODA_Functional_Blocks_Overview_ja.drawio.svg'}}
     {{/if}}
 
     {{#oc data}}{{/oc}}
-    <h3>Overview</h3>
+    <h3 translate="no">Overview</h3>
     <p id="description">{{breaklines data.overview}}</p>
-    <h3>Functionality</h3>
+    <h3 translate="no">Functionality</h3>
     <p id="functionality">{{breaklines data.functionality}}</p>
-    <h3>Relation Data</h3>
+    <h3 translate="no">Relation Data</h3>
     <p id="relationData">
     {{#each data.relationData}}
         <b>{{@key}}</b><br />
@@ -50,7 +50,7 @@
     {{/each}}
     </p>
 
-    <div>
+    <div translate="no">
         <h4>Source icon legend</h4>
         TMForum Official documentation
         <span class="message fa-stack maturity_level_4" style="font-size: 0.6em;" >
@@ -88,6 +88,6 @@
             <i class="fa fa-circle fa-stack-2x "></i>
             <i class="fa fa-exclamation fa-stack-1x fa-inverse"></i>
         </span>
-        Maturity level
+        Maturity level 4 ⇔ 1
     </div>
     <br />
