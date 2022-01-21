@@ -13,7 +13,7 @@
             "tables": {
                 "tam":{"tableName":"TAM","caption":"Application Framework (TAM)","logic":"getPageData"},
                 "etom":{"tableName":"eTOM","caption":"Business Process Framework (eTOM)","logic":"getPageData"},
-                "sid":{"tableName":"SID_ABE","caption":"Information_Framework (SID)","logic":"getPageData"},
+                "sid_abe":{"tableName":"SID_ABE","caption":"Information_Framework (SID)","logic":"getPageData"},
                 "oda_functional_blocks":{"tableName":"ODA_Functional_Blocks","caption":"ODA Functional Blocks","logic":"getPageData"},
                 "end_to_end_business_flows":{"tableName":"End_to_End_Business_Flows","caption":"End to End Business Flows","logic":"getPageData"},
                 "open_apis":{"tableName":"Open_APIs","caption":"Open APIs","logic":"getPageData"},
@@ -31,7 +31,7 @@
             "tables": {
                 "tam":{"tableName":"TAM","caption":"Application Framework (TAM)","logic":"getPageData"},
                 "etom":{"tableName":"eTOM","caption":"Business Process Framework (eTOM)","logic":"getPageData"},
-                "sid":{"tableName":"SID_ABE","caption":"Information_Framework (SID)","logic":"getPageData"},
+                "sid_abe":{"tableName":"SID_ABE","caption":"Information_Framework (SID)","logic":"getPageData"},
                 "oda_functional_blocks":{"tableName":"ODA_Functional_Blocks","caption":"ODA Functional Blocks","logic":"getPageData"},
                 "end_to_end_business_flows":{"tableName":"End_to_End_Business_Flows","caption":"End to End Business Flows","logic":"getPageData"},
                 "open_apis":{"tableName":"Open_APIs","caption":"Open APIs","logic":"getPageData"},
