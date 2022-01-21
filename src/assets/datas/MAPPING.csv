@@ -470,3 +470,65 @@ eTOM,1.3.13,TAM,5.19,consideration,1,End_to_End_Business_FlowsのUPから考察
 eTOM,1.5.10,TAM,7.4,consideration,1,End_to_End_Business_FlowsのUPから考察
 eTOM,1.5.10,TAM,7.6,consideration,1,End_to_End_Business_FlowsのUPから考察
 eTOM,1.5.10,TAM,7.14,consideration,1,End_to_End_Business_FlowsのUPから考察
+ODA_Functional_Blocks,PM,SID_ABE,1.Market & Sales Strategy Plan ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,PM,SID_ABE,1.Market Segment ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,PM,SID_ABE,1.Competitor ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,PM,SID_ABE,1.Contact Lead Prospect ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,PM,SID_ABE,1.Sales Channel ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,PM,SID_ABE,1.Market Sales Forecast ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,PM,SID_ABE,1.Market Sales Party Roles ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,PM,SID_ABE,3.Customer Party Roles ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,PM,SID_ABE,3.Customer Interaction ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,PM,SID_ABE,3.Customer Bill ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,PM,SID_ABE,3.Customer Bill Collection ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,PM,SID_ABE,3.Customer Bill Inquiry ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,PM,SID_ABE,6.Party Strategy & Plan ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,PM,SID_ABE,6.Business Partner Account ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,PM,SID_ABE,6.Party Bill ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,PM,SID_ABE,6.Party Bill Collection ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,PM,SID_ABE,6.Business Partner Party Roles ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,PM,SID_ABE,6.Party Interaction ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,PM,SID_ABE,8.Communication Interaction ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,PM,SID_ABE,8.Users and Roles ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,PM,SID_ABE,4.Service Party Roles ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,PM,SID_ABE,5.Resource Party Roles ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,CCM,SID_ABE,3.Customer Product Order ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,CCM,SID_ABE,3.Customer Problem ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,CCM,SID_ABE,3.Applied Customer Billing Rate ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,CCM,SID_ABE,2.Product ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,CCM,SID_ABE,2.Product Specification ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,CCM,SID_ABE,2.Product Offering ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,CCM,SID_ABE,2.Product Usage ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,CCM,SID_ABE,2.Product Configuration ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,CCM,SID_ABE,2.Loyalty ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,CCM,SID_ABE,2.Product Test ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,CCM,SID_ABE,6.Party Problem ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,CCM,SID_ABE,6.Business Partner Product Order ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,CCM,SID_ABE,6.Party Product Specification and Offering ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,CCM,SID_ABE,6.Party Revenue & Settlement ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,CCM,SID_ABE,6.Party Service Level Agreement ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,CCM,SID_ABE,8.Agreement ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,CCM,SID_ABE,8.Capacity ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,P,SID_ABE,4.Service ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,P,SID_ABE,4.Service Order ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,P,SID_ABE,4.Service Specification ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,P,SID_ABE,4.Service Strategy & Plan ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,P,SID_ABE,4.Service Configuration ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,P,SID_ABE,4.Service Usage ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,P,SID_ABE,4.Service Problem ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,P,SID_ABE,4.Service Test ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,P,SID_ABE,5.Resource ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,P,SID_ABE,5.Resource Order ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,P,SID_ABE,5.Resource Specification ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,P,SID_ABE,5.Resource Topology ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,P,SID_ABE,5.Resource Configuration ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,P,SID_ABE,5.Resource Usage ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,P,SID_ABE,5.Resource Strategy & Plan ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,P,SID_ABE,5.Resource Trouble ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,P,SID_ABE,5.Resource Test ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,P,SID_ABE,8.Location ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,IM,SID_ABE,1.Marketing Campaign ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,IM,SID_ABE,1.Market Sales Statistics ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,IM,SID_ABE,3.Customer Statistic ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,IM,SID_ABE,4.Service Performance ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
+ODA_Functional_Blocks,IM,SID_ABE,5.Resource Performance ABE,GB1022,4,GB1022_ODA_Functional_Architecture_Guidebook_v1.1.0にて定義
