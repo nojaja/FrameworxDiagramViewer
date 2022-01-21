@@ -81557,13 +81557,14 @@ let pageGen = async function (table, id) {
     //if(!dao.tableExists(table)) throw new Error(table + ' TABLES not exist')
     //table単位でページテンプレートを読み込み
     if (!pageCache[table]) {
-      const response = await (await fetch("./assets/" + table + "_" + language + ".tmp", { method: "get" })).text();
+      const tableName = (dao.getTableInfo(table))? dao.getTableInfo(table).tableName : table;
+      const response = await (await fetch("./assets/" + tableName + "_" + language + ".tmp", { method: "get" })).text();
       pageCache[table] = Handlebars.compile(response);
     }
     return pageCache[table]
   }
   //表示ロジックの取得
-  const logic = _setting.logic[table.toLowerCase()];
+  const logic = (dao.getTableInfo(table))? dao.getTableInfo(table).logic : "";
   const data = (logic == "getPageData")? await dao.getPageData(table, id) : {}
   const template = await getPageTemplate(table)
   document.getElementById("content_body").innerHTML = await template({ data: data })
@@ -81835,4 +81836,4 @@ Handlebars.registerHelper("sql", async function(querName,parameters, options) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=map/main.82a7d2839398b7126670.js.map
+//# sourceMappingURL=map/main.0413ddfe9e3c48284433.js.map
