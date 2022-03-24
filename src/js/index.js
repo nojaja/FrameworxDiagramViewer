@@ -141,9 +141,8 @@ let pageGen = async function (table, id, scroll) {
   console.log('data.relationData',data.relationData)
   console.log('filters',filters)
 
-  
-  for (const [dataset, record] of Object.entries(data.relationData)) {
-    const result = record.filter(data => {
+  const filter_logic = function (dataList){
+    const result = dataList.filter(data => {
       for (const [filter_category, filter] of Object.entries(filters)) {
         let hit_count = 0
         let filters_count = 0
@@ -153,30 +152,19 @@ let pageGen = async function (table, id, scroll) {
             if(data[filter_category].indexOf(filter_id) > -1 )hit_count++;//filterに一致
           }
         }
-        if(filters_count > hit_count )return false //フィルタカテゴリ内で1つも一致しない場合は除外する
+        if(filters_count > 0 && hit_count == 0 )return false //フィルタカテゴリ内で1つも一致しない場合は除外する
       }
       return true
     });
-    data.relationData[dataset]=result
+    return result
   }
 
+  for (const [dataset, record] of Object.entries(data.relationData)) {
+    data.relationData[dataset]=filter_logic(record)
+  }
   
   console.log('data.children',data.children)
-  const result = data.children.filter(data => {
-    for (const [filter_category, filter] of Object.entries(filters)) {
-      let hit_count = 0
-      let filters_count = 0
-      for (const [filter_id, value] of Object.entries(filter)) {
-        if(value && data[filter_category]) {
-          filters_count++;
-          if(data[filter_category].indexOf(filter_id) > -1 )hit_count++;//filterに一致
-        }
-      }
-      if(filters_count > 0 && hit_count == 0 )return false //フィルタカテゴリ内で1つも一致しない場合は除外する
-    }
-    return true
-  });
-  data.children=result
+  data.children=filter_logic(data.children)
 
   const template = await getPageTemplate(table)
   document.getElementById("content_body").innerHTML = await template({ data: data })

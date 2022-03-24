@@ -162,7 +162,7 @@ table {
   border-spacing: 0;
   display: block;
   margin-bottom: 1rem;
-  overflow: auto;
+  overflow: visible;
 }
 thead {
   display: table-header-group;
@@ -205,6 +205,7 @@ td {
   position: absolute;
   top: -20px;
   left: 10px;
+  z-index: 1;
 }
 
 .maturity_level_5 {
