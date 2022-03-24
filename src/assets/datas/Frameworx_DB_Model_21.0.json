@@ -51,6 +51,11 @@
         },
         {
             "action": "Import-CSV",
+            "sql": "INSERT INTO Product VALUES ($ID ,$CATEGORY ,$BRAND_NAME ,$PRODUCT_NAME ,$OWNER );",
+            "file": "./src/assets/datas/Sample_Product.csv"
+        },
+        {
+            "action": "Import-CSV",
             "sql": "INSERT INTO MAPPING VALUES ($FROM_TABLE ,$FROM_KEY ,$TO_TABLE ,$TO_KEY ,$SOURCE ,$MATURITY_LEVEL ,$MEMO );",
             "file": "./src/assets/datas/MAPPING.csv"
         },

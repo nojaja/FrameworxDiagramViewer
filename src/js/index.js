@@ -243,3 +243,8 @@ Handlebars.registerHelper("sql", async function(querName,parameters, options) {
   _parameters['$type'] = type
   return await dao.getResult(querName,_parameters,options.fn)
 });
+
+Handlebars.registerHelper('log', function(arg1, arg2, options) {
+  console.log(arg1, arg2, options);
+  return
+});
