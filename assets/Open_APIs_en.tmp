@@ -84,22 +84,9 @@
         Maturity level 4 ⇔ 1
         <br />
         Other than TMForum official documentation
-        <span class="message fa-stack maturity_level_4" style="font-size: 0.6em;">
-            <i class="fa fa-circle fa-stack-2x "></i>
-            <i class="fa fa-exclamation fa-stack-1x fa-inverse"></i>
-        </span>
-        <span class="message fa-stack maturity_level_3" style="font-size: 0.6em;">
-            <i class="fa fa-circle fa-stack-2x "></i>
-            <i class="fa fa-exclamation fa-stack-1x fa-inverse"></i>
-        </span>
-        <span class="message fa-stack maturity_level_2" style="font-size: 0.6em;">
-            <i class="fa fa-circle fa-stack-2x "></i>
-            <i class="fa fa-exclamation fa-stack-1x fa-inverse"></i>
-        </span>
         <span class="message fa-stack maturity_level_1" style="font-size: 0.6em;">
             <i class="fa fa-circle fa-stack-2x "></i>
             <i class="fa fa-exclamation fa-stack-1x fa-inverse"></i>
         </span>
-        Maturity level 4 ⇔ 1
     </div>
     <br />
