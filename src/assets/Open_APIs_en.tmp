@@ -24,7 +24,7 @@
 
     <h3 translate="no">Overview</h3>
     <p id="description">{{breaklines data.overview}}</p>
-    <h3 translate="no" translate="no">Functionality</h3>
+    <h3 translate="no">Functionality</h3>
     <p id="functionality">{{breaklines data.functionality}}</p>
     <h3 translate="no">Relation Data</h3>
     <p id="relationData">
