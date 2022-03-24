@@ -118,7 +118,7 @@ window.addEventListener('popstate', async (event) => {
 });
 
 //ページの描画処理
-let pageGen = async function (table, id) {
+let pageGen = async function (table, id, scroll) {
   const dao = await dao_promise
   const _setting = await getSetting()
 
@@ -181,10 +181,12 @@ let pageGen = async function (table, id) {
   const template = await getPageTemplate(table)
   document.getElementById("content_body").innerHTML = await template({ data: data })
   //画面遷移したら上部に移動
-  window.scroll({
-    top: 0,
-    behavior: "instant"
-  });
+  if(scroll != false){
+    document.getElementById("content").scroll({
+      top: 0,
+      behavior: "instant"
+    });
+  }
   //リンクイベント作成
   const elementlinks = document.getElementsByClassName("elementlink")
   createDataset2ClickEvent(elementlinks)
@@ -270,7 +272,7 @@ function updateFilterEvent(elements){
         const type = await getParam("type")
 
         window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${id}&type=${type}&f=${serialized_filter}`)
-        pageGen(type, id);
+        pageGen(type, id, false);
 
         return  true
       }
