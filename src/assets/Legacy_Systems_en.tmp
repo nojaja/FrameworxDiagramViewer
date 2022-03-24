@@ -10,6 +10,13 @@
     <p id="description">{{breaklines data.overview}}</p>
     <h3 translate="no">Functionality</h3>
     <p id="functionality">{{breaklines data.functionality}}</p>
+
+    {{#log data}}{{/log}}
+    {{#if data.SYSTEM_DOCUMENT}}
+    <h3 translate="no">Document</h3>
+    <p id="functionality"><a target="_blank" href="{{data.SYSTEM_DOCUMENT}}">{{breaklines data.SYSTEM_DOCUMENT}}</a></p>
+    {{/if}}
+
     <h3 translate="no">Relation Data</h3>
     <p id="relationData">
     {{#each data.relationData}}
@@ -48,26 +55,6 @@
 
     <div translate="no">
         <h4>Source icon legend</h4>
-        TMForum Official documentation
-        <span class="message fa-stack maturity_level_4" style="font-size: 0.6em;" >
-            <i class="fa fa-certificate fa-stack-2x"></i>
-            <i class="fa fa-check fa-stack-1x fa-inverse"></i>
-        </span>
-        <span class="message fa-stack maturity_level_3" style="font-size: 0.6em;" >
-            <i class="fa fa-certificate fa-stack-2x"></i>
-            <i class="fa fa-check fa-stack-1x fa-inverse"></i>
-        </span>
-        <span class="message fa-stack maturity_level_2" style="font-size: 0.6em;" >
-            <i class="fa fa-certificate fa-stack-2x"></i>
-            <i class="fa fa-check fa-stack-1x fa-inverse"></i>
-        </span>
-        <span class="message fa-stack maturity_level_1" style="font-size: 0.6em;" >
-            <i class="fa fa-certificate fa-stack-2x"></i>
-            <i class="fa fa-check fa-stack-1x fa-inverse"></i>
-        </span>
-        Maturity level 4 ⇔ 1
-        <br />
-        Other than TMForum official documentation
         <span class="message fa-stack maturity_level_4" style="font-size: 0.6em;">
             <i class="fa fa-circle fa-stack-2x "></i>
             <i class="fa fa-exclamation fa-stack-1x fa-inverse"></i>

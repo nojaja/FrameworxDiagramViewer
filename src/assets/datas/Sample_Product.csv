@@ -1,0 +1,6 @@
+ID,CATEGORY,BRAND_NAME,PRODUCT_NAME,OWNER
+P001,telecom,a-tel,BasicPlan,A
+P002,broadband,b-bb,BasicPlan,B
+P003,mobile,c-mob,BasicPlan,C
+P004,mobile,d-mob,LightPlan,D
+P005,mobile,d-mob,HeavyPlan,E

@@ -98,7 +98,7 @@ p {
   display: block;
   margin-block-start: 1em;
   margin-block-end: 1em;
-  margin-inline-start: 0px;
+  margin-inline-start: 5px;
   margin-inline-end: 0px;
 }
 
@@ -120,6 +120,8 @@ p {
   background-color: #323232;
   --padding-top: 5em;
   z-index: 0;
+  text-decoration: none;
+  color: white;
 }
 
 .leftbaritem {
@@ -131,8 +133,6 @@ p {
   color: white;
 }
 .leftbar .title {
-  text-decoration: none;
-  color: white;
   background-color: #161616;
   font-weight: bold;
   padding-top: 10px;
@@ -141,6 +141,7 @@ p {
   position: inherit;
   bottom: -10px;
   width: 100%;
+  margin-inline-start: 0px;
 }
 
 .content_body {
@@ -216,4 +217,20 @@ td {
 }
 .maturity_level_1 {
   color: darkorange;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+}
+
+.filter-list li,
+ul li {
+  word-wrap: break-word;
+  margin: 0;
 }
