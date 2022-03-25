@@ -17,7 +17,7 @@
     <p id="functionality"><a target="_blank" href="{{data.SYSTEM_DOCUMENT}}">{{breaklines data.SYSTEM_DOCUMENT}}</a></p>
     {{/if}}
 
-    <h3 translate="no">Relation Data</h3>
+    <h3 translate="no">Relationships</h3>
     <p id="relationData">
     {{#each data.relationData}}
         <b>{{@key}}</b><br />
