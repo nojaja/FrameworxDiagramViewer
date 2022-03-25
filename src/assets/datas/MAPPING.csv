@@ -103,8 +103,12 @@ End_to_End_Business_Flows,Order-to-Payment,eTOM,1.4.5,GB921E,4,GB921E_End_to_End
 End_to_End_Business_Flows,Order-to-Payment,eTOM,1.5.6,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level2 MAPより
 End_to_End_Business_Flows,Order-to-Payment,eTOM,1.6.8,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level2 MAPより
 End_to_End_Business_Flows,Usage-to-Payment,eTOM,1.3.5,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level2 MAPより
-End_to_End_Business_Flows,Order-to-Payment,eTOM,1.3.12,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level2 MAPより
-End_to_End_Business_Flows,Order-to-Payment,eTOM,1.3.13,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level2 MAPより
+End_to_End_Business_Flows,Usage-to-Payment,eTOM,1.3.8,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level2 MAPより
+End_to_End_Business_Flows,Usage-to-Payment,eTOM,1.3.9,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level2 MAPより
+End_to_End_Business_Flows,Usage-to-Payment,eTOM,1.3.12,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level2 MAPより
+End_to_End_Business_Flows,Usage-to-Payment,eTOM,1.3.13,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level2 MAPより
+End_to_End_Business_Flows,Usage-to-Payment,eTOM,1.4.8,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level2 MAPより
+End_to_End_Business_Flows,Usage-to-Payment,eTOM,1.5.10,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level2 MAPより
 End_to_End_Business_Flows,Request-to-Change,eTOM,1.1.11,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level2 MAPより
 End_to_End_Business_Flows,Request-to-Change,eTOM,1.3.3,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level2 MAPより
 End_to_End_Business_Flows,Request-to-Change,eTOM,1.3.4,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level2 MAPより
@@ -166,6 +170,7 @@ End_to_End_Business_Flows,Capacity Management,eTOM,1.5.4,GB921E,4,GB921E_End_to_
 End_to_End_Business_Flows,Capacity Management,eTOM,1.5.7,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level2 MAPより
 End_to_End_Business_Flows,Capacity Management,eTOM,1.5.9,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level2 MAPより
 End_to_End_Business_Flows,Capacity Management,eTOM,1.6.11,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level2 MAPより
+End_to_End_Business_Flows,Capacity Management,eTOM,1.8.2,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level2 MAPより
 End_to_End_Business_Flows,Service Lifecycle Management,eTOM,1.2.1,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level2 MAPより
 End_to_End_Business_Flows,Service Lifecycle Management,eTOM,1.4.1,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level2 MAPより
 End_to_End_Business_Flows,Service Lifecycle Management,eTOM,1.4.2,GB921E,4,GB921E_End_to_End_Business_FlowsのeTOM Level2 MAPより

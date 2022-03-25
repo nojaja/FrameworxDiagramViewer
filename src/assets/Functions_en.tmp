@@ -6,7 +6,7 @@
    
     <h3 translate="no">Overview</h3>
     <p id="description">{{breaklines data.overview}}</p>
-    <h3 translate="no">Relation Data</h3>
+    <h3 translate="no">Relationships</h3>
     <p id="relationData">
     {{#each data.relationData}}
         <b>{{@key}}</b><br />

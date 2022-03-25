@@ -12,7 +12,7 @@ import DefaultSetting from "../assets/default_setting.json";
 
 const Handlebars = promisedHandlebars(require('handlebars'), { Promise: Promise })
 const pageCache = {}
-
+const filters = {}
 
 //setting loader
 let setting = null
@@ -103,6 +103,9 @@ window.addEventListener('load', async (event) => {
   //初回表示時の描画
   const id = await getParam("q")
   const type = await getParam("type")
+  const serialized_filter = await getParam("f")
+  const addfilters = (serialized_filter)? JSON.parse(atob(serialized_filter)) : {}
+  Object.assign(filters, addfilters);
   pageGen(type, id);
 });
 
@@ -115,7 +118,7 @@ window.addEventListener('popstate', async (event) => {
 });
 
 //ページの描画処理
-let pageGen = async function (table, id) {
+let pageGen = async function (table, id, scroll) {
   const dao = await dao_promise
   const _setting = await getSetting()
 
@@ -132,9 +135,46 @@ let pageGen = async function (table, id) {
   //表示ロジックの取得
   const logic = (dao.getTableInfo(table))? dao.getTableInfo(table).logic : "";
   const data = (logic == "getPageData")? await dao.getPageData(table, id) : {}
+
+  /*filter処理*/
+  console.log('data',data)
+  console.log('data.relationData',data.relationData)
+  console.log('filters',filters)
+
+  const filter_logic = function (dataList){
+    const result = dataList.filter(data => {
+      for (const [filter_category, filter] of Object.entries(filters)) {
+        let hit_count = 0
+        let filters_count = 0
+        for (const [filter_id, value] of Object.entries(filter)) {
+          if(value && data[filter_category]) {
+            filters_count++;
+            if(data[filter_category].indexOf(filter_id) > -1 )hit_count++;//filterに一致
+          }
+        }
+        if(filters_count > 0 && hit_count == 0 )return false //フィルタカテゴリ内で1つも一致しない場合は除外する
+      }
+      return true
+    });
+    return result
+  }
+
+  for (const [dataset, record] of Object.entries(data.relationData)) {
+    data.relationData[dataset]=filter_logic(record)
+  }
+  
+  console.log('data.children',data.children)
+  data.children=filter_logic(data.children)
+
   const template = await getPageTemplate(table)
   document.getElementById("content_body").innerHTML = await template({ data: data })
-
+  //画面遷移したら上部に移動
+  if(scroll != false){
+    document.getElementById("content").scroll({
+      top: 0,
+      behavior: "instant"
+    });
+  }
   //リンクイベント作成
   const elementlinks = document.getElementsByClassName("elementlink")
   createDataset2ClickEvent(elementlinks)
@@ -147,6 +187,8 @@ let pageGen = async function (table, id) {
   const atags = document.querySelectorAll("svg a")
   createSVGATag2ClickEvent(atags)
 
+  const filter_elements = document.getElementsByClassName("filter")
+  updateFilterEvent(filter_elements)
 }
 
 function createSVGATag2ClickEvent(elements){
@@ -182,6 +224,45 @@ function createDataset2ClickEvent(elements){
         window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${id}&type=${type}`)
         pageGen(type, id);
         return  false
+      }
+    } (elements[i])
+  }
+}
+//フィルタ状況の設定
+function updateFilterEvent(elements){
+  for (let i = 0; i < elements.length; i++) {
+    const filter_category = elements[i].dataset.category
+    const filter_id = elements[i].name
+    const filter = filters[filter_category]||{};
+    const status = filter[filter_id]
+    console.log(filter_category,filter_id,status,filter,filters)
+    elements[i].checked = status
+    elements[i].onclick = function (node_element) {
+      return async (event) => {
+        //ノードのID表示用のURLをhistoryに追加して、再描画
+        const filter_category = node_element.dataset.category
+        const filter_id = node_element.name
+        const status = node_element.checked
+        //delete出来るようにMapにする
+        const filter = new Map(Object.entries(filters[filter_category]||{}));
+        if(status==true){
+          filter.set(filter_id,status)
+        }else{
+          filter.delete(filter_id)
+        }
+        //serialize出来るようにobjectにする
+        filters[filter_category] = [...filter].reduce((l,[k,v]) => Object.assign(l, {[k]:v}), {})
+        const serialized_filter = btoa(JSON.stringify(filters));
+        
+        console.log(filter_id,status,filters,serialized_filter)
+
+        const id = await getParam("q")
+        const type = await getParam("type")
+
+        window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${id}&type=${type}&f=${serialized_filter}`)
+        pageGen(type, id, false);
+
+        return  true
       }
     } (elements[i])
   }
