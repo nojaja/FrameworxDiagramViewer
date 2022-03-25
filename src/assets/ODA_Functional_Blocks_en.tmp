@@ -21,7 +21,7 @@
         <table>
             <thead>
                 <tr>
-                    <th>ID</th><th>名称</th>
+                    <th>ID</th><th>Name</th><th>Description</th>
                 </tr>
             </thead>
             <tbody>
@@ -42,6 +42,7 @@
                         </span>
                         {{/ifEquals}}
                     </td>
+                    <td>{{breaklines brief}}</td>
                 </tr>
             {{/each}}
             </tbody>

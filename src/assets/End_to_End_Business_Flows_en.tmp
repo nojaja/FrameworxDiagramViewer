@@ -8,6 +8,9 @@
     <h3 translate="no">Overview</h3>
     <p id="description">{{breaklines data.overview}}</p>
     
+    <h3 translate="no">Assumptions</h3>
+    <p id="assumptions">{{breaklines data.ASSUMPTIONS}}</p>
+
     {{#ifEquals data.LEVEL "2"}}
     <h3 translate="no">Flow</h3>
     {{bpmnsvg data.name}}
@@ -22,7 +25,7 @@
         <table>
             <thead>
                 <tr>
-                    <th>ID</th><th>名称</th>
+                    <th>ID</th><th>Name</th><th>Description</th>
                 </tr>
             </thead>
             <tbody>
@@ -43,6 +46,7 @@
                         </span>
                         {{/ifEquals}}
                     </td>
+                    <td>{{breaklines brief}}</td>
                 </tr>
             {{/each}}
             </tbody>

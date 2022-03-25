@@ -22,8 +22,8 @@
             },
             "prepares": {
                 "PageData": "SELECT ID as name, NAME as title, LEVEL, DESCRIPTION as overview, MATURITY_LEVEL as maturity, FUNCTION as functionality, PARENT as parent, TYPE as category, DOMAIN as domain,* FROM {{{table}}} WHERE ID=$id",
-                "ChildData": "SELECT ID as name, NAME as title, DOMAIN as domain, CATEGORY as category FROM {{{table}}} WHERE PARENT=$id",
-                "RelationChildData":"SELECT {{{totable}}}.ID as name, NAME as title, DOMAIN as domain, CATEGORY as category, MAP.SOURCE as source, MAP.MATURITY_LEVEL as maturity_level, MAP.MEMO as memo FROM (SELECT TO_KEY as ID, SOURCE, MATURITY_LEVEL, MEMO FROM MAPPING WHERE TO_TABLE == $totable AND FROM_KEY IN ({{{ids}}}) AND FROM_TABLE == $fromtable UNION SELECT FROM_KEY as ID, SOURCE, MATURITY_LEVEL, MEMO FROM MAPPING WHERE FROM_TABLE == $totable AND TO_KEY IN ({{{ids}}}) AND TO_TABLE == $fromtable) as MAP INNER JOIN {{{totable}}} ON {{{totable}}}.ID == MAP.ID"
+                "ChildData": "SELECT ID as name, NAME as title, BRIEF_DESCRIPTION as brief, DOMAIN as domain, CATEGORY as category FROM {{{table}}} WHERE PARENT=$id",
+                "RelationChildData":"SELECT {{{totable}}}.ID as name, NAME as title, BRIEF_DESCRIPTION as brief, DOMAIN as domain, CATEGORY as category, MAP.SOURCE as source, MAP.MATURITY_LEVEL as maturity_level, MAP.MEMO as memo FROM (SELECT TO_KEY as ID, SOURCE, MATURITY_LEVEL, MEMO FROM MAPPING WHERE TO_TABLE == $totable AND FROM_KEY IN ({{{ids}}}) AND FROM_TABLE == $fromtable UNION SELECT FROM_KEY as ID, SOURCE, MATURITY_LEVEL, MEMO FROM MAPPING WHERE FROM_TABLE == $totable AND TO_KEY IN ({{{ids}}}) AND TO_TABLE == $fromtable) as MAP INNER JOIN {{{totable}}} ON {{{totable}}}.ID == MAP.ID"
             }
         },
         "ja":{
@@ -43,8 +43,8 @@
                 "test2": "select * from TAM",
                 "sid": "select * from SID_ABE",
                 "PageData": "SELECT ID as name, NAME as title, LEVEL, DESCRIPTION as overview, MATURITY_LEVEL as maturity, FUNCTION as functionality, PARENT as parent, TYPE as category, DOMAIN as domain,* FROM {{{table}}} WHERE ID=$id",
-                "ChildData": "SELECT ID as name, NAME as title, DOMAIN as domain, CATEGORY as category FROM {{{table}}} WHERE PARENT=$id",
-                "RelationChildData":"SELECT {{{totable}}}.ID as name, NAME as title, DOMAIN as domain, CATEGORY as category, MAP.SOURCE as source, MAP.MATURITY_LEVEL as maturity_level, MAP.MEMO as memo FROM (SELECT TO_KEY as ID, SOURCE, MATURITY_LEVEL, MEMO FROM MAPPING WHERE TO_TABLE == $totable AND FROM_KEY IN ({{{ids}}}) AND FROM_TABLE == $fromtable UNION SELECT FROM_KEY as ID, SOURCE, MATURITY_LEVEL, MEMO FROM MAPPING WHERE FROM_TABLE == $totable AND TO_KEY IN ({{{ids}}}) AND TO_TABLE == $fromtable) as MAP INNER JOIN {{{totable}}} ON {{{totable}}}.ID == MAP.ID"
+                "ChildData": "SELECT ID as name, NAME as title, BRIEF_DESCRIPTION as brief, DOMAIN as domain, CATEGORY as category FROM {{{table}}} WHERE PARENT=$id",
+                "RelationChildData":"SELECT {{{totable}}}.ID as name, NAME as title, BRIEF_DESCRIPTION as brief, DOMAIN as domain, CATEGORY as category, MAP.SOURCE as source, MAP.MATURITY_LEVEL as maturity_level, MAP.MEMO as memo FROM (SELECT TO_KEY as ID, SOURCE, MATURITY_LEVEL, MEMO FROM MAPPING WHERE TO_TABLE == $totable AND FROM_KEY IN ({{{ids}}}) AND FROM_TABLE == $fromtable UNION SELECT FROM_KEY as ID, SOURCE, MATURITY_LEVEL, MEMO FROM MAPPING WHERE FROM_TABLE == $totable AND TO_KEY IN ({{{ids}}}) AND TO_TABLE == $fromtable) as MAP INNER JOIN {{{totable}}} ON {{{totable}}}.ID == MAP.ID"
             }
         }
     }
