@@ -23,7 +23,8 @@
             "prepares": {
                 "PageData": "SELECT ID as name, NAME as title, LEVEL, DESCRIPTION as overview, MATURITY_LEVEL as maturity, FUNCTION as functionality, PARENT as parent, TYPE as category, DOMAIN as domain,* FROM {{{table}}} WHERE ID=$id",
                 "ChildData": "SELECT ID as name, NAME as title, BRIEF_DESCRIPTION as brief, DOMAIN as domain, CATEGORY as category FROM {{{table}}} WHERE PARENT=$id",
-                "RelationChildData":"SELECT {{{totable}}}.ID as name, NAME as title, BRIEF_DESCRIPTION as brief, DOMAIN as domain, CATEGORY as category, MAP.SOURCE as source, MAP.MATURITY_LEVEL as maturity_level, MAP.MEMO as memo FROM (SELECT TO_KEY as ID, SOURCE, MATURITY_LEVEL, MEMO FROM MAPPING WHERE TO_TABLE == $totable AND FROM_KEY IN ({{{ids}}}) AND FROM_TABLE == $fromtable UNION SELECT FROM_KEY as ID, SOURCE, MATURITY_LEVEL, MEMO FROM MAPPING WHERE FROM_TABLE == $totable AND TO_KEY IN ({{{ids}}}) AND TO_TABLE == $fromtable) as MAP INNER JOIN {{{totable}}} ON {{{totable}}}.ID == MAP.ID"
+                "RelationChildData":"SELECT {{{totable}}}.ID as name, NAME as title, BRIEF_DESCRIPTION as brief, DOMAIN as domain, CATEGORY as category, MAP.ID2 as fromid FROM (SELECT DISTINCT TO_KEY as ID, FROM_KEY as ID2 FROM MAPPING WHERE TO_TABLE == $totable AND FROM_KEY IN ({{{ids}}}) AND FROM_TABLE == $fromtable UNION SELECT DISTINCT FROM_KEY as ID, TO_KEY as ID2 FROM MAPPING WHERE FROM_TABLE == $totable AND TO_KEY IN ({{{ids}}}) AND TO_TABLE == $fromtable) as MAP INNER JOIN {{{totable}}} ON {{{totable}}}.ID == MAP.ID",
+                "RelationChildReasonData":"SELECT SOURCE as source, MATURITY_LEVEL as maturity_level, MEMO as memo FROM MAPPING WHERE FROM_TABLE == $fromtable AND FROM_KEY == $fromid AND TO_TABLE == $totable AND TO_KEY == $toid"
             }
         },
         "ja":{
