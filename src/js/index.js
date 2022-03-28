@@ -200,11 +200,31 @@ let pageGen = async function (table, id, scroll) {
   console.log('data.relationData',data.relationData)
   console.log('filters',filters)
 
-  const unique_filter_logic = function (dataList){
-    let map = new Map(dataList.map(data=>{
-      return [dataList.name,{dataList}]
-    }))
-    return result
+  /**
+   * リストからの重複排除
+   * dataList
+   * keylist: ['key',,,]
+   * override: (old,new) => {return true}
+   */
+  const unique_filter_logic = (dataList,keylist,override) => {
+    // uniqueになるkey文字列作成
+    const keyjoin = (data,keylist,delimiter) => {
+      return keylist.reduce((resultArray, key, index) => {
+        resultArray[index] = data[key] || ""
+        return resultArray;
+      }, []).join(delimiter)
+    }
+    const map = new Map()
+    for (let index = 0; index < dataList.length; index++) {
+      const currentData = dataList[index];
+      const uniqueKey=keyjoin(currentData,keylist)
+      if(map.has(uniqueKey)){//上書き
+        if(override && override(map.get(uniqueKey),currentData)) map.set(uniqueKey,currentData)
+      }else{
+        map.set(uniqueKey,currentData)
+      }
+    }
+    return Array.from(map.values())
   }
 
   const filter_logic = function (dataList){
@@ -226,7 +246,9 @@ let pageGen = async function (table, id, scroll) {
   }
   //data.relationDataに対してfilter_logicを適用
   for (const [dataset, record] of Object.entries(data.relationData)) {
-    data.relationData[dataset]=filter_logic(record)
+    const recordtmp = unique_filter_logic(record,["title"],(oldrecord,newrecord)=>{return newrecord.basefromid==newrecord.fromid})
+    console.log(recordtmp)
+    data.relationData[dataset]=filter_logic(recordtmp)
   }
   //data.childrenに対してfilter_logicを適用
   console.log('data.children',data.children)

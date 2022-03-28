@@ -26,6 +26,13 @@
                 <tr>
                     <td><a class="parentlink elementlink" data-id="{{this.name}}" data-type="{{this.table}}" >{{this.name}}</a></td>
                     <td>{{this.title}}
+                        {{#ifEquals this.basefromid this.fromid}}
+                        {{else}}
+                        <span class="message fa-stack maturity_level_1" style="font-size: 0.6em;">
+                            <i class="fa fa-question-circle fa-stack-2x"></i>
+                            <span class="remark">source:Auto  <br />maturity_level:1 <br />上位階層からの自動推測</span>
+                        </span>
+                        {{/ifEquals}}
                         {{#each this.reasonData}}
                         {{#ifEquals this.source "consideration"}}
                         <span class="message fa-stack maturity_level_{{this.maturity_level}}" style="font-size: 0.6em;">

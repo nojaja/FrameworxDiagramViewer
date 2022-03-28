@@ -11,14 +11,14 @@
         "en":{
             "url": "./assets/Frameworx_DB_Model_21.0.db.gz",
             "tables": {
-                "tam":{"tableName":"TAM","caption":"Application Framework (TAM)","logic":"getPageData"},
-                "etom":{"tableName":"eTOM","caption":"Business Process Framework (eTOM)","logic":"getPageData"},
-                "sid_abe":{"tableName":"SID_ABE","caption":"Information_Framework (SID)","logic":"getPageData"},
-                "oda_functional_blocks":{"tableName":"ODA_Functional_Blocks","caption":"ODA Functional Blocks","logic":"getPageData"},
-                "end_to_end_business_flows":{"tableName":"End_to_End_Business_Flows","caption":"End to End Business Flows","logic":"getPageData"},
-                "open_apis":{"tableName":"Open_APIs","caption":"Open APIs","logic":"getPageData"},
-                "legacy_systems":{"tableName":"Legacy_Systems","caption":"Target Systems","logic":"getPageData"},
-                "functions":{"tableName":"Functions","caption":"Functionality","logic":"getPageData"}
+                "tam":{"tableName":"TAM","caption":"Application Framework (TAM)","logic":"getPageData","rollupFind":false},
+                "etom":{"tableName":"eTOM","caption":"Business Process Framework (eTOM)","logic":"getPageData","rollupFind":false},
+                "sid_abe":{"tableName":"SID_ABE","caption":"Information_Framework (SID)","logic":"getPageData","rollupFind":true},
+                "oda_functional_blocks":{"tableName":"ODA_Functional_Blocks","caption":"ODA Functional Blocks","logic":"getPageData","rollupFind":false},
+                "end_to_end_business_flows":{"tableName":"End_to_End_Business_Flows","caption":"End to End Business Flows","logic":"getPageData","rollupFind":false},
+                "open_apis":{"tableName":"Open_APIs","caption":"Open APIs","logic":"getPageData","rollupFind":false},
+                "legacy_systems":{"tableName":"Legacy_Systems","caption":"Target Systems","logic":"getPageData","rollupFind":true},
+                "functions":{"tableName":"Functions","caption":"Functionality","logic":"getPageData","rollupFind":false}
             },
             "prepares": {
                 "PageData": "SELECT ID as name, NAME as title, LEVEL, DESCRIPTION as overview, MATURITY_LEVEL as maturity, FUNCTION as functionality, PARENT as parent, TYPE as category, DOMAIN as domain,* FROM {{{table}}} WHERE ID=$id",
@@ -30,14 +30,14 @@
         "ja":{
             "url": "./assets/Frameworx_DB_Model_21.0.db.gz",
             "tables": {
-                "tam":{"tableName":"TAM","caption":"Application Framework (TAM)","logic":"getPageData"},
-                "etom":{"tableName":"eTOM","caption":"Business Process Framework (eTOM)","logic":"getPageData"},
-                "sid_abe":{"tableName":"SID_ABE","caption":"Information_Framework (SID)","logic":"getPageData"},
-                "oda_functional_blocks":{"tableName":"ODA_Functional_Blocks","caption":"ODA Functional Blocks","logic":"getPageData"},
-                "end_to_end_business_flows":{"tableName":"End_to_End_Business_Flows","caption":"End to End Business Flows","logic":"getPageData"},
-                "open_apis":{"tableName":"Open_APIs","caption":"Open APIs","logic":"getPageData"},
-                "legacy_systems":{"tableName":"Legacy_Systems","caption":"現行システム","logic":"getPageData"},
-                "functions":{"tableName":"Functions","caption":"所有機能","logic":"getPageData"}
+                "tam":{"tableName":"TAM","caption":"Application Framework (TAM)","logic":"getPageData","rollupFind":false},
+                "etom":{"tableName":"eTOM","caption":"Business Process Framework (eTOM)","logic":"getPageData","rollupFind":false},
+                "sid_abe":{"tableName":"SID_ABE","caption":"Information_Framework (SID)","logic":"getPageData","rollupFind":true},
+                "oda_functional_blocks":{"tableName":"ODA_Functional_Blocks","caption":"ODA Functional Blocks","logic":"getPageData","rollupFind":false},
+                "end_to_end_business_flows":{"tableName":"End_to_End_Business_Flows","caption":"End to End Business Flows","logic":"getPageData","rollupFind":false},
+                "open_apis":{"tableName":"Open_APIs","caption":"Open APIs","logic":"getPageData","rollupFind":false},
+                "legacy_systems":{"tableName":"Legacy_Systems","caption":"現行システム","logic":"getPageData","rollupFind":true},
+                "functions":{"tableName":"Functions","caption":"所有機能","logic":"getPageData","rollupFind":false}
             },
             "prepares": {
                 "test": "select sql from sqlite_master where type='table';",
