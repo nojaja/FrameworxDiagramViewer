@@ -25804,7 +25804,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "../node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".orgchart { \n  background-image:none;\n  background: white; \n}\n/* excluding leaf node */\n.orgchart .node:not(:only-child)::after {\n  height: 15px;\n  background-color: rgba(0,0,0,.8);\n}\n/* excluding root node */\n.orgchart > ul > li > ul li > .node::before {\n  height: 15px;\n  background-color: rgba(0,0,0,.8);\n}\n\n.orgchart .hierarchy::before {\n  border-top: 2px solid rgba(0,0,0,.8);\n}\n\n.orgchart .node .title {\n  background-color: rgba(0,0,0,.8);\n}\n\n.orgchart .node .content {\n  height: 50px;\n  width: 130px;\n  word-break: break-word;\n  white-space: break-spaces;\n  vertical-align: middle;\n  display: table-cell;\n  font-size: .75rem;\n  font-weight: 700;\n  border: 1px solid rgba(0,0,0,.8);\n  --background: linear-gradient(to bottom right, #f1f1f1, #afafaf);\n  background-color: #ffffe0;\n  box-shadow: 5px 5px 5px 0 rgb(0 0 0 / 50%);\n}\n\n.orgchart .node[data-domain=\"Market Sales Domain\"] .title {\n  background-color: rgb(247,161,162);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Customer Domain\"] .title {\n  background-color: rgb(246,236,19);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Product Domain\"] .title {\n  background-color: rgb(255,209,115);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Resource Domain\"] .title {\n  background-color: rgb(188,230,247);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Service Domain\"] .title {\n  background-color: rgb(125,196,112);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Business Partner Domain\"] .title {\n  background-color: rgb(188,188,217);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Enterprise Domain\"] .title {\n  background-color: rgb(211,211,211);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Common Domain\"] .title {\n  background-color: rgb(255,153,204);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Integration Domain\"] .title {\n  background-color: rgb(210,180,140);\n  border: 1px solid rgba(0,0,0,.8);\n}\nh1 {\n  display: block;\n  font-size: 2em;\n  margin-block-start: 0.67em;\n  margin-block-end: 0.67em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\nh3 {\n  display: block;\n  font-size: 1.17em;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\np {\n  display: block;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 5px;\n  margin-inline-end: 0px;\n}\n\n.elementlink {\n  cursor: pointer;\n}\n\n.parentlink {\n  color: navy;\n  text-decoration: underline;\n}\n\n.leftbar {\n  position: absolute;\n  top: 0px;\n  left: 0;\n  width: 20%;\n  height: 100%;\n  background-color: #323232;\n  --padding-top: 5em;\n  z-index: 0;\n  text-decoration: none;\n  color: white;\n  overflow: overlay;\n}\n\n.leftbaritem {\n  padding-left: 1em;\n  font-size: 90%;\n}\n.leftbar a {\n  text-decoration: none;\n  color: white;\n}\n.leftbar .title {\n  background-color: #161616;\n  font-weight: bold;\n  padding-top: 10px;\n  padding-bottom: 10px;\n  padding-left: 0px;\n  width: 100%;\n  margin-inline-start: 0px;\n  margin-block-start: 0em;\n}\n\n.content_body {\n  position: absolute;\n  top: 0px;\n  left: 21%;\n  width: 79%;\n  height: 100%;\n  overflow: overlay;\n}\n.content_body > div {\n  padding-right: 5%;\n}\n\ntable {\n  border-color: grey;\n  border-collapse: collapse;\n  border-spacing: 0;\n  display: block;\n  margin-bottom: 1rem;\n  overflow: visible;\n}\nthead {\n  display: table-header-group;\n  vertical-align: middle;\n  border-color: inherit;\n}\ntbody {\n  display: table-row-group;\n  vertical-align: middle;\n  border-color: inherit;\n}\ntr {\n  border-top: 1px solid #ccc;\n  display: table-row;\n}\ntr:nth-child(2n) {\n  background-color: #f8f8f8;\n}\nth {\n  border: 1px solid #ddd;\n  padding: 6px 13px;\n  font-weight: 700;\n}\ntd {\n  border: 1px solid #ddd;\n  padding: 6px 13px;\n  display: table-cell;\n}\n\n.message span.remark {\n  display: none;\n}\n.message:hover span.remark {\n  background: none repeat scroll 0 0 #EEFFEE;\n  border: 1px solid #CCCCCC;\n  color: #000000;\n  display: block;\n  margin: 0.5em;\n  padding: 0.5em;\n  position: absolute;\n  top: -20px;\n  left: 10px;\n  z-index: 1;\n}\n\n.maturity_level_5 {\n  color: royalblue;\n}\n.maturity_level_4 {\n  color: royalblue;\n}\n.maturity_level_3 {\n  color: forestgreen;\n}\n.maturity_level_2 {\n  color: forestgreen;\n}\n.maturity_level_1 {\n  color: darkorange;\n}\n\nul {\n  display: block;\n  list-style-type: disc;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  padding-inline-start: 0px;\n}\n\n.filter-list li,\nul li {\n  word-wrap: break-word;\n  margin: 0;\n}\n", ""]);
+exports.push([module.i, ".orgchart { \n  background-image:none;\n  background: white; \n}\n/* excluding leaf node */\n.orgchart .node:not(:only-child)::after {\n  height: 15px;\n  background-color: rgba(0,0,0,.8);\n}\n/* excluding root node */\n.orgchart > ul > li > ul li > .node::before {\n  height: 15px;\n  background-color: rgba(0,0,0,.8);\n}\n\n.orgchart .hierarchy::before {\n  border-top: 2px solid rgba(0,0,0,.8);\n}\n\n.orgchart .node .title {\n  background-color: rgba(0,0,0,.8);\n}\n\n.orgchart .node .content {\n  height: 50px;\n  width: 130px;\n  word-break: break-word;\n  white-space: break-spaces;\n  vertical-align: middle;\n  display: table-cell;\n  font-size: .75rem;\n  font-weight: 700;\n  border: 1px solid rgba(0,0,0,.8);\n  --background: linear-gradient(to bottom right, #f1f1f1, #afafaf);\n  background-color: #ffffe0;\n  box-shadow: 5px 5px 5px 0 rgb(0 0 0 / 50%);\n}\n\n.orgchart .node[data-domain=\"Market Sales Domain\"] .title {\n  background-color: rgb(247,161,162);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Customer Domain\"] .title {\n  background-color: rgb(246,236,19);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Product Domain\"] .title {\n  background-color: rgb(255,209,115);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Resource Domain\"] .title {\n  background-color: rgb(188,230,247);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Service Domain\"] .title {\n  background-color: rgb(125,196,112);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Business Partner Domain\"] .title {\n  background-color: rgb(188,188,217);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Enterprise Domain\"] .title {\n  background-color: rgb(211,211,211);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Common Domain\"] .title {\n  background-color: rgb(255,153,204);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Integration Domain\"] .title {\n  background-color: rgb(210,180,140);\n  border: 1px solid rgba(0,0,0,.8);\n}\nh1 {\n  display: block;\n  font-size: 2em;\n  margin-block-start: 0.67em;\n  margin-block-end: 0.67em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\nh3 {\n  display: block;\n  font-size: 1.17em;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\np {\n  display: block;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 5px;\n  margin-inline-end: 0px;\n}\n\n.elementlink {\n  cursor: pointer;\n}\n\n.parentlink {\n  color: navy;\n  text-decoration: underline;\n}\n\n.leftbar {\n  position: absolute;\n  top: 0px;\n  left: 0;\n  width: 20%;\n  height: 100%;\n  background-color: #323232;\n  --padding-top: 5em;\n  z-index: 0;\n  text-decoration: none;\n  color: white;\n  overflow: overlay;\n}\n\n.leftbaritem {\n  padding-left: 1em;\n  font-size: 90%;\n}\n.leftbar a {\n  text-decoration: none;\n  color: white;\n}\n.leftbar .title {\n  background-color: #161616;\n  font-weight: bold;\n  padding-top: 10px;\n  padding-bottom: 10px;\n  padding-left: 0px;\n  width: 100%;\n  margin-inline-start: 0px;\n  margin-block-start: 0em;\n}\n\n.content_body {\n  position: absolute;\n  top: 0px;\n  left: 21%;\n  width: 79%;\n  height: 100%;\n  overflow: overlay;\n}\n.content_body > div {\n  padding-right: 5%;\n}\n\ntable {\n  border-color: grey;\n  border-collapse: collapse;\n  border-spacing: 0;\n  display: block;\n  margin-bottom: 1rem;\n  overflow: visible;\n}\nthead {\n  display: table-header-group;\n  vertical-align: middle;\n  border-color: inherit;\n}\ntbody {\n  display: table-row-group;\n  vertical-align: middle;\n  border-color: inherit;\n}\ntr {\n  border-top: 1px solid #ccc;\n  display: table-row;\n}\ntr:nth-child(2n) {\n  background-color: #f8f8f8;\n}\nth {\n  border: 1px solid #ddd;\n  padding: 6px 13px;\n  font-weight: 700;\n}\ntd {\n  border: 1px solid #ddd;\n  padding: 6px 13px;\n  display: table-cell;\n}\n\n.message span.remark {\n  display: none;\n}\n.message:hover span.remark {\n  background: none repeat scroll 0 0 #EEFFEE;\n  border: 1px solid #CCCCCC;\n  color: #000000;\n  display: block;\n  margin: 0.5em;\n  padding: 0.5em;\n  position: absolute;\n  top: 20px;\n  left: 10px;\n  z-index: 1;\n}\n\n.maturity_level_5 {\n  color: royalblue;\n}\n.maturity_level_4 {\n  color: royalblue;\n}\n.maturity_level_3 {\n  color: forestgreen;\n}\n.maturity_level_2 {\n  color: forestgreen;\n}\n.maturity_level_1 {\n  color: darkorange;\n}\n\nul {\n  display: block;\n  list-style-type: disc;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  padding-inline-start: 0px;\n}\n\n.filter-list li,\nul li {\n  word-wrap: break-word;\n  margin: 0;\n}\n\n.choices__inner {\n  background-color: #323232;\n  border: 1px solid #fff;\n  border-radius: 2px;\n  padding: 0px 10px;\n  width: 60%;\n}\n\n.choices__list--multiple .choices__item {\n  background-color: #010b0c;\n  border: 1px solid #000000;\n  color: #fff;\n}\n.choices__input {\n  /* background-color: #f9f9f9; */\n  background-color: #323232;\n  color: white;\n}\n.choices__list--dropdown, .choices__list[aria-expanded] {\n  /* background-color: #fff; */\n  background-color: #323232;\n  width: 80%;\n}\n.choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item {\n  padding: 0px;\n}\n.choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {\n  /* background-color: #f2f2f2; */\n  background-color: #323232;\n}\n.choices__list--multiple .choices__item.is-highlighted {\n  background-color: #161616;\n  border: 1px solid #020202;\n}\n\n.choices[data-type*=select-multiple] .choices__button,\n.choices[data-type*=text] .choices__button {\n  border-left: 1px solid #323232;\n\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -81364,6 +81364,8 @@ class Dao {
             while (stmt.step()) { //
                 const ret = stmt.getAsObject()
                 ret.table = totable
+                //関連性の理由情報取得
+                ret.reasonData = await this.getRelationChildReasonData(fromtable, ret.fromid ,totable, ret.name)
                 children.push(ret)
             }
             return children
@@ -81372,6 +81374,35 @@ class Dao {
         }
     }
 
+    //ページのに関連する子要素の関連性根拠の取得
+    async getRelationChildReasonData(fromtable, fromid, totable, toid) {
+        if (!this.tableExists(fromtable)) throw new Error(this.getTableInfo(fromtable).tableName + ' TABLES not exist')
+        if (!this.tableExists(totable)) throw new Error(this.getTableInfo(totable).tableName + ' TABLES not exist')
+        this.db = this.db || await this.database()
+
+        const ids = fromid.split('.').map((currentValue, index, array) => {
+            return `'${array.slice(0, index + 1).join('.')}'`
+        }).join();
+
+        try {
+            // Prepare an sql statement
+            const stmt = this.db.prepare(this.preparesTemplate.RelationChildReasonData({}))
+
+            // Bind values to the parameters and fetch the results of the query
+            //const result = stmt.getAsObject({'$id' : id});
+            // Bind new values
+            stmt.bind({ $fromtable: this.getTableInfo(fromtable).tableName, $fromid: fromid, $totable: this.getTableInfo(totable).tableName, $toid: toid});
+            let children = [];
+            while (stmt.step()) { //
+                const ret = stmt.getAsObject()
+                ret.table = totable
+                children.push(ret)
+            }
+            return children
+        } catch (error) {
+            console.error("getRelationChildReasonData", this.db.prepare(this.preparesTemplate.RelationChildReasonData({})), error)
+        }
+    }
 
     //クエリ実行
     async getResult(querName, parameters, callback) {
@@ -81434,6 +81465,8 @@ __webpack_require__.r(__webpack_exports__);
 var _assets_default_setting_json__WEBPACK_IMPORTED_MODULE_9___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../assets/default_setting.json */ "./assets/default_setting.json", 1);
 
 
+////npm install choices.js
+//import 'choices.js/public/assets/styles/choices.css';
 
 
 
@@ -81443,10 +81476,35 @@ var _assets_default_setting_json__WEBPACK_IMPORTED_MODULE_9___namespace = /*#__P
 
 
 
-
+//import * as Choices from 'choices.js'
+        
 const Handlebars = promised_handlebars__WEBPACK_IMPORTED_MODULE_7___default()(__webpack_require__(/*! handlebars */ "../node_modules/handlebars/dist/cjs/handlebars.js"), { Promise: Promise })
 const pageCache = {}
-const filters = {}
+let filters = {}
+
+/*
+const filterItems = [
+  { value: 'Market', label: 'Market Sales Domain', customProperties: {category:'domain'},selected:false},
+  { value: 'Product', label: 'Product Domain', customProperties: {category:'domain'},selected:false},
+  { value: 'Customer', label: 'Customer Domain', customProperties: {category:'domain'},selected:false},
+  { value: 'Service', label: 'Service Domain', customProperties: {category:'domain'},selected:false},
+  { value: 'Resource', label: 'Resource Domain', customProperties: {category:'domain'},selected:false},
+  { value: 'Partner', label: 'Business Partner Domain', customProperties: {category:'domain'},selected:false},
+  { value: 'Enterprise', label: 'Enterprise Domain', customProperties: {category:'domain'},selected:false},
+  { value: 'Common', label: 'Common Domain', customProperties: {category:'domain'},selected:false},
+  { value: 'Integration', label: 'Integration Domain', customProperties: {category:'domain'},selected:false},
+  { value: 'Cross', label: 'Cross Domain', customProperties: {category:'domain'},selected:false},
+
+  
+  { value: 'Strategy', label: 'Strategy Management', customProperties: {category:'category'},selected:false},
+  { value: 'Capability', label: 'Capability Delivery', customProperties: {category:'category'},selected:false},
+  { value: 'Lifecycle', label: 'Lifecycle Management', customProperties: {category:'category'},selected:false},
+  { value: 'Readiness', label: 'Operations Readiness & Support', customProperties: {category:'category'},selected:false},
+  { value: 'Fulfillment', label: 'Fulfillment', customProperties: {category:'category'},selected:false},
+  { value: 'Assurance', label: 'Assurance', customProperties: {category:'category'},selected:false},
+  { value: 'Billing', label: 'Billing & Revenue Management', customProperties: {category:'category'},selected:false},
+]
+*/
 
 //setting loader
 let setting = null
@@ -81503,6 +81561,8 @@ const dao_promise = async function () {
 }()
 
 let oc; //階層チャート
+//let choices; //フィルタ選択
+
 //View///////////////////////////////////////////////////
 //コンテンツロード完了イベントのハンドリング
 document.addEventListener('DOMContentLoaded', function () {
@@ -81530,6 +81590,36 @@ document.addEventListener('DOMContentLoaded', function () {
       $node.find('.bottomEdge').removeClass('bottomEdge');
     }
   });
+
+  /*
+  const choiceselement = document.getElementById('task_member_ids');
+
+  choices = new Choices(choiceselement,{
+    delimiter: ',',
+    removeItemButton: true,
+    editItems: true,
+    DuplicateItemsAllowed: false,
+    shouldSort: false
+  });
+
+  choiceselement.addEventListener(
+    'change',
+    function(event) {
+      const newFilters = {}
+      const valueArray = choices.getValue()
+      for (let index = 0; index < valueArray.length; index++) {
+        const choiceValue = valueArray[index];
+        const category = choiceValue.customProperties.category || 'default'
+        if(!newFilters[category]) newFilters[category] = {};
+        newFilters[category][choiceValue.value]=true
+      }
+      //Object.assign(filters, newFilters);
+      filters = newFilters
+      updateFilter()
+    },
+    false,
+  );
+  */
 });
 
 // ページの読み込み完了イベントのハンドリング
@@ -81575,6 +81665,13 @@ let pageGen = async function (table, id, scroll) {
   console.log('data.relationData',data.relationData)
   console.log('filters',filters)
 
+  const unique_filter_logic = function (dataList){
+    let map = new Map(dataList.map(data=>{
+      return [dataList.name,{dataList}]
+    }))
+    return result
+  }
+
   const filter_logic = function (dataList){
     const result = dataList.filter(data => {
       for (const [filter_category, filter] of Object.entries(filters)) {
@@ -81592,11 +81689,11 @@ let pageGen = async function (table, id, scroll) {
     });
     return result
   }
-
+  //data.relationDataに対してfilter_logicを適用
   for (const [dataset, record] of Object.entries(data.relationData)) {
     data.relationData[dataset]=filter_logic(record)
   }
-  
+  //data.childrenに対してfilter_logicを適用
   console.log('data.children',data.children)
   data.children=filter_logic(data.children)
 
@@ -81621,8 +81718,7 @@ let pageGen = async function (table, id, scroll) {
   const atags = document.querySelectorAll("svg a")
   createSVGATag2ClickEvent(atags)
 
-  const filter_elements = document.getElementsByClassName("filter")
-  updateFilterEvent(filter_elements)
+  updateFilterEvent()
 }
 
 function createSVGATag2ClickEvent(elements){
@@ -81663,43 +81759,68 @@ function createDataset2ClickEvent(elements){
   }
 }
 //フィルタ状況の設定
-function updateFilterEvent(elements){
-  for (let i = 0; i < elements.length; i++) {
-    const filter_category = elements[i].dataset.category
-    const filter_id = elements[i].name
+function updateFilterEvent(){
+  /*
+  for (let i = 0; i < filterItems.length; i++) {
+    const filter_category = filterItems[i].customProperties.category
+    const filter_id = filterItems[i].value
+    const filter = filters[filter_category]||{};
+    const status = filter[filter_id]||false
+    filterItems[i].selected = status
+  }
+  choices.clearStore();
+  choices.setChoices(
+    filterItems,
+    'value',
+    'label',
+    true,
+  );
+  */
+  const filter_elements = document.getElementsByClassName("filter")
+  for (let i = 0; i < filter_elements.length; i++) {
+    const filter_category = filter_elements[i].dataset.category
+    const filter_id = filter_elements[i].name
     const filter = filters[filter_category]||{};
     const status = filter[filter_id]
-    console.log(filter_category,filter_id,status,filter,filters)
-    elements[i].checked = status
-    elements[i].onclick = function (node_element) {
+    filter_elements[i].checked = status
+    filter_elements[i].onclick = function (node_element) {
       return async (event) => {
         //ノードのID表示用のURLをhistoryに追加して、再描画
         const filter_category = node_element.dataset.category
         const filter_id = node_element.name
         const status = node_element.checked
-        //delete出来るようにMapにする
-        const filter = new Map(Object.entries(filters[filter_category]||{}));
-        if(status==true){
-          filter.set(filter_id,status)
-        }else{
-          filter.delete(filter_id)
-        }
-        //serialize出来るようにobjectにする
-        filters[filter_category] = [...filter].reduce((l,[k,v]) => Object.assign(l, {[k]:v}), {})
-        const serialized_filter = btoa(JSON.stringify(filters));
-        
-        console.log(filter_id,status,filters,serialized_filter)
-
-        const id = await getParam("q")
-        const type = await getParam("type")
-
-        window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${id}&type=${type}&f=${serialized_filter}`)
-        pageGen(type, id, false);
-
-        return  true
+        setFilter(filter_category,filter_id,status)
+        updateFilter()
+        return true
       }
-    } (elements[i])
+    } (filter_elements[i])
   }
+}
+
+//ノードのID表示用のURLをhistoryに追加して、再描画
+async function setFilter (filter_category,filter_id,status){
+  //delete出来るようにMapにする
+  const filter = new Map(Object.entries(filters[filter_category]||{}));
+  if(status==true){
+    filter.set(filter_id,status)
+  }else{
+    filter.delete(filter_id)
+  }
+  //serialize出来るようにobjectにする
+  filters[filter_category] = [...filter].reduce((l,[k,v]) => Object.assign(l, {[k]:v}), {})
+  return  true
+}
+
+//フィルタ設定のURLをhistoryに追加して、再描画
+async function updateFilter (){
+    const serialized_filter = btoa(JSON.stringify(filters));    
+    const id = await getParam("q")
+    const type = await getParam("type")
+
+    window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${id}&type=${type}&f=${serialized_filter}`)
+    pageGen(type, id, false);
+
+    return  true
 }
 
 //tree表示する
@@ -81922,4 +82043,4 @@ Handlebars.registerHelper('log', function(arg1, arg2, options) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=map/main.3edad07c682f5b5243e3.js.map
+//# sourceMappingURL=map/main.d677fdacb832525ed8f9.js.map

@@ -11,9 +11,10 @@
     <p class="leftbaritem title">Frameworx Version 21.0</p>
     <div>
       <p >contents</p>
-      <p class="leftbaritem"><a class="leftlink elementlink" data-id="1" data-type="TAM">Application Framework (TAM)</a></p>
-      <p class="leftbaritem"><a class="leftlink elementlink" data-id="1" data-type="eTOM">Business Process Framework (eTOM)</a></p>
-      <p class="leftbaritem"><a class="leftlink elementlink" data-id="top" data-type="SID_ABE">Information Framework (SID)</a></p>
+      
+      <p class="leftbaritem"><a class="leftlink elementlink" data-id="1" data-type="TAM"><i class="fa fa-th"></i> Application Framework (TAM)</a></p>
+      <p class="leftbaritem"><a class="leftlink elementlink" data-id="1" data-type="eTOM"><i class="fa fa-check-square"></i> Business Process Framework (eTOM)</a></p>
+      <p class="leftbaritem"><a class="leftlink elementlink" data-id="top" data-type="SID_ABE"><i class="fa fa-puzzle-piece"></i> Information Framework (SID)</a></p>
       <p class="leftbaritem"><a class="leftlink elementlink" data-id="End-to-End Business Streams" data-type="End_to_End_Business_Flows">Business Flows</a></p>
       <p class="leftbaritem"><a class="leftlink elementlink" data-id="ODA" data-type="ODA_Functional_Blocks">ODA The Functional Blocks</a></p>
       <p class="leftbaritem"><a class="leftlink elementlink" data-id="top" data-type="Open_APIs">TMForum Open APIs</a></p>
@@ -21,6 +22,9 @@
     </div>
     <div>
       <p >filter</p>
+      <!--
+      <select multiple="multiple" name="task[member_ids][]" id="task_member_ids"></select>
+      -->
       <ul class="filter-list">
         Domain
         <li><input class="filter" type="checkbox" id="Market Sales Domain" name="Market" data-category="domain"><label for="Market">Market Sales Domain</label></li>
@@ -45,7 +49,7 @@
     </div>
   </div>
   <div id="content" class="content_body">
-    <div id="content_body" >
+    <div id="content_body">
       <div id="chart-container"></div>
       <h3>loading...</h3>
       <i class="fas fa-spinner fa-pulse" style="color: royalblue;"></i>
@@ -53,9 +57,7 @@
     <p>Some details have been omitted due to space constraints. See complete Frameworx information at www.tmforum.org.
     </p>
     <p>Copyright © TM Forum 2020. All Rights Reserved.</p>
-
   </div>
-
 <script src="./main.bundle.js"></script></body>
 
 </html>

@@ -24,14 +24,16 @@
         <table>
             <thead>
                 <tr>
-                    <th>ID</th><th>名称</th>
+                    <th>ID</th><th>Name</th><th>Description</th>
                 </tr>
             </thead>
             <tbody>
             {{#each this}}
                 <tr>
                     <td><a class="parentlink elementlink" data-id="{{this.name}}" data-type="{{this.table}}" >{{this.name}}</a></td>
-                    <td>{{this.title}}{{#ifEquals this.source "consideration"}}
+                    <td>{{this.title}}
+                        {{#each this.reasonData}}
+                        {{#ifEquals this.source "consideration"}}
                         <span class="message fa-stack maturity_level_{{this.maturity_level}}" style="font-size: 0.6em;">
                             <i class="fa fa-circle fa-stack-2x "></i>
                             <i class="fa fa-exclamation fa-stack-1x fa-inverse"></i>
@@ -44,7 +46,9 @@
                             <span class="remark">source:{{this.source}}  <br />maturity_level:{{this.maturity_level}} <br />{{#if this.memo}}{{this.memo}}{{/if}}</span>
                         </span>
                         {{/ifEquals}}
+                        {{/each}}
                     </td>
+                    <td>{{breaklines brief}}</td>
                 </tr>
             {{/each}}
             </tbody>
@@ -79,7 +83,7 @@
         <table>
             <thead>
                 <tr>
-                    <th>ID</th><th>Name</th>
+                    <th>ID</th><th>Name</th><th>Description</th>
                 </tr>
             </thead>
             <tbody>
@@ -87,6 +91,7 @@
                 <tr>
                     <td><a class="parentlink elementlink" data-id="{{name}}" data-type="{{table}}" >{{name}}</a></td>
                     <td>{{title}}</td>
+                    <td>{{breaklines brief}}</td>
                 </tr>
             {{/each}}
             </tbody>
