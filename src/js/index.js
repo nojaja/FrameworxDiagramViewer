@@ -1,5 +1,7 @@
 
 import OrgChart from 'orgchart';
+////npm install choices.js
+//import 'choices.js/public/assets/styles/choices.css';
 import 'orgchart/dist/css/jquery.orgchart.min.css'
 import '../css/style.css'
 import '@fortawesome/fontawesome-free/js/fontawesome';
@@ -9,10 +11,35 @@ import _Handlebars from "handlebars";
 import promisedHandlebars from "promised-handlebars";
 import Dao from "./dao.js";
 import DefaultSetting from "../assets/default_setting.json";
-
+//import * as Choices from 'choices.js'
+        
 const Handlebars = promisedHandlebars(require('handlebars'), { Promise: Promise })
 const pageCache = {}
-const filters = {}
+let filters = {}
+
+/*
+const filterItems = [
+  { value: 'Market', label: 'Market Sales Domain', customProperties: {category:'domain'},selected:false},
+  { value: 'Product', label: 'Product Domain', customProperties: {category:'domain'},selected:false},
+  { value: 'Customer', label: 'Customer Domain', customProperties: {category:'domain'},selected:false},
+  { value: 'Service', label: 'Service Domain', customProperties: {category:'domain'},selected:false},
+  { value: 'Resource', label: 'Resource Domain', customProperties: {category:'domain'},selected:false},
+  { value: 'Partner', label: 'Business Partner Domain', customProperties: {category:'domain'},selected:false},
+  { value: 'Enterprise', label: 'Enterprise Domain', customProperties: {category:'domain'},selected:false},
+  { value: 'Common', label: 'Common Domain', customProperties: {category:'domain'},selected:false},
+  { value: 'Integration', label: 'Integration Domain', customProperties: {category:'domain'},selected:false},
+  { value: 'Cross', label: 'Cross Domain', customProperties: {category:'domain'},selected:false},
+
+  
+  { value: 'Strategy', label: 'Strategy Management', customProperties: {category:'category'},selected:false},
+  { value: 'Capability', label: 'Capability Delivery', customProperties: {category:'category'},selected:false},
+  { value: 'Lifecycle', label: 'Lifecycle Management', customProperties: {category:'category'},selected:false},
+  { value: 'Readiness', label: 'Operations Readiness & Support', customProperties: {category:'category'},selected:false},
+  { value: 'Fulfillment', label: 'Fulfillment', customProperties: {category:'category'},selected:false},
+  { value: 'Assurance', label: 'Assurance', customProperties: {category:'category'},selected:false},
+  { value: 'Billing', label: 'Billing & Revenue Management', customProperties: {category:'category'},selected:false},
+]
+*/
 
 //setting loader
 let setting = null
@@ -69,6 +96,8 @@ const dao_promise = async function () {
 }()
 
 let oc; //階層チャート
+//let choices; //フィルタ選択
+
 //View///////////////////////////////////////////////////
 //コンテンツロード完了イベントのハンドリング
 document.addEventListener('DOMContentLoaded', function () {
@@ -96,6 +125,36 @@ document.addEventListener('DOMContentLoaded', function () {
       $node.find('.bottomEdge').removeClass('bottomEdge');
     }
   });
+
+  /*
+  const choiceselement = document.getElementById('task_member_ids');
+
+  choices = new Choices(choiceselement,{
+    delimiter: ',',
+    removeItemButton: true,
+    editItems: true,
+    DuplicateItemsAllowed: false,
+    shouldSort: false
+  });
+
+  choiceselement.addEventListener(
+    'change',
+    function(event) {
+      const newFilters = {}
+      const valueArray = choices.getValue()
+      for (let index = 0; index < valueArray.length; index++) {
+        const choiceValue = valueArray[index];
+        const category = choiceValue.customProperties.category || 'default'
+        if(!newFilters[category]) newFilters[category] = {};
+        newFilters[category][choiceValue.value]=true
+      }
+      //Object.assign(filters, newFilters);
+      filters = newFilters
+      updateFilter()
+    },
+    false,
+  );
+  */
 });
 
 // ページの読み込み完了イベントのハンドリング
@@ -141,6 +200,13 @@ let pageGen = async function (table, id, scroll) {
   console.log('data.relationData',data.relationData)
   console.log('filters',filters)
 
+  const unique_filter_logic = function (dataList){
+    let map = new Map(dataList.map(data=>{
+      return [dataList.name,{dataList}]
+    }))
+    return result
+  }
+
   const filter_logic = function (dataList){
     const result = dataList.filter(data => {
       for (const [filter_category, filter] of Object.entries(filters)) {
@@ -158,11 +224,11 @@ let pageGen = async function (table, id, scroll) {
     });
     return result
   }
-
+  //data.relationDataに対してfilter_logicを適用
   for (const [dataset, record] of Object.entries(data.relationData)) {
     data.relationData[dataset]=filter_logic(record)
   }
-  
+  //data.childrenに対してfilter_logicを適用
   console.log('data.children',data.children)
   data.children=filter_logic(data.children)
 
@@ -187,8 +253,7 @@ let pageGen = async function (table, id, scroll) {
   const atags = document.querySelectorAll("svg a")
   createSVGATag2ClickEvent(atags)
 
-  const filter_elements = document.getElementsByClassName("filter")
-  updateFilterEvent(filter_elements)
+  updateFilterEvent()
 }
 
 function createSVGATag2ClickEvent(elements){
@@ -229,43 +294,68 @@ function createDataset2ClickEvent(elements){
   }
 }
 //フィルタ状況の設定
-function updateFilterEvent(elements){
-  for (let i = 0; i < elements.length; i++) {
-    const filter_category = elements[i].dataset.category
-    const filter_id = elements[i].name
+function updateFilterEvent(){
+  /*
+  for (let i = 0; i < filterItems.length; i++) {
+    const filter_category = filterItems[i].customProperties.category
+    const filter_id = filterItems[i].value
+    const filter = filters[filter_category]||{};
+    const status = filter[filter_id]||false
+    filterItems[i].selected = status
+  }
+  choices.clearStore();
+  choices.setChoices(
+    filterItems,
+    'value',
+    'label',
+    true,
+  );
+  */
+  const filter_elements = document.getElementsByClassName("filter")
+  for (let i = 0; i < filter_elements.length; i++) {
+    const filter_category = filter_elements[i].dataset.category
+    const filter_id = filter_elements[i].name
     const filter = filters[filter_category]||{};
     const status = filter[filter_id]
-    console.log(filter_category,filter_id,status,filter,filters)
-    elements[i].checked = status
-    elements[i].onclick = function (node_element) {
+    filter_elements[i].checked = status
+    filter_elements[i].onclick = function (node_element) {
       return async (event) => {
         //ノードのID表示用のURLをhistoryに追加して、再描画
         const filter_category = node_element.dataset.category
         const filter_id = node_element.name
         const status = node_element.checked
-        //delete出来るようにMapにする
-        const filter = new Map(Object.entries(filters[filter_category]||{}));
-        if(status==true){
-          filter.set(filter_id,status)
-        }else{
-          filter.delete(filter_id)
-        }
-        //serialize出来るようにobjectにする
-        filters[filter_category] = [...filter].reduce((l,[k,v]) => Object.assign(l, {[k]:v}), {})
-        const serialized_filter = btoa(JSON.stringify(filters));
-        
-        console.log(filter_id,status,filters,serialized_filter)
-
-        const id = await getParam("q")
-        const type = await getParam("type")
-
-        window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${id}&type=${type}&f=${serialized_filter}`)
-        pageGen(type, id, false);
-
-        return  true
+        setFilter(filter_category,filter_id,status)
+        updateFilter()
+        return true
       }
-    } (elements[i])
+    } (filter_elements[i])
   }
+}
+
+//ノードのID表示用のURLをhistoryに追加して、再描画
+async function setFilter (filter_category,filter_id,status){
+  //delete出来るようにMapにする
+  const filter = new Map(Object.entries(filters[filter_category]||{}));
+  if(status==true){
+    filter.set(filter_id,status)
+  }else{
+    filter.delete(filter_id)
+  }
+  //serialize出来るようにobjectにする
+  filters[filter_category] = [...filter].reduce((l,[k,v]) => Object.assign(l, {[k]:v}), {})
+  return  true
+}
+
+//フィルタ設定のURLをhistoryに追加して、再描画
+async function updateFilter (){
+    const serialized_filter = btoa(JSON.stringify(filters));    
+    const id = await getParam("q")
+    const type = await getParam("type")
+
+    window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${id}&type=${type}&f=${serialized_filter}`)
+    pageGen(type, id, false);
+
+    return  true
 }
 
 //tree表示する
