@@ -159,6 +159,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // ページの読み込み完了イベントのハンドリング
 window.addEventListener('load', async (event) => {
+  
+  const footer = await (await fetch("./assets/footer_" + language + ".tmp", { method: "get" })).text();
+  console.log("footer",footer)
+  Handlebars.registerPartial('footer', footer);
+  
+
   //初回表示時の描画
   const id = await getParam("q")
   const type = await getParam("type")
@@ -441,3 +447,5 @@ Handlebars.registerHelper('log', function(arg1, arg2, options) {
   console.log(arg1, arg2, options);
   return
 });
+
+
