@@ -81348,10 +81348,13 @@ class Dao {
         if (!this.tableExists(totable)) throw new Error(this.getTableInfo(totable).tableName + ' TABLES not exist')
         this.db = this.db || await this.database()
 
-        const ids = fromid.split('.').map((currentValue, index, array) => {
-            return `'${array.slice(0, index + 1).join('.')}'`
-        }).join();
-
+        //ID decomposition ex. '1.3.3' -> ['1','1.3','1.3.3']
+        const rollupId = (currentId) => {
+            return currentId.split('.').map((currentValue, index, array) => {
+                return `'${array.slice(0, index + 1).join('.')}'`
+            }).join();
+        }
+        const ids = (this.getTableInfo(totable).rollupFind)?rollupId(fromid):`'${fromid}'`
         try {
             // Prepare an sql statement
             const stmt = this.db.prepare(this.preparesTemplate.RelationChildData({ totable: this.getTableInfo(totable).tableName, ids, ids }))
@@ -81364,6 +81367,7 @@ class Dao {
             while (stmt.step()) { //
                 const ret = stmt.getAsObject()
                 ret.table = totable
+                ret.basefromid = fromid
                 //関連性の理由情報取得
                 ret.reasonData = await this.getRelationChildReasonData(fromtable, ret.fromid ,totable, ret.name)
                 children.push(ret)
@@ -81380,16 +81384,11 @@ class Dao {
         if (!this.tableExists(totable)) throw new Error(this.getTableInfo(totable).tableName + ' TABLES not exist')
         this.db = this.db || await this.database()
 
-        const ids = fromid.split('.').map((currentValue, index, array) => {
-            return `'${array.slice(0, index + 1).join('.')}'`
-        }).join();
-
         try {
             // Prepare an sql statement
             const stmt = this.db.prepare(this.preparesTemplate.RelationChildReasonData({}))
 
             // Bind values to the parameters and fetch the results of the query
-            //const result = stmt.getAsObject({'$id' : id});
             // Bind new values
             stmt.bind({ $fromtable: this.getTableInfo(fromtable).tableName, $fromid: fromid, $totable: this.getTableInfo(totable).tableName, $toid: toid});
             let children = [];
@@ -81665,11 +81664,31 @@ let pageGen = async function (table, id, scroll) {
   console.log('data.relationData',data.relationData)
   console.log('filters',filters)
 
-  const unique_filter_logic = function (dataList){
-    let map = new Map(dataList.map(data=>{
-      return [dataList.name,{dataList}]
-    }))
-    return result
+  /**
+   * リストからの重複排除
+   * dataList
+   * keylist: ['key',,,]
+   * override: (old,new) => {return true}
+   */
+  const unique_filter_logic = (dataList,keylist,override) => {
+    // uniqueになるkey文字列作成
+    const keyjoin = (data,keylist,delimiter) => {
+      return keylist.reduce((resultArray, key, index) => {
+        resultArray[index] = data[key] || ""
+        return resultArray;
+      }, []).join(delimiter)
+    }
+    const map = new Map()
+    for (let index = 0; index < dataList.length; index++) {
+      const currentData = dataList[index];
+      const uniqueKey=keyjoin(currentData,keylist)
+      if(map.has(uniqueKey)){//上書き
+        if(override && override(map.get(uniqueKey),currentData)) map.set(uniqueKey,currentData)
+      }else{
+        map.set(uniqueKey,currentData)
+      }
+    }
+    return Array.from(map.values())
   }
 
   const filter_logic = function (dataList){
@@ -81691,7 +81710,9 @@ let pageGen = async function (table, id, scroll) {
   }
   //data.relationDataに対してfilter_logicを適用
   for (const [dataset, record] of Object.entries(data.relationData)) {
-    data.relationData[dataset]=filter_logic(record)
+    const recordtmp = unique_filter_logic(record,["title"],(oldrecord,newrecord)=>{return newrecord.basefromid==newrecord.fromid})
+    console.log(recordtmp)
+    data.relationData[dataset]=filter_logic(recordtmp)
   }
   //data.childrenに対してfilter_logicを適用
   console.log('data.children',data.children)
@@ -82043,4 +82064,4 @@ Handlebars.registerHelper('log', function(arg1, arg2, options) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=map/main.d677fdacb832525ed8f9.js.map
+//# sourceMappingURL=map/main.b4deae3c141653c7dd57.js.map
