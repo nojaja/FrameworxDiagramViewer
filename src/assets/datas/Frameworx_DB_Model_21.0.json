@@ -16,7 +16,7 @@
         },
         {
             "action": "Import-CSV",
-            "sql": "INSERT INTO TAM VALUES ($ApplicationIdentifier ,$LEVEL ,$PARENT ,$FrameworxApplication ,$Category ,'',$Overview ,$FrameworxFunction ,'',$FrameworxDomain ,'',$MaturityLevel ,$Status );",
+            "sql": "INSERT INTO TAM VALUES ($ApplicationIdentifier ,$LEVEL ,$PARENT ,$FrameworxApplication ,$Category ,'',$Overview ,$FrameworxFunction ,substr($Overview, 1, 150),$FrameworxDomain ,'',$MaturityLevel ,$Status );",
             "file": "./src/assets/datas/GB929F_Functional_Framework_Functional_Decomposition_v21.0.0.csv"
         },
         {
@@ -26,7 +26,7 @@
         },
         {
             "action": "Import-CSV",
-            "sql": "INSERT INTO Functions VALUES ($FunctionIdentifier ,'1','',$FrameworxFunction ,'','',$FrameworxDomain ,$VerticalGroup ,$Description ,'1','','',$Issue );",
+            "sql": "INSERT INTO Functions VALUES ($FunctionIdentifier ,'1','',$FrameworxFunction ,'','',$FrameworxDomain ,$VerticalGroup ,$Description ,substr($Description, 1, 150) ,'1','','',$Issue );",
             "file": "./src/assets/datas/GB929F_Functional_Framework_Functional_Decomposition_Functions_v21.0.0.csv"
         },
         {
@@ -36,17 +36,17 @@
         },
         {
             "action": "Import-CSV",
-            "sql": "INSERT INTO End_to_End_Business_Flows VALUES ($ID ,$LEVEL ,$PARENT ,$NAME ,$TYPE ,$ORIGINAL_ID ,$DESCRIPTION ,$FUNCTION ,$BRIEF_DESCRIPTION ,$ASSUMPTIONS ,$DOMAIN ,$CATEGORY ,$MATURITY_LEVEL ,$FRAMEWORX_STATUS );",
+            "sql": "INSERT INTO End_to_End_Business_Flows VALUES ($ID ,$LEVEL ,$PARENT ,$NAME ,$TYPE ,$ORIGINAL_ID ,$DESCRIPTION ,$FUNCTION ,substr($DESCRIPTION, 1, 150) ,$ASSUMPTIONS ,$DOMAIN ,$CATEGORY ,$MATURITY_LEVEL ,$FRAMEWORX_STATUS );",
             "file": "./src/assets/datas/GB921E_End_to_End_Business_Flows_v20.0.1.csv"
         },
         {
             "action": "Import-CSV",
-            "sql": "INSERT INTO Open_APIs VALUES ($ID ,$LEVEL ,$PARENT ,$NAME ,$TYPE ,$FUNCID ,$CATEGORY ,$DESCRIPTION ,$FUNCTION ,$MATURITY_LEVEL ,$SWAGGER ,$SPECIFICATION ,$CONFORMANCE_PROFILE ,$CTK ,$SAMPLEIMPLEMENTATIONCODE ,$POSTMANCOLLECTION ,$RELEASE ,$VERSION ,'',$LIFECYCLESTATUS );",
+            "sql": "INSERT INTO Open_APIs VALUES ($ID ,$LEVEL ,$PARENT ,$NAME ,$TYPE ,$FUNCID ,$CATEGORY ,$DESCRIPTION ,$FUNCTION ,substr($DESCRIPTION, 1, 150) ,$MATURITY_LEVEL ,$SWAGGER ,$SPECIFICATION ,$CONFORMANCE_PROFILE ,$CTK ,$SAMPLEIMPLEMENTATIONCODE ,$POSTMANCOLLECTION ,$RELEASE ,$VERSION ,'',$LIFECYCLESTATUS );",
             "file": "./src/assets/datas/TM_Forum_Open_APIs.csv"
         },
         {
             "action": "Import-CSV",
-            "sql": "INSERT INTO Legacy_Systems VALUES ($ID ,$LEVEL ,$PARENT ,$NAME ,$TYPE ,$FUNCID ,$CATEGORY ,$DESCRIPTION ,$FUNCTION ,$DOMAIN ,$MATURITY_LEVEL ,$DEV_OWNER ,$OPE_OWNER ,$SYSTEM_OWNER ,$SYSTEM_DOCUMENT );",
+            "sql": "INSERT INTO Legacy_Systems VALUES ($ID ,$LEVEL ,$PARENT ,$NAME ,$TYPE ,$FUNCID ,$CATEGORY ,$DESCRIPTION ,$FUNCTION ,$BRIEF_DESCRIPTION ,$DOMAIN ,$MATURITY_LEVEL ,$DEV_OWNER ,$OPE_OWNER ,$SYSTEM_OWNER ,$SYSTEM_DOCUMENT );",
             "file": "./src/assets/datas/Legacy_Systems.csv"
         },
         {
@@ -70,7 +70,7 @@
         },
         {
             "action": "Import-CSV",
-            "sql": "INSERT INTO SID_ABE VALUES ($ID ,$LEVEL ,$PARENT, $NAME ,'','' ,$DESCRIPTION ,'','',$DOMAIN,'','','');",
+            "sql": "INSERT INTO SID_ABE VALUES ($ID ,$LEVEL ,$PARENT, $NAME ,'','' ,$DESCRIPTION ,'',substr($DESCRIPTION, 1, 150),$DOMAIN,'','','');",
             "file": "./src/assets/datas/Information_Framework_SID_Excel_Format_v21.0_ABES.csv"
         },
         {

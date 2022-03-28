@@ -165,6 +165,8 @@ export class Dao {
             while (stmt.step()) { //
                 const ret = stmt.getAsObject()
                 ret.table = totable
+                //関連性の理由情報取得
+                ret.reasonData = await this.getRelationChildReasonData(fromtable, ret.fromid ,totable, ret.name)
                 children.push(ret)
             }
             return children
@@ -173,6 +175,35 @@ export class Dao {
         }
     }
 
+    //ページのに関連する子要素の関連性根拠の取得
+    async getRelationChildReasonData(fromtable, fromid, totable, toid) {
+        if (!this.tableExists(fromtable)) throw new Error(this.getTableInfo(fromtable).tableName + ' TABLES not exist')
+        if (!this.tableExists(totable)) throw new Error(this.getTableInfo(totable).tableName + ' TABLES not exist')
+        this.db = this.db || await this.database()
+
+        const ids = fromid.split('.').map((currentValue, index, array) => {
+            return `'${array.slice(0, index + 1).join('.')}'`
+        }).join();
+
+        try {
+            // Prepare an sql statement
+            const stmt = this.db.prepare(this.preparesTemplate.RelationChildReasonData({}))
+
+            // Bind values to the parameters and fetch the results of the query
+            //const result = stmt.getAsObject({'$id' : id});
+            // Bind new values
+            stmt.bind({ $fromtable: this.getTableInfo(fromtable).tableName, $fromid: fromid, $totable: this.getTableInfo(totable).tableName, $toid: toid});
+            let children = [];
+            while (stmt.step()) { //
+                const ret = stmt.getAsObject()
+                ret.table = totable
+                children.push(ret)
+            }
+            return children
+        } catch (error) {
+            console.error("getRelationChildReasonData", this.db.prepare(this.preparesTemplate.RelationChildReasonData({})), error)
+        }
+    }
 
     //クエリ実行
     async getResult(querName, parameters, callback) {
