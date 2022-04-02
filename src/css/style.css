@@ -280,3 +280,35 @@ ul li {
   border-left: 1px solid #323232;
 
 }
+
+.selectstepper {
+  border: 1px solid #eee;
+  display: inline-block;
+  overflow: visible;
+  height: 2.1em;
+  background: #fff;
+  padding: 1px;
+  font-size: .65rem;
+}
+
+.selectstepper select {
+  height: 100%;
+  text-align: center;
+  border: 0;
+  background: transparent;
+  color: #000;
+  appearance: none;
+}
+
+.selectstepper button {
+  width: 1.4em;
+  font-weight: 300;
+  height: 100%;
+  line-height: 0.1em;
+  font-size: 1.4em;
+  padding: 0.2em !important;
+  background: #eee;
+  color: #333;
+  border: none;
+}
+

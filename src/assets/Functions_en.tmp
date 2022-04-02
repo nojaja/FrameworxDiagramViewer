@@ -9,7 +9,18 @@
     <h3 translate="no">Relationships</h3>
     <p id="relationData">
     {{#each data.relationData}}
-        <b>{{@key}}</b><br />
+        <b>{{this.caption}}</b><br />
+
+        <span class="selectstepper" data-category="LEVEL"><button>-</button>
+        <select id="{{this.tableName}}" name="{{this.tableName}}" disabled>
+        <option value="" selected> ALL Level Mapping </option>
+        <option value="1"> Level 1 Mapping </option>
+        <option value="2"> Level 2 Mapping </option>
+        <option value="3"> Level 3 Mapping </option>
+        <option value="4"> Level 4 Mapping </option>
+        </select>
+        <button>+</button></span>
+
         <table>
             <thead>
                 <tr>
@@ -17,7 +28,7 @@
                 </tr>
             </thead>
             <tbody>
-            {{#each this}}
+            {{#each this.children}}
                 <tr>
                     <td><a class="parentlink elementlink" data-id="{{this.name}}" data-type="{{this.table}}" >{{this.name}}</a></td>
                     <td>{{this.title}}

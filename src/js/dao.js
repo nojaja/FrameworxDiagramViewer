@@ -138,7 +138,7 @@ export class Dao {
             if (this.getTableInfo(table).tableName == this.getTableInfo(relationTable).tableName) continue
             const children = await this.getRelationChildData(table, id, relationTable)
             if (children.length > 0)
-                result[this.getTableInfo(relationTable).caption] = children
+                result[this.getTableInfo(relationTable).tableName] = {tableName:this.getTableInfo(relationTable).tableName,caption:this.getTableInfo(relationTable).caption ,children:children}
         }
         return result
     }
