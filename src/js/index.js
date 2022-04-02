@@ -12,11 +12,13 @@ import promisedHandlebars from "promised-handlebars";
 import Dao from "./dao.js";
 import DefaultSetting from "../assets/default_setting.json";
 //import * as Choices from 'choices.js'
+import SelectStepper from "./select-stepper.js";
+import SelectCheckbox from "./select-checkbox.js";
+import Filter from "./filter.js";
         
 const Handlebars = promisedHandlebars(require('handlebars'), { Promise: Promise })
 const pageCache = {}
-let filters = {}
-
+const filter = new Filter();
 /*
 const filterItems = [
   { value: 'Market', label: 'Market Sales Domain', customProperties: {category:'domain'},selected:false},
@@ -169,7 +171,7 @@ window.addEventListener('load', async (event) => {
   const type = await getParam("type")
   const serialized_filter = await getParam("f")
   const addfilters = (serialized_filter)? JSON.parse(atob(serialized_filter)) : {}
-  Object.assign(filters, addfilters);
+  filter.setFilters(addfilters);
 
   pageGen(type, id);
 });
@@ -204,67 +206,17 @@ let pageGen = async function (table, id, scroll) {
   /*filter処理*/
   console.log('data',data)
   console.log('data.relationData',data.relationData)
-  console.log('filters',filters)
+  console.log('filters',filter.getFilters())
 
-  /**
-   * リストからの重複排除
-   * dataList
-   * keylist: ['key',,,]
-   * override: (old,new) => {return true}
-   */
-  const unique_filter_logic = (dataList,keylist,override) => {
-    // uniqueになるkey文字列作成
-    const keyjoin = (data,keylist,delimiter) => {
-      return keylist.reduce((resultArray, key, index) => {
-        resultArray[index] = data[key] || ""
-        return resultArray;
-      }, []).join(delimiter)
-    }
-    const map = new Map()
-    for (let index = 0; index < dataList.length; index++) {
-      const currentData = dataList[index];
-      const uniqueKey=keyjoin(currentData,keylist)
-      if(map.has(uniqueKey)){//上書き
-        if(override && override(map.get(uniqueKey),currentData)) map.set(uniqueKey,currentData)
-      }else{
-        map.set(uniqueKey,currentData)
-      }
-    }
-    return Array.from(map.values())
-  }
-
-  const filter_logic = function (dataList){
-    const result = dataList.filter(data => {
-      for (const [filter_category, filter] of Object.entries(filters)) {
-        let hit_count = 0
-        let filters_count = 0
-        for (const [filter_id, value] of Object.entries(filter)) {
-          if(filter_category=="LEVEL"){
-            if(data["table"]==filter_id.toLowerCase()){
-              if(data[filter_category]!=value)return false;//filterに不一致
-            }
-          }else{
-            if(value && data[filter_category]) {
-              filters_count++;
-              if(data[filter_category].indexOf(filter_id) > -1 )hit_count++;//filterに一致
-            }
-          }
-        }
-        if(filters_count > 0 && hit_count == 0 )return false //フィルタカテゴリ内で1つも一致しない場合は除外する
-      }
-      return true
-    });
-    return result
-  }
   //data.relationDataに対してfilter_logicを適用
   for (const [dataset, record] of Object.entries(data.relationData)) {
-    const recordtmp = unique_filter_logic(record.children,["title"],(oldrecord,newrecord)=>{return newrecord.basefromid==newrecord.fromid})
-    data.relationData[dataset].children=filter_logic(recordtmp)
+    const recordtmp = filter.unique_filter_logic(record.children,["title"],(oldrecord,newrecord)=>{return newrecord.basefromid==newrecord.fromid})
+    data.relationData[dataset].children=filter.filter_logic(recordtmp)
   }
   //data.childrenに対してfilter_logicを適用
   console.log('data.children',data.children)
-  data.children=filter_logic(data.children)
-
+  data.children=filter.filter_logic(data.children)
+  
   const template = await getPageTemplate(table)
   document.getElementById("content_body").innerHTML = await template({ data: data })
   //画面遷移したら上部に移動
@@ -286,149 +238,19 @@ let pageGen = async function (table, id, scroll) {
   const atags = document.querySelectorAll("svg a")
   createSVGATag2ClickEvent(atags)
 
-  console.log("pageGen filters",filters)
-  createSelectStepper("selectstepper", (target,value) => {
+  const selectStepper = new SelectStepper("selectstepper", (target,value) => {
     console.log("selectstepper onchange",target.category,target.name,value)
-    setFilter(target.category,target.name,value)
+    filter.setFilter(target.category,target.name,value)
     updateFilter()
-  }).setValues(filters)
-
-  createFilter("filter-list", (target,value) => {
+  })
+  selectStepper.setValues(filter.getFilters())
+  
+  const selectCheckbox = new SelectCheckbox("filter-list", (target,value) => {
     console.log("filter onchange",target.category,target.name,value)
-    setFilter(target.category,target.name,value)
+    filter.setFilter(target.category,target.name,value)
     updateFilter()
-  }).setValues(filters)
-}
-
-function createSelectStepper(classname, onChange){
-  
-  const stepper = {
-    classname:classname,
-    elements:document.getElementsByClassName(classname),
-    datas:{}
-  }
-  
-  const stepper_elements = stepper.elements
-  for (let i = 0; i < stepper_elements.length; i++) {
-    
-    
-    const stepper_element = stepper_elements[i]
-    const stepper_category = stepper_element.dataset.category
-    const stepper_datas = stepper.datas[stepper_category]?
-          stepper.datas[stepper_category]:stepper.datas[stepper_category]={element:{}}
-    
-    const select_element = stepper_element.querySelector("select")
-    const stepper_name = select_element.name || select_element.id
-    stepper_datas.element[stepper_name]=select_element
-    stepper_datas[stepper_name]=select_element.value
-    
-      select_element.previousElementSibling.onclick = function (node_element) {
-        const min = 0
-        const max = select_element.length
-        const value = select_element.selectedIndex
-        if (value > min) {
-          select_element.value = select_element.item(select_element.selectedIndex-1).value 
-          if(onChange)onChange({category:stepper_category,name:stepper_name,element:select_element},select_element.value,value)
-          stepper_datas[stepper_name]=select_element.value
-        }
-      }// Down
-      select_element.nextElementSibling.onclick = function (node_element) { 
-          const max = select_element.length-1
-          const value = select_element.selectedIndex
-          if (value < max) {
-          select_element.value = select_element.item(select_element.selectedIndex+1).value
-          if(onChange)onChange({category:stepper_category,name:stepper_name,element:select_element},select_element.value,value)
-          stepper_datas[stepper_name]=select_element.value
-          }
-        }// Up
-  }
-
-  stepper.getAllValue = function(){
-    return stepper.datas
-  }
-  stepper.getCategoryValue = function(category){
-    return stepper.getAllValue()[category]
-  }
-  stepper.getValue = function(category,name){
-    return stepper.getCategoryValue(category)[name]
-  }
-  //状態を更新
-  stepper.setValueByCategory = function(category,name,status){
-    if(!stepper.datas[category])return false
-    stepper.datas[category][name]=status
-    const select_element = stepper.datas[category].element[name]
-    if(select_element)select_element.value=status
-  }
-    
-  stepper.setValuesByCategory = function(category,statusList){
-    for (const [name, status] of Object.entries(statusList)) {
-      stepper.setValueByCategory(category, name, status)
-    }
-  }
-
-  stepper.setValues = function(datas){
-    for (const [category, statusList] of Object.entries(datas)) {
-      stepper.setValuesByCategory(category, statusList)
-    }
-  }
-  return stepper
-}
-
-function createFilter(classname, onChange){
-  const filter = {
-    classname:classname,
-    elements:document.getElementsByClassName(classname),
-    datas:{}
-  }
-  const filter_elements = filter.elements
-  for (let i = 0; i < filter_elements.length; i++) {
-    const filter_element = filter_elements[i]
-    const filter_category = filter_element.dataset.category
-    const filter_datas = filter.datas[filter_category]?
-          filter.datas[filter_category]:filter.datas[filter_category]={}
-    filter_datas.elements = filter_element.getElementsByTagName("input")
-    const input_elements = filter_datas.elements
-    for (let j = 0; j < input_elements.length; j++) {
-      const input_element = input_elements[j]
-      filter_datas[input_element.name]=input_element.checked
-      input_element.onclick = function (event) {
-        filter_datas[input_element.name]=input_element.checked
-        if(onChange)onChange({category:filter_category,name:input_element.name,element:input_element},(input_element.checked==true),!(input_element.checked==true))
-    }
-   }
- }
-
-  filter.getAllValue = function(){
-    return filter.datas
-  }
-  filter.getCategoryValue = function(category){
-    return filter.getAllValue()[category]
-  }
-  filter.getValue = function(category,name){
-    return filter.getCategoryValue(category)[name]
-  }
-  //状態を更新
-  filter.setValueByCategory = function(category,name,status){
-    if(!filter.datas[category])return false
-    filter.datas[category][name]=status
-    const input_elements = filter.datas[category].elements
-    for (let i = 0; i < input_elements.length; i++) {
-      if(input_elements[i].name==name)input_elements[i].checked = status
-    }
-  }
-    
-  filter.setValuesByCategory = function(category,statusList){
-    for (const [name, status] of Object.entries(statusList)) {
-      filter.setValueByCategory(category, name, status)
-    }
-  }
-
-  filter.setValues = function(datas){
-    for (const [category, statusList] of Object.entries(datas)) {
-      filter.setValuesByCategory(category, statusList)
-    }
-  }
-  return filter
+  })
+  selectCheckbox.setValues(filter.getFilters())
 }
 
 function createSVGATag2ClickEvent(elements){
@@ -469,36 +291,16 @@ function createDataset2ClickEvent(elements){
   }
 }
 
-//ノードのID表示用のURLをhistoryに追加して、再描画
-async function setFilter (filter_category,filter_id,status){
-  //delete出来るようにMapにする
-  const filter = new Map(Object.entries(filters[filter_category]||{}));
-  if(status){
-    filter.set(filter_id,status)
-  }else{
-    filter.delete(filter_id)
-  }
-  //serialize出来るようにobjectにする
-  filters[filter_category] = [...filter].reduce((l,[k,v]) => Object.assign(l, {[k]:v}), {})
-  console.log("setFilter",filters)
-  const serialized_filter = btoa(JSON.stringify(filters));    
-  const id = await getParam("q")
-  const type = await getParam("type")
-  window.history.replaceState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${id}&type=${type}&f=${serialized_filter}`)
-
-  return  true
-}
-
 //フィルタ設定のURLをhistoryに追加して、再描画
 async function updateFilter (){
-    const serialized_filter = btoa(JSON.stringify(filters));    
-    const id = await getParam("q")
-    const type = await getParam("type")
+  const serialized_filter = filter.getSerializedFiltersString()
+  const id = await getParam("q")
+  const type = await getParam("type")
 
-    window.history.replaceState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${id}&type=${type}&f=${serialized_filter}`)
-    pageGen(type, id, false);
+  window.history.replaceState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${id}&type=${type}&f=${serialized_filter}`)
+  pageGen(type, id, false);
 
-    return  true
+  return  true
 }
 
 //tree表示する
