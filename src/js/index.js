@@ -1,7 +1,5 @@
 
 import OrgChart from 'orgchart';
-////npm install choices.js
-//import 'choices.js/public/assets/styles/choices.css';
 import 'orgchart/dist/css/jquery.orgchart.min.css'
 import '../css/style.css'
 import '@fortawesome/fontawesome-free/js/fontawesome';
@@ -11,7 +9,6 @@ import _Handlebars from "handlebars";
 import promisedHandlebars from "promised-handlebars";
 import Dao from "./dao.js";
 import DefaultSetting from "../assets/default_setting.json";
-//import * as Choices from 'choices.js'
 import SelectStepper from "./select-stepper.js";
 import SelectCheckbox from "./select-checkbox.js";
 import Filter from "./filter.js";
@@ -98,7 +95,6 @@ const dao_promise = async function () {
 }()
 
 let oc; //階層チャート
-//let choices; //フィルタ選択
 
 //View///////////////////////////////////////////////////
 //コンテンツロード完了イベントのハンドリング
@@ -127,45 +123,13 @@ document.addEventListener('DOMContentLoaded', function () {
       $node.find('.bottomEdge').removeClass('bottomEdge');
     }
   });
-
-  /*
-  const choiceselement = document.getElementById('task_member_ids');
-
-  choices = new Choices(choiceselement,{
-    delimiter: ',',
-    removeItemButton: true,
-    editItems: true,
-    DuplicateItemsAllowed: false,
-    shouldSort: false
-  });
-
-  choiceselement.addEventListener(
-    'change',
-    function(event) {
-      const newFilters = {}
-      const valueArray = choices.getValue()
-      for (let index = 0; index < valueArray.length; index++) {
-        const choiceValue = valueArray[index];
-        const category = choiceValue.customProperties.category || 'default'
-        if(!newFilters[category]) newFilters[category] = {};
-        newFilters[category][choiceValue.value]=true
-      }
-      //Object.assign(filters, newFilters);
-      filters = newFilters
-      updateFilter()
-    },
-    false,
-  );
-  */
 });
 
 // ページの読み込み完了イベントのハンドリング
 window.addEventListener('load', async (event) => {
-  
   const footer = await (await fetch("./assets/footer_" + language + ".tmp", { method: "get" })).text();
   Handlebars.registerPartial('footer', footer);
   
-
   //初回表示時の描画
   const id = await getParam("q")
   const type = await getParam("type")
@@ -206,6 +170,7 @@ let pageGen = async function (table, id, scroll) {
   /*filter処理*/
   console.log('data',data)
   console.log('data.relationData',data.relationData)
+  console.log('data.children',data.children)
   console.log('filters',filter.getFilters())
 
   //data.relationDataに対してfilter_logicを適用
@@ -214,7 +179,6 @@ let pageGen = async function (table, id, scroll) {
     data.relationData[dataset].children=filter.filter_logic(recordtmp)
   }
   //data.childrenに対してfilter_logicを適用
-  console.log('data.children',data.children)
   data.children=filter.filter_logic(data.children)
   
   const template = await getPageTemplate(table)
@@ -239,14 +203,12 @@ let pageGen = async function (table, id, scroll) {
   createSVGATag2ClickEvent(atags)
 
   const selectStepper = new SelectStepper("selectstepper", (target,value) => {
-    console.log("selectstepper onchange",target.category,target.name,value)
     filter.setFilter(target.category,target.name,value)
     updateFilter()
   })
   selectStepper.setValues(filter.getFilters())
   
   const selectCheckbox = new SelectCheckbox("filter-list", (target,value) => {
-    console.log("filter onchange",target.category,target.name,value)
     filter.setFilter(target.category,target.name,value)
     updateFilter()
   })
