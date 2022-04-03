@@ -5,16 +5,14 @@ import '../css/style.css'
 import '@fortawesome/fontawesome-free/js/fontawesome';
 import '@fortawesome/fontawesome-free/js/solid';
 import '@fortawesome/fontawesome-free/js/regular';
-import _Handlebars from "handlebars";
-import promisedHandlebars from "promised-handlebars";
+import CustomHandlebarsFactory from "./custom-handlebars-factory.js";
 import Dao from "./dao.js";
 import DefaultSetting from "../assets/default_setting.json";
 import SelectStepper from "./select-stepper.js";
 import SelectCheckbox from "./select-checkbox.js";
 import Filter from "./filter.js";
         
-const Handlebars = promisedHandlebars(require('handlebars'), { Promise: Promise })
-const pageCache = {}
+const Handlebars = CustomHandlebarsFactory.getInstance()
 const filter = new Filter();
 /*
 const filterItems = [
@@ -48,9 +46,9 @@ const getSetting = async function () {
       method: "get"
     }).then(async (response) => {
       if (response.status === 200) {
-        console.log(response); // => "OK"
+        //console.log(response); // => "OK"
         setting = await response.json()
-        console.log(setting)
+        //console.log(setting)
         return setting
       } else {
         console.log(response.statusText); // => Error Message
@@ -88,9 +86,9 @@ const language = function(){
 
 const dao_promise = async function () {
   const _setting = await getSetting()
-  console.log("dao_promise_setting",_setting)
+  //console.log("dao_promise_setting",_setting)
   const dbconf = _setting.database[language]
-  console.log("dao_promise_dbconf",dbconf)
+  //console.log("dao_promise_dbconf",dbconf)
   return new Dao(dbconf.url,dbconf.tables,dbconf.prepares)
 }()
 
@@ -152,17 +150,7 @@ window.addEventListener('popstate', async (event) => {
 let pageGen = async function (table, id, scroll) {
   const dao = await dao_promise
   const _setting = await getSetting()
-
-  let getPageTemplate = async function (table) {
-    //if(!dao.tableExists(table)) throw new Error(table + ' TABLES not exist')
-    //table単位でページテンプレートを読み込み
-    if (!pageCache[table]) {
-      const tableName = (dao.getTableInfo(table))? dao.getTableInfo(table).tableName : table;
-      const response = await (await fetch("./assets/" + tableName + "_" + language + ".tmp", { method: "get" })).text();
-      pageCache[table] = Handlebars.compile(response);
-    }
-    return pageCache[table]
-  }
+  
   //表示ロジックの取得
   const logic = (dao.getTableInfo(table))? dao.getTableInfo(table).logic : "";
   const data = (logic == "getPageData")? await dao.getPageData(table, id) : {}
@@ -181,7 +169,9 @@ let pageGen = async function (table, id, scroll) {
   //data.childrenに対してfilter_logicを適用
   data.children=filter.filter_logic(data.children)
   
-  const template = await getPageTemplate(table)
+  const tableName = (dao.getTableInfo(table))? dao.getTableInfo(table).tableName : table;
+  const url = "./assets/" + tableName + "_" + language + ".tmp";
+  const template = await Handlebars.getPageTemplate(url)
   document.getElementById("content_body").innerHTML = await template({ data: data })
   //画面遷移したら上部に移動
   if(scroll != false){
@@ -215,6 +205,7 @@ let pageGen = async function (table, id, scroll) {
   selectCheckbox.setValues(filter.getFilters())
 }
 
+  //SVGリンクイベント作成
 function createSVGATag2ClickEvent(elements){
   for (let i = 0; i < elements.length; i++) {
     elements[i].onclick = function (node_element) {
@@ -238,6 +229,8 @@ function createSVGATag2ClickEvent(elements){
     } (elements[i])
   }
 }
+
+  //リンクイベント作成
 function createDataset2ClickEvent(elements){
   for (let i = 0; i < elements.length; i++) {
     elements[i].onclick = function (node_element) {
@@ -278,12 +271,6 @@ Handlebars.registerHelper("oc", function(context, options) {
   return new Handlebars.SafeString(chartContainer.outerHTML)
 });
 
-// 改行をBRに変換する
-Handlebars.registerHelper("breaklines", function(text) {
-  text = Handlebars.Utils.escapeExpression(text);
-  text = text.replace(/(\r\n|\n|\r)/gm, "<br />");
-  return new Handlebars.SafeString(text);
-});
 
 //SVGファイルを埋め込み表示する
 Handlebars.registerHelper("svg", async function(svgfilepath) {
@@ -306,10 +293,6 @@ Handlebars.registerHelper("bpmnsvg", async function(svgfilepath) {
   return new Handlebars.SafeString(response);
 });
 
-Handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {
-  return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
-});
-
 //settingのpreparesに定義されたクエリを実行する
 Handlebars.registerHelper("sql", async function(querName,parameters, options) {
   const id = await getParam("q")
@@ -320,11 +303,6 @@ Handlebars.registerHelper("sql", async function(querName,parameters, options) {
   _parameters['$id'] = id
   _parameters['$type'] = type
   return await dao.getResult(querName,_parameters,options.fn)
-});
-
-Handlebars.registerHelper('log', function(arg1, arg2, options) {
-  console.log(arg1, arg2, options);
-  return
 });
 
 
