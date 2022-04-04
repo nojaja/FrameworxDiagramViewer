@@ -138,7 +138,7 @@ export class Dao {
             if (this.getTableInfo(table).tableName == this.getTableInfo(relationTable).tableName) continue
             const children = await this.getRelationChildData(table, id, relationTable)
             if (children.length > 0)
-                result[this.getTableInfo(relationTable).tableName] = {tableName:this.getTableInfo(relationTable).tableName,caption:this.getTableInfo(relationTable).caption ,children:children}
+                result[this.getTableInfo(relationTable).tableName] = { tableName: this.getTableInfo(relationTable).tableName, caption: this.getTableInfo(relationTable).caption, children: children }
         }
         return result
     }
@@ -155,7 +155,7 @@ export class Dao {
                 return `'${array.slice(0, index + 1).join('.')}'`
             }).join();
         }
-        const ids = (this.getTableInfo(totable).rollupFind)?rollupId(fromid):`'${fromid}'`
+        const ids = (this.getTableInfo(totable).rollupFind) ? rollupId(fromid) : `'${fromid}'`
         try {
             // Prepare an sql statement
             const stmt = this.db.prepare(this.preparesTemplate.RelationChildData({ totable: this.getTableInfo(totable).tableName, ids, ids }))
@@ -170,7 +170,7 @@ export class Dao {
                 ret.table = totable
                 ret.basefromid = fromid
                 //関連性の理由情報取得
-                ret.reasonData = await this.getRelationChildReasonData(fromtable, ret.fromid ,totable, ret.name)
+                ret.reasonData = await this.getRelationChildReasonData(fromtable, ret.fromid, totable, ret.name)
                 children.push(ret)
             }
             return children
@@ -191,7 +191,7 @@ export class Dao {
 
             // Bind values to the parameters and fetch the results of the query
             // Bind new values
-            stmt.bind({ $fromtable: this.getTableInfo(fromtable).tableName, $fromid: fromid, $totable: this.getTableInfo(totable).tableName, $toid: toid});
+            stmt.bind({ $fromtable: this.getTableInfo(fromtable).tableName, $fromid: fromid, $totable: this.getTableInfo(totable).tableName, $toid: toid });
             let children = [];
             while (stmt.step()) { //
                 const ret = stmt.getAsObject()
