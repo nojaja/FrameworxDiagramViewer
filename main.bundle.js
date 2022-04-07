@@ -25804,7 +25804,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "../node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".orgchart { \n  background-image:none;\n  background: white; \n}\n/* excluding leaf node */\n.orgchart .node:not(:only-child)::after {\n  height: 15px;\n  background-color: rgba(0,0,0,.8);\n}\n/* excluding root node */\n.orgchart > ul > li > ul li > .node::before {\n  height: 15px;\n  background-color: rgba(0,0,0,.8);\n}\n\n.orgchart .hierarchy::before {\n  border-top: 2px solid rgba(0,0,0,.8);\n}\n\n.orgchart .node .title {\n  background-color: rgba(0,0,0,.8);\n}\n\n.orgchart .node .content {\n  height: 50px;\n  width: 130px;\n  word-break: break-word;\n  white-space: break-spaces;\n  vertical-align: middle;\n  display: table-cell;\n  font-size: .75rem;\n  font-weight: 700;\n  border: 1px solid rgba(0,0,0,.8);\n  --background: linear-gradient(to bottom right, #f1f1f1, #afafaf);\n  background-color: #ffffe0;\n  box-shadow: 5px 5px 5px 0 rgb(0 0 0 / 50%);\n}\n\n.orgchart .node[data-domain=\"Market Sales Domain\"] .title {\n  background-color: rgb(247,161,162);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Customer Domain\"] .title {\n  background-color: rgb(246,236,19);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Product Domain\"] .title {\n  background-color: rgb(255,209,115);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Resource Domain\"] .title {\n  background-color: rgb(188,230,247);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Service Domain\"] .title {\n  background-color: rgb(125,196,112);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Business Partner Domain\"] .title {\n  background-color: rgb(188,188,217);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Enterprise Domain\"] .title {\n  background-color: rgb(211,211,211);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Common Domain\"] .title {\n  background-color: rgb(255,153,204);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Integration Domain\"] .title {\n  background-color: rgb(210,180,140);\n  border: 1px solid rgba(0,0,0,.8);\n}\nh1 {\n  display: block;\n  font-size: 2em;\n  margin-block-start: 0.67em;\n  margin-block-end: 0.67em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\nh3 {\n  display: block;\n  font-size: 1.17em;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\np {\n  display: block;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 5px;\n  margin-inline-end: 0px;\n}\n\n.elementlink {\n  cursor: pointer;\n}\n\n.parentlink {\n  color: navy;\n  text-decoration: underline;\n}\n\n.leftbar {\n  position: absolute;\n  top: 0px;\n  left: 0;\n  width: 20%;\n  height: 100%;\n  background-color: #323232;\n  --padding-top: 5em;\n  z-index: 0;\n  text-decoration: none;\n  color: white;\n  overflow: overlay;\n}\n\n.leftbaritem {\n  padding-left: 1em;\n  font-size: 90%;\n}\n.leftbar a {\n  text-decoration: none;\n  color: white;\n}\n.leftbar .title {\n  background-color: #161616;\n  font-weight: bold;\n  padding-top: 10px;\n  padding-bottom: 10px;\n  padding-left: 0px;\n  width: 100%;\n  margin-inline-start: 0px;\n  margin-block-start: 0em;\n}\n\n.content_body {\n  position: absolute;\n  top: 0px;\n  left: 21%;\n  width: 79%;\n  height: 100%;\n  overflow: overlay;\n}\n.content_body > div {\n  padding-right: 5%;\n}\n\ntable {\n  border-color: grey;\n  border-collapse: collapse;\n  border-spacing: 0;\n  display: block;\n  margin-bottom: 1rem;\n  overflow: visible;\n}\nthead {\n  display: table-header-group;\n  vertical-align: middle;\n  border-color: inherit;\n}\ntbody {\n  display: table-row-group;\n  vertical-align: middle;\n  border-color: inherit;\n}\ntr {\n  border-top: 1px solid #ccc;\n  display: table-row;\n}\ntr:nth-child(2n) {\n  background-color: #f8f8f8;\n}\nth {\n  border: 1px solid #ddd;\n  padding: 6px 13px;\n  font-weight: 700;\n}\ntd {\n  border: 1px solid #ddd;\n  padding: 6px 13px;\n  display: table-cell;\n}\n\n.message span.remark {\n  display: none;\n}\n.message:hover span.remark {\n  background: none repeat scroll 0 0 #EEFFEE;\n  border: 1px solid #CCCCCC;\n  color: #000000;\n  display: block;\n  margin: 0.5em;\n  padding: 0.5em;\n  position: absolute;\n  top: 20px;\n  left: 10px;\n  z-index: 1;\n}\n\n.maturity_level_5 {\n  color: royalblue;\n}\n.maturity_level_4 {\n  color: royalblue;\n}\n.maturity_level_3 {\n  color: forestgreen;\n}\n.maturity_level_2 {\n  color: forestgreen;\n}\n.maturity_level_1 {\n  color: darkorange;\n}\n\nul {\n  display: block;\n  list-style-type: disc;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  padding-inline-start: 0px;\n}\n\n.filter-list li,\nul li {\n  word-wrap: break-word;\n  margin: 0;\n}\n\n.choices__inner {\n  background-color: #323232;\n  border: 1px solid #fff;\n  border-radius: 2px;\n  padding: 0px 10px;\n  width: 60%;\n}\n\n.choices__list--multiple .choices__item {\n  background-color: #010b0c;\n  border: 1px solid #000000;\n  color: #fff;\n}\n.choices__input {\n  /* background-color: #f9f9f9; */\n  background-color: #323232;\n  color: white;\n}\n.choices__list--dropdown, .choices__list[aria-expanded] {\n  /* background-color: #fff; */\n  background-color: #323232;\n  width: 80%;\n}\n.choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item {\n  padding: 0px;\n}\n.choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {\n  /* background-color: #f2f2f2; */\n  background-color: #323232;\n}\n.choices__list--multiple .choices__item.is-highlighted {\n  background-color: #161616;\n  border: 1px solid #020202;\n}\n\n.choices[data-type*=select-multiple] .choices__button,\n.choices[data-type*=text] .choices__button {\n  border-left: 1px solid #323232;\n\n}", ""]);
+exports.push([module.i, ".orgchart { \n  background-image:none;\n  background: white; \n}\n/* excluding leaf node */\n.orgchart .node:not(:only-child)::after {\n  height: 15px;\n  background-color: rgba(0,0,0,.8);\n}\n/* excluding root node */\n.orgchart > ul > li > ul li > .node::before {\n  height: 15px;\n  background-color: rgba(0,0,0,.8);\n}\n\n.orgchart .hierarchy::before {\n  border-top: 2px solid rgba(0,0,0,.8);\n}\n\n.orgchart .node .title {\n  background-color: rgba(0,0,0,.8);\n}\n\n.orgchart .node .content {\n  height: 50px;\n  width: 130px;\n  word-break: break-word;\n  white-space: break-spaces;\n  vertical-align: middle;\n  display: table-cell;\n  font-size: .75rem;\n  font-weight: 700;\n  border: 1px solid rgba(0,0,0,.8);\n  --background: linear-gradient(to bottom right, #f1f1f1, #afafaf);\n  background-color: #ffffe0;\n  box-shadow: 5px 5px 5px 0 rgb(0 0 0 / 50%);\n}\n\n.orgchart .node[data-domain=\"Market Sales Domain\"] .title {\n  background-color: rgb(247,161,162);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Customer Domain\"] .title {\n  background-color: rgb(246,236,19);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Product Domain\"] .title {\n  background-color: rgb(255,209,115);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Resource Domain\"] .title {\n  background-color: rgb(188,230,247);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Service Domain\"] .title {\n  background-color: rgb(125,196,112);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Business Partner Domain\"] .title {\n  background-color: rgb(188,188,217);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Enterprise Domain\"] .title {\n  background-color: rgb(211,211,211);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Common Domain\"] .title {\n  background-color: rgb(255,153,204);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Integration Domain\"] .title {\n  background-color: rgb(210,180,140);\n  border: 1px solid rgba(0,0,0,.8);\n}\nh1 {\n  display: block;\n  font-size: 2em;\n  margin-block-start: 0.67em;\n  margin-block-end: 0.67em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\nh3 {\n  display: block;\n  font-size: 1.17em;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\np {\n  display: block;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 5px;\n  margin-inline-end: 0px;\n}\n\n.elementlink {\n  cursor: pointer;\n}\n\n.parentlink {\n  color: navy;\n  text-decoration: underline;\n}\n\n.leftbar {\n  position: absolute;\n  top: 0px;\n  left: 0;\n  width: 20%;\n  height: 100%;\n  background-color: #323232;\n  --padding-top: 5em;\n  z-index: 0;\n  text-decoration: none;\n  color: white;\n  overflow: overlay;\n}\n\n.leftbaritem {\n  padding-left: 1em;\n  font-size: 90%;\n}\n.leftbar a {\n  text-decoration: none;\n  color: white;\n}\n.leftbar .title {\n  background-color: #161616;\n  font-weight: bold;\n  padding-top: 10px;\n  padding-bottom: 10px;\n  padding-left: 0px;\n  width: 100%;\n  margin-inline-start: 0px;\n  margin-block-start: 0em;\n}\n\n.content_body {\n  position: absolute;\n  top: 0px;\n  left: 21%;\n  width: 79%;\n  height: 100%;\n  overflow: overlay;\n}\n.content_body > div {\n  padding-right: 5%;\n}\n\ntable {\n  border-color: grey;\n  border-collapse: collapse;\n  border-spacing: 0;\n  display: block;\n  margin-bottom: 1rem;\n  overflow: visible;\n}\nthead {\n  display: table-header-group;\n  vertical-align: middle;\n  border-color: inherit;\n}\ntbody {\n  display: table-row-group;\n  vertical-align: middle;\n  border-color: inherit;\n}\ntr {\n  border-top: 1px solid #ccc;\n  display: table-row;\n}\ntr:nth-child(2n) {\n  background-color: #f8f8f8;\n}\nth {\n  border: 1px solid #ddd;\n  padding: 6px 13px;\n  font-weight: 700;\n}\ntd {\n  border: 1px solid #ddd;\n  padding: 6px 13px;\n  display: table-cell;\n}\n\n.message span.remark {\n  display: none;\n}\n.message:hover span.remark {\n  background: none repeat scroll 0 0 #EEFFEE;\n  border: 1px solid #CCCCCC;\n  color: #000000;\n  display: block;\n  margin: 0.5em;\n  padding: 0.5em;\n  position: absolute;\n  top: 20px;\n  left: 10px;\n  z-index: 1;\n}\n\n.maturity_level_5 {\n  color: royalblue;\n}\n.maturity_level_4 {\n  color: royalblue;\n}\n.maturity_level_3 {\n  color: forestgreen;\n}\n.maturity_level_2 {\n  color: forestgreen;\n}\n.maturity_level_1 {\n  color: darkorange;\n}\n\nul {\n  display: block;\n  list-style-type: disc;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  padding-inline-start: 0px;\n}\n\n.filter-list li,\nul li {\n  word-wrap: break-word;\n  margin: 0;\n}\n\n.choices__inner {\n  background-color: #323232;\n  border: 1px solid #fff;\n  border-radius: 2px;\n  padding: 0px 10px;\n  width: 60%;\n}\n\n.choices__list--multiple .choices__item {\n  background-color: #010b0c;\n  border: 1px solid #000000;\n  color: #fff;\n}\n.choices__input {\n  /* background-color: #f9f9f9; */\n  background-color: #323232;\n  color: white;\n}\n.choices__list--dropdown, .choices__list[aria-expanded] {\n  /* background-color: #fff; */\n  background-color: #323232;\n  width: 80%;\n}\n.choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item {\n  padding: 0px;\n}\n.choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {\n  /* background-color: #f2f2f2; */\n  background-color: #323232;\n}\n.choices__list--multiple .choices__item.is-highlighted {\n  background-color: #161616;\n  border: 1px solid #020202;\n}\n\n.choices[data-type*=select-multiple] .choices__button,\n.choices[data-type*=text] .choices__button {\n  border-left: 1px solid #323232;\n\n}\n\n.selectstepper {\n  border: 1px solid #eee;\n  display: inline-block;\n  overflow: visible;\n  height: 2.1em;\n  background: #fff;\n  padding: 1px;\n  font-size: .65rem;\n}\n\n.selectstepper select {\n  height: 100%;\n  text-align: center;\n  border: 0;\n  background: transparent;\n  color: #000;\n  appearance: none;\n}\n\n.selectstepper button {\n  width: 1.4em;\n  font-weight: 300;\n  height: 100%;\n  line-height: 0.1em;\n  font-size: 1.4em;\n  padding: 0.2em !important;\n  background: #eee;\n  color: #333;\n  border: none;\n}\n\ntable {\n  border-collapse: collapse;\n}\ntr {\n  background: #eee;\n  border-bottom: 1px solid #fff;\n}\ntr, td {\n  padding: 0;\n}\n\ntr.hidden td div {\n  max-height: 0;\n  padding: 0 10px;\n  box-sizing: border-box;\n  overflow: hidden;\n  transition: max-height 0.3s, padding 0.3s;\n}\ntr td div {\n  padding: 10px 10px;\n  transition: max-height 0.6s, padding 0.6s;\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -81181,6 +81181,67 @@ module.exports = content.locals || {};
 
 /***/ }),
 
+/***/ "./js/custom-handlebars-factory.js":
+/*!*****************************************!*\
+  !*** ./js/custom-handlebars-factory.js ***!
+  \*****************************************/
+/*! exports provided: CustomHandlebarsFactory, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CustomHandlebarsFactory", function() { return CustomHandlebarsFactory; });
+/* harmony import */ var handlebars__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! handlebars */ "../node_modules/handlebars/dist/cjs/handlebars.js");
+/* harmony import */ var handlebars__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(handlebars__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var promised_handlebars__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! promised-handlebars */ "../node_modules/promised-handlebars/index.js");
+/* harmony import */ var promised_handlebars__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(promised_handlebars__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+
+class CustomHandlebarsFactory {
+    constructor() {
+    }
+    static getInstance() {
+        const Handlebars = promised_handlebars__WEBPACK_IMPORTED_MODULE_1___default()(__webpack_require__(/*! handlebars */ "../node_modules/handlebars/dist/cjs/handlebars.js"), { Promise: Promise })
+        // 改行をBRに変換する
+        Handlebars.registerHelper("breaklines", function (text) {
+            text = Handlebars.Utils.escapeExpression(text);
+            text = text.replace(/(\r\n|\n|\r)/gm, "<br />");
+            return new Handlebars.SafeString(text);
+        });
+
+        Handlebars.registerHelper('ifEquals', function (arg1, arg2, options) {
+            return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+        });
+        Handlebars.registerHelper('log', function (arg1, arg2, options) {
+            console.log(arg1, arg2, options);
+            return
+        });
+
+        Handlebars.pageCache = {}
+        Handlebars.getPageTemplate = async (URL) => {
+            return await CustomHandlebarsFactory.getPageTemplate(Handlebars, URL)
+        }
+
+        return Handlebars
+    }
+
+    static async getPageTemplate(HandlebarsInstance, URL) {
+        //if(!dao.tableExists(table)) throw new Error(table + ' TABLES not exist')
+        //table単位でページテンプレートを読み込み
+        if (!HandlebarsInstance.pageCache[URL]) {
+            const response = await (await fetch(URL, { method: "get" })).text();
+            HandlebarsInstance.pageCache[URL] = HandlebarsInstance.compile(response);
+        }
+        return HandlebarsInstance.pageCache[URL]
+    }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (CustomHandlebarsFactory);
+
+/***/ }),
+
 /***/ "./js/dao.js":
 /*!*******************!*\
   !*** ./js/dao.js ***!
@@ -81337,7 +81398,7 @@ class Dao {
             if (this.getTableInfo(table).tableName == this.getTableInfo(relationTable).tableName) continue
             const children = await this.getRelationChildData(table, id, relationTable)
             if (children.length > 0)
-                result[this.getTableInfo(relationTable).caption] = children
+                result[this.getTableInfo(relationTable).tableName] = { tableName: this.getTableInfo(relationTable).tableName, caption: this.getTableInfo(relationTable).caption, children: children }
         }
         return result
     }
@@ -81354,7 +81415,7 @@ class Dao {
                 return `'${array.slice(0, index + 1).join('.')}'`
             }).join();
         }
-        const ids = (this.getTableInfo(totable).rollupFind)?rollupId(fromid):`'${fromid}'`
+        const ids = (this.getTableInfo(totable).rollupFind) ? rollupId(fromid) : `'${fromid}'`
         try {
             // Prepare an sql statement
             const stmt = this.db.prepare(this.preparesTemplate.RelationChildData({ totable: this.getTableInfo(totable).tableName, ids, ids }))
@@ -81369,7 +81430,7 @@ class Dao {
                 ret.table = totable
                 ret.basefromid = fromid
                 //関連性の理由情報取得
-                ret.reasonData = await this.getRelationChildReasonData(fromtable, ret.fromid ,totable, ret.name)
+                ret.reasonData = await this.getRelationChildReasonData(fromtable, ret.fromid, totable, ret.name)
                 children.push(ret)
             }
             return children
@@ -81390,7 +81451,7 @@ class Dao {
 
             // Bind values to the parameters and fetch the results of the query
             // Bind new values
-            stmt.bind({ $fromtable: this.getTableInfo(fromtable).tableName, $fromid: fromid, $totable: this.getTableInfo(totable).tableName, $toid: toid});
+            stmt.bind({ $fromtable: this.getTableInfo(fromtable).tableName, $fromid: fromid, $totable: this.getTableInfo(totable).tableName, $toid: toid });
             let children = [];
             while (stmt.step()) { //
                 const ret = stmt.getAsObject()
@@ -81434,6 +81495,129 @@ class Dao {
 
 /***/ }),
 
+/***/ "./js/filter.js":
+/*!**********************!*\
+  !*** ./js/filter.js ***!
+  \**********************/
+/*! exports provided: Filter, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Filter", function() { return Filter; });
+
+class Filter {
+    constructor(filters) {
+        this.filters = filters || {}
+    }
+
+    /**
+     * リストからの重複排除 Deduplication from list
+     * @param {*} dataList : [{'key1':'val','unique-key-name':'val'},,,]
+     * @param {*} keylist : Composite key ['unique-key-name',,,] 
+     * @param {*} override : Override strategy
+     *           ex1. (old,new) => {return true} //Strategy to choose the Latter
+     *           ex1. (old,new) => {return old.min > new.min} //Strategy to choose the smaller
+     * @returns : new List [{...},{...},,,,]
+     */
+    unique_filter_logic(dataList, keylist, override) {
+        // uniqueになるkey文字列作成
+        const keyjoin = (data, keylist, delimiter) => {
+            return keylist.reduce((resultArray, key, index) => {
+                resultArray[index] = data[key] || ""
+                return resultArray;
+            }, []).join(delimiter)
+        }
+        const map = new Map()
+        for (let index = 0; index < dataList.length; index++) {
+            const currentData = dataList[index];
+            const uniqueKey = keyjoin(currentData, keylist)
+            if (map.has(uniqueKey)) {//上書き
+                if (override && override(map.get(uniqueKey), currentData)) map.set(uniqueKey, currentData)
+            } else {
+                map.set(uniqueKey, currentData)
+            }
+        }
+        return Array.from(map.values())
+    }
+
+
+    /**
+     * filter処理の実行
+     * select * from dataList where ( table == filter_id ) or ( filter_category like filter_id)
+     * @param {*} dataList 
+     * @returns 
+     */
+    filter_logic(dataList) {
+        //const result = dataList.filter((data)=>this.filter(data));
+        const result = dataList.map((data)=>{
+            data.hash = btoa(data.table + data.name)
+            if(this.filter(data)){
+                data.hidden = false
+            }else{
+                data.hidden = true
+            }
+            return data
+        });
+        return result
+    }
+    filter_logic2(dataList) {
+        const result = dataList.filter((data)=>this.filter(data));
+        return result
+    }
+
+    filter(data) {
+        for (const [filter_category, filter] of Object.entries(this.filters)) {
+            let hit_count = 0
+            let filters_count = 0
+            for (const [filter_id, value] of Object.entries(filter)) {
+                if (filter_category == "LEVEL") {
+                    if (data["table"] == filter_id.toLowerCase()) {
+                        if (data[filter_category] != value) return false;//filterに不一致
+                    }
+                } else {
+                    if (value && data[filter_category]) {
+                        filters_count++;
+                        if (data[filter_category].indexOf(filter_id) > -1) hit_count++;//filterに一致
+                    }
+                }
+            }
+            if (filters_count > 0 && hit_count == 0) return false //フィルタカテゴリ内で1つも一致しない場合は除外する
+        }
+        return true
+    }
+
+    //ノードのID表示用のURLをhistoryに追加して、再描画
+    async setFilter(filter_category, filter_id, status) {
+        //delete出来るようにMapにする
+        const filter = new Map(Object.entries(this.filters[filter_category] || {}));
+        if (status) {
+            filter.set(filter_id, status)
+        } else {
+            filter.delete(filter_id)
+        }
+        //serialize出来るようにobjectにする
+        this.filters[filter_category] = [...filter].reduce((l, [k, v]) => Object.assign(l, { [k]: v }), {})
+        console.log("setFilter", this.filters)
+        return true
+    }
+
+    setFilters(filters) {
+        this.filters = filters
+    }
+
+    getFilters() {
+        return this.filters
+    }
+    getSerializedFiltersString() {
+        return btoa(JSON.stringify(this.filters));
+    }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Filter);
+
+/***/ }),
+
 /***/ "./js/index.js":
 /*!*********************!*\
   !*** ./js/index.js ***!
@@ -81455,17 +81639,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _fortawesome_fontawesome_free_js_solid__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_js_solid__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _fortawesome_fontawesome_free_js_regular__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fortawesome/fontawesome-free/js/regular */ "../node_modules/@fortawesome/fontawesome-free/js/regular.js");
 /* harmony import */ var _fortawesome_fontawesome_free_js_regular__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_fortawesome_fontawesome_free_js_regular__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var handlebars__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! handlebars */ "../node_modules/handlebars/dist/cjs/handlebars.js");
-/* harmony import */ var handlebars__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(handlebars__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var promised_handlebars__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! promised-handlebars */ "../node_modules/promised-handlebars/index.js");
-/* harmony import */ var promised_handlebars__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(promised_handlebars__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _dao_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./dao.js */ "./js/dao.js");
-/* harmony import */ var _assets_default_setting_json__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../assets/default_setting.json */ "./assets/default_setting.json");
-var _assets_default_setting_json__WEBPACK_IMPORTED_MODULE_9___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../assets/default_setting.json */ "./assets/default_setting.json", 1);
-
-
-////npm install choices.js
-//import 'choices.js/public/assets/styles/choices.css';
+/* harmony import */ var _custom_handlebars_factory_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./custom-handlebars-factory.js */ "./js/custom-handlebars-factory.js");
+/* harmony import */ var _dao_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./dao.js */ "./js/dao.js");
+/* harmony import */ var _assets_default_setting_json__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../assets/default_setting.json */ "./assets/default_setting.json");
+var _assets_default_setting_json__WEBPACK_IMPORTED_MODULE_8___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../assets/default_setting.json */ "./assets/default_setting.json", 1);
+/* harmony import */ var _select_stepper_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./select-stepper.js */ "./js/select-stepper.js");
+/* harmony import */ var _select_checkbox_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./select-checkbox.js */ "./js/select-checkbox.js");
+/* harmony import */ var _filter_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./filter.js */ "./js/filter.js");
 
 
 
@@ -81475,12 +81655,14 @@ var _assets_default_setting_json__WEBPACK_IMPORTED_MODULE_9___namespace = /*#__P
 
 
 
-//import * as Choices from 'choices.js'
-        
-const Handlebars = promised_handlebars__WEBPACK_IMPORTED_MODULE_7___default()(__webpack_require__(/*! handlebars */ "../node_modules/handlebars/dist/cjs/handlebars.js"), { Promise: Promise })
-const pageCache = {}
-let filters = {}
 
+
+
+
+
+const Handlebars = _custom_handlebars_factory_js__WEBPACK_IMPORTED_MODULE_6__["default"].getInstance()
+const filter = new _filter_js__WEBPACK_IMPORTED_MODULE_11__["default"]();
+let pagedata = {}
 /*
 const filterItems = [
   { value: 'Market', label: 'Market Sales Domain', customProperties: {category:'domain'},selected:false},
@@ -81508,14 +81690,14 @@ const filterItems = [
 //setting loader
 let setting = null
 const getSetting = async function () {
-  if(!setting){
+  if (!setting) {
     await fetch("./setting.json", {
       method: "get"
     }).then(async (response) => {
       if (response.status === 200) {
-        console.log(response); // => "OK"
+        //console.log(response); // => "OK"
         setting = await response.json()
-        console.log(setting)
+        //console.log(setting)
         return setting
       } else {
         console.log(response.statusText); // => Error Message
@@ -81535,32 +81717,31 @@ const getParam = function (key) {
   const pair = location.search.substring(1).split("&");
   for (let i = 0; pair[i]; i++) {
     let kv = pair[i].split("=");
-    if(key==kv[0]) return decodeURI(kv[1])
+    if (key == kv[0]) return decodeURI(kv[1])
     //arg[kv[0]] = kv[1];
   }
-  return _assets_default_setting_json__WEBPACK_IMPORTED_MODULE_9__.default[key]
+  return _assets_default_setting_json__WEBPACK_IMPORTED_MODULE_8__.default[key]
 }
 
-const language = function(){
+const language = function () {
   const language = (window.navigator.languages && window.navigator.languages[0]) ||
-  window.navigator.language ||
-  window.navigator.userLanguage ||
-  window.navigator.browserLanguage;
-  const languages = _assets_default_setting_json__WEBPACK_IMPORTED_MODULE_9__.languages
+    window.navigator.language ||
+    window.navigator.userLanguage ||
+    window.navigator.browserLanguage;
+  const languages = _assets_default_setting_json__WEBPACK_IMPORTED_MODULE_8__.languages
   console.log(languages)
-  return (languages.indexOf(language) != -1)? language :"en"
+  return (languages.indexOf(language) != -1) ? language : "en"
 }()
 
 const dao_promise = async function () {
   const _setting = await getSetting()
-  console.log("dao_promise_setting",_setting)
+  //console.log("dao_promise_setting",_setting)
   const dbconf = _setting.database[language]
-  console.log("dao_promise_dbconf",dbconf)
-  return new _dao_js__WEBPACK_IMPORTED_MODULE_8__["default"](dbconf.url,dbconf.tables,dbconf.prepares)
+  //console.log("dao_promise_dbconf",dbconf)
+  return new _dao_js__WEBPACK_IMPORTED_MODULE_7__["default"](dbconf.url, dbconf.tables, dbconf.prepares)
 }()
 
 let oc; //階層チャート
-//let choices; //フィルタ選択
 
 //View///////////////////////////////////////////////////
 //コンテンツロード完了イベントのハンドリング
@@ -81577,9 +81758,9 @@ document.addEventListener('DOMContentLoaded', function () {
       $node.on('click', function () {
         //ノードのID表示用のURLをhistoryに追加して、再描画
         const type = getParam("type")
-        $node.attr('data-q',data.name)
-        $node.attr('data-type',type)
-        $node.attr('data-domain',data.domain)
+        $node.attr('data-q', data.name)
+        $node.attr('data-type', type)
+        $node.attr('data-domain', data.domain)
         window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${data.name}&type=${type}`)
         pageGen(type, data.name);
       });
@@ -81589,46 +81770,20 @@ document.addEventListener('DOMContentLoaded', function () {
       $node.find('.bottomEdge').removeClass('bottomEdge');
     }
   });
-
-  /*
-  const choiceselement = document.getElementById('task_member_ids');
-
-  choices = new Choices(choiceselement,{
-    delimiter: ',',
-    removeItemButton: true,
-    editItems: true,
-    DuplicateItemsAllowed: false,
-    shouldSort: false
-  });
-
-  choiceselement.addEventListener(
-    'change',
-    function(event) {
-      const newFilters = {}
-      const valueArray = choices.getValue()
-      for (let index = 0; index < valueArray.length; index++) {
-        const choiceValue = valueArray[index];
-        const category = choiceValue.customProperties.category || 'default'
-        if(!newFilters[category]) newFilters[category] = {};
-        newFilters[category][choiceValue.value]=true
-      }
-      //Object.assign(filters, newFilters);
-      filters = newFilters
-      updateFilter()
-    },
-    false,
-  );
-  */
 });
 
 // ページの読み込み完了イベントのハンドリング
 window.addEventListener('load', async (event) => {
+  const footer = await (await fetch("./assets/footer_" + language + ".tmp", { method: "get" })).text();
+  Handlebars.registerPartial('footer', footer);
+
   //初回表示時の描画
   const id = await getParam("q")
   const type = await getParam("type")
   const serialized_filter = await getParam("f")
-  const addfilters = (serialized_filter)? JSON.parse(atob(serialized_filter)) : {}
-  Object.assign(filters, addfilters);
+  const addfilters = (serialized_filter) ? JSON.parse(atob(serialized_filter)) : {}
+  filter.setFilters(addfilters);
+
   pageGen(type, id);
 });
 
@@ -81645,83 +81800,33 @@ let pageGen = async function (table, id, scroll) {
   const dao = await dao_promise
   const _setting = await getSetting()
 
-  let getPageTemplate = async function (table) {
-    //if(!dao.tableExists(table)) throw new Error(table + ' TABLES not exist')
-    //table単位でページテンプレートを読み込み
-    if (!pageCache[table]) {
-      const tableName = (dao.getTableInfo(table))? dao.getTableInfo(table).tableName : table;
-      const response = await (await fetch("./assets/" + tableName + "_" + language + ".tmp", { method: "get" })).text();
-      pageCache[table] = Handlebars.compile(response);
-    }
-    return pageCache[table]
-  }
   //表示ロジックの取得
-  const logic = (dao.getTableInfo(table))? dao.getTableInfo(table).logic : "";
-  const data = (logic == "getPageData")? await dao.getPageData(table, id) : {}
+  const logic = (dao.getTableInfo(table)) ? dao.getTableInfo(table).logic : "";
+  //表示データの取得
+  const data = (logic == "getPageData") ? await dao.getPageData(table, id) : {}
 
   /*filter処理*/
-  console.log('data',data)
-  console.log('data.relationData',data.relationData)
-  console.log('filters',filters)
+  console.log('data', data)
+  console.log('data.relationData', data.relationData)
+  console.log('data.children', data.children)
+  console.log('filters', filter.getFilters())
 
-  /**
-   * リストからの重複排除
-   * dataList
-   * keylist: ['key',,,]
-   * override: (old,new) => {return true}
-   */
-  const unique_filter_logic = (dataList,keylist,override) => {
-    // uniqueになるkey文字列作成
-    const keyjoin = (data,keylist,delimiter) => {
-      return keylist.reduce((resultArray, key, index) => {
-        resultArray[index] = data[key] || ""
-        return resultArray;
-      }, []).join(delimiter)
-    }
-    const map = new Map()
-    for (let index = 0; index < dataList.length; index++) {
-      const currentData = dataList[index];
-      const uniqueKey=keyjoin(currentData,keylist)
-      if(map.has(uniqueKey)){//上書き
-        if(override && override(map.get(uniqueKey),currentData)) map.set(uniqueKey,currentData)
-      }else{
-        map.set(uniqueKey,currentData)
-      }
-    }
-    return Array.from(map.values())
-  }
-
-  const filter_logic = function (dataList){
-    const result = dataList.filter(data => {
-      for (const [filter_category, filter] of Object.entries(filters)) {
-        let hit_count = 0
-        let filters_count = 0
-        for (const [filter_id, value] of Object.entries(filter)) {
-          if(value && data[filter_category]) {
-            filters_count++;
-            if(data[filter_category].indexOf(filter_id) > -1 )hit_count++;//filterに一致
-          }
-        }
-        if(filters_count > 0 && hit_count == 0 )return false //フィルタカテゴリ内で1つも一致しない場合は除外する
-      }
-      return true
-    });
-    return result
-  }
   //data.relationDataに対してfilter_logicを適用
   for (const [dataset, record] of Object.entries(data.relationData)) {
-    const recordtmp = unique_filter_logic(record,["title"],(oldrecord,newrecord)=>{return newrecord.basefromid==newrecord.fromid})
-    console.log(recordtmp)
-    data.relationData[dataset]=filter_logic(recordtmp)
+    const recordtmp = filter.unique_filter_logic(record.children, ["title"], (oldrecord, newrecord) => { return newrecord.basefromid == newrecord.fromid /*basefromidと同じものを優先する*/ })
+    data.relationData[dataset].children = filter.filter_logic(recordtmp)
   }
   //data.childrenに対してfilter_logicを適用
-  console.log('data.children',data.children)
-  data.children=filter_logic(data.children)
+  data.children_org = data.children
+  data.children = filter.filter_logic2(data.children)
+  pagedata = data;
 
-  const template = await getPageTemplate(table)
+  const tableName = (dao.getTableInfo(table)) ? dao.getTableInfo(table).tableName : table;
+  const url = "./assets/" + tableName + "_" + language + ".tmp";
+  const template = await Handlebars.getPageTemplate(url)
   document.getElementById("content_body").innerHTML = await template({ data: data })
   //画面遷移したら上部に移動
-  if(scroll != false){
+  if (scroll != false) {
     document.getElementById("content").scroll({
       top: 0,
       behavior: "instant"
@@ -81734,25 +81839,36 @@ let pageGen = async function (table, id, scroll) {
   //組織図のクリックイベント作成
   const node_elements = document.getElementsByClassName("node")
   createDataset2ClickEvent(node_elements)
-  
+
   //SVGリンクイベント作成
   const atags = document.querySelectorAll("svg a")
   createSVGATag2ClickEvent(atags)
 
-  updateFilterEvent()
+  const selectStepper = new _select_stepper_js__WEBPACK_IMPORTED_MODULE_9__["default"]("selectstepper", (target, value) => {
+    filter.setFilter(target.category, target.name, value)
+    updateFilter()
+  })
+  selectStepper.setValues(filter.getFilters())
+
+  const selectCheckbox = new _select_checkbox_js__WEBPACK_IMPORTED_MODULE_10__["default"]("filter-list", (target, value) => {
+    filter.setFilter(target.category, target.name, value)
+    updateFilter()
+  })
+  selectCheckbox.setValues(filter.getFilters())
 }
 
-function createSVGATag2ClickEvent(elements){
+//SVGリンクイベント作成
+function createSVGATag2ClickEvent(elements) {
   for (let i = 0; i < elements.length; i++) {
     elements[i].onclick = function (node_element) {
       return (event) => {
         //ノードのID表示用のURLをhistoryに追加して、再描画
-        const url = new URL(node_element.href.baseVal,window.location)
+        const url = new URL(node_element.href.baseVal, window.location)
         let param = new Object;
-        let pair=url.search.substring(1).split('&');
-        for(let i=0;pair[i];i++) {
-            let kv = pair[i].split('=');
-            param[kv[0]]=kv[1];
+        let pair = url.search.substring(1).split('&');
+        for (let i = 0; pair[i]; i++) {
+          let kv = pair[i].split('=');
+          param[kv[0]] = kv[1];
         }
 
         const id = param['q']
@@ -81762,10 +81878,12 @@ function createSVGATag2ClickEvent(elements){
         pageGen(type, id);
         return false
       }
-    } (elements[i])
+    }(elements[i])
   }
 }
-function createDataset2ClickEvent(elements){
+
+//リンクイベント作成
+function createDataset2ClickEvent(elements) {
   for (let i = 0; i < elements.length; i++) {
     elements[i].onclick = function (node_element) {
       return (event) => {
@@ -81774,123 +81892,108 @@ function createDataset2ClickEvent(elements){
         const type = node_element.dataset.type
         window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${id}&type=${type}`)
         pageGen(type, id);
-        return  false
+        return false
       }
-    } (elements[i])
+    }(elements[i])
   }
-}
-//フィルタ状況の設定
-function updateFilterEvent(){
-  /*
-  for (let i = 0; i < filterItems.length; i++) {
-    const filter_category = filterItems[i].customProperties.category
-    const filter_id = filterItems[i].value
-    const filter = filters[filter_category]||{};
-    const status = filter[filter_id]||false
-    filterItems[i].selected = status
-  }
-  choices.clearStore();
-  choices.setChoices(
-    filterItems,
-    'value',
-    'label',
-    true,
-  );
-  */
-  const filter_elements = document.getElementsByClassName("filter")
-  for (let i = 0; i < filter_elements.length; i++) {
-    const filter_category = filter_elements[i].dataset.category
-    const filter_id = filter_elements[i].name
-    const filter = filters[filter_category]||{};
-    const status = filter[filter_id]
-    filter_elements[i].checked = status
-    filter_elements[i].onclick = function (node_element) {
-      return async (event) => {
-        //ノードのID表示用のURLをhistoryに追加して、再描画
-        const filter_category = node_element.dataset.category
-        const filter_id = node_element.name
-        const status = node_element.checked
-        setFilter(filter_category,filter_id,status)
-        updateFilter()
-        return true
-      }
-    } (filter_elements[i])
-  }
-}
-
-//ノードのID表示用のURLをhistoryに追加して、再描画
-async function setFilter (filter_category,filter_id,status){
-  //delete出来るようにMapにする
-  const filter = new Map(Object.entries(filters[filter_category]||{}));
-  if(status==true){
-    filter.set(filter_id,status)
-  }else{
-    filter.delete(filter_id)
-  }
-  //serialize出来るようにobjectにする
-  filters[filter_category] = [...filter].reduce((l,[k,v]) => Object.assign(l, {[k]:v}), {})
-  return  true
 }
 
 //フィルタ設定のURLをhistoryに追加して、再描画
-async function updateFilter (){
-    const serialized_filter = btoa(JSON.stringify(filters));    
-    const id = await getParam("q")
-    const type = await getParam("type")
+async function updateFilter() {
+  const serialized_filter = filter.getSerializedFiltersString()
+  const id = await getParam("q")
+  const type = await getParam("type")
 
-    window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${id}&type=${type}&f=${serialized_filter}`)
-    pageGen(type, id, false);
+  window.history.replaceState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${id}&type=${type}&f=${serialized_filter}`)
+  //pageGen(type, id, false);
 
-    return  true
+  const updatelist = []
+  //data.relationDataに対してfilter_logicを適用
+  for (const [dataset, record] of Object.entries(pagedata.relationData)) {
+    const recordtmp = filter.unique_filter_logic(record.children, ["title"], (oldrecord, newrecord) => { return newrecord.basefromid == newrecord.fromid /*basefromidと同じものを優先する*/ })
+    Array.prototype.push.apply(updatelist, filter.filter_logic(recordtmp))
+  }
+
+  for (let j = 0; j < updatelist.length; j++) {
+    const element = document.getElementById(updatelist[j].hash)
+    if(element==null)continue
+    if (updatelist[j].hidden) {
+      element.classList.add("hidden");
+    } else {
+      element.classList.remove("hidden");
+    }
+    element.hidden = updatelist[j].hidden
+  }
+  
+  //pagedata.relationDataに対してfilter_logicを適用
+  for (const [dataset, record] of Object.entries(pagedata.relationData)) {
+    const recordtmp = filter.unique_filter_logic(record.children, ["title"], (oldrecord, newrecord) => { return newrecord.basefromid == newrecord.fromid /*basefromidと同じものを優先する*/ })
+    pagedata.relationData[dataset].children = filter.filter_logic(recordtmp)
+  }
+  //data.childrenに対してfilter_logicを適用
+  pagedata.children = filter.filter_logic2(pagedata.children_org)
+
+  const element = document.getElementById('chart-container')
+  updateOc(element,pagedata)
+
+  
+  //組織図のクリックイベント作成
+  const node_elements = document.getElementsByClassName("node")
+  createDataset2ClickEvent(node_elements)
+
+  return true
+}
+
+
+function updateOc(targetElement,datas) {
+  const chartContainer = oc.init({
+    'data': datas,
+    'createNode': function ($node, data) {
+      $node.attr('data-id', data.name)
+      $node.attr('data-type', data.table)
+      $node.attr('data-domain', data.domain)
+    }
+  }).$chartContainer[0]
+  targetElement.outerHTML = chartContainer.outerHTML
 }
 
 //tree表示する
-Handlebars.registerHelper("oc", function(context, options) {
-  const chartContainer = oc.init({ 
-    'data': context ,
+Handlebars.registerHelper("oc", function (context, options) {
+  const chartContainer = oc.init({
+    'data': context,
     'createNode': function ($node, data) {
-        $node.attr('data-id',data.name)
-        $node.attr('data-type',data.table)
-        $node.attr('data-domain',data.domain)
-      }
-    }).$chartContainer[0]
+      $node.attr('data-id', data.name)
+      $node.attr('data-type', data.table)
+      $node.attr('data-domain', data.domain)
+    }
+  }).$chartContainer[0]
   return new Handlebars.SafeString(chartContainer.outerHTML)
 });
 
-// 改行をBRに変換する
-Handlebars.registerHelper("breaklines", function(text) {
-  text = Handlebars.Utils.escapeExpression(text);
-  text = text.replace(/(\r\n|\n|\r)/gm, "<br />");
-  return new Handlebars.SafeString(text);
-});
 
 //SVGファイルを埋め込み表示する
-Handlebars.registerHelper("svg", async function(svgfilepath) {
+Handlebars.registerHelper("svg", async function (svgfilepath) {
   svgfilepath = Handlebars.Utils.escapeExpression(svgfilepath);
-  if(svgfilepath.lastIndexOf('.svg')==-1)svgfilepath=svgfilepath+'.svg';
+  if (svgfilepath.lastIndexOf('.svg') == -1) svgfilepath = svgfilepath + '.svg';
   const response = await (await fetch("./assets/" + svgfilepath, { method: "get" })).text();
   return new Handlebars.SafeString(response);
 });
 
 //bpmnsvgファイルを埋め込み表示する、editorへのリンクを作成する
-Handlebars.registerHelper("bpmnsvg", async function(svgfilepath) {
+Handlebars.registerHelper("bpmnsvg", async function (svgfilepath) {
   const _setting = await getSetting()
   svgfilepath = Handlebars.Utils.escapeExpression(svgfilepath);
-  if(svgfilepath.lastIndexOf('.bpmn.svg')==-1)svgfilepath=svgfilepath+'.bpmn.svg';
+  if (svgfilepath.lastIndexOf('.bpmn.svg') == -1) svgfilepath = svgfilepath + '.bpmn.svg';
 
   const api_call = await fetch("./assets/" + svgfilepath, { method: "get" });
-  const response = (api_call.status !== 200)? 'no image': await api_call.text() 
-    + "<br /><a href='"+_setting.default['bpmn-modeler-url']+window.location.href.split('?')[0]+"assets/"+svgfilepath+"' target='_blank'>open BPMN-Modeler</a>"
+  const response = (api_call.status !== 200) ? 'no image' : await api_call.text()
+    + "<br /><a href='" + _setting.default['bpmn-modeler-url'] + window.location.href.split('?')[0] + "assets/" + svgfilepath + "' target='_blank'>open BPMN-Modeler</a>"
   //const response = await (await fetch("./assets/" + svgfilepath, { method: "get" })).text();
   return new Handlebars.SafeString(response);
 });
 
-Handlebars.registerHelper('ifEquals', function(arg1, arg2, options) {
-  return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
-});
-
 //settingのpreparesに定義されたクエリを実行する
-Handlebars.registerHelper("sql", async function(querName,parameters, options) {
+Handlebars.registerHelper("sql", async function (querName, parameters, options) {
   const id = await getParam("q")
   const type = await getParam("type")
 
@@ -81898,14 +82001,185 @@ Handlebars.registerHelper("sql", async function(querName,parameters, options) {
   const _parameters = parameters || {}
   _parameters['$id'] = id
   _parameters['$type'] = type
-  return await dao.getResult(querName,_parameters,options.fn)
+  return await dao.getResult(querName, _parameters, options.fn)
 });
 
-Handlebars.registerHelper('log', function(arg1, arg2, options) {
-  console.log(arg1, arg2, options);
-  return
-});
+
+
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "../node_modules/jquery/dist/jquery.js")))
+
+/***/ }),
+
+/***/ "./js/select-checkbox.js":
+/*!*******************************!*\
+  !*** ./js/select-checkbox.js ***!
+  \*******************************/
+/*! exports provided: SelectCheckbox, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SelectCheckbox", function() { return SelectCheckbox; });
+
+
+class SelectCheckbox {
+    constructor(classname, onChange) {
+
+        this.filter = {
+            classname: classname,
+            elements: document.getElementsByClassName(classname),
+            datas: {}
+        }
+
+        const filter_elements = this.filter.elements
+        for (let i = 0; i < filter_elements.length; i++) {
+            const filter_element = filter_elements[i]
+            const filter_category = filter_element.dataset.category
+            const filter_datas = this.filter.datas[filter_category] ?
+                this.filter.datas[filter_category] : this.filter.datas[filter_category] = {}
+            filter_datas.elements = filter_element.getElementsByTagName("input")
+            const input_elements = filter_datas.elements
+            for (let j = 0; j < input_elements.length; j++) {
+                const input_element = input_elements[j]
+                filter_datas[input_element.name] = input_element.checked
+                input_element.onclick = function (event) {
+                    filter_datas[input_element.name] = input_element.checked
+                    if (onChange) onChange({ category: filter_category, name: input_element.name, element: input_element }, (input_element.checked == true), !(input_element.checked == true))
+                }
+            }
+        }
+
+    }
+
+    getAllValue() {
+        return this.filter.datas
+    }
+
+    getCategoryValue(category) {
+        return this.getAllValue()[category]
+    }
+    getValue(category, name) {
+        return this.getCategoryValue(category)[name]
+    }
+
+    //状態を更新
+    setValueByCategory(category, name, status) {
+        if (!this.filter.datas[category]) return false
+        this.filter.datas[category][name] = status
+        const input_elements = this.filter.datas[category].elements
+        for (let i = 0; i < input_elements.length; i++) {
+            if (input_elements[i].name == name) input_elements[i].checked = status
+        }
+    }
+
+    setValuesByCategory(category, statusList) {
+        for (const [name, status] of Object.entries(statusList)) {
+            this.setValueByCategory(category, name, status)
+        }
+    }
+
+    setValues(datas) {
+        for (const [category, statusList] of Object.entries(datas)) {
+            this.setValuesByCategory(category, statusList)
+        }
+    }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (SelectCheckbox);
+
+/***/ }),
+
+/***/ "./js/select-stepper.js":
+/*!******************************!*\
+  !*** ./js/select-stepper.js ***!
+  \******************************/
+/*! exports provided: SelectStepper, default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SelectStepper", function() { return SelectStepper; });
+
+
+class SelectStepper {
+    constructor(classname, onChange) {
+        this.stepper = {
+            classname: classname,
+            elements: document.getElementsByClassName(classname),
+            datas: {}
+        }
+
+        const stepper_elements = this.stepper.elements
+        for (let i = 0; i < stepper_elements.length; i++) {
+
+            const stepper_element = stepper_elements[i]
+            const stepper_category = stepper_element.dataset.category
+            const stepper_datas = this.stepper.datas[stepper_category] ?
+                this.stepper.datas[stepper_category] : this.stepper.datas[stepper_category] = { element: {} }
+
+            const select_element = stepper_element.querySelector("select")
+            const stepper_name = select_element.name || select_element.id
+            stepper_datas.element[stepper_name] = select_element
+            stepper_datas[stepper_name] = select_element.value
+
+            select_element.previousElementSibling.onclick = function (node_element) {
+                const min = 0
+                const max = select_element.length
+                const value = select_element.selectedIndex
+                if (value > min) {
+                    select_element.value = select_element.item(select_element.selectedIndex - 1).value
+                    if (onChange) onChange({ category: stepper_category, name: stepper_name, element: select_element }, select_element.value, value)
+                    stepper_datas[stepper_name] = select_element.value
+                }
+            }// Down
+            select_element.nextElementSibling.onclick = function (node_element) {
+                const max = select_element.length - 1
+                const value = select_element.selectedIndex
+                if (value < max) {
+                    select_element.value = select_element.item(select_element.selectedIndex + 1).value
+                    if (onChange) onChange({ category: stepper_category, name: stepper_name, element: select_element }, select_element.value, value)
+                    stepper_datas[stepper_name] = select_element.value
+                }
+            }// Up
+        }
+
+    }
+
+
+    getAllValue() {
+        return this.stepper.datas
+    }
+
+    getCategoryValue(category) {
+        return this.getAllValue()[category]
+    }
+
+    getValue(category, name) {
+        return this.getCategoryValue(category)[name]
+    }
+
+    setValueByCategory(category, name, status) {
+        if (!this.stepper.datas[category]) return false
+        this.stepper.datas[category][name] = status
+        const select_element = this.stepper.datas[category].element[name]
+        if (select_element) select_element.value = status
+    }
+
+    setValuesByCategory(category, statusList) {
+        for (const [name, status] of Object.entries(statusList)) {
+            this.setValueByCategory(category, name, status)
+        }
+    }
+
+    setValues(datas) {
+        for (const [category, statusList] of Object.entries(datas)) {
+            this.setValuesByCategory(category, statusList)
+        }
+    }
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (SelectStepper);
 
 /***/ }),
 
@@ -82064,4 +82338,4 @@ Handlebars.registerHelper('log', function(arg1, arg2, options) {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=map/main.b4deae3c141653c7dd57.js.map
+//# sourceMappingURL=map/main.8a9ac80b0e3d58b614f7.js.map

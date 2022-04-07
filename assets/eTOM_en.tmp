@@ -18,7 +18,19 @@
     <h3 translate="no">Relationships</h3>
     <p id="relationData">
     {{#each data.relationData}}
-        <b>{{@key}}</b><br />
+        <b>{{this.caption}}</b><br />
+
+        <span class="selectstepper" data-category="LEVEL"><button>-</button>
+        <select id="{{this.tableName}}" name="{{this.tableName}}" disabled>
+        <option value="" selected> ALL Level Mapping </option>
+        <option value="1"> Level 1 Mapping </option>
+        <option value="2"> Level 2 Mapping </option>
+        <option value="3"> Level 3 Mapping </option>
+        <option value="4"> Level 4 Mapping </option>
+        </select>
+        <button>+</button></span>
+
+        <table>
         <table>
             <thead>
                 <tr>
@@ -26,10 +38,10 @@
                 </tr>
             </thead>
             <tbody>
-            {{#each this}}
-                <tr>
-                    <td><a class="parentlink elementlink" data-id="{{this.name}}" data-type="{{this.table}}" >{{this.name}}</a></td>
-                    <td>{{this.title}}
+            {{#each this.children}}
+                {{#if this.hidden }}<tr id="{{this.hash}}" class="hidden">{{else}}<tr id="{{this.hash}}">{{/if}}
+                    <td><div><a class="parentlink elementlink" data-id="{{this.name}}" data-type="{{this.table}}" >{{this.name}}</a></div></td>
+                    <td><div>{{this.title}}
                         {{#ifEquals this.basefromid this.fromid}}
                         {{else}}
                         <span class="message fa-stack maturity_level_1" style="font-size: 0.6em;">
@@ -52,8 +64,8 @@
                         </span>
                         {{/ifEquals}}
                         {{/each}}
-                    </td>
-                    <td>{{breaklines brief}}</td>
+                    </div></td>
+                    <td><div>{{breaklines brief}}</div></td>
                 </tr>
             {{/each}}
             </tbody>
@@ -62,31 +74,4 @@
     {{/each}}
     </p>
 
-    <div translate="no">
-        <h4>Source icon legend</h4>
-        TMForum Official documentation
-        <span class="message fa-stack maturity_level_4" style="font-size: 0.6em;" >
-            <i class="fa fa-certificate fa-stack-2x"></i>
-            <i class="fa fa-check fa-stack-1x fa-inverse"></i>
-        </span>
-        <span class="message fa-stack maturity_level_3" style="font-size: 0.6em;" >
-            <i class="fa fa-certificate fa-stack-2x"></i>
-            <i class="fa fa-check fa-stack-1x fa-inverse"></i>
-        </span>
-        <span class="message fa-stack maturity_level_2" style="font-size: 0.6em;" >
-            <i class="fa fa-certificate fa-stack-2x"></i>
-            <i class="fa fa-check fa-stack-1x fa-inverse"></i>
-        </span>
-        <span class="message fa-stack maturity_level_1" style="font-size: 0.6em;" >
-            <i class="fa fa-certificate fa-stack-2x"></i>
-            <i class="fa fa-check fa-stack-1x fa-inverse"></i>
-        </span>
-        Maturity level 4 ⇔ 1
-        <br />
-        Other than TMForum official documentation
-        <span class="message fa-stack maturity_level_1" style="font-size: 0.6em;">
-            <i class="fa fa-circle fa-stack-2x "></i>
-            <i class="fa fa-exclamation fa-stack-1x fa-inverse"></i>
-        </span>
-    </div>
-    <br />
+    {{> footer }}

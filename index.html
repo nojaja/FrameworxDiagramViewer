@@ -11,41 +11,46 @@
     <p class="leftbaritem title">Frameworx Version 21.0</p>
     <div>
       <p >contents</p>
-      
-      <p class="leftbaritem"><a class="leftlink elementlink" data-id="1" data-type="TAM"><i class="fa fa-th"></i> Application Framework (TAM)</a></p>
+      <p class="leftbaritem"><a class="leftlink elementlink" data-id="End-to-End Business Streams" data-type="End_to_End_Business_Flows"><i class="fa fa-play-circle"></i> Business Flows</a></p>
       <p class="leftbaritem"><a class="leftlink elementlink" data-id="1" data-type="eTOM"><i class="fa fa-check-square"></i> Business Process Framework (eTOM)</a></p>
-      <p class="leftbaritem"><a class="leftlink elementlink" data-id="top" data-type="SID_ABE"><i class="fa fa-puzzle-piece"></i> Information Framework (SID)</a></p>
-      <p class="leftbaritem"><a class="leftlink elementlink" data-id="End-to-End Business Streams" data-type="End_to_End_Business_Flows">Business Flows</a></p>
-      <p class="leftbaritem"><a class="leftlink elementlink" data-id="ODA" data-type="ODA_Functional_Blocks">ODA The Functional Blocks</a></p>
-      <p class="leftbaritem"><a class="leftlink elementlink" data-id="top" data-type="Open_APIs">TMForum Open APIs</a></p>
-      <p class="leftbaritem"><a class="leftlink elementlink" data-id="top" data-type="Legacy_Systems">Target Systems</a></p>
+      <p class="leftbaritem"><a class="leftlink elementlink" data-id="1" data-type="TAM"><i class="fa fa-th"></i> Application Framework (TAM)</a></p>
+      <p class="leftbaritem"><a class="leftlink elementlink" data-id="top" data-type="SID_ABE"><i class="fa fa-database"></i> Information Framework (SID)</a></p>
+      <p class="leftbaritem"><a class="leftlink elementlink" data-id="ODA" data-type="ODA_Functional_Blocks"><i class="fa fa-puzzle-piece"></i> ODA The Functional Blocks</a></p>
+      <p class="leftbaritem"><a class="leftlink elementlink" data-id="top" data-type="Open_APIs"><i class="fa fa-plug"></i> TMForum Open APIs</a></p>
+      <p class="leftbaritem"><a class="leftlink elementlink" data-id="top" data-type="Legacy_Systems"><i class="fa fa-th-large"></i> Target Systems</a></p>
     </div>
     <div>
       <p >filter</p>
       <!--
       <select multiple="multiple" name="task[member_ids][]" id="task_member_ids"></select>
       -->
-      <ul class="filter-list">
-        Domain
-        <li><input class="filter" type="checkbox" id="Market Sales Domain" name="Market" data-category="domain"><label for="Market">Market Sales Domain</label></li>
-        <li><input class="filter" type="checkbox" id="Product Domain" name="Product" data-category="domain"><label for="Product">Product Domain</label></li>
-        <li><input class="filter" type="checkbox" id="Customer Domain" name="Customer" data-category="domain"><label for="Customer">Customer Domain</label></li>
-        <li><input class="filter" type="checkbox" id="Service Domain" name="Service" data-category="domain"><label for="Service">Service Domain</label></li>
-        <li><input class="filter" type="checkbox" id="Resource Domain" name="Resource" data-category="domain"><label for="Resource">Resource Domain</label></li>
-        <li><input class="filter" type="checkbox" id="Business Partner Domain" name="Partner" data-category="domain"><label for="Partner">Business Partner Domain</label></li>
-        <li><input class="filter" type="checkbox" id="Enterprise Domain" name="Enterprise" data-category="domain"><label for="Enterprise">Enterprise Domain</label></li>
-        <li><input class="filter" type="checkbox" id="Integration Domain" name="Integration" data-category="domain"><label for="Integration">Integration Domain</label></li>
-        <li><input class="filter" type="checkbox" id="Cross Domain" name="Cross" data-category="domain"><label for="Cross">Cross Domain</label></li>
-        <li><input class="filter" type="checkbox" id="Common Domain" name="Common" data-category="domain"><label for="Common">Common Domain</label></li>
-        Category
-        <li><input class="filter" type="checkbox" id="Fulfillment" name="Fulfillment" data-category="category"><label for="Fulfillment">Fulfillment</label></li>
-        <li><input class="filter" type="checkbox" id="Assurance" name="Assurance" data-category="category"><label for="Assurance">Assurance</label></li>
-        <li><input class="filter" type="checkbox" id="Readiness" name="Readiness" data-category="category"><label for="Readiness">Readiness & Operations Support</label></li>
-        <li><input class="filter" type="checkbox" id="Lifecycle" name="Lifecycle" data-category="category"><label for="Lifecycle">Lifecycle Management</label></li>
-        <li><input class="filter" type="checkbox" id="Capabilit" name="Capabilit" data-category="category"><label for="Capabilit">Capability Delivery</label></li>
-        <li><input class="filter" type="checkbox" id="Strategy" name="Strategy" data-category="category"><label for="Strategy">Strategy Management</label></li>
-        <li><input class="filter" type="checkbox" id="Billing" name="Billing" data-category="category"><label for="Billing">Billing & Revenue Management</label></li>
-      </ul>
+        <details>
+          <summary>Domain</summary>
+          <ul class="filter-list"  data-category="domain">
+            <li><input class="filter" type="checkbox" id="Market Sales Domain" name="Market"><label for="Market">Market Sales Domain</label></li>
+            <li><input class="filter" type="checkbox" id="Product Domain" name="Product"><label for="Product">Product Domain</label></li>
+            <li><input class="filter" type="checkbox" id="Customer Domain" name="Customer"><label for="Customer">Customer Domain</label></li>
+            <li><input class="filter" type="checkbox" id="Service Domain" name="Service"><label for="Service">Service Domain</label></li>
+            <li><input class="filter" type="checkbox" id="Resource Domain" name="Resource"><label for="Resource">Resource Domain</label></li>
+            <li><input class="filter" type="checkbox" id="Business Partner Domain" name="Partner"><label for="Partner">Business Partner Domain</label></li>
+            <li><input class="filter" type="checkbox" id="Enterprise Domain" name="Enterprise"><label for="Enterprise">Enterprise Domain</label></li>
+            <li><input class="filter" type="checkbox" id="Integration Domain" name="Integration"><label for="Integration">Integration Domain</label></li>
+            <li><input class="filter" type="checkbox" id="Cross Domain" name="Cross"><label for="Cross">Cross Domain</label></li>
+            <li><input class="filter" type="checkbox" id="Common Domain" name="Common"><label for="Common">Common Domain</label></li>
+          </ul>
+      </details>
+      <details>
+        <summary>Category</summary>
+        <ul class="filter-list" data-category="category">
+          <li><input class="filter" type="checkbox" id="Fulfillment" name="Fulfillment" ><label for="Fulfillment">Fulfillment</label></li>
+          <li><input class="filter" type="checkbox" id="Assurance" name="Assurance" ><label for="Assurance">Assurance</label></li>
+          <li><input class="filter" type="checkbox" id="Readiness" name="Readiness" ><label for="Readiness">Readiness & Operations Support</label></li>
+          <li><input class="filter" type="checkbox" id="Lifecycle" name="Lifecycle" ><label for="Lifecycle">Lifecycle Management</label></li>
+          <li><input class="filter" type="checkbox" id="Capabilit" name="Capabilit" ><label for="Capabilit">Capability Delivery</label></li>
+          <li><input class="filter" type="checkbox" id="Strategy" name="Strategy" ><label for="Strategy">Strategy Management</label></li>
+          <li><input class="filter" type="checkbox" id="Billing" name="Billing" ><label for="Billing">Billing & Revenue Management</label></li>
+        </ul>
+      </details>
     </div>
   </div>
   <div id="content" class="content_body">
