@@ -14,6 +14,7 @@ import Filter from "./filter.js";
 
 const Handlebars = CustomHandlebarsFactory.getInstance()
 const filter = new Filter();
+let pagedata = {}
 /*
 const filterItems = [
   { value: 'Market', label: 'Market Sales Domain', customProperties: {category:'domain'},selected:false},
@@ -153,6 +154,7 @@ let pageGen = async function (table, id, scroll) {
 
   //表示ロジックの取得
   const logic = (dao.getTableInfo(table)) ? dao.getTableInfo(table).logic : "";
+  //表示データの取得
   const data = (logic == "getPageData") ? await dao.getPageData(table, id) : {}
 
   /*filter処理*/
@@ -163,11 +165,13 @@ let pageGen = async function (table, id, scroll) {
 
   //data.relationDataに対してfilter_logicを適用
   for (const [dataset, record] of Object.entries(data.relationData)) {
-    const recordtmp = filter.unique_filter_logic(record.children, ["title"], (oldrecord, newrecord) => { return newrecord.basefromid == newrecord.fromid })
+    const recordtmp = filter.unique_filter_logic(record.children, ["title"], (oldrecord, newrecord) => { return newrecord.basefromid == newrecord.fromid /*basefromidと同じものを優先する*/ })
     data.relationData[dataset].children = filter.filter_logic(recordtmp)
   }
   //data.childrenに対してfilter_logicを適用
-  data.children = filter.filter_logic(data.children)
+  data.children_org = data.children
+  data.children = filter.filter_logic2(data.children)
+  pagedata = data;
 
   const tableName = (dao.getTableInfo(table)) ? dao.getTableInfo(table).tableName : table;
   const url = "./assets/" + tableName + "_" + language + ".tmp";
@@ -253,9 +257,56 @@ async function updateFilter() {
   const type = await getParam("type")
 
   window.history.replaceState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${id}&type=${type}&f=${serialized_filter}`)
-  pageGen(type, id, false);
+  //pageGen(type, id, false);
+
+  const updatelist = []
+  //data.relationDataに対してfilter_logicを適用
+  for (const [dataset, record] of Object.entries(pagedata.relationData)) {
+    const recordtmp = filter.unique_filter_logic(record.children, ["title"], (oldrecord, newrecord) => { return newrecord.basefromid == newrecord.fromid /*basefromidと同じものを優先する*/ })
+    Array.prototype.push.apply(updatelist, filter.filter_logic(recordtmp))
+  }
+
+  for (let j = 0; j < updatelist.length; j++) {
+    const element = document.getElementById(updatelist[j].hash)
+    if(element==null)continue
+    if (updatelist[j].hidden) {
+      element.classList.add("hidden");
+    } else {
+      element.classList.remove("hidden");
+    }
+    element.hidden = updatelist[j].hidden
+  }
+  
+  //pagedata.relationDataに対してfilter_logicを適用
+  for (const [dataset, record] of Object.entries(pagedata.relationData)) {
+    const recordtmp = filter.unique_filter_logic(record.children, ["title"], (oldrecord, newrecord) => { return newrecord.basefromid == newrecord.fromid /*basefromidと同じものを優先する*/ })
+    pagedata.relationData[dataset].children = filter.filter_logic(recordtmp)
+  }
+  //data.childrenに対してfilter_logicを適用
+  pagedata.children = filter.filter_logic2(pagedata.children_org)
+
+  const element = document.getElementById('chart-container')
+  updateOc(element,pagedata)
+
+  
+  //組織図のクリックイベント作成
+  const node_elements = document.getElementsByClassName("node")
+  createDataset2ClickEvent(node_elements)
 
   return true
+}
+
+
+function updateOc(targetElement,datas) {
+  const chartContainer = oc.init({
+    'data': datas,
+    'createNode': function ($node, data) {
+      $node.attr('data-id', data.name)
+      $node.attr('data-type', data.table)
+      $node.attr('data-domain', data.domain)
+    }
+  }).$chartContainer[0]
+  targetElement.outerHTML = chartContainer.outerHTML
 }
 
 //tree表示する

@@ -5,10 +5,13 @@ export class Filter {
     }
 
     /**
-     * リストからの重複排除
-     * dataList
-     * keylist: ['key',,,]
-     * override: (old,new) => {return true}
+     * リストからの重複排除 Deduplication from list
+     * @param {*} dataList : [{'key1':'val','unique-key-name':'val'},,,]
+     * @param {*} keylist : Composite key ['unique-key-name',,,] 
+     * @param {*} override : Override strategy
+     *           ex1. (old,new) => {return true} //Strategy to choose the Latter
+     *           ex1. (old,new) => {return old.min > new.min} //Strategy to choose the smaller
+     * @returns : new List [{...},{...},,,,]
      */
     unique_filter_logic(dataList, keylist, override) {
         // uniqueになるkey文字列作成
@@ -32,28 +35,49 @@ export class Filter {
     }
 
 
+    /**
+     * filter処理の実行
+     * select * from dataList where ( table == filter_id ) or ( filter_category like filter_id)
+     * @param {*} dataList 
+     * @returns 
+     */
     filter_logic(dataList) {
-        const result = dataList.filter(data => {
-            for (const [filter_category, filter] of Object.entries(this.filters)) {
-                let hit_count = 0
-                let filters_count = 0
-                for (const [filter_id, value] of Object.entries(filter)) {
-                    if (filter_category == "LEVEL") {
-                        if (data["table"] == filter_id.toLowerCase()) {
-                            if (data[filter_category] != value) return false;//filterに不一致
-                        }
-                    } else {
-                        if (value && data[filter_category]) {
-                            filters_count++;
-                            if (data[filter_category].indexOf(filter_id) > -1) hit_count++;//filterに一致
-                        }
-                    }
-                }
-                if (filters_count > 0 && hit_count == 0) return false //フィルタカテゴリ内で1つも一致しない場合は除外する
+        //const result = dataList.filter((data)=>this.filter(data));
+        const result = dataList.map((data)=>{
+            data.hash = btoa(data.table + data.name)
+            if(this.filter(data)){
+                data.hidden = false
+            }else{
+                data.hidden = true
             }
-            return true
+            return data
         });
         return result
+    }
+    filter_logic2(dataList) {
+        const result = dataList.filter((data)=>this.filter(data));
+        return result
+    }
+
+    filter(data) {
+        for (const [filter_category, filter] of Object.entries(this.filters)) {
+            let hit_count = 0
+            let filters_count = 0
+            for (const [filter_id, value] of Object.entries(filter)) {
+                if (filter_category == "LEVEL") {
+                    if (data["table"] == filter_id.toLowerCase()) {
+                        if (data[filter_category] != value) return false;//filterに不一致
+                    }
+                } else {
+                    if (value && data[filter_category]) {
+                        filters_count++;
+                        if (data[filter_category].indexOf(filter_id) > -1) hit_count++;//filterに一致
+                    }
+                }
+            }
+            if (filters_count > 0 && hit_count == 0) return false //フィルタカテゴリ内で1つも一致しない場合は除外する
+        }
+        return true
     }
 
     //ノードのID表示用のURLをhistoryに追加して、再描画

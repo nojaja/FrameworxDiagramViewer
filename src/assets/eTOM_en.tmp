@@ -39,9 +39,9 @@
             </thead>
             <tbody>
             {{#each this.children}}
-                <tr>
-                    <td><a class="parentlink elementlink" data-id="{{this.name}}" data-type="{{this.table}}" >{{this.name}}</a></td>
-                    <td>{{this.title}}
+                {{#if this.hidden }}<tr id="{{this.hash}}" class="hidden">{{else}}<tr id="{{this.hash}}">{{/if}}
+                    <td><div><a class="parentlink elementlink" data-id="{{this.name}}" data-type="{{this.table}}" >{{this.name}}</a></div></td>
+                    <td><div>{{this.title}}
                         {{#ifEquals this.basefromid this.fromid}}
                         {{else}}
                         <span class="message fa-stack maturity_level_1" style="font-size: 0.6em;">
@@ -64,8 +64,8 @@
                         </span>
                         {{/ifEquals}}
                         {{/each}}
-                    </td>
-                    <td>{{breaklines brief}}</td>
+                    </div></td>
+                    <td><div>{{breaklines brief}}</div></td>
                 </tr>
             {{/each}}
             </tbody>
