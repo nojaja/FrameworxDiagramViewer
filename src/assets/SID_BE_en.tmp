@@ -1,0 +1,71 @@
+    <h1 id="name">{{data.title}}</h1>
+    <h4 id="type" translate="no">Information_Framework (SID)</h4>
+    <h4 id="domain" translate="no">Domain: {{data.domain}}</h4>
+    <h4 id="identifier" translate="no">Identifier: {{data.name}}</h4>
+    
+    {{#if data.parent}}
+    <h4 id="parent" translate="no">Parent Identifier: <a class="parentlink elementlink" data-id="{{data.parent}}" data-type="{{data.table}}" >{{data.parent}}</a></h4>
+    {{/if}}
+
+    {{#oc data}}{{/oc}}
+    <h3 translate="no">Overview</h3>
+    <p id="description">{{breaklines data.overview}}</p>
+    <h3 translate="no">Relationships</h3>
+    <p id="relationData">
+    {{#each data.relationData}}
+        <b>{{this.caption}}</b><br />
+
+        <span class="selectstepper" data-category="LEVEL"><button>-</button>
+        <select id="{{this.tableName}}" name="{{this.tableName}}" disabled>
+        <option value="" selected> ALL Level Mapping </option>
+        <option value="1"> Level 1 Mapping </option>
+        <option value="2"> Level 2 Mapping </option>
+        <option value="3"> Level 3 Mapping </option>
+        <option value="4"> Level 4 Mapping </option>
+        </select>
+        <button>+</button></span>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th><th>Name</th><th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+            {{#each this.children}}
+                {{#if this.hidden }}<tr id="{{this.hash}}" class="hidden">{{else}}<tr id="{{this.hash}}">{{/if}}
+                    <td><div><a class="parentlink elementlink" data-id="{{this.name}}" data-type="{{this.table}}" >{{this.name}}</a></div></td>
+                    <td><div>{{this.title}}
+                        {{#ifEquals this.basefromid this.fromid}}
+                        {{else}}
+                        <span class="message fa-stack maturity_level_1" style="font-size: 0.6em;">
+                            <i class="fa fa-question-circle fa-stack-2x"></i>
+                            <span class="remark">source:Auto  <br />maturity_level:1 <br />Guessed from this parent hierarchy</span>
+                        </span>
+                        {{/ifEquals}}
+                        {{#each this.reasonData}}
+                        {{#ifEquals this.source "consideration"}}
+                        <span class="message fa-stack maturity_level_{{this.maturity_level}}" style="font-size: 0.6em;">
+                            <i class="fa fa-circle fa-stack-2x "></i>
+                            <i class="fa fa-exclamation fa-stack-1x fa-inverse"></i>
+                            <span class="remark">source:{{this.source}}  <br />maturity_level:{{this.maturity_level}} <br />{{#if this.memo}}{{this.memo}}{{/if}}</span>
+                        </span>
+                         {{else}}
+                        <span class="message fa-stack maturity_level_{{this.maturity_level}}" style="font-size: 0.6em;" >
+                            <i class="fa fa-certificate fa-stack-2x"></i>
+                            <i class="fa fa-check fa-stack-1x fa-inverse"></i>
+                            <span class="remark">source:{{this.source}}  <br />maturity_level:{{this.maturity_level}} <br />{{#if this.memo}}{{this.memo}}{{/if}}</span>
+                        </span>
+                        {{/ifEquals}}
+                        {{/each}}
+                    </div></td>
+                    <td><div>{{breaklines brief}}</div></td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+        <br />
+    {{/each}}
+    </p>
+
+    {{> footer }}

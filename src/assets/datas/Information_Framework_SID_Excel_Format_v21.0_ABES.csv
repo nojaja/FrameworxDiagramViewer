@@ -1,313 +1,313 @@
 ID,NAME,DESCRIPTION,DOMAIN,LEVEL,PARENT
-1.Market Sales Domain,Market Sales Domain,マーケット＆セールスドメインは、販売ライフサイクル段階を経て販売ライフサイクル段階（例えば、連絡先/リード/プロスペクトなど）を移動する、マーケティングおよび販売戦略、能力配信、ライフサイクル管理、および締約国の支援（例：個人/組織）に関する役割、情報および活動を表しています。企業によって提供されている商品やサービス（すなわち製品）については、注文、注文、注文、注文、注文、注文、およびサポートされています。販売側では、これには販売力と販売統計までの販売連絡先/リード/見通しが含まれます。市場には、市場戦略と計画、市場セグメント、競合他社、およびその製品が含まれています。,Market Sales Domain,0,top
-1.Competitor ABE,Competitor ABE,競合他社のABEは、同じ市場セグメントに競争する他のプロバイダを識別し、製品を含む競合他社についての知性を蓄積します（価格、主要業績指標など）。競合他社ABEは、企業の競合他社に関連する知性の分析に関する情報を提供しています。競合他社が誰であるかを理解することは、製品のためのターゲット市場が何であるか、そして彼らの製品の成功のどれほどの成功です。競合他社と競合他社の企業はまた、次のレベル2のABES•競合他社のインテリジェンスを含む。,Market Sales Domain,1,1.Market Sales Domain
-1.Competitor Intelligence ABE,Competitor Intelligence ABE,,Market Sales Domain,2,1.Competitor ABE
-1.Competitor Product Correlation ABE,Competitor Product Correlation ABE,,Market Sales Domain,2,1.Competitor ABE
-1.Contact Lead Prospect ABE,Contact Lead Prospect ABE,連絡先Readppppte Abeは、リードと連絡先情報、販売展望、潜在的な顧客に対する提案、およびリードが潜在的な顧客に対する提案、および潜在的な収益の額など、リードが顧客になるまで販売を追跡する能力を提供します。販売パイプラインの形式,Market Sales Domain,1,1.Market Sales Domain
-1.Market & Sales Strategy Plan ABE,Market & Sales Strategy Plan ABE,市場販売戦略計画ABEは、適切な製品やチャンネルで市場に取り組む方法に関する事業計画と戦略を支援しています。,Market Sales Domain,1,1.Market Sales Domain
-1.Market Sales Forecast ABE,Market Sales Forecast ABE,市場販売予測ABEは、市場および販売予測、新サービス要件、顧客のニーズ、および顧客教育を維持しています。,Market Sales Domain,1,1.Market Sales Domain
-1.Market Sales Party Roles ABE,Market Sales Party Roles ABE,市場営業パーティの役割ABEは、MarketingManager、Salesagentなどの市場販売ドメインに関連するすべてのパーティロールを含んでいます...,Market Sales Domain,1,1.Market Sales Domain
-1.Market Sales Statistics ABE,Market Sales Statistics ABE,市場の販売統計は、販売とマーケティングの収益および販売チャネルのパフォーマンスに関する市場および販売主要業績指標を維持しています。,Market Sales Domain,1,1.Market Sales Domain
-1.Market Segment ABE,Market Segment ABE,市場セグメントABEは市場セグメントの説明をサポートしています。,Market Sales Domain,1,1.Market Sales Domain
-1.Marketing Campaign ABE,Marketing Campaign ABE,マーケティングキャンペーンABEは、識別されたターゲット市場に新規または既存のProduct社をマーケティングするための戦略、またはアプローチを表しています。キャンペーンは次のいずれかになる可能性があります。 •セールチャネル、マーケンセグメントなどの複数のプロモーションを備えた前払いのProduct Productionsの開始•既存のProductSofferingの新しいキャンペーン。 ProductOfferingは新しいものではありませんが、関係、担保などが新たになる可能性があります。•既存の製品上限のキャンペーンの再開,Market Sales Domain,1,1.Market Sales Domain
-1.Sales Channel ABE,Sales Channel ABE,販売チャネルABEは、流通チャネルや販売活動、販売割当、販売、販売、コンテスト、コミッション/ボーナス計画、委員会/ボーナス、および販売力を構成する個人のグループを維持し続けています。,Market Sales Domain,1,1.Market Sales Domain
-1.Sales Commission ABE,Sales Commission ABE,.\doc\Figure SC.01 Sales Commission overview.docx,Market Sales Domain,1,1.Market Sales Domain
-3.Customer Domain,Customer Domain,"顧客のドメインは、締約国（個人/組織など）が行った役割、情報、および活動を表しています（例：個人/組織）、顧客との連絡先とすべての種類の連絡先に関与している役割を果たす、顧客との連絡先、使用、支払い、および商品やサービスで支えられています。彼らが企業から入手する（すなわち製品）。アクティビティは次のとおりです。準備のための戦略（顧客戦略、能力、顧客ライフサイクル管理）および操作（例えば、顧客関係管理、データ、プライバシー、相互作用、通信、注文、口座、残高、サービスレベル契約（SLA）、訓練、問題、ケース、請求書、支払い、紛争、コレクション、ロイヤルティ、パフォーマンス、使用状況統計、分析およびサポート）。
+Market Sales Domain,Market Sales Domain,マーケット＆セールスドメインは、販売ライフサイクル段階を介して販売ライフサイクル段階（例えば、連絡先/リード/プロスペクト）を介して、マーケティングおよび販売戦略、能力配信、ライフサイクル管理およびサポートに関する役割、情報、および活動を表しています。企業によって提供されている商品やサービス（I.販売側では、これには販売力と販売統計までの販売連絡先/リード/見通しが含まれます。市場には、市場戦略と計画、市場セグメント、競合他社、およびその製品が含まれています。,Market Sales Domain,0,top
+Competitor ABE,Competitor ABE,競合他社のABEは、同じ市場セグメントに競争する他のプロバイダを識別し、製品を含む競合他社についての知性を蓄積します（価格、主要業績指標など）。競合他社ABEは、企業の競合他社に関連する知性の分析に関する情報を提供しています。競合他社が誰であるかを理解することは、製品のためのターゲット市場が何であるか、そして彼らの製品の成功のどれほどの成功です。競合他社と競合他社の企業はまた、次のレベル2のABES•競合他社のインテリジェンスを含む。,Market Sales Domain,1,Market Sales Domain
+Competitor Intelligence ABE,Competitor Intelligence ABE,,Market Sales Domain,2,Competitor ABE
+Competitor Product Correlation ABE,Competitor Product Correlation ABE,,Market Sales Domain,2,Competitor ABE
+Contact Lead Prospect ABE,Contact Lead Prospect ABE,連絡先Readppppte Abeは、リードと連絡先情報、販売展望、潜在的な顧客に対する提案、およびリードが潜在的な顧客に対する提案、および潜在的な収益の額など、リードが顧客になるまで販売を追跡する能力を提供します。販売パイプラインの形式,Market Sales Domain,1,Market Sales Domain
+Market & Sales Strategy Plan ABE,Market & Sales Strategy Plan ABE,市場販売戦略計画ABEは、適切な製品やチャンネルで市場に取り組む方法に関する事業計画と戦略を支援しています。,Market Sales Domain,1,Market Sales Domain
+Market Sales Forecast ABE,Market Sales Forecast ABE,市場販売予測ABEは、市場および販売予測、新サービス要件、顧客のニーズ、および顧客教育を維持しています。,Market Sales Domain,1,Market Sales Domain
+Market Sales Party Roles ABE,Market Sales Party Roles ABE,市場営業パーティの役割ABEは、MarketingManager、Salesagentなどの市場販売ドメインに関連するすべてのパーティロールを含んでいます...,Market Sales Domain,1,Market Sales Domain
+Market Sales Statistics ABE,Market Sales Statistics ABE,市場の販売統計は、販売とマーケティングの収益および販売チャネルのパフォーマンスに関する市場および販売主要業績指標を維持しています。,Market Sales Domain,1,Market Sales Domain
+Market Segment ABE,Market Segment ABE,市場セグメントABEは市場セグメントの説明をサポートしています。,Market Sales Domain,1,Market Sales Domain
+Marketing Campaign ABE,Marketing Campaign ABE,マーケティングキャンペーンABEは、識別されたターゲット市場に新規または既存のProduct社をマーケティングするための戦略、またはアプローチを表しています。キャンペーンは次のいずれかになる可能性があります。 •セールチャネル、マーケンセグメントなどの複数のプロモーションを備えた前払いのProduct Productionsの開始•既存のProductSofferingの新しいキャンペーン。 ProductOfferingは新しいものではありませんが、関係、担保などが新たになる可能性があります。•既存の製品上限のキャンペーンの再開,Market Sales Domain,1,Market Sales Domain
+Sales Channel ABE,Sales Channel ABE,販売チャネルABEは、流通チャネルや販売活動、販売割当、販売、販売、コンテスト、コミッション/ボーナス計画、委員会/ボーナス、および販売力を構成する個人のグループを維持し続けています。,Market Sales Domain,1,Market Sales Domain
+Sales Commission ABE,Sales Commission ABE,.\doc\Figure SC.01 Sales Commission overview.docx,Market Sales Domain,1,Market Sales Domain
+Customer Domain,Customer Domain,"顧客ドメインは、パーティー、情報、および活動を表しています（例えば、個人/組織）、顧客とのすべてのタイプの連絡先とすべての種類の連絡先に関与している役割を果たす役割を果たしています。彼らが企業から入手したこと（すなわち、製品）。アクティビティには次のようなものがあります：準備の戦略（例えば、顧客戦略、能力、顧客ライフサイクル管理）および操作（例えば、顧客関係管理、データ、プライバシー、相互作用、通信、注文、口座、残高、サービスレベル契約（SLA）、訓練、問題、ケース、請求書、支払い、紛争、コレクション、ロイヤルティ、パフォーマンス、使用状況統計、分析およびサポート）。
 ノート：
 SID 17.0の顧客ドメインでいくつかの変更が行われました。これらの変更は、既存の顧客ドメインABEと同等のパーティドメインABE属性とエンティティを使用している属性とエンティティの削除を目的としています。顧客ドメインABESのエンティティ/属性への適合は、パーティドメインABESのエンティティ/属性へのマッピングを含める必要があります。これらは顧客ガイド帳簿に示されています。過去の適合性は影響を受けませんが、過去の適合性は一部の顧客ドメインABESのエンティティ/属性が同等のパーティドメインABEのエンティティ/属性に置き換えられていることに注意してください。たとえば、顧客のクレジットプロファイルエンティティは、同等のパーティのクレジットプロファイルエンティティへの参照に置き換えられました。",Customer Domain,0,top
-3.Applied Customer Billing Rate ABE,Applied Customer Billing Rate ABE,適用された顧客請求率ABEは、その後の評価のための関連する使用法の相関関係、使用法（規制および非規制の両方）、使用法、および定格使用による税金の税金を扱います。,Customer Domain,1,3.Customer Domain
-3.Applied Customer Billing Rate Spec ABE,Applied Customer Billing Rate Spec ABE,適用された顧客請求レートスペックABEは、AppliedCustomerBillingRateエンティティの詳細な説明です。,Customer Domain,2,3.Applied Customer Billing Rate ABE
-3.Customer Bill ABE,Customer Bill ABE,顧客請求ABEは、リアルタイムおよび非リアルタイムコール詳細レコード（CDR）およびその他の請求書のソースを処理しています。顧客Bill ABEは、請求書の形式を表し、請求書の生産、顧客請求プロファイル、請求書の合計（評価と格付割引を除く）、および請求書へのクレジットおよび調整を行うために必要なすべての財務計算を表します。,Customer Domain,1,3.Customer Domain
-3.Customer Billing Statistic ABE,Customer Billing Statistic ABE,顧客請求統計ABEは、カスタマービルから派生した収集されたデータを表します。,Customer Domain,2,3.Customer Bill ABE
-3.Customer Bill Collection ABE,Customer Bill Collection ABE,顧客Bill Collection ABEは、信用違反、期限切れの借金、および施設課金監査の行動を処理します。,Customer Domain,1,3.Customer Domain
-3.Customer Payment ABE,Customer Payment ABE,顧客支払いABEは、製品の製品または使用状況のための顧客からの富の譲渡を表しています。,Customer Domain,2,3.Customer Bill Collection ABE
-3.Dunning ABE,Dunning ABE,督促ABEは、期限切れの支払いのために顧客から支払いを集める試みを表しています。,Customer Domain,2,3.Customer Bill Collection ABE
-3.Customer Bill Inquiry ABE,Customer Bill Inquiry ABE,顧客に送信された請求書に関連する請求書のお問い合わせを表し、個々の料金、請求書、および口座に関する紛争と調整を処理します。,Customer Domain,1,3.Customer Domain
-3.Customer Billing Account ABE,Customer Billing Account ABE,アカウントとその残高情報を管理するために使用されます。バランス（または残高）は、通常は、通常は一部の金額、通常は集約を表します。これは、サービスプロバイダーとアカウント保有者（通常は顧客）の間の責任（多くの場合）の側面を示しています。この金額は、金額、または非貨幣性（自由分など）でもかまいません（無料の議事録や忠誠店のポイントなど）、CSPが顧客に保持するクレジット（たとえば、プリペイドバランスなど）または顧客がCSPを負っていると債務を表すことができます。 （Post-Payed A / Rバランスの通常の場合です）。特にチャリリングドメインで顧客の支払いやその他のABESとしっかりと関連しています。プリペイドケースと後払いの両方の事件に適用可能な統合モデルをサポートすることを目的としています。,Customer Domain,1,3.Customer Domain
-3.Customer Billing Credit ABE,Customer Billing Credit ABE,クレジットを追跡します。,Customer Domain,2,3.Customer Billing Account ABE
-3.Customer Interaction ABE,Customer Interaction ABE,顧客の対話ABEは、顧客との通信、および顧客の命令の作成、顧客の請求書の照会の作成、または顧客の問題の作成など、適切な「イベント」への顧客要求の翻訳を表しています。,Customer Domain,1,3.Customer Domain
-3.Customer Party Roles ABE,Customer Party Roles ABE,カスタマパーティの役割ABEは、顧客に関連するすべてのパーティロールに焦点を当てています。,Customer Domain,1,3.Customer Domain
-3.Customer Problem ABE,Customer Problem ABE,顧客の問題ABEは、顧客のための技術支援と問題処理に焦点を当てています。,Customer Domain,1,3.Customer Domain
-3.Customer Product Order ABE,Customer Product Order ABE,"顧客製品注文ABEは、単一の顧客製品の注文とその様々なタイプを調整し、規制されていない注文などのさまざまな種類を処理します。
+Applied Customer Billing Rate ABE,Applied Customer Billing Rate ABE,適用された顧客請求率ABEは、その後の評価のための関連する使用法の相関関係、使用法（規制および非規制の両方）、使用法、および定格使用による税金の税金を扱います。,Customer Domain,1,Customer Domain
+Applied Customer Billing Rate Spec ABE,Applied Customer Billing Rate Spec ABE,適用された顧客請求レートスペックABEは、AppliedCustomerBillingRateエンティティの詳細な説明です。,Customer Domain,2,Applied Customer Billing Rate ABE
+Customer Bill ABE,Customer Bill ABE,顧客請求ABEは、リアルタイムおよび非リアルタイムコール詳細レコード（CDR）およびその他の請求書のソースを処理しています。顧客Bill ABEは、請求書の形式を表し、請求書の生産、顧客請求プロファイル、請求書の合計（評価と格付割引を除く）、および請求書へのクレジットおよび調整を行うために必要なすべての財務計算を表します。,Customer Domain,1,Customer Domain
+Customer Billing Statistic ABE,Customer Billing Statistic ABE,顧客請求統計ABEは、カスタマービルから派生した収集されたデータを表します。,Customer Domain,2,Customer Bill ABE
+Customer Bill Collection ABE,Customer Bill Collection ABE,顧客Bill Collection ABEは、信用違反、期限切れの借金、および施設課金監査の行動を処理します。,Customer Domain,1,Customer Domain
+Customer Payment ABE,Customer Payment ABE,顧客支払いABEは、製品の製品または使用状況のための顧客からの富の譲渡を表しています。,Customer Domain,2,Customer Bill Collection ABE
+Customer Domain Dunning ABE,Dunning ABE,督促ABEは、期限切れの支払いのために顧客から支払いを集める試みを表しています。,Customer Domain,2,Customer Bill Collection ABE
+Customer Bill Inquiry ABE,Customer Bill Inquiry ABE,顧客に送信された請求書に関連する請求書のお問い合わせを表し、個々の料金、請求書、および口座に関する紛争と調整を処理します。,Customer Domain,1,Customer Domain
+Customer Billing Account ABE,Customer Billing Account ABE,アカウントとその残高情報を管理するために使用されます。バランス（または残高）は、通常は、通常は一部の金額、通常は集約を表します。これは、サービスプロバイダーとアカウント保有者（通常は顧客）の間の責任（多くの場合）の側面を示しています。この金額は、金額、または非貨幣性（自由分など）でもかまいません（無料の議事録や忠誠店のポイントなど）、CSPが顧客に保持するクレジット（たとえば、プリペイドバランスなど）または顧客がCSPを負っていると債務を表すことができます。 （Post-Payed A / Rバランスの通常の場合です）。特にチャリリングドメインで顧客の支払いやその他のABESとしっかりと関連しています。プリペイドケースと後払いの両方の事件に適用可能な統合モデルをサポートすることを目的としています。,Customer Domain,1,Customer Domain
+Customer Billing Credit ABE,Customer Billing Credit ABE,クレジットを追跡します。,Customer Domain,2,Customer Billing Account ABE
+Customer Interaction ABE,Customer Interaction ABE,顧客の対話ABEは、顧客との通信、および顧客の命令の作成、顧客の請求書の照会の作成、または顧客の問題の作成など、適切な「イベント」への顧客要求の翻訳を表しています。,Customer Domain,1,Customer Domain
+Customer Party Roles ABE,Customer Party Roles ABE,カスタマパーティの役割ABEは、顧客に関連するすべてのパーティロールに焦点を当てています。,Customer Domain,1,Customer Domain
+Customer Problem ABE,Customer Problem ABE,顧客の問題ABEは、顧客のための技術支援と問題処理に焦点を当てています。,Customer Domain,1,Customer Domain
+Customer Product Order ABE,Customer Product Order ABE,"顧客製品注文ABEは、単一の顧客製品の注文とその様々なタイプを調整し、規制されていない注文などのさまざまな種類を処理します。
 ノート：
-すべての企業が契約の種類になる注文を検討するものもあります。 SIDモデルの観点からは、契約と協定の関係と協定の関係と協定関係によって注文を形式化することができます。この哲学は、2つの異なる概念を明確に分けるという利点を持っています：注文に関連する法的形式からの順序。たとえば、複数の注文は同じ契約を参照することがあります。",Customer Domain,1,3.Customer Domain
-3.Customer Service Level Agreement ABE,Customer Service Level Agreement ABE,顧客SLA ABEは、契約の関与当事者が顧客であるサービスレベル契約ABEの特別なケースです。詳細については、従事者ドメインの契約ABEを参照してください。,Customer Domain,1,3.Customer Domain
-3.Customer Statistic ABE,Customer Statistic ABE,顧客の統計的ABEは、顧客使用パターン、顧客の収益性統計、およびチャーンおよび保存統計の分析を表しています。,Customer Domain,1,3.Customer Domain
-2.Product Domain,Product Domain,"製品ドメインは、締約国（例えば、個人/組織）によって行われた役割、情報および活動を表しています。活動には、製品の管理が含まれます。戦略、機能、ライフサイクル、製品、インスタンス、パフォーマンス、契約事業、使用統計、および企業によって顧客が顧客に提供される商品およびサービスの支援（製品）。
+すべての企業が契約の種類になる注文を検討するものもあります。 SIDモデルの観点からは、契約と協定の関係と協定の関係と協定関係によって注文を形式化することができます。この哲学は、2つの異なる概念を明確に分けるという利点を持っています：注文に関連する法的形式からの順序。たとえば、複数の注文は同じ契約を参照することがあります。",Customer Domain,1,Customer Domain
+Customer Service Level Agreement ABE,Customer Service Level Agreement ABE,顧客SLA ABEは、契約の関与当事者が顧客であるサービスレベル契約ABEの特別なケースです。詳細については、従事者ドメインの契約ABEを参照してください。,Customer Domain,1,Customer Domain
+Customer Statistic ABE,Customer Statistic ABE,顧客の統計的ABEは、顧客使用パターン、顧客の収益性統計、およびチャーンおよび保存統計の分析を表しています。,Customer Domain,1,Customer Domain
+Product Domain,Product Domain,"製品ドメインは、締約国（例えば、個人/組織）によって行われた役割、情報および活動を表しています。活動には、製品の管理が含まれます。戦略、機能、ライフサイクル、製品、インスタンス、パフォーマンス、契約事業、使用統計、および企業によって顧客が顧客に提供される商品およびサービスの支援（製品）。
  なお、製品は2つのケースをカバーしています。
  SIDモデルの「製品」を見て、モデラーはETOMの製品の概念とメンバー会社の提供と実装を見ました。検討された重要な概念は、製品の詳細仕様（製品専用）でした。彼らが市場に提供されている方法（Productofferings）そして使用中にそれらが維持され実行される方法（製品）。 SIDモデルは、ビジネス指向のビューから製品エンティティを反映し、この分野に最適な標準モデリングパターンを使用します。",Product Domain,0,top
-2.Loyalty ABE,Loyalty ABE,"ロイヤルティプログラムは、顧客を維持するためにロイヤルティプロセスによって使用されるツールの1つです。
+Loyalty ABE,Loyalty ABE,"ロイヤルティプログラムは、顧客を維持するためにロイヤルティプロセスによって使用されるツールの1つです。
 ロイヤルティABEには、ロイヤルティプログラムを指定してインスタンス化するのに役立つすべてのエンティティが含まれています。
 LoyaltyProgramProdSpecは、適用されるアクションを識別するためにチェックされなければならないロイヤルティレールを定義します。
 ロイヤルティレールの種類に応じて、利益を集める必要があるかどうか。
-ロイヤルティプログラムProductは、製品コンポーネントの一種であり、LoyaltyProgramProdSpecによって説明されています。",Product Domain,1,2.Product Domain
-2.Loyalty Program ABE,Loyalty Program ABE,ロイヤルティプログラムABEには、ロイヤルティプログラムやロイヤリティカードなどの特定の顧客のためのロイヤルティプログラムをインスタンス化するために必要なすべてのエンティティが含まれています。,Product Domain,2,2.Loyalty ABE
-2.Loyalty Program Specification ABE,Loyalty Program Specification ABE,ロイヤルティプログラム仕様ABEには、ロイヤルティプログラムProdSpecやLyyaltyRuleなどのロイヤルティプログラムを指定するすべてのエンティティが含まれています。,Product Domain,2,2.Loyalty ABE
-2.Product ABE,Product ABE,顧客、使用中の場所、および割り当てられた電話番号やインターネットアドレスなどの構成特性など、製品の提供または仕様の製品在庫の製品インベントリのインスタンスを表します。製品ABEはまた、製品が実現されるサービスおよび/またはリソースを追跡する。,Product Domain,1,2.Product Domain
-2.Example Product Entities ABE,Example Product Entities ABE,サンプル製品エンティティABEには、使用可能な製品サブクラスの例が含まれています。,Product Domain,2,2.Product ABE
-2.Network Product ABE,Network Product ABE,ネットワーク製品ABEには、ネットワーク製品の説明と関係が含まれています。,Product Domain,2,2.Product ABE
-2.Product Price ABE,Product Price ABE,製品価格ABEには、製品に適用されるすべての価格が記載されています。,Product Domain,2,2.Product ABE
-2.Usage Volume Product ABE,Usage Volume Product ABE,使用量製品ABEには、UsageVolumeProductとこの種類の製品に固有のすべてのエンティティが含まれています。,Product Domain,2,2.Product ABE
-2.Product Capacity ABE,Product Capacity ABE,長期間にわたって数量の量および単位で測定された製品ドメインエンティティの特定の能力。,Product Domain,1,2.Product Domain
-2.Product Configuration ABE,Product Configuration ABE,製品の運用または機能の観点から、特性の特徴と関連資源（S）、ServicesPECの観点から機能し、特性と関連性の観点から機能する方法の表現の定義リソース、製品、サービス。,Product Domain,1,2.Product Domain
-2.Product Action ABE,Product Action ABE,Product Action ABEには、製品特定、ProductOfferings、およびProductConfigSpecの可能なアクションを記述するビジネスエンティティが含まれています。,Product Domain,2,2.Product Configuration ABE
-2.Product Offering ABE,Product Offering ABE,ABEを提供する製品は、製品カタログの形で市場に特定の価格で利用可能にされた有形で無形の商品を説明しています。このABEはまた、適切な市場戦略に基づいて市場セグメントをターゲットにする責任を負います。,Product Domain,1,2.Product Domain
-2.Pricing Logic Algorithm ABE,Pricing Logic Algorithm ABE,価格化論理アルゴリズムABEは、イン​​タフェース仕様のインスタンス化を表すエンティティを、外部格付け関数（SIDのモデル化されたバラバオードなし）を含む。,Product Domain,2,2.Product Offering ABE
-2.PLA Spec ABE,PLA Spec ABE,PLA SPEC ABEは、価格設定論理アルゴリズムを指定します。,Product Domain,3,2.Pricing Logic Algorithm ABE
-2.Product Catalog ABE,Product Catalog ABE,製品カタログABEは、ProductOfferingsとその関連する製品の専用宣益を含むそれらによって記述された製品カタログとカタログの仕様を表すエンティティの集まりです。,Product Domain,2,2.Product Offering ABE
-2.Product Offering Price ABE,Product Offering Price ABE,Product Price Abeを提供する製品は、製品専門枠に関連するすべての価格について説明しています。,Product Domain,2,2.Product Offering ABE
-2.Product Offering Price Rule ABE,Product Offering Price Rule ABE,商品提供価格規則ABEは、プロダクト事業に関する価格に関連するすべての規則を記載しています。,Product Domain,2,2.Product Offering ABE
-2.Product Offering Price Tax ABE,Product Offering Price Tax ABE,価格税ABEを提供する製品は、ProductOfFeringPriceとProductPriceの文脈で課税がどのようにモデル化されるかについて説明しています。モデルは次の側面をカバーしています。•納税事項と税申請 - これらは、計算に関する特定の状況の影響を含め、税がどのように計算されるかを指定します。 ProductOfferingのために追加されました•TaxProdPricaltation  - これは、実際に購入され、パーティーに配信された製品に対してどの税が追加されるかを表す製品プリツェへの変更です。税額は、最終的にInpontationCustomerBillingTaxRate（または従事者の党モデルに従ってAppliedPartyBillingTaxRate）として請求書に表されます。,Product Domain,2,2.Product Offering ABE
-2.Product Placement ABE,Product Placement ABE,製品の配置ABEは、ダイレクトメールを介して、製品専門管理がどのように販売されるかについて説明します。プロダクトプレスタンスには、市場の侵入、製品戦略などのようなものを記述する定性的声明、または評価が含まれています。,Product Domain,2,2.Product Offering ABE
-2.Product Promotion ABE,Product Promotion ABE,製品推進ABEは、締約国を購入、家賃、または他の方法で調達することを奨励するための製品上限の出版を説明しています。,Product Domain,2,2.Product Offering ABE
-2.Product Specification ABE,Product Specification ABE,製品仕様ABEには、ビジネスユーザーによって認識されている製品仕様を表すものがすべて含まれており、マーケティングオペレータが機能レベルレベルで販売したい（すなわち、使用可能な容量は何ですか...）。,Product Domain,1,2.Product Domain
-2.Example Product Specification Entities ABE,Example Product Specification Entities ABE,サンプル製品仕様エンティティABEには、使用可能な製品設定サブクラスの例が含まれています。,Product Domain,2,2.Product Specification ABE
-2.Goods and Shipping Product Spec ABE,Goods and Shipping Product Spec ABE,商品・出荷商品スペックABEは、商品と輸送製品仕様とその関係の特異性を説明しています。,Product Domain,2,2.Product Specification ABE
-2.Network Product Spec ABE,Network Product Spec ABE,ネットワーク製品SPEC ABEには、NetworkProductspecの説明と関係が含まれています。,Product Domain,2,2.Product Specification ABE
-2.Usage Volume Product Spec ABE,Usage Volume Product Spec ABE,使用量製品仕様ABEには、UsageVolumeProductspecとこの種の製品に固有のすべてのエンティティが含まれています。,Product Domain,2,2.Product Specification ABE
-2.Product Test ABE,Product Test ABE,製品テストは、試験中の製品の機能を反映する対策をもたらす製品に対して行われる機能です。,Product Domain,1,2.Product Domain
-2.Product Usage ABE,Product Usage ABE,顧客の請求書に表示される可能性がある顧客に関連する顧客に関連する製品の使用を表します。,Product Domain,1,2.Product Domain
-2.Product Usage Spec ABE,Product Usage Spec ABE,製品使用スペックABEは、製品専用の使用法の種類を指定します。,Product Domain,2,2.Product Usage ABE
-4.Service Domain,Service Domain,サービスドメインは、当事者（例えば、個人/組織）によって実行された役割、情報、および活動を表しています。活動には、管理、機能、ライフサイクル、カタログ、在庫、設置、活性化、問題、パフォーマンス、ガイド、調停、使用統計、および顧客と資源の直面しているサービスの支援とサポートが含まれます。企業によるリソース。,Service Domain,0,top
-4.Service ABE,Service ABE,サービスABEには、顧客向けとリソース面の両方のサービスの種類を表すために使用されるエンティティが含まれています。このABEのエンティティは、あらゆる型のサービスを検討、分析、設定、監視および修復するためのさまざまなビューを提供します。このABEのエンティティはサービス仕様エンティティから派生しています。,Service Domain,1,4.Service Domain
-4.Customer Facing Service ABE,Customer Facing Service ABE,顧客向けサービスABEは、組織のインフラストラクチャ内の製品の実現を表す特定のCustomerFaceServiceの特性を定義しています。対照的に、リソースが直面しているサービスABEは、CustomerFacingServiceの一部に直面しているネットワーク/インフラストラクチャをサポートする特定のResourceFacingServiceの特性を定義する抽象化です。 ResourceFacingServicesは、CustomerFacingServiceをサポートするために必要な「内部」サービスです。このABEのエンティティは、すべてのタイプのカスタムフェイスサービスを調べ、分析、設定、監視、修復するためのさまざまなビューを提供します。このABEのエンティティは、カスタマーサービス仕様エンティティから派生しています。,Service Domain,2,4.Service ABE
-4.Customer Facing Service Example ABE,Customer Facing Service Example ABE,顧客向けサービスの例ABEには、カスタマファイクスサービスエンティティの例が含まれています。,Service Domain,3,4.Customer Facing Service ABE
-4.CustomerFacing Service Role ABE,CustomerFacing Service Role ABE,顧客向けサービス役割ABEは、このタイプのサービスが再生する役割の観点から、CustomerFacingServiceの可変特性を表すために使用されるCustomerServiceRolesを定義しています。,Service Domain,3,4.Customer Facing Service ABE
-4.Resource Facing Service ABE,Resource Facing Service ABE,サービスABEには、CustomerFacingServicesとResourceFacingServicesという2つの基本的に異なる種類のサービスを表すために使用されるエンティティが含まれています。 CustomerFacingServiceは、組織のインフラストラクチャ内の製品の実現を表す特定のサービスの特性を定義します。対照的に、ResourceFacingServiceは、サービスのネットワーク/インフラストラクチャをサポートする特定のサービスの特性を定義する抽象化です。たとえば、VPNはCustomerFacingServiceの一例であり、VPNを構成するネットワークデバイス間で異なる種類のルーティングを実行するサブサービスはResourceFacingServicesの例である。 ResourceFacingServicesは、CustomerFacingServiceをサポートするために必要な「内部」サービスです。このABEのエンティティは、あらゆる型のサービスを検討、分析、設定、監視および修復するためのさまざまなビューを提供します。このABEのエンティティはサービス仕様エンティティから派生しています。,Service Domain,2,4.Service ABE
-4.Resource Facing Service Examples ABE,Resource Facing Service Examples ABE,リソース直面サービスの例ABEには、ResourceFacingServicesの例が含まれています。,Service Domain,3,4.Resource Facing Service ABE
-4.Resource Facing Service Role ABE,Resource Facing Service Role ABE,リソースが直面するサービスロールABEは、このタイプのサービスが再生する役割の観点から、ResourceFacingServiceの変数特性を表すために使用される担当者を定義しています。,Service Domain,3,4.Resource Facing Service ABE
-4.Service Capacity ABE,Service Capacity ABE,長期間にわたって数量の量と単位で測定されたサービスドメインエンティティの特定の機能。,Service Domain,1,4.Service Domain
-4.Service Configuration ABE,Service Configuration ABE,"サービスが特性の特徴と関連資源（S）およびサービススペックの観点から機能する方法の定義、ならびに製品が特性および関連リソースに関してどのように機能するかまたは機能の表現の表現の定義。サービス（S）
-詳細については、共通ドメインのConfiguration＆Profiling ABEを参照してください。",Service Domain,1,4.Service Domain
-4.Service Order ABE,Service Order ABE,サービス指図ABEは、顧客注文の製品を実現するサービスオーダーに関連するサービスに分解する要求の種類を表すエンティティを含む。,Service Domain,1,4.Service Domain
-4.Service Party Roles ABE,Service Party Roles ABE,サービスパーティの役割ABEは、ServiceManagerなどのサービスドメインに関連するすべてのパーティロールを含みます。,Service Domain,1,4.Service Domain
-4.Service Performance ABE,Service Performance ABE,サービスパフォーマンスABEは、さまざまなパフォーマンス統計やその他の顧客とリソースに直面しているサービスエンティティの操作特性を収縮し、統合し、および検証します。それはパフォーマンスを監視および報告できるエンティティのセットを提供します。これらの各エンティティは、計画された目標に対するネットワーク性能評価も行い、誤り率を含む傾向分析のさまざまな側面を実行し、解析とサービスの劣化をもたらします。このABEのエンティティはまた、サービスによって生成されたトラフィック、およびトラフィックトレンド分析を管理します。これは、特定のサービスのデータ、制御および管理機能を分離する新しい技術にとって重要です。,Service Domain,1,4.Service Domain
-4.Service Level Spec ABE,Service Level Spec ABE,サービス仕様ABEには、両方の種類のサービスエンティティの不変特性と動作を定義するエンティティが含まれています。これにより、複数のインスタンスを単一の仕様エンティティから派生させることができます。この派生では、各インスタンスは、その関連テンプレートで定義されている不変特性と動作を使用します。このABEには、ServiceLevelspecificationの3番目のタイプのサービス仕様エンティティが含まれています。この種の仕様は、サービスレベル契約に拘束されているサービスをテンプル化します。,Service Domain,2,4.Service Performance ABE
-4.Service Performance Specification ABE,Service Performance Specification ABE,サービスパフォーマンス仕様ABEは、サービスが機能している方法の尺度を定義しています。,Service Domain,2,4.Service Performance ABE
-4.Service Problem ABE,Service Problem ABE,サービス問題ABEは、サービスポイントビューから障害、アラーム、および停止を管理します。これは、原因が物理的または論理的であるかどうかにかかわらず、トラブルチケットと相関しています。このABEの他のエンティティは、これら3種類の問題のそれぞれからの回復を指示するために使用されます。それらは、リソースの障害とアラームをそれらのリソース上で実行されるサービスの劣化と停止に関連付ける機能を提供します。これらの機能は、サービスの構築に使用されるリソースとテクノロジとは無関係です。このABEの3番目のエンティティのセットは、顧客報告の問題とネットワークによる問題を区別するために使用されます。,Service Domain,1,4.Service Domain
-4.Service Specification ABE,Service Specification ABE,サービス仕様ABEには、両方のタイプのサービスエンティティの共有特性を定義するエンティティが含まれています。これにより、複数のインスタンスを単一の仕様エンティティから派生させることができます。この派生では、各インスタンスはそれに関連する仕様で定義されている特性を使用します。このABEのエンティティは、標準への遵守、サービスの特徴、依存関係（身体的および論理的、そして他のサービスの両方）、品質、そして費用を区別します。一般に、このABEのエンティティは、サービスを製品にバインドしてリソースを使用して実行することを可能にします。ネットワークサービスは、構築することができるサービスの一例です。追加の例には、インストール、メンテナンス、監視、およびコンテンツ認証、承認、会計、および監査機能が含まれます。,Service Domain,1,4.Service Domain
-4.Customer Facing Service Spec ABE,Customer Facing Service Spec ABE,顧客向けサービス仕様ABEは、一連のカスタマーフェイスサービスの共通特性を定義しています。このスケールは、複数のCustomerFaceServicesPECを定義して、さまざまなグループのCustomerFacingServicesの一般的な特性をモデル化することを可能にします。,Service Domain,2,4.Service Specification ABE
-4.Customer Facing Service Spec Examples ABE,Customer Facing Service Spec Examples ABE,顧客向けサービス仕様の例ABEには、CustomerFaceServicespecsのサブクラスの例が含まれています。,Service Domain,3,4.Customer Facing Service Spec ABE
-4.Customer Facing Service Spec Role ABE,Customer Facing Service Spec Role ABE,CustomerFacingServiceのServicePecificationRoolesのセットで、サービススペックの役割の顧客は、ServicePecificationRoolesのセットの観点から、サービススペックを定義しています。 CustomerFacingServiceの共有特性を表すために使用されます。これにより、CustomerFacingServiceをServicePecificationRollesを使用して抽象的に管理することができます。それはまた、それが提供または提供する関数に関してカスタマーフェイスサービスを定義するのにも役立ちます。,Service Domain,3,4.Customer Facing Service Spec ABE
-4.Service Package ABE,Service Package ABE,Service Package ABEは、1つ以上の製品専用で指定された機能を満たすために、さまざまなCustomerFacingServicespecsのセットをバンドルするという概念を定義します。これにより、これらのCustomerFaceServicesの共有特性を指定することができ、その結果、複数の製品を関連製品の設定から構築できます。,Service Domain,3,4.Customer Facing Service Spec ABE
-4.Service Package Spec Examples ABE,Service Package Spec Examples ABE,サービスパッケージのスペック例ABEには、ServicePackagesPecsのサブクラスのサブクラスが含まれています。,Service Domain,4,4.Service Package ABE
-4.Resource Facing Service Spec ABE,Resource Facing Service Spec ABE,サービススペックABEが直面しているリソースは、一連のResourceFaceServicesの共通特性を定義します。このスケールでは、ResourceFacingServicesのさまざまなグループの一般的な特性をモデル化するために複数のResourceFacingServicesPECを定義できるようにします。,Service Domain,2,4.Service Specification ABE
-4.Resource Facing Service Spec Role ABE,Resource Facing Service Spec Role ABE,サービススペックロールのリソースABEは、ResourceFacingServiceのServicePecificationRoolesのセットに関して、サービススペック化を定義します。 ResourceFacingServiceの共有特性を表すために使用されます。これにより、ResourceFacingServiceをServicePecificationRollesを使用して抽象的に管理することができます。また、それが持つか提供する関数の観点から、ResourceFacingServices専門家を定義するのにも役立ちます。,Service Domain,3,4.Resource Facing Service Spec ABE
-4.Service Bundle ABE,Service Bundle ABE,サービスバンドルABEは、ResourceFaceServices専門家のコレクションです。これにより、さまざまなセットのResourceFaceServicesPecificationsをグループ化する必要があるため、「バンドル」という名前の名前をグループ化できます。これらはResourFaceSpecificationsですので、特定のCustomerFacingService（ServicePackageによって表されるように）が必要とされるResourceFacingServicesを実装するための再利用可能なテンプレートを定義します。,Service Domain,3,4.Resource Facing Service Spec ABE
-4.Service Bundle Examples ABE,Service Bundle Examples ABE,サービスバンドルの例ABEには、ServiceBundlespecのサブクラスの例が含まれています。,Service Domain,4,4.Service Bundle ABE
-4.Service Catalog ABE,Service Catalog ABE,サービススペックを含むServiceCatalogsとカタログの仕様を表すエンティティのコレクション。,Service Domain,2,4.Service Specification ABE
-4.Service Strategy & Plan ABE,Service Strategy & Plan ABE,サービス戦略と計画ABEには、企業による拡張型または新しいサービスの必要性、および既存のサービスの退職の必要性に取り組むために使用されるエンティティが含まれています。これらのエンティティは、リソースドメインと製品ドメイン内の両方のエンティティに強い依存関係を持ちます。サービスの需要予測と同様に、サービスを利用するために使用するリソースを決定するなどの努力も、サービス需要予測と同様にサポートされています。,Service Domain,1,4.Service Domain
-4.Service Test ABE,Service Test ABE,サービステストは、テスト中のエンティティの機能を反映した対策をもたらすサービスに対して実行される機能です。,Service Domain,1,4.Service Domain
-4.Service Usage ABE,Service Usage ABE,"サービス使用量ABEは、サービス消費データを収集し、他の事業体で使用するためのサービス利用記録を生成します。このABEのエンティティは、物理的、論理的、およびネットワークの使用状況情報を提供します。
-詳しくは、共通ドメインの使用法を参照してください。",Service Domain,1,4.Service Domain
-4.TIP Service Management ABE,TIP Service Management ABE,TMFインタフェースプログラムは、このABEにおけるSIDサービスモデルへの拡張に基づくマルチテクノロジーオペレーティングシステムインタフェース（MTOSI）2.0で導入されました。結果の解決策セットは、2つの新しいサービス管理アクティベーションインターフェイスとサービスインベントリインタフェースを導入しました。,Service Domain,1,4.Service Domain
-5.Resource Domain,Resource Domain,リソースドメインは、締約国（個人/組織など）によって実行された役割、情報、および活動を表します（例：機能、アプリケーション、コンピューティング、ネットワーキング、ストレージなど）、サービスを実現するために使用される企業のインフラストラクチャを表します。アクティビティには、戦略、機能、ライフサイクル、カタログ、インベントリ、トポロジ、インストール、アクティベーション、アラーム、問題、パフォーマンス、調停、使用状況統計、および企業によって管理されているリソースのサポートが含まれます。リソースドメインは、他の情報モデルからの採掘情報を含む情報モデルのリソース部分のビューを提供する。 SIDはITU-T、IETF、ONF、MEF、DMTFの作業から描画します。このモデルは、フィットする他のリソース（サブ）モデルの基盤として機能するという表現の目的で構築されています。,Resource Domain,0,top
-5.Resource ABE,Resource ABE,リソースABEには、リソースのさまざまな側面を表すために使用されるエンティティが含まれています。これには、リソースの物理的および論理的側面を表す4組のエンティティが含まれます。そのようなリソースを、物理的および論理的特性および動作を持つ集約エンティティにどのように集約するかを示します。ネットワーク、サブネットワーク、ネットワークコンポーネント、およびネットワークの他の関連した側面を表現する方法を示します。,Resource Domain,1,5.Resource Domain
-5.Compound Resource ABE,Compound Resource ABE,複合資源ABEは、ComponeResourceのさまざまな側面を表すために使用されるエンティティを含む。 ComponeResourceは、物理的な特性と論理的特性と行動を持つ集計エンティティに、物理リソースとLogicalResourcesを集約したエンティティに集約する方法を示す一連のエンティティです。,Resource Domain,2,5.Resource ABE
-5.Logical Resource ABE,Logical Resource ABE,論理リソースABEには、LogicalResourceのさまざまな側面を表すために使用されるエンティティが含まれています。,Resource Domain,2,5.Resource ABE
-5.Address ABE,Address ABE,,Resource Domain,3,5.Logical Resource ABE
-5.Computing and Software ABE,Computing and Software ABE,,Resource Domain,3,5.Logical Resource ABE
-5.Software Resource and Software ABE,Software Resource and Software ABE,,Resource Domain,4,5.Computing and Software ABE
-5.Converged Network ABE,Converged Network ABE,,Resource Domain,3,5.Logical Resource ABE
-5.LogicalResource Examples ABE,LogicalResource Examples ABE,,Resource Domain,3,5.Logical Resource ABE
-5.Management Information ABE,Management Information ABE,,Resource Domain,3,5.Logical Resource ABE
-5.Accounting ABE,Accounting ABE,,Resource Domain,4,5.Management Information ABE
-5.Management Method ABE,Management Method ABE,,Resource Domain,4,5.Management Information ABE
-5.Performance Info ABE,Performance Info ABE,,Resource Domain,4,5.Management Information ABE
-5.Resource State ABE,Resource State ABE,,Resource Domain,4,5.Management Information ABE
-5.Resource Statistical ABE,Resource Statistical ABE,,Resource Domain,4,5.Management Information ABE
-5.Security ABE,Security ABE,,Resource Domain,4,5.Management Information ABE
-5.Service State ABE,Service State ABE,,Resource Domain,4,5.Management Information ABE
-5.Service Statistical Info ABE,Service Statistical Info ABE,,Resource Domain,4,5.Management Information ABE
-5.Protocol Service ABE,Protocol Service ABE,,Resource Domain,3,5.Logical Resource ABE
-5.Bridging Protocols ABE,Bridging Protocols ABE,,Resource Domain,4,5.Protocol Service ABE
-5.LAN Protocols ABE,LAN Protocols ABE,,Resource Domain,4,5.Protocol Service ABE
-5.Management Protocols ABE,Management Protocols ABE,,Resource Domain,4,5.Protocol Service ABE
-5.Routed Protocols ABE,Routed Protocols ABE,,Resource Domain,4,5.Protocol Service ABE
-5.Routing Protocols ABE,Routing Protocols ABE,,Resource Domain,4,5.Protocol Service ABE
-5.Signaling Protocols ABE,Signaling Protocols ABE,,Resource Domain,4,5.Protocol Service ABE
-5.Switching Protocols ABE,Switching Protocols ABE,,Resource Domain,4,5.Protocol Service ABE
-5.WAN Protocols ABE,WAN Protocols ABE,,Resource Domain,4,5.Protocol Service ABE
-5.Resource Number ABE,Resource Number ABE,リソース番号ABEには、番号のさまざまな側面を表すために使用されるエンティティが含まれています。このために一般的なクラスがあります。resourceNumberと他のドメインからの他のエンティティとの関係を説明するためのそれぞれの数字でresourceNumberとresourceNumberspecification。,Resource Domain,3,5.Logical Resource ABE
-5.Statistics ABE,Statistics ABE,,Resource Domain,3,5.Logical Resource ABE
-5.TIP Logical Resource ABE,TIP Logical Resource ABE,,Resource Domain,3,5.Logical Resource ABE
-5.Network Resource Fulfillment ABE,Network Resource Fulfillment ABE,,Resource Domain,4,5.TIP Logical Resource ABE
-5.Physical Resource ABE,Physical Resource ABE,PYSICALリソースABEは、物理リソースのさまざまな側面を表すために使用されるエンティティを含む。,Resource Domain,2,5.Resource ABE
-5.Auxiliary Component ABE,Auxiliary Component ABE,,Resource Domain,3,5.Physical Resource ABE
-5.Equipment ABE,Equipment ABE,,Resource Domain,3,5.Physical Resource ABE
-5.Equipment Holder ABE,Equipment Holder ABE,,Resource Domain,3,5.Physical Resource ABE
-5.HolderAtomic ABE,HolderAtomic ABE,,Resource Domain,4,5.Equipment Holder ABE
-5.HolderComposite ABE,HolderComposite ABE,,Resource Domain,4,5.Equipment Holder ABE
-5.Hardware ABE,Hardware ABE,,Resource Domain,3,5.Physical Resource ABE
-5.Physical Capacity ABE,Physical Capacity ABE,,Resource Domain,3,5.Physical Resource ABE
-5.Physical Component ABE,Physical Component ABE,,Resource Domain,3,5.Physical Resource ABE
-5.Physical Device ABE,Physical Device ABE,,Resource Domain,3,5.Physical Resource ABE
-5.Physical Role ABE,Physical Role ABE,,Resource Domain,3,5.Physical Resource ABE
-5.Pysical Role Example ABE,Pysical Role Example ABE,,Resource Domain,4,5.Physical Role ABE
-5.ResourceRole System View ABE,ResourceRole System View ABE,,Resource Domain,2,5.Resource ABE
-5.TIP Resource ABE,TIP Resource ABE,,Resource Domain,2,5.Resource ABE
-5.Network Resource Assurance ABE,Network Resource Assurance ABE,,Resource Domain,3,5.TIP Resource ABE
-5.Network Resource Basic ABE,Network Resource Basic ABE,,Resource Domain,3,5.TIP Resource ABE
-5.Resource Capacity ABE,Resource Capacity ABE,長期間にわたって数量の量と単位で測定されたリソースドメインエンティティの特定の能力。,Resource Domain,1,5.Resource Domain
-5.Resource Configuration ABE,Resource Configuration ABE,リソースが特性特定および関連資源の観点からどのように動作または機能するかの定義、ならびに資源が特性および関連資源の観点からどのように機能または機能するかの表現の表現の定義。,Resource Domain,1,5.Resource Domain
-5.Resource Order ABE,Resource Order ABE,リソースオーダーABEには、リソースを提供/更新/削除する要求に関連するエンティティが含まれています。,Resource Domain,1,5.Resource Domain
-5.Resource Number Portability ABE,Resource Number Portability ABE,リソース番号移植性ABEには、移植性自体にグループ化されているエンティティが含まれています。これは、ポートのポートのポート、ポートアウト、ポートオーバー、および数字の退職など、含まれるすべてのプロセスを意味します。,Resource Domain,2,5.Resource Order ABE
-5.Resource Number Portability Role ABE,Resource Number Portability Role ABE,リソース番号ポータビリティロールABEには、移植性のために登録された役割に関連するエンティティが含まれています。,Resource Domain,2,5.Resource Order ABE
-5.Resource Party Roles ABE,Resource Party Roles ABE,リソースパーティーの役割ABEは、技術者、ResourceManagerなどのリソースドメインに関連するすべてのパーティロールを含みます。,Resource Domain,1,5.Resource Domain
-5.Resource Performance ABE,Resource Performance ABE,リソースパフォーマンスABEは、さまざまなパフォーマンス統計やリソースエンティティの動作特性を収縮、相関、統合、および検証します。それはパフォーマンスを監視および報告できるエンティティのセットを提供します。このABEのエンティティは、物理的、論理的、および性能情報を提供します。これらの各エンティティはまた、計画された目標に対するネットワーク性能評価を行い、誤り率を含む傾向分析のさまざまな側面を実行し、解析と資源の劣化をもたらします。このABEのエンティティはまたリソース内のトラフィックを管理します。これには、リソースロードの定義統計、およびトラフィックトレンド解析が含まれます。,Resource Domain,1,5.Resource Domain
-5.Resource Specification ABE,Resource Specification ABE,リソース仕様ABEには、4つのタイプのリソースエンティティのそれぞれの共有特性と動作を定義するエンティティが含まれています。これにより、複数のインスタンスを単一の仕様エンティティから派生させることができます。この派生では、各インスタンスは、その関連テンプレートで定義されている共有特性と動作を使用します。,Resource Domain,1,5.Resource Domain
-5.CompoundResource Specification ABE,CompoundResource Specification ABE,ComponeResource指定ABEは、ComponeResourceの不変特性と動作（属性、メソッド、制約、および関係）を定義するために使用されます。,Resource Domain,2,5.Resource Specification ABE
-5.LogicalResource Specification ABE,LogicalResource Specification ABE,論理リソース仕様ABEは、LogicalResourceの不変特性と動作（属性、メソッド、制約、および関係）を定義するために使用されます。,Resource Domain,2,5.Resource Specification ABE
-5.Logical Role Specification ABE,Logical Role Specification ABE,,Resource Domain,3,5.LogicalResource Specification ABE
-5.LogicalResource Spec Examples ABE,LogicalResource Spec Examples ABE,LogicalResourcespecの例ABEには、LogicalResourcespecsの明示的なモデリングの例が含まれています。,Resource Domain,3,5.LogicalResource Specification ABE
-5.Software Resource and Software Specifications ABE,Software Resource and Software Specifications ABE,,Resource Domain,3,5.LogicalResource Specification ABE
-5.Software Resource Specification ABE,Software Resource Specification ABE,属性値がそれに関連するSoftWarEresourceのインスタンスごとに属性値が共有されているSoftWareResourcessecificationの定義。このエンティティはスーパークラスです,Resource Domain,4,5.Software Resource and Software Specifications ABE
-5.Software Specification ABE,Software Specification ABE,,Resource Domain,4,5.Software Resource and Software Specifications ABE
-5.PhysicalResource Specification ABE,PhysicalResource Specification ABE,物理リソース仕様ABEは、物理リソースの不変特性と動作（属性、メソッド、制約、および関係）を記述します。,Resource Domain,2,5.Resource Specification ABE
-5.Physical Role Specification ABE,Physical Role Specification ABE,,Resource Domain,3,5.PhysicalResource Specification ABE
-5.Resource Catalog ABE,Resource Catalog ABE,ResourcePecificationsを含むResourceCatalogとカタログの仕様を表すエンティティのコレクション。,Resource Domain,2,5.Resource Specification ABE
-5.Resource Strategy & Plan ABE,Resource Strategy & Plan ABE,リソース戦略＆プランABEは、最初に、そして成長の両方でネットワークとリソース要素を計画するために使用されます。論理リソースの成長と物理的なリソースの成長の両方を調整します。入力は、ビジネスソース、サービス予測、現在および予測されたネットワーク利用、新技術、および引退技術の予算です。論理リソースと物理リソースの両方のライフサイクル（インストール、修正、削除、および退職）を処理します。,Resource Domain,1,5.Resource Domain
-5.Resource Test ABE,Resource Test ABE,リソーステストABEには、PhysicalResources、LogicalResources、およびCompinationResourcesのテストに使用されるエンティティが含まれています。これらのエンティティは通常、トラブル診断の一部またはトラブル修理が完了した後に、インストール中に呼び出されます。,Resource Domain,1,5.Resource Domain
-5.Resource Topology ABE,Resource Topology ABE,リソーストポロジABEには、物理​​的、論理的、およびネットワークのトポロジ情報を定義するエンティティが含まれています。この情報は、ネットワークの現在の状態を評価するために重要であり、問​​題、能力の調整、および一般にネットワークとの関係の情報を提供するだけでなく、（全体としてもそのコンポーネントを持つ）という情報を提供するために重要です。これらのトポロジービューのそれぞれは、階層化ネットワーク内の1つまたは複数のレイヤを管理するために使用できる独自の物理的、論理的、またはネットワーク関連の情報を提供します。,Resource Domain,1,5.Resource Domain
-5.Resource Trouble ABE,Resource Trouble ABE,リソーストラブルABEは、問題が物理的または論理的であるかどうかにかかわらず、割り当てられたリソースインスタンスで見つかった問題を管理します。このABEの事業体はこれらの問題を検出し、彼らの根本原因を決定し、これらの問題を解決し、問題の診断と解決に関わる活動の歴史を維持するために行動します。問題の検出は、ソフトウェア（例えば、警報に応答する）および/またはハードウェア（例えば、測定またはプローブ）および/または手動（例えば目視検査）を介して行うことができる。これには、追跡、報告、問題、テスト、検証、および修理活動の全体的な管理を修正するための人々の割り当てが含まれます。,Resource Domain,1,5.Resource Domain
-5.Alarm ABE,Alarm ABE,,Resource Domain,2,5.Resource Trouble ABE
-5.Alarm Severity Assignment Profile ABE,Alarm Severity Assignment Profile ABE,,Resource Domain,2,5.Resource Trouble ABE
-5.Resource Usage ABE,Resource Usage ABE,リソース使用量ABEはリソース消費データを収集し、他のビジネスエンティティで使用するためのリソース使用量レコードを生成します。このABEのエンティティは、物理的、論理的、およびネットワークの使用状況情報を提供します。,Resource Domain,1,5.Resource Domain
-5.Stock Item ABE,Stock Item ABE,在庫品目ABEは、サプライチェーンに必要なすべての情報をカバーしています。それは含まれています•在庫品目カタログ•倉庫に保存されている在庫品•在庫品目の移動（受信または出荷）,Resource Domain,1,5.Resource Domain
-6.Business Partner Domain,Business Partner Domain,ビジネスパートナドメインは、締約国（例えば、個人/組織など）によって行われた役割、情報、および活動を表し、戦略的計画、定義、開発、運用面およびビジネスパートナーとのあらゆる種類の連絡先（例えば、サプライヤー、パートナーなど）企業が事業を運営するために協力している。活動には、ビジネスパートナの管理が含まれます。戦略、機能、価値の提案、関係、プロファイル、データ、プライバシー、セキュリティ、相互作用、コミュニケーション、入札、契約、注文、求職、資料、アカウント、残高、在庫、調整、サービスレベル契約（ SLA）、トレーニング、問題、ケース、請求書、支払い、収益、紛争、コレクション、ロイヤルティ、パフォーマンス、利用統計、分析、およびビジネスパートナーの支援、納得、取得、使用、サポート、購入、支払い、支払う彼らが提供および/または企業から入手する商品およびサービス（製品）。ビジネスパートナーは、企業（すなわちサービスプロバイダ）が何らかの形の協調提携を有する商業当事者である。この関係は、両方の当事者が第三者と同盟国ではなく、関連当事者のゆるい配置に委託する正式な契約専用債券の範囲であり得る。ビジネスパートナドメイン情報と活動の多くは、基礎ドメイン内で定義されている一般化概念のビジネスパートナの役割固有の専門化です。,Business Partner Domain,0,top
-6.Applied Party Billing Rate ABE,Applied Party Billing Rate ABE,このABEはまだ暫定的です,Business Partner Domain,1,6.Business Partner Domain
-6.Business Partner Account ABE,Business Partner Account ABE,ビジネスパートナアカウントABEはアカウントABEから継承し、アカウントを説明する基本属性と関係を指定するために必要なすべてのエンティティを含みます。それはまたBusinessPartnerのコンテキストの特異性を表します。,Business Partner Domain,1,6.Business Partner Domain
-6.Business Partner Party Roles ABE,Business Partner Party Roles ABE,ビジネスパートナパーティーの役割ABEは、パートナーの役割と関連情報を管理します。,Business Partner Domain,1,6.Business Partner Domain
-6.Business Partner Product Order ABE,Business Partner Product Order ABE,"ビジネスパートナーの製品注文ABEには、サービスプロバイダーのProductOfferingのコンテキストで、1つまたは複数の製品を調達、更新、または削除するために使用される通信を指定するために必要なすべてのエンティティが含まれています。
+ロイヤルティプログラムProductは、製品コンポーネントの一種であり、LoyaltyProgramProdSpecによって説明されています。",Product Domain,1,Product Domain
+Loyalty Program ABE,Loyalty Program ABE,ロイヤルティプログラムABEには、ロイヤルティプログラムやロイヤリティカードなどの特定の顧客のためのロイヤルティプログラムをインスタンス化するために必要なすべてのエンティティが含まれています。,Product Domain,2,Loyalty ABE
+Loyalty Program Specification ABE,Loyalty Program Specification ABE,ロイヤルティプログラム仕様ABEには、ロイヤルティプログラムProdSpecやLyyaltyRuleなどのロイヤルティプログラムを指定するすべてのエンティティが含まれています。,Product Domain,2,Loyalty ABE
+Product ABE,Product ABE,顧客、使用中の場所、および割り当てられた電話番号やインターネットアドレスなどの構成特性など、製品の提供または仕様の製品在庫の製品インベントリのインスタンスを表します。製品ABEはまた、製品が実現されるサービスおよび/またはリソースを追跡する。,Product Domain,1,Product Domain
+Example Product Entities ABE,Example Product Entities ABE,サンプル製品エンティティABEには、使用可能な製品サブクラスの例が含まれています。,Product Domain,2,Product ABE
+Network Product ABE,Network Product ABE,ネットワーク製品ABEには、ネットワーク製品の説明と関係が含まれています。,Product Domain,2,Product ABE
+Product Price ABE,Product Price ABE,製品価格ABEには、製品に適用されるすべての価格が記載されています。,Product Domain,2,Product ABE
+Usage Volume Product ABE,Usage Volume Product ABE,使用量製品ABEには、UsageVolumeProductとこの種類の製品に固有のすべてのエンティティが含まれています。,Product Domain,2,Product ABE
+Product Capacity ABE,Product Capacity ABE,長期間にわたって数量の量および単位で測定された製品ドメインエンティティの特定の能力。,Product Domain,1,Product Domain
+Product Configuration ABE,Product Configuration ABE,製品の運用または機能の観点から、特性の特徴と関連資源（S）、ServicesPECの観点から機能し、特性と関連性の観点から機能する方法の表現の定義リソース、製品、サービス。,Product Domain,1,Product Domain
+Product Action ABE,Product Action ABE,Product Action ABEには、製品特定、ProductOfferings、およびProductConfigSpecの可能なアクションを記述するビジネスエンティティが含まれています。,Product Domain,2,Product Configuration ABE
+Product Offering ABE,Product Offering ABE,ABEを提供する製品は、製品カタログの形で市場に特定の価格で利用可能にされた有形で無形の商品を説明しています。このABEはまた、適切な市場戦略に基づいて市場セグメントをターゲットにする責任を負います。,Product Domain,1,Product Domain
+Pricing Logic Algorithm ABE,Pricing Logic Algorithm ABE,価格化論理アルゴリズムABEは、イン​​タフェース仕様のインスタンス化を表すエンティティを、外部格付け関数（SIDのモデル化されたバラバオードなし）を含む。,Product Domain,2,Product Offering ABE
+PLA Spec ABE,PLA Spec ABE,PLA SPEC ABEは、価格設定論理アルゴリズムを指定します。,Product Domain,3,Pricing Logic Algorithm ABE
+Product Catalog ABE,Product Catalog ABE,製品カタログABEは、ProductOfferingsとその関連する製品の専用宣益を含むそれらによって記述された製品カタログとカタログの仕様を表すエンティティの集まりです。,Product Domain,2,Product Offering ABE
+Product Offering Price ABE,Product Offering Price ABE,Product Price Abeを提供する製品は、製品専門枠に関連するすべての価格について説明しています。,Product Domain,2,Product Offering ABE
+Product Offering Price Rule ABE,Product Offering Price Rule ABE,商品提供価格規則ABEは、プロダクト事業に関する価格に関連するすべての規則を記載しています。,Product Domain,2,Product Offering ABE
+Product Offering Price Tax ABE,Product Offering Price Tax ABE,価格税ABEを提供する製品は、ProductOfFeringPriceとProductPriceの文脈で課税がどのようにモデル化されるかについて説明しています。モデルは次の側面をカバーしています。•納税事項と税申請 - これらは、計算に関する特定の状況の影響を含め、税がどのように計算されるかを指定します。 ProductOfferingのために追加されました•TaxProdPricaltation  - これは、実際に購入され、パーティーに配信された製品に対してどの税が追加されるかを表す製品プリツェへの変更です。税額は、最終的にInpontationCustomerBillingTaxRate（または従事者の党モデルに従ってAppliedPartyBillingTaxRate）として請求書に表されます。,Product Domain,2,Product Offering ABE
+Product Placement ABE,Product Placement ABE,製品の配置ABEは、ダイレクトメールを介して、製品専門管理がどのように販売されるかについて説明します。プロダクトプレスタンスには、市場の侵入、製品戦略などのようなものを記述する定性的声明、または評価が含まれています。,Product Domain,2,Product Offering ABE
+Product Promotion ABE,Product Promotion ABE,製品推進ABEは、締約国を購入、家賃、または他の方法で調達することを奨励するための製品上限の出版を説明しています。,Product Domain,2,Product Offering ABE
+Product Specification ABE,Product Specification ABE,製品仕様ABEには、ビジネスユーザーによって認識されている製品仕様を表すものがすべて含まれており、マーケティングオペレータが機能レベルレベルで販売したい（すなわち、使用可能な容量は何ですか...）。,Product Domain,1,Product Domain
+Example Product Specification Entities ABE,Example Product Specification Entities ABE,サンプル製品仕様エンティティABEには、使用可能な製品設定サブクラスの例が含まれています。,Product Domain,2,Product Specification ABE
+Goods and Shipping Product Spec ABE,Goods and Shipping Product Spec ABE,商品・出荷商品スペックABEは、商品と輸送製品仕様とその関係の特異性を説明しています。,Product Domain,2,Product Specification ABE
+Network Product Spec ABE,Network Product Spec ABE,ネットワーク製品SPEC ABEには、NetworkProductspecの説明と関係が含まれています。,Product Domain,2,Product Specification ABE
+Usage Volume Product Spec ABE,Usage Volume Product Spec ABE,使用量製品仕様ABEには、UsageVolumeProductspecとこの種の製品に固有のすべてのエンティティが含まれています。,Product Domain,2,Product Specification ABE
+Product Test ABE,Product Test ABE,製品テストは、試験中の製品の機能を反映する対策をもたらす製品に対して行われる機能です。,Product Domain,1,Product Domain
+Product Usage ABE,Product Usage ABE,顧客の請求書に表示される可能性がある顧客に関連する顧客に関連する製品の使用を表します。,Product Domain,1,Product Domain
+Product Usage Spec ABE,Product Usage Spec ABE,製品使用スペックABEは、製品専用の使用法の種類を指定します。,Product Domain,2,Product Usage ABE
+Service Domain,Service Domain,サービスドメインは、当事者（例えば、個人/組織）によって実行された役割、情報、および活動を表しています。活動には、管理、機能、ライフサイクル、カタログ、在庫、設置、活性化、問題、パフォーマンス、ガイド、調停、使用統計、および顧客と資源の直面しているサービスの支援とサポートが含まれます。企業によるリソース。,Service Domain,0,top
+Service ABE,Service ABE,サービスABEには、顧客向けとリソース面の両方のサービスの種類を表すために使用されるエンティティが含まれています。このABEのエンティティは、あらゆる型のサービスを検討、分析、設定、監視および修復するためのさまざまなビューを提供します。このABEのエンティティはサービス仕様エンティティから派生しています。,Service Domain,1,Service Domain
+Customer Facing Service ABE,Customer Facing Service ABE,顧客向けサービスABEは、組織のインフラストラクチャ内の製品の実現を表す特定のCustomerFaceServiceの特性を定義しています。対照的に、リソースが直面しているサービスABEは、CustomerFacingServiceの一部に直面しているネットワーク/インフラストラクチャをサポートする特定のResourceFacingServiceの特性を定義する抽象化です。 ResourceFacingServicesは、CustomerFacingServiceをサポートするために必要な「内部」サービスです。このABEのエンティティは、すべてのタイプのカスタムフェイスサービスを調べ、分析、設定、監視、修復するためのさまざまなビューを提供します。このABEのエンティティは、カスタマーサービス仕様エンティティから派生しています。,Service Domain,2,Service ABE
+Customer Facing Service Example ABE,Customer Facing Service Example ABE,顧客向けサービスの例ABEには、カスタマファイクスサービスエンティティの例が含まれています。,Service Domain,3,Customer Facing Service ABE
+CustomerFacing Service Role ABE,CustomerFacing Service Role ABE,顧客向けサービス役割ABEは、このタイプのサービスが再生する役割の観点から、CustomerFacingServiceの可変特性を表すために使用されるCustomerServiceRolesを定義しています。,Service Domain,3,Customer Facing Service ABE
+Resource Facing Service ABE,Resource Facing Service ABE,サービスABEには、CustomerFacingServicesとResourceFacingServicesという2つの基本的に異なる種類のサービスを表すために使用されるエンティティが含まれています。 CustomerFacingServiceは、組織のインフラストラクチャ内の製品の実現を表す特定のサービスの特性を定義します。対照的に、ResourceFacingServiceは、サービスのネットワーク/インフラストラクチャをサポートする特定のサービスの特性を定義する抽象化です。たとえば、VPNはCustomerFacingServiceの一例であり、VPNを構成するネットワークデバイス間で異なる種類のルーティングを実行するサブサービスはResourceFacingServicesの例である。 ResourceFacingServicesは、CustomerFacingServiceをサポートするために必要な「内部」サービスです。このABEのエンティティは、あらゆる型のサービスを検討、分析、設定、監視および修復するためのさまざまなビューを提供します。このABEのエンティティはサービス仕様エンティティから派生しています。,Service Domain,2,Service ABE
+Resource Facing Service Examples ABE,Resource Facing Service Examples ABE,リソース直面サービスの例ABEには、ResourceFacingServicesの例が含まれています。,Service Domain,3,Resource Facing Service ABE
+Resource Facing Service Role ABE,Resource Facing Service Role ABE,リソースが直面するサービスロールABEは、このタイプのサービスが再生する役割の観点から、ResourceFacingServiceの変数特性を表すために使用される担当者を定義しています。,Service Domain,3,Resource Facing Service ABE
+Service Capacity ABE,Service Capacity ABE,長期間にわたって数量の量と単位で測定されたサービスドメインエンティティの特定の機能。,Service Domain,1,Service Domain
+Service Configuration ABE,Service Configuration ABE,"サービスが特性の特徴と関連資源（S）およびサービススペックの観点から機能する方法の定義、ならびに製品が特性および関連リソースに関してどのように機能するかまたは機能の表現の表現の定義。サービス（S）
+詳細については、共通ドメインのConfiguration＆Profiling ABEを参照してください。",Service Domain,1,Service Domain
+Service Order ABE,Service Order ABE,サービス指図ABEは、顧客注文の製品を実現するサービスオーダーに関連するサービスに分解する要求の種類を表すエンティティを含む。,Service Domain,1,Service Domain
+Service Party Roles ABE,Service Party Roles ABE,サービスパーティの役割ABEは、ServiceManagerなどのサービスドメインに関連するすべてのパーティロールを含みます。,Service Domain,1,Service Domain
+Service Performance ABE,Service Performance ABE,サービスパフォーマンスABEは、さまざまなパフォーマンス統計やその他の顧客とリソースに直面しているサービスエンティティの操作特性を収縮し、統合し、および検証します。それはパフォーマンスを監視および報告できるエンティティのセットを提供します。これらの各エンティティは、計画された目標に対するネットワーク性能評価も行い、誤り率を含む傾向分析のさまざまな側面を実行し、解析とサービスの劣化をもたらします。このABEのエンティティはまた、サービスによって生成されたトラフィック、およびトラフィックトレンド分析を管理します。これは、特定のサービスのデータ、制御および管理機能を分離する新しい技術にとって重要です。,Service Domain,1,Service Domain
+Service Level Spec ABE,Service Level Spec ABE,サービス仕様ABEには、両方の種類のサービスエンティティの不変特性と動作を定義するエンティティが含まれています。これにより、複数のインスタンスを単一の仕様エンティティから派生させることができます。この派生では、各インスタンスは、その関連テンプレートで定義されている不変特性と動作を使用します。このABEには、ServiceLevelspecificationの3番目のタイプのサービス仕様エンティティが含まれています。この種の仕様は、サービスレベル契約に拘束されているサービスをテンプル化します。,Service Domain,2,Service Performance ABE
+Service Performance Specification ABE,Service Performance Specification ABE,サービスパフォーマンス仕様ABEは、サービスが機能している方法の尺度を定義しています。,Service Domain,2,Service Performance ABE
+Service Problem ABE,Service Problem ABE,サービス問題ABEは、サービスポイントビューから障害、アラーム、および停止を管理します。これは、原因が物理的または論理的であるかどうかにかかわらず、トラブルチケットと相関しています。このABEの他のエンティティは、これら3種類の問題のそれぞれからの回復を指示するために使用されます。それらは、リソースの障害とアラームをそれらのリソース上で実行されるサービスの劣化と停止に関連付ける機能を提供します。これらの機能は、サービスの構築に使用されるリソースとテクノロジとは無関係です。このABEの3番目のエンティティのセットは、顧客報告の問題とネットワークによる問題を区別するために使用されます。,Service Domain,1,Service Domain
+Service Specification ABE,Service Specification ABE,サービス仕様ABEには、両方のタイプのサービスエンティティの共有特性を定義するエンティティが含まれています。これにより、複数のインスタンスを単一の仕様エンティティから派生させることができます。この派生では、各インスタンスはそれに関連する仕様で定義されている特性を使用します。このABEのエンティティは、標準への遵守、サービスの特徴、依存関係（身体的および論理的、そして他のサービスの両方）、品質、そして費用を区別します。一般に、このABEのエンティティは、サービスを製品にバインドしてリソースを使用して実行することを可能にします。ネットワークサービスは、構築することができるサービスの一例です。追加の例には、インストール、メンテナンス、監視、およびコンテンツ認証、承認、会計、および監査機能が含まれます。,Service Domain,1,Service Domain
+Customer Facing Service Spec ABE,Customer Facing Service Spec ABE,顧客向けサービス仕様ABEは、一連のカスタマーフェイスサービスの共通特性を定義しています。このスケールは、複数のCustomerFaceServicesPECを定義して、さまざまなグループのCustomerFacingServicesの一般的な特性をモデル化することを可能にします。,Service Domain,2,Service Specification ABE
+Customer Facing Service Spec Examples ABE,Customer Facing Service Spec Examples ABE,顧客向けサービス仕様の例ABEには、CustomerFaceServicespecsのサブクラスの例が含まれています。,Service Domain,3,Customer Facing Service Spec ABE
+Customer Facing Service Spec Role ABE,Customer Facing Service Spec Role ABE,CustomerFacingServiceのServicePecificationRoolesのセットで、サービススペックの役割の顧客は、ServicePecificationRoolesのセットの観点から、サービススペックを定義しています。 CustomerFacingServiceの共有特性を表すために使用されます。これにより、CustomerFacingServiceをServicePecificationRollesを使用して抽象的に管理することができます。それはまた、それが提供または提供する関数に関してカスタマーフェイスサービスを定義するのにも役立ちます。,Service Domain,3,Customer Facing Service Spec ABE
+Service Package ABE,Service Package ABE,Service Package ABEは、1つ以上の製品専用で指定された機能を満たすために、さまざまなCustomerFacingServicespecsのセットをバンドルするという概念を定義します。これにより、これらのCustomerFaceServicesの共有特性を指定することができ、その結果、複数の製品を関連製品の設定から構築できます。,Service Domain,3,Customer Facing Service Spec ABE
+Service Package Spec Examples ABE,Service Package Spec Examples ABE,サービスパッケージのスペック例ABEには、ServicePackagesPecsのサブクラスのサブクラスが含まれています。,Service Domain,4,Service Package ABE
+Resource Facing Service Spec ABE,Resource Facing Service Spec ABE,サービススペックABEが直面しているリソースは、一連のResourceFaceServicesの共通特性を定義します。このスケールでは、ResourceFacingServicesのさまざまなグループの一般的な特性をモデル化するために複数のResourceFacingServicesPECを定義できるようにします。,Service Domain,2,Service Specification ABE
+Resource Facing Service Spec Role ABE,Resource Facing Service Spec Role ABE,サービススペックロールのリソースABEは、ResourceFacingServiceのServicePecificationRoolesのセットに関して、サービススペック化を定義します。 ResourceFacingServiceの共有特性を表すために使用されます。これにより、ResourceFacingServiceをServicePecificationRollesを使用して抽象的に管理することができます。また、それが持つか提供する関数の観点から、ResourceFacingServices専門家を定義するのにも役立ちます。,Service Domain,3,Resource Facing Service Spec ABE
+Service Bundle ABE,Service Bundle ABE,サービスバンドルABEは、ResourceFaceServices専門家のコレクションです。これにより、さまざまなセットのResourceFaceServicesPecificationsをグループ化する必要があるため、「バンドル」という名前の名前をグループ化できます。これらはResourFaceSpecificationsですので、特定のCustomerFacingService（ServicePackageによって表されるように）が必要とされるResourceFacingServicesを実装するための再利用可能なテンプレートを定義します。,Service Domain,3,Resource Facing Service Spec ABE
+Service Bundle Examples ABE,Service Bundle Examples ABE,サービスバンドルの例ABEには、ServiceBundlespecのサブクラスの例が含まれています。,Service Domain,4,Service Bundle ABE
+Service Catalog ABE,Service Catalog ABE,サービススペックを含むServiceCatalogsとカタログの仕様を表すエンティティのコレクション。,Service Domain,2,Service Specification ABE
+Service Strategy & Plan ABE,Service Strategy & Plan ABE,サービス戦略と計画ABEには、企業による拡張型または新しいサービスの必要性、および既存のサービスの退職の必要性に取り組むために使用されるエンティティが含まれています。これらのエンティティは、リソースドメインと製品ドメイン内の両方のエンティティに強い依存関係を持ちます。サービスの需要予測と同様に、サービスを利用するために使用するリソースを決定するなどの努力も、サービス需要予測と同様にサポートされています。,Service Domain,1,Service Domain
+Service Test ABE,Service Test ABE,サービステストは、テスト中のエンティティの機能を反映した対策をもたらすサービスに対して実行される機能です。,Service Domain,1,Service Domain
+Service Usage ABE,Service Usage ABE,"サービス使用量ABEは、サービス消費データを収集し、他の事業体で使用するためのサービス利用記録を生成します。このABEのエンティティは、物理的、論理的、およびネットワークの使用状況情報を提供します。
+詳しくは、共通ドメインの使用法を参照してください。",Service Domain,1,Service Domain
+TIP Service Management ABE,TIP Service Management ABE,TMFインタフェースプログラムは、このABEにおけるSIDサービスモデルへの拡張に基づくマルチテクノロジーオペレーティングシステムインタフェース（MTOSI）2.0で導入されました。結果の解決策セットは、2つの新しいサービス管理アクティベーションインターフェイスとサービスインベントリインタフェースを導入しました。,Service Domain,1,Service Domain
+Resource Domain,Resource Domain,リソースドメインは、締約国（例えば、個人/組織）によって実行された役割、情報、および活動を表し、リソースの戦略的計画、定義、開発および運用的側面（例えば、機能、アプリケーション、コンピューティング、ネットワーキングおよびストレージ）に関与する役割を果たしています。サービスを実現するために使用される企業のインフラストラクチャを表します。アクティビティには、戦略、機能、ライフサイクル、カタログ、インベントリ、トポロジ、インストール、アクティベーション、アラーム、問題、パフォーマンス、調停、使用状況統計、および企業によって管理されているリソースのサポートが含まれます。リソースドメインは、他の情報モデルからの採掘情報を含む情報モデルのリソース部分のビューを提供する。 SIDはITU-T、IETF、ONF、MEF、DMTFの作業から描画します。このモデルは、フィットする他のリソース（サブ）モデルの基盤として機能するという表現の目的で構築されています。,Resource Domain,0,top
+Resource ABE,Resource ABE,リソースABEには、リソースのさまざまな側面を表すために使用されるエンティティが含まれています。これには、リソースの物理的および論理的側面を表す4組のエンティティが含まれます。そのようなリソースを、物理的および論理的特性および動作を持つ集約エンティティにどのように集約するかを示します。ネットワーク、サブネットワーク、ネットワークコンポーネント、およびネットワークの他の関連した側面を表現する方法を示します。,Resource Domain,1,Resource Domain
+Compound Resource ABE,Compound Resource ABE,複合資源ABEは、ComponeResourceのさまざまな側面を表すために使用されるエンティティを含む。 ComponeResourceは、物理的な特性と論理的特性と行動を持つ集計エンティティに、物理リソースとLogicalResourcesを集約したエンティティに集約する方法を示す一連のエンティティです。,Resource Domain,2,Resource ABE
+Logical Resource ABE,Logical Resource ABE,論理リソースABEには、LogicalResourceのさまざまな側面を表すために使用されるエンティティが含まれています。,Resource Domain,2,Resource ABE
+Address ABE,Address ABE,,Resource Domain,3,Logical Resource ABE
+Computing and Software ABE,Computing and Software ABE,,Resource Domain,3,Logical Resource ABE
+Software Resource and Software ABE,Software Resource and Software ABE,,Resource Domain,4,Computing and Software ABE
+Converged Network ABE,Converged Network ABE,,Resource Domain,3,Logical Resource ABE
+LogicalResource Examples ABE,LogicalResource Examples ABE,,Resource Domain,3,Logical Resource ABE
+Management Information ABE,Management Information ABE,,Resource Domain,3,Logical Resource ABE
+Accounting ABE,Accounting ABE,,Resource Domain,4,Management Information ABE
+Management Method ABE,Management Method ABE,,Resource Domain,4,Management Information ABE
+Performance Info ABE,Performance Info ABE,,Resource Domain,4,Management Information ABE
+Resource State ABE,Resource State ABE,,Resource Domain,4,Management Information ABE
+Resource Statistical ABE,Resource Statistical ABE,,Resource Domain,4,Management Information ABE
+Security ABE,Security ABE,,Resource Domain,4,Management Information ABE
+Service State ABE,Service State ABE,,Resource Domain,4,Management Information ABE
+Service Statistical Info ABE,Service Statistical Info ABE,,Resource Domain,4,Management Information ABE
+Protocol Service ABE,Protocol Service ABE,,Resource Domain,3,Logical Resource ABE
+Bridging Protocols ABE,Bridging Protocols ABE,,Resource Domain,4,Protocol Service ABE
+LAN Protocols ABE,LAN Protocols ABE,,Resource Domain,4,Protocol Service ABE
+Management Protocols ABE,Management Protocols ABE,,Resource Domain,4,Protocol Service ABE
+Routed Protocols ABE,Routed Protocols ABE,,Resource Domain,4,Protocol Service ABE
+Routing Protocols ABE,Routing Protocols ABE,,Resource Domain,4,Protocol Service ABE
+Signaling Protocols ABE,Signaling Protocols ABE,,Resource Domain,4,Protocol Service ABE
+Switching Protocols ABE,Switching Protocols ABE,,Resource Domain,4,Protocol Service ABE
+WAN Protocols ABE,WAN Protocols ABE,,Resource Domain,4,Protocol Service ABE
+Resource Number ABE,Resource Number ABE,リソース番号ABEには、番号のさまざまな側面を表すために使用されるエンティティが含まれています。このために一般的なクラスがあります。resourceNumberと他のドメインからの他のエンティティとの関係を説明するためのそれぞれの数字でresourceNumberとresourceNumberspecification。,Resource Domain,3,Logical Resource ABE
+Statistics ABE,Statistics ABE,,Resource Domain,3,Logical Resource ABE
+TIP Logical Resource ABE,TIP Logical Resource ABE,,Resource Domain,3,Logical Resource ABE
+Network Resource Fulfillment ABE,Network Resource Fulfillment ABE,,Resource Domain,4,TIP Logical Resource ABE
+Physical Resource ABE,Physical Resource ABE,PYSICALリソースABEは、物理リソースのさまざまな側面を表すために使用されるエンティティを含む。,Resource Domain,2,Resource ABE
+Auxiliary Component ABE,Auxiliary Component ABE,,Resource Domain,3,Physical Resource ABE
+Equipment ABE,Equipment ABE,,Resource Domain,3,Physical Resource ABE
+Equipment Holder ABE,Equipment Holder ABE,,Resource Domain,3,Physical Resource ABE
+HolderAtomic ABE,HolderAtomic ABE,,Resource Domain,4,Equipment Holder ABE
+HolderComposite ABE,HolderComposite ABE,,Resource Domain,4,Equipment Holder ABE
+Hardware ABE,Hardware ABE,,Resource Domain,3,Physical Resource ABE
+Physical Capacity ABE,Physical Capacity ABE,,Resource Domain,3,Physical Resource ABE
+Physical Component ABE,Physical Component ABE,,Resource Domain,3,Physical Resource ABE
+Physical Device ABE,Physical Device ABE,,Resource Domain,3,Physical Resource ABE
+Physical Role ABE,Physical Role ABE,,Resource Domain,3,Physical Resource ABE
+Pysical Role Example ABE,Pysical Role Example ABE,,Resource Domain,4,Physical Role ABE
+ResourceRole System View ABE,ResourceRole System View ABE,,Resource Domain,2,Resource ABE
+TIP Resource ABE,TIP Resource ABE,,Resource Domain,2,Resource ABE
+Network Resource Assurance ABE,Network Resource Assurance ABE,,Resource Domain,3,TIP Resource ABE
+Network Resource Basic ABE,Network Resource Basic ABE,,Resource Domain,3,TIP Resource ABE
+Resource Capacity ABE,Resource Capacity ABE,長期間にわたって数量の量と単位で測定されたリソースドメインエンティティの特定の能力。,Resource Domain,1,Resource Domain
+Resource Configuration ABE,Resource Configuration ABE,リソースが特性特定および関連資源の観点からどのように動作または機能するかの定義、ならびに資源が特性および関連資源の観点からどのように機能または機能するかの表現の表現の定義。,Resource Domain,1,Resource Domain
+Resource Order ABE,Resource Order ABE,リソースオーダーABEには、リソースを提供/更新/削除する要求に関連するエンティティが含まれています。,Resource Domain,1,Resource Domain
+Resource Number Portability ABE,Resource Number Portability ABE,リソース番号移植性ABEには、移植性自体にグループ化されているエンティティが含まれています。これは、ポートのポートのポート、ポートアウト、ポートオーバー、および数字の退職など、含まれるすべてのプロセスを意味します。,Resource Domain,2,Resource Order ABE
+Resource Number Portability Role ABE,Resource Number Portability Role ABE,リソース番号ポータビリティロールABEには、移植性のために登録された役割に関連するエンティティが含まれています。,Resource Domain,2,Resource Order ABE
+Resource Party Roles ABE,Resource Party Roles ABE,リソースパーティーの役割ABEは、技術者、ResourceManagerなどのリソースドメインに関連するすべてのパーティロールを含みます。,Resource Domain,1,Resource Domain
+Resource Performance ABE,Resource Performance ABE,リソースパフォーマンスABEは、さまざまなパフォーマンス統計やリソースエンティティの動作特性を収縮、相関、統合、および検証します。それはパフォーマンスを監視および報告できるエンティティのセットを提供します。このABEのエンティティは、物理的、論理的、および性能情報を提供します。これらの各エンティティはまた、計画された目標に対するネットワーク性能評価を行い、誤り率を含む傾向分析のさまざまな側面を実行し、解析と資源の劣化をもたらします。このABEのエンティティはまたリソース内のトラフィックを管理します。これには、リソースロードの定義統計、およびトラフィックトレンド解析が含まれます。,Resource Domain,1,Resource Domain
+Resource Specification ABE,Resource Specification ABE,リソース仕様ABEには、4つのタイプのリソースエンティティのそれぞれの共有特性と動作を定義するエンティティが含まれています。これにより、複数のインスタンスを単一の仕様エンティティから派生させることができます。この派生では、各インスタンスは、その関連テンプレートで定義されている共有特性と動作を使用します。,Resource Domain,1,Resource Domain
+CompoundResource Specification ABE,CompoundResource Specification ABE,ComponeResource指定ABEは、ComponeResourceの不変特性と動作（属性、メソッド、制約、および関係）を定義するために使用されます。,Resource Domain,2,Resource Specification ABE
+LogicalResource Specification ABE,LogicalResource Specification ABE,論理リソース仕様ABEは、LogicalResourceの不変特性と動作（属性、メソッド、制約、および関係）を定義するために使用されます。,Resource Domain,2,Resource Specification ABE
+Logical Role Specification ABE,Logical Role Specification ABE,,Resource Domain,3,LogicalResource Specification ABE
+LogicalResource Spec Examples ABE,LogicalResource Spec Examples ABE,LogicalResourcespecの例ABEには、LogicalResourcespecsの明示的なモデリングの例が含まれています。,Resource Domain,3,LogicalResource Specification ABE
+Software Resource and Software Specifications ABE,Software Resource and Software Specifications ABE,,Resource Domain,3,LogicalResource Specification ABE
+Software Resource Specification ABE,Software Resource Specification ABE,属性値がそれに関連するSoftWarEresourceのインスタンスごとに属性値が共有されているSoftWareResourcessecificationの定義。このエンティティはスーパークラスです,Resource Domain,4,Software Resource and Software Specifications ABE
+Software Specification ABE,Software Specification ABE,,Resource Domain,4,Software Resource and Software Specifications ABE
+PhysicalResource Specification ABE,PhysicalResource Specification ABE,物理リソース仕様ABEは、物理リソースの不変特性と動作（属性、メソッド、制約、および関係）を記述します。,Resource Domain,2,Resource Specification ABE
+Physical Role Specification ABE,Physical Role Specification ABE,,Resource Domain,3,PhysicalResource Specification ABE
+Resource Catalog ABE,Resource Catalog ABE,ResourcePecificationsを含むResourceCatalogとカタログの仕様を表すエンティティのコレクション。,Resource Domain,2,Resource Specification ABE
+Resource Strategy & Plan ABE,Resource Strategy & Plan ABE,リソース戦略＆プランABEは、最初に、そして成長の両方でネットワークとリソース要素を計画するために使用されます。論理リソースの成長と物理的なリソースの成長の両方を調整します。入力は、ビジネスソース、サービス予測、現在および予測されたネットワーク利用、新技術、および引退技術の予算です。論理リソースと物理リソースの両方のライフサイクル（インストール、修正、削除、および退職）を処理します。,Resource Domain,1,Resource Domain
+Resource Test ABE,Resource Test ABE,リソーステストABEには、PhysicalResources、LogicalResources、およびCompinationResourcesのテストに使用されるエンティティが含まれています。これらのエンティティは通常、トラブル診断の一部またはトラブル修理が完了した後に、インストール中に呼び出されます。,Resource Domain,1,Resource Domain
+Resource Topology ABE,Resource Topology ABE,リソーストポロジABEには、物理​​的、論理的、およびネットワークのトポロジ情報を定義するエンティティが含まれています。この情報は、ネットワークの現在の状態を評価するために重要であり、問​​題、能力の調整、および一般にネットワークとの関係の情報を提供するだけでなく、（全体としてもそのコンポーネントを持つ）という情報を提供するために重要です。これらのトポロジービューのそれぞれは、階層化ネットワーク内の1つまたは複数のレイヤを管理するために使用できる独自の物理的、論理的、またはネットワーク関連の情報を提供します。,Resource Domain,1,Resource Domain
+Resource Trouble ABE,Resource Trouble ABE,リソーストラブルABEは、問題が物理的または論理的であるかどうかにかかわらず、割り当てられたリソースインスタンスで見つかった問題を管理します。このABEの事業体はこれらの問題を検出し、彼らの根本原因を決定し、これらの問題を解決し、問題の診断と解決に関わる活動の歴史を維持するために行動します。問題の検出は、ソフトウェア（例えば、警報に応答する）および/またはハードウェア（例えば、測定またはプローブ）および/または手動（例えば目視検査）を介して行うことができる。これには、追跡、報告、問題、テスト、検証、および修理活動の全体的な管理を修正するための人々の割り当てが含まれます。,Resource Domain,1,Resource Domain
+Alarm ABE,Alarm ABE,,Resource Domain,2,Resource Trouble ABE
+Alarm Severity Assignment Profile ABE,Alarm Severity Assignment Profile ABE,,Resource Domain,2,Resource Trouble ABE
+Resource Usage ABE,Resource Usage ABE,リソース使用量ABEはリソース消費データを収集し、他のビジネスエンティティで使用するためのリソース使用量レコードを生成します。このABEのエンティティは、物理的、論理的、およびネットワークの使用状況情報を提供します。,Resource Domain,1,Resource Domain
+Stock Item ABE,Stock Item ABE,在庫品目ABEは、サプライチェーンに必要なすべての情報をカバーしています。それは含まれています•在庫品目カタログ•倉庫に保存されている在庫品•在庫品目の移動（受信または出荷）,Resource Domain,1,Resource Domain
+Business Partner Domain,Business Partner Domain,ビジネスパートナーのドメインは、当事者（例えば、個人/組織）によって実行された役割、情報、および活動を表します。企業が事業を運営するために協力している。活動には、ビジネスパートナの管理が含まれます。戦略、機能、価値の提案、関係、プロファイル、データ、プライバシー、セキュリティ、相互作用、コミュニケーション、入札、契約、注文、求職、資料、アカウント、残高、在庫、調整、サービスレベル契約（ SLA）、トレーニング、問題、ケース、請求書、支払い、収益、紛争、コレクション、ロイヤルティ、パフォーマンス、利用統計、分析、およびビジネスパートナーの支援、納得、取得、使用、サポート、購入、支払い、支払う彼らが提供および/または企業から入手する商品およびサービス（製品）。ビジネスパートナーは、企業（すなわちサービスプロバイダ）が何らかの形の協調提携を有する商業当事者である。この関係は、両方の当事者が第三者と同盟国ではなく、関連当事者のゆるい配置に委託する正式な契約専用債券の範囲であり得る。ビジネスパートナドメイン情報と活動の多くは、基礎ドメイン内で定義されている一般化概念のビジネスパートナの役割固有の専門化です。,Business Partner Domain,0,top
+Applied Party Billing Rate ABE,Applied Party Billing Rate ABE,このABEはまだ暫定的です,Business Partner Domain,1,Business Partner Domain
+Business Partner Account ABE,Business Partner Account ABE,ビジネスパートナアカウントABEはアカウントABEから継承し、アカウントを説明する基本属性と関係を指定するために必要なすべてのエンティティを含みます。それはまたBusinessPartnerのコンテキストの特異性を表します。,Business Partner Domain,1,Business Partner Domain
+Business Partner Party Roles ABE,Business Partner Party Roles ABE,ビジネスパートナパーティーの役割ABEは、パートナーの役割と関連情報を管理します。,Business Partner Domain,1,Business Partner Domain
+Business Partner Product Order ABE,Business Partner Product Order ABE,"ビジネスパートナーの製品注文ABEには、サービスプロバイダーのProductOfferingのコンテキストで、1つまたは複数の製品を調達、更新、または削除するために使用される通信を指定するために必要なすべてのエンティティが含まれています。
 ノート：
-すべての企業が契約の種類になる注文を検討するものもあります。 SIDモデルの観点からは、契約と協定の関係と協定の関係と協定関係によって注文を形式化することができます。この哲学は、2つの異なる概念を明確に分けるという利点を持っています：注文に関連する法的形式からの順序。たとえば、複数の注文は同じ契約を参照することがあります。",Business Partner Domain,1,6.Business Partner Domain
-6.Party Bill ABE,Party Bill ABE,このABEはまだ暫定的です,Business Partner Domain,1,6.Business Partner Domain
-6.Party Billing Credit ABE,Party Billing Credit ABE,,Business Partner Domain,2,6.Party Bill ABE
-6.Party Billing Statistic ABE,Party Billing Statistic ABE,,Business Partner Domain,2,6.Party Bill ABE
-6.Party Bill Collection ABE,Party Bill Collection ABE,"パーティーBill Collection ABEは、信用違反、期限切れ債務（督促）、およびBusinessPartnerPaymentに関連するもののすべてを処理します。
+すべての企業が契約の種類になる注文を検討するものもあります。 SIDモデルの観点からは、契約と協定の関係と協定の関係と協定関係によって注文を形式化することができます。この哲学は、2つの異なる概念を明確に分けるという利点を持っています：注文に関連する法的形式からの順序。たとえば、複数の注文は同じ契約を参照することがあります。",Business Partner Domain,1,Business Partner Domain
+Party Bill ABE,Party Bill ABE,このABEはまだ暫定的です,Business Partner Domain,1,Business Partner Domain
+Party Billing Credit ABE,Party Billing Credit ABE,,Business Partner Domain,2,Party Bill ABE
+Party Billing Statistic ABE,Party Billing Statistic ABE,,Business Partner Domain,2,Party Bill ABE
+Party Bill Collection ABE,Party Bill Collection ABE,"パーティーBill Collection ABEは、信用違反、期限切れ債務（督促）、およびBusinessPartnerPaymentに関連するもののすべてを処理します。
 このABEはまだ暫定的なものですが、ABEビジネスパートナの支払いは検証されています
-PartyPaymentおよび関連するビジネスエンティティについて詳しくは、共通のガイドブックを参照してください。",Business Partner Domain,1,6.Business Partner Domain
-6.Business Partner Payment ABE,Business Partner Payment ABE,ビジネスパートナーABEには、CSPとビジネスパートナの間の富の移転の説明が含まれています。,Business Partner Domain,2,6.Party Bill Collection ABE
-6.Dunning ABE,Dunning ABE,CSPがサプライヤから督促状に従うかどうかを確認する,Business Partner Domain,2,6.Party Bill Collection ABE
-6.Party Interaction ABE,Party Interaction ABE,"パーティーインタラクションABEは、当事者との通信、および順序の作成、請求書の問い合わせの作成、または問題の作成など、要求と照会の適切な「イベント」への翻訳を表します。
-このABEはまだ暫定的です",Business Partner Domain,1,6.Business Partner Domain
-6.Party Problem ABE,Party Problem ABE,"他の当事者に報告されている技術援助と問題処理に焦点を当てています。
-このABEはまだ暫定的です",Business Partner Domain,1,6.Business Partner Domain
-6.Party Product Specification and Offering ABE,Party Product Specification and Offering ABE,Party製品仕様とABEの提供は、役割の再生締約国に、製品専用と製品の製品を順守して請求され、その請求などの製品の提供を表しています。サブアバは、2つのドメイン内のエンティティの交差点を表します。たとえば、PartyRoleProductofferingは、ProductOfferingとPartyRoleエンティティ間の交差点です。 •これらのABESは、製品の特定と製品の製品が搭乗され、企業によって市場に提供されている場合、または製品が別の当事者から調達されたときにのみ提供されます。 •abesは、ライフサイクルを管理するプロセスを含むドメインに存在する必要があります。 ABESのライフサイクルを管理するプロセス（エンティティを使用する/更新/削除エンティティを使用するものと削除）は、別のパーティーからのオンボードおよびオフボード製品の製品などのビジネスパートナドメインにあります。,Business Partner Domain,1,6.Business Partner Domain
-6.Party Role Product Offering ABE,Party Role Product Offering ABE,ABEを提供するパーティーロール製品は、役割がProductOfferings with withの関与締約国を表しています。,Business Partner Domain,2,6.Party Product Specification and Offering ABE
-6.Example Party Role Product Offering Entities ABE,Example Party Role Product Offering Entities ABE,パーティの役割製品の提供製品の提供ABEには、PartyRoleProductofferingsのより明確なモデリングの例が含まれています。,Business Partner Domain,3,6.Party Role Product Offering ABE
-6.Party Role Product Specification ABE,Party Role Product Specification ABE,Party Role Product Specification ABEは、役割が製品専用の関与締約国を表します。,Business Partner Domain,2,6.Party Product Specification and Offering ABE
-6.Example Party Role Product Spec Entities ABE,Example Party Role Product Spec Entities ABE,パーティの役割製品仕様エンティティABEには、PartyRoleProductspecificationのより明確なモデリングの例が含まれています。,Business Partner Domain,3,6.Party Role Product Specification ABE
-6.Party Revenue & Settlement ABE,Party Revenue & Settlement ABE,"党収益と和解A​​BEは、収益の共有と和解で構成されています。
-ABEパーティーの決済はまだ予備的です。",Business Partner Domain,1,6.Business Partner Domain
-6.Party Revenue Sharing ABE,Party Revenue Sharing ABE,収益の分配は収益の分配、パートナー、会社の従業員、または企業間の企業間であるステークホルダー間の企業の間の企業に対する顧客またはその他の当事者によって支払われる金額の配布です。収益分配の目的は、関係者に関連する当事者に共有収益を使用しています。収益が企業と1人以上の締約国によって共有される前に、彼らは関与する当事者間での収益がどのように共有されるかを特定する党収入分配契約に入ります。当事者の収益分担ABEには、パーティー収入分担モデル、党収益分配契約、党収益株式、および党収益共有調整が含まれています。当事者収益分配モデルには、1つ以上の他の当事者との収益が企業によってどのように共有されているかを定義する収益共有モデルが含まれています。収益共有モデルは重要な要素収益分配契約です。当事者の収益分配契約ABEは、企業と製品の製品が企業によって何らかの形で利用可能にされている他の1人以上の関係者との間で収益がどのように共有されるかを指定する契約を含んでいます。当事者収益シェアABEは、使用法、請求書、商品価格、および収益が共有される方法を指定する既存の成果物を使用しています。当事者の収益株式調整ABEは、2組の党収入共有記録に対する整合と合意を表します。各ABEは、今後のセクションでさらに説明される。,Business Partner Domain,2,6.Party Revenue & Settlement ABE
-6.Party Revenue Share ABE,Party Revenue Share ABE,当事者の収益株式ABEは、収益分配契約に関与する当事者間で共有されている収益量を表しています。収益シェアは、使用法、請求書、商品価格、および適用請求率などの既存のアーティファクトを使用して決定されます。収益シェアは、パーティーやパーティーの請求書/請求書への支払いをもたらす可能性があります。また、当事者から送受信された請求書/請求書、または当事者の口座残高へのクレジット/デビットの削減または増加として表示されてもよい。収入共有モデルは、企業や他の当事者の間でどのように分割される可能性があるかを決定するさまざまな収益共有モデルがあります。収益共有モデルの種類に基づいて、さまざまな決定要因が最終的な請求書/請求書または支払いを計算するために使用されます。定額料金と使用状況に基づく収益モデルは、ティアリング、コミットメント、プログレッシブ、それぞれのマルチパーティのバリエーションと共にこれらに限定されない、数多くのモデルだけです。パーティーの収益分配契約は、製品提供の収益シェアが決定される期間を定義しています。,Business Partner Domain,3,6.Party Revenue Sharing ABE
-6.Party Revenue Share Reconciliation ABE,Party Revenue Share Reconciliation ABE,当事者収益分配調整ABEは、2組の党収入共有記録を整列させ合意していることを保証します。たとえば、企業は、当事者の収益に含まれている当事者と共有されていると判断された収益シェアと比較された他の当事者からの請求書を受け取ることができます。調整には、支払われるもの、請求書または口座残高、食い違いの識別、解決、売上高の調整、および不一致の解決の追跡の識別、承認、貸借対照表の比較が含まれます。,Business Partner Domain,3,6.Party Revenue Sharing ABE
-6.Party Revenue Sharing Agreement ABE,Party Revenue Sharing Agreement ABE,当事者収益分配契約ABEは、企業が企業によって何らかの方法で利用可能にされる企業と1人以上の他の締約国の間で収益がどのように共有されるかを指定する契約を表します。たとえば、企業は、他の当事者に代わって製品を利用可能にしたり、自分のオファリングを開発するための他のパーティーのオファーを使用したりすることがあります。 1つ以上の当事者との収益分配契約に参入するための基礎として使用されるテンプレートパーティーの収益分配契約が含まれています。それは、継承、該当する契約承認承認、契約書、契約額などを使用します。 ABEの焦点は、契約の項目と契約の項目を関連付け、契約項目の更新と、修正をモデルに関連付けて契約項目に関連付けることで、契約契約項目を契約と更新しています。,Business Partner Domain,3,6.Party Revenue Sharing ABE
-6.Party Revenue Sharing Model ABE,Party Revenue Sharing Model ABE,当事者収益共有モデルABEには、パーティー収入共有モデルとその仕様が含まれており、その仕様は、収益が1つ以上の他の当事者と企業によってどのように共有されているかを定義します。収益共有モデルは重要な要素収益分配契約です。商品提供価格ABEエンティティは、売上高の金額を表すために使用されます。たとえば、企業はオファリングのために10ユーロを請求し、Application Developerなどの別のパーティーでフラット4ユーロを共有することがあります。設定可能な製品のために、売上高は、オファリングを獲得したパーティーによって選択されたそれらの機能に依存するかもしれません。この場合、共有された収益はパーティーの製品の構成によっても支配されています。,Business Partner Domain,3,6.Party Revenue Sharing ABE
-6.Party Settlement ABE,Party Settlement ABE,それは、提供された製品/サービス/リソースの使用/繰り返し手数料の結果として、企業または当事者が企業に支払われる金額を表す企業のグループです。 PartySetterMetは契約によって管理されており、企業やその他のMVNOS、ディーラー、小売業者、コンテンツプロバイダーなどの間に作成できます。,Business Partner Domain,2,6.Party Revenue & Settlement ABE
-6.Party Service Level Agreement ABE,Party Service Level Agreement ABE,"パーティーサービスレベル契約ABEは、他の1つ以上の当事者を持つSLAを表します。詳細については協定ABEを参照してください。
-このABEはまだ暫定的です",Business Partner Domain,1,6.Business Partner Domain
-6.Party Statistic ABE,Party Statistic ABE,"パーティー統計ABEは、パーティー使用パターン、収益性統計の分析を表します。
-このABEは完全には開発されていません",Business Partner Domain,1,6.Business Partner Domain
-6.Party Strategy & Plan ABE,Party Strategy & Plan ABE,"Marketsales、Party Performance、競合他社の分析など、他のABESからの入力を伴う他の当事者とのビジネス関係の戦略と計画。
-このABEは完全には開発されていません",Business Partner Domain,1,6.Business Partner Domain
-8.Common Domain,Common Domain,一般的なドメインは、他のFrameWorxドメインをサポートし、（一般的な）または「所有する」に固有のものではないビジネスロール、情報、および活動（事業体、ビジネスプロセス、機能、論理アプリケーション、インタフェース、メトリックなど）を表します。特定のドメイン、または2つ以上の他のドメインから参照または利用されている。,Common Domain,0,top
-8.Account ABE,Account ABE,アカウントABEには、アカウントを説明する基本属性と関係を指定するために必要なすべてのエンティティが含まれています。,Common Domain,1,8.Common Domain
-8.Agreement ABE,Agreement ABE,契約は、サービスレベル契約や顧客価格契約など、書面または口頭であり、時には法律によって執行可能な契約または取り決めを表しています。合意には、製品、サービス、および資源などの他の多くの事業体、および/またはその仕様が含まれます。,Common Domain,1,8.Common Domain
-8.Commitment ABE,Commitment ABE,ビジネスインタラクションABEから派生したコミットメントABEは、サービス、製品、資源、あるいはその他の納品についての締約国間の相互合意を反映しています。コミットメント調達の役割,Common Domain,2,8.Agreement ABE
-8.Base Types ABE,Base Types ABE,お金や日付範囲のような小さな単純なオブジェクト。平等は身元に基づいていません。,Common Domain,1,8.Common Domain
-8.Base Types Example ABE,Base Types Example ABE,属性の種類の基本タイプエンティティの使用例,Common Domain,2,8.Base Types ABE
-8.Business Interaction ABE,Business Interaction ABE,ビジネスインタラクションABEは、企業と個人や組織（または組織の一部）などの1つ以上の他の事業体との間の配置、契約、または通信を表しています。インタラクションは、要求、応答、および通知の形式を取ります。,Common Domain,1,8.Common Domain
-8.Disputed Amount ABE,Disputed Amount ABE,企業を支払う必要がある金額を変更するための外部パーティー（顧客または他の従事者）による要求。,Common Domain,2,8.Business Interaction ABE
-8.Calendar ABE,Calendar ABE,時間関連機能を提供するために使用されるエンティティを表します。これには、スケジューリング、時間の競合、および時間ベースのプレゼンテーションサポートが含まれます。,Common Domain,1,8.Common Domain
-8.Schedule Definition ABE,Schedule Definition ABE,,Common Domain,2,8.Calendar ABE
-8.Capacity ABE,Capacity ABE,一般化されたABEと製品、サービス、および資源に対する能力と需要の需要を提供する特殊化。容量はある程度の機能を提供する能力です。例えば、ネットワーク容量の1つの尺度は、5月の月の間に一定量の帯域幅を提供するためのネットワークの能力である。,Common Domain,1,8.Common Domain
-8.Catalog ABE,Catalog ABE,エンティティ、連合、製品、サービス、およびリソースカタログABESのコンポーネントによって共通のカタログ仕様およびカタログエンティティ、属性、および関連付けを表す一般化ABE。,Common Domain,1,8.Common Domain
-8.Entity Catalog ABE,Entity Catalog ABE,エンティティカタログABEは、仕様とエンティティとその属性、およびEntityCatalogSpecification、FederatedCatalogSpecification、EntityCatalog、およびFederatedCatalogの関連付けを表します。,Common Domain,2,8.Catalog ABE
-8.Communication Interaction ABE,Communication Interaction ABE,通信対話ABEは、ある期間中に2つ以上の人間および/またはマシン間の通信中の情報の交換を記述する通信インタランスを特定するために必要なすべてのエンティティを含む。コミュニケーションインターラクションは、顧客、サプライヤー...またはリソースの役割を果たす締約国に関係している可能性があります。したがって、ABE«CommunicationInteraction ABE»は、«共通のビジネスエンティティドメイン»にあります。,Common Domain,1,8.Common Domain
-8.Configuration and Profiling ABE,Configuration and Profiling ABE,構成（プロファイルとも呼ばれる）は、特性仕様および関連製品/サービス/リソースの仕様および特性および関連製品/サービス/リソースエンティティに関して、リソース、サービス、または製品がどのように機能または機能するかを定義しています。構成は、1つ以上の部分を含んでいてもよい（原子/複合パターンを使用することによって実現されるが、単一のエンティティ構成回復として表される）、各部分は0以上のフィールドを含み得る。各フィールドは、静的または動的に定義されている属性を持つことができます。これらのフィールドのいくつかは固定値を持ち、他のものは選択され得る値（例えば、EntitySpec / Entityおよび/またはPassityPec / PassityValueパターンを使用して）を実行できる値を提供します。,Common Domain,1,8.Common Domain
-8.Digital Identity ABE,Digital Identity ABE,.\doc\Figure DI.02 - Credential Hierarchy.docx,Common Domain,1,8.Common Domain
-8.Location ABE,Location ABE,位置ABEは、顧客の住所、障害がある機器の現場など、設備のサイトや、機器を修理することができる最寄りの人物などのサイトや位置を表しています。場所は、座標および/またはアドレスおよび/または物理的表現の形をとることができる。,Common Domain,1,8.Common Domain
-8.Geographic Place ABE,Geographic Place ABE,地理的な場所を定義し、それをマップにマークするか、またはアドレスを指定することを可能にするために使用されるエンティティのグループ。,Common Domain,2,8.Location ABE
-8.Geographic Address ABE,Geographic Address ABE,場所の地理的アドレスを表すために使用されるエンティティのグループ。,Common Domain,3,8.Geographic Place ABE
-8.Symbology ABE,Symbology ABE,線、表面、点などの一連のオブジェクトは、何かを表すために使用されます。,Common Domain,3,8.Geographic Place ABE
-8.Local Place ABE,Local Place ABE,地域座標系に関係がある場所を決定する一連のエンティティ。それはSIDモデルの他の部分へのリンクポイントを提供します。,Common Domain,2,8.Location ABE
-8.OpenGisSFS ABE,OpenGisSFS ABE,企業、政府機関、および大学で構成された国際業界コンソーシアムで定義された幾何学的標準（OGC）で定義されている一連の企業、政府機関、および大学は、公に利用可能なインターフェース基準を開発するためのコンセンサスプロセスに参加しています。,Common Domain,2,8.Location ABE
-8.Metric ABE,Metric ABE,メトリックABEは、単位と値を含む測定基準、および値がどのように決定されるかを定義します。それはまた、メトリックを評価するために使用されるしきい値としきい値に違反した結果を含みます。他のプロジェクトは、Metric Abeを何らかの形で使用して専門とし、PM（Performance Management）、RA（収益保証）、SLA（サービスレベル契約）などのメトリックABEを使用して専門としています。,Common Domain,1,8.Common Domain
-8.Example Metric Entities ABE,Example Metric Entities ABE,これはメートル基本例を含むABEです,Common Domain,2,8.Metric ABE
-8.Metric Definition ABE,Metric Definition ABE,メトリック定義ABEには、MetricDefinition自体、MetricDefinitionCategory、MetricDefinitionDimensionなどのメトリック定義を説明する主なエンティティが含まれています。,Common Domain,2,8.Metric ABE
-8.Metric Definition Dimension ABE,Metric Definition Dimension ABE,メトリック定義ディメンションABEには、メトリックコンテキスト内のディメンションを記述するすべてのエンティティが含まれています。,Common Domain,3,8.Metric Definition ABE
-8.Metric Definition Measure ABE,Metric Definition Measure ABE,MetricDefMeasureは、エンティティの特定の側面の尺度を指定し、メトリック定義の主要部分です。メトリック定義メジャーABEには、関連しきい値、通知、および結果などのMetricDefMeasureを記述するすべてのエンティティが含まれています。,Common Domain,2,8.Metric ABE
-8.Metric Definition Measure Threshold ABE,Metric Definition Measure Threshold ABE,メトリック定義メジャースレッショルドABEには、MetricDefMeasureに使用されるしきい値を記述するすべてのエンティティが含まれています。,Common Domain,3,8.Metric Definition Measure ABE
-8.Metric Measure ABE,Metric Measure ABE,メトリックメジャーABEは、メトリグメトリックなどのメトリック定義に従って措置を記述するエンティティを含む。,Common Domain,2,8.Metric ABE
-8.Metric Monitoring ABE,Metric Monitoring ABE,メトリック監視ABEには、MetricMeasurementJobなどのメトリック措置の監視を可能にするすべてのエンティティが含まれています。,Common Domain,2,8.Metric ABE
-8.Metric Collection ABE,Metric Collection ABE,メトリック収集ABEは初期化されていますが、反復中にさらに研究されていなければなりません。,Common Domain,3,8.Metric Monitoring ABE
-8.Metric Job ABE,Metric Job ABE,メトリックジョブABEには、メトリックの測定ジョブの違いの種類に対応するエンティティが含まれています。,Common Domain,3,8.Metric Monitoring ABE
-8.Party ABE,Party ABE,当事者は、関心がある、または企業の観点から直接的または間接的に価値を提供する個人、組織、または組織単位を表しています（企業はプロバイダー、サービスプロバイダまたはオペレーターとして理解されるべきではありません）。したがって、パーティーは企業と1つ以上の役割を果たしています。これは、企業が興味を持っている唯一のパーティーが興味があり、そのシステムで検討することを指定するために紹介されています。役割はPartyRoleの概念によって表されます。パーティーによって行われた役割の例には、競合他社、販売見通しなどの役割の例に含まれます。•顧客、ユーザー、従業員など、顧客、ユーザー、従業員などの関心があります。または、サービスプロバイダ、オペレータ、クラウドブローカー、インフラストラクチャプロバイダ、アプリケーション開発者などの間接的に。,Common Domain,1,8.Common Domain
-8.Contact Medium ABE,Contact Medium ABE,電話、ファックス、電子メールなど、PartyRoleまたはPartyAccount / BillingAccountContactにアクセスできるさまざまな手段。,Common Domain,2,8.Party ABE
-8.Currency ABE,Currency ABE,通貨モデル内の主なエンティティをグループ化します。,Common Domain,2,8.Party ABE
-8.Identification ABE,Identification ABE,個人や組織によって使用されるさまざまな形態の識別、集合的にパーティーと呼ばれています。,Common Domain,2,8.Party ABE
-8.Party Community ABE,Party Community ABE,パーティーコミュニティABEは、コミュニティ、コミュニティにコミュニティを犯し、コミュニティに貢献し、コミュニティから資産を消費することができる党ロールであるコミュニティで構成されています。,Common Domain,2,8.Party ABE
-8.Party Demographic ABE,Party Demographic ABE,人口統計は、彼らのサイズ、成長、密度、分布、ならびに誕生、結婚、病気、そして死に関する統計を含む、個人および組織の研究に対処する。人口統計データは、市場セグメントのメイクアップ、サイズ、顧客の分類、ランキングなど、決定を下すことを可能にする当事者に関する情報です。人口統計は、「何」情報を提供し、2つのカテゴリに分類することができます：個々の人口統計と組織の人口統計。,Common Domain,2,8.Party ABE
-8.Party Organization ABE,Party Organization ABE,パーティー組織をモデル化するために使用されます。,Common Domain,2,8.Party ABE
-8.Party Profile ABE,Party Profile ABE,マーケッジとマーケティングキャンペーンの策定と標的化の締約国グループに使用される特性。パーティーProfileTypeは、1つ以上のPartyRoleScificationsを分類するために使用されます。 PartyProfLietypeは、1つ以上の地理的エリアに定義できます。プロファイルは、1つまたは複数のProductofferingsと1つ以上の市場セグメントをターゲットにすることができます。 PartyProfileLitesは、人口統計学的に基づくことができます（または定義された）。,Common Domain,2,8.Party ABE
-8.Party Role Examples ABE,Party Role Examples ABE,当事者がプレイする可能性がある一連のパーティロールのセットです。,Common Domain,2,8.Party ABE
-8.Party Role Group ABE,Party Role Group ABE,パーティーロールグループABEは、PartyRolegrougsを指定するために使用されるすべてのビジネスエンティティを含みます。,Common Domain,2,8.Party ABE
-8.Permission ABE,Permission ABE,Pemission ABEには、権限の仕様を記述するためのすべてのビジネスエンティティが含まれており、権限の範囲を含めて付与された効果的な権限。,Common Domain,2,8.Party ABE
-8.Skill ABE,Skill ABE,個人または組織が所有しているスキルとスキルの仕様のカタログ。,Common Domain,2,8.Party ABE
-8.Party Payment ABE,Party Payment ABE,パーティー支払いABEには、PaymentMethodやBankAccountなどの支払いを説明するために必要なすべてのエンティティが含まれています。,Common Domain,1,8.Common Domain
-8.Bank ABE,Bank ABE,銀行ABEは銀行に関連する才能を包括しています。,Common Domain,2,8.Party Payment ABE
-8.Payment Method ABE,Payment Method ABE,支払い方法ABEには、すべての種類の支払い方法が含まれています。 PaymentMethodは、Partyが支払いを提供する方法、例えば現金、クレジット、転送です。,Common Domain,2,8.Party Payment ABE
-8.Party Privacy ABE,Party Privacy ABE,Party Privacy Profile Abeには、Party Privacy Management Processingが指定するためのパーティープライバシー管理プロセスが使用しているすべてのエンティティが含まれています。,Common Domain,1,8.Common Domain
-8.Party Privacy Profile ABE,Party Privacy Profile ABE,パーティーのプライバシープロファイルABEには、パーティーのプライバシー管理プロセスが独自のプライバシーのために行われた選択を指定するためのすべてのエンティティが含まれています。,Common Domain,2,8.Party Privacy ABE
-8.Party Privacy Profile Type ABE,Party Privacy Profile Type ABE,パーティーのプライバシープロファイルABEには、パーティーのプライバシー管理プロセスが指定するためのパーティープライバシー管理プロセスで使用されているすべてのエンティティが含まれています - プライバシールール、 - プライバシールール自体。,Common Domain,2,8.Party Privacy ABE
-8.Performance ABE,Performance ABE,製品および/またはサービスおよび/またはリソースが機能している方法の尺度を表します。,Common Domain,1,8.Common Domain
-8.Performance Category ABE,Performance Category ABE,,Common Domain,2,8.Performance ABE
-8.Performance Category Specification ABE,Performance Category Specification ABE,,Common Domain,3,8.Performance Category ABE
-8.Performance Monitoring ABE,Performance Monitoring ABE,,Common Domain,2,8.Performance ABE
-8.Performance Collection ABE,Performance Collection ABE,,Common Domain,3,8.Performance Monitoring ABE
-8.Performance Production ABE,Performance Production ABE,,Common Domain,3,8.Performance Monitoring ABE
-8.Performance Specification ABE,Performance Specification ABE,,Common Domain,2,8.Performance ABE
-8.Performance Threshold ABE,Performance Threshold ABE,,Common Domain,2,8.Performance ABE
-8.Policy ABE,Policy ABE,ポリシードメインは、仕様（例えば、テンプレート）を定義する一連の階層化されたABESと、他のドメインの実体の動作と定義を管理するのに使用できるポリシーエンティティの定義で構成されています。ポリシーは3つのプライマリフォームを取ります。最初のものは、他のエンティティの定義、変更、および構成を管理するためのポリシーの使用方法の定義です。 2つ目は、ポリシー自体の管理方法の定義です。 3つ目は、アプリケーションのポリシーを使用してエンティティを管理する方法です。,Common Domain,1,8.Common Domain
-8.Policy Application ABE,Policy Application ABE,ポリシーアプリケーションABEは、ポリシーエンティティを使用して他のエンティティの構成を管理できる概念とアプリケーションコンポーネントを定義します。これは、ポリシーの意思決定機能、およびポリシーを強制して実行するエンティティを提供するためのエンティティで構成されています。また、NGOSSポリシーシステムを構築するために必要なエンティティも含まれています。これらには、ポリシーコンポーネントを大規模な分散システムに拡大することができるように、ポリシーの管理と使用状況を調整するためのエンティティが含まれます。,Common Domain,2,8.Policy ABE
-8.Policy Server ABE,Policy Server ABE,,Common Domain,3,8.Policy Application ABE
-8.PolicyApp Role ABE,PolicyApp Role ABE,,Common Domain,3,8.Policy Application ABE
-8.Policy Framework ABE,Policy Framework ABE,,Common Domain,2,8.Policy ABE
-8.Policy Framework Spec ABE,Policy Framework Spec ABE,ポリシー仕様ABEには、ポリシーエンティティの不変特性と動作を定義するエンティティが含まれています。これにより、複数のインスタンスを単一の仕様エンティティから派生させることができます。この派生では、各インスタンスは、その関連テンプレートで定義されている不変特性と動作を使用します。このドメインには、政策、そのコンポーネント、および複数の政策をグループ化できる方法の仕様が含まれています。,Common Domain,2,8.Policy ABE
-8.Policy Management ABE,Policy Management ABE,ポリシー管理ABEには、他のドメイン内の他のエンティティを管理するために使用されるエンティティが含まれています。これには、他の一般的なビジネスエンティティサブドメイン（例えば、場所およびパーティー）、およびその他の兄弟ドメイン（例えば、製品、サービス、およびリソース）のエンティティが含まれます。,Common Domain,2,8.Policy ABE
-8.Policy Structure ABE,Policy Structure ABE,ポリシーABEには、ポリシーのさまざまなコンポーネントを表すために使用されるエンティティが含まれています。これらのコンポーネントは、次のように定義されたトリプレットであるPolicyRuleの概念を中心にします。 。このABEの新規な特徴は、同じトリプレットを使用して条件および行動句を形成することができるということです。このABEはまた、政治量とその構成要素をグループ化して綴る能力を含んでいます。,Common Domain,2,8.Policy ABE
-8.Policy Action ABE,Policy Action ABE,,Common Domain,3,8.Policy Structure ABE
-8.Policy Condition ABE,Policy Condition ABE,,Common Domain,3,8.Policy Structure ABE
-8.Policy Event ABE,Policy Event ABE,,Common Domain,3,8.Policy Structure ABE
-8.Policy Statement ABE,Policy Statement ABE,,Common Domain,3,8.Policy Structure ABE
-8.Policy Value ABE,Policy Value ABE,,Common Domain,3,8.Policy Structure ABE
-8.Policy Variable ABE,Policy Variable ABE,,Common Domain,3,8.Policy Structure ABE
-8.Project ABE,Project ABE,プロジェクトマネージャによって使用されるツールを表して、品質、費用、および時間の企業の目標が計画およびスケジューリング作業によって達成されるようにします。プロジェクトの一般的な業界の定義、作業内訳構造、およびプロジェクトマネージャへのサポートを提供します。,Common Domain,1,8.Common Domain
-8.Activity ABE,Activity ABE,,Common Domain,2,8.Project ABE
-8.EntitiesToBeFixedInPh4 ABE,EntitiesToBeFixedInPh4 ABE,,Common Domain,2,8.Project ABE
-8.Project Calendar ABE,Project Calendar ABE,,Common Domain,2,8.Project ABE
-8.Project Element ABE,Project Element ABE,,Common Domain,2,8.Project ABE
-8.Project Resource ABE,Project Resource ABE,,Common Domain,2,8.Project ABE
-8.Project Role ABE,Project Role ABE,,Common Domain,2,8.Project ABE
-8.Project Scope ABE,Project Scope ABE,,Common Domain,2,8.Project ABE
-8.SCRUM Blade ABE,SCRUM Blade ABE,,Common Domain,2,8.Project ABE
-8.Work Breakdown Structure ABE,Work Breakdown Structure ABE,,Common Domain,2,8.Project ABE
-8.Work Order ABE,Work Order ABE,,Common Domain,2,8.Project ABE
-8.Root Business Entities ABE,Root Business Entities ABE,ビジネスビューの基礎としてまとめて役立つ一連の共通のビジネスエンティティ。この一連のエンティティは、SIDフレームワークの異なるドメイン内のエンティティを互いに関連付けることを可能にし、情報フレームワークに全体的な全体的なコヒーレンスを提供します。,Common Domain,1,8.Common Domain
-8.Association ABE,Association ABE,EntitySpecification /エンティティパターンを使用して作成された暗黙的なサブクラスと同様に、関連付けられているSIDエンティティ（クラスとサブクラス）の間で関連付けを動的に作成できるパターン。,Common Domain,2,8.Root Business Entities ABE
-8.Characteristic ABE,Characteristic ABE,パターン（ABEの内容）を使用すると、エンティティがその関連付けを介して作成されるエンティティの種類に固有の属性をextitySpecificationに介して作成でき、RootEntityTypeとの関連付けを介して特定のエンティティに固有の属性を作成できます。 RootEntityTypeはSIDのエンティティです。たとえば、これらのエンティティのすべてのインスタンスに適用される製品、顧客、および製品専用のエンティティ（RootEntityTypeのインスタンス）に対して特性を定義できます。,Common Domain,2,8.Root Business Entities ABE
-8.Characteristic Pricing ABE,Characteristic Pricing ABE,価格設定は、特性分類とその関連する特性分割の組み合わせに基づくことを可能にします。,Common Domain,3,8.Characteristic ABE
-8.Entity Identification ABE,Entity Identification ABE,Dynamicallに使用できるエンティティのコレクションは、任意のタイプのエンティティに対してさまざまな識別フォーマットを指定し、エンティティに関連付けられている識別インスタンスを表します。,Common Domain,2,8.Root Business Entities ABE
-8.Entity Specification Action ABE,Entity Specification Action ABE,関連エンティティ仕様のアクションとワークフローを定義するために使用できるエンティティのコレクション。,Common Domain,2,8.Root Business Entities ABE
-8.External System Capability ABE,External System Capability ABE,フルフィルメント、課金、保証、ポリシー、および請求などの外部システム機能を定義するために使用できるエンティティの集まり。,Common Domain,2,8.Root Business Entities ABE
-8.Root Entity Attachment ABE,Root Entity Attachment ABE,画像や文書のような関連するルートエンティティ添付ファイルを定義するために使用できるエンティティのコレクション。,Common Domain,2,8.Root Business Entities ABE
-8.Entity Specification Attachment Example Instances ABE,Entity Specification Attachment Example Instances ABE,EntitySpecificationAttachmentsを拡張するために使用できる添付ファイル例エンティティの集まり。,Common Domain,3,8.Root Entity Attachment ABE
-8.Root Entity Group ABE,Root Entity Group ABE,ルートエンティティグループABEは、RootEntityRelationshipのインスタンス数を減らすために、ルートエンティティグループのグループをRootEntityRelationshipエンティティを使用することを代替として関連付けることができます。また、グループからルートエンティティを選択することもできます。たとえば、7チャンネルパックのうち3つを選択してください。そして、グループのルートエンティティメンバを制限する式を定義すること。例えば、チャネルパック3またはチャネルパック4のいずれも選択することができるが、両方ではない。,Common Domain,2,8.Root Business Entities ABE
-8.Test ABE,Test ABE,テストは、特に広範囲の使用にされる前に、エンティティの品質、性能、または信頼性を確立することを目的とした手順です。テストは、エンティティの正しい機能に関連する問題を診断するために使用された後にエンティティの上で実行されてもよい。したがって、テストは、製品、サービス、またはリソースに対して実行されてもよい。テストは3つのカテゴリに分けられます。•プロアクティブ/制御。実体上の履行プロセス中に確立されているテスト、および一般に、エンティティの寿命を通して継続的に実行されます。これらのテストは、エンティティを消費者に提供する前に、テスト中のエンティティの正しい機能を確立するためにしばしば使用されます。これらの試験の結果は任意の時間に照会することができる。 •オンデマンド/制御。特定の時点で要求されたテストでは、それはまた将来の時点で実際に実行されるようにスケジュールされ得る。これらのテストは通常​​保証プロセスの一部として実行されます。それらは問題を検出するため、またはテスト中のエンティティによって提供される機能の消費者になされた品質、性能、または信頼性の約束を保証するために使用されます。これらのテストは、それらが「管理されている」という意味で制御され、中断され、再開され、その結果が要求される可能性がある。 •オンデマンド/制御不能すぐに実行されるように要求されたテスト、およびテストが完了してリアルタイムを返すまでの要求がブロックされているテスト。これらのテストは、それらが「管理されていない」という点で制御されていません。テストABEは製品テストABE、サービステストABE、およびリソーステストABEに特化しています。,Common Domain,1,8.Common Domain
-8.Usage ABE,Usage ABE,その意図された目的のために製品、サービスまたはリソースを採用することの発生は、ビジネスにとって関心があり、それに適用される料金を与えることができる。使用属性を表す特性で構成されています。,Common Domain,1,8.Common Domain
-8.IP Detail Record ABE,IP Detail Record ABE,,Common Domain,2,8.Usage ABE
-8.Usage Example Instances ABE,Usage Example Instances ABE,,Common Domain,2,8.Usage ABE
-8.Usage Spec ABE,Usage Spec ABE,,Common Domain,2,8.Usage ABE
-8.Users and Roles ABE,Users and Roles ABE,ユーザーと役割ABEは、ユーザーと役割の種類とその製品、サービス、およびリソースの使用への関与を表しています。,Common Domain,1,8.Common Domain
+PartyPaymentおよび関連するビジネスエンティティについて詳しくは、共通のガイドブックを参照してください。",Business Partner Domain,1,Business Partner Domain
+Business Partner Payment ABE,Business Partner Payment ABE,ビジネスパートナーABEには、CSPとビジネスパートナの間の富の移転の説明が含まれています。,Business Partner Domain,2,Party Bill Collection ABE
+Business Partner Domain Dunning ABE,Dunning ABE,CSPがサプライヤから督促状に従うかどうかを確認する,Business Partner Domain,2,Party Bill Collection ABE
+Party Interaction ABE,Party Interaction ABE,"パーティーインタラクションABEは、当事者との通信、および順序の作成、請求書の問い合わせの作成、または問題の作成など、要求と照会の適切な「イベント」への翻訳を表します。
+このABEはまだ暫定的です",Business Partner Domain,1,Business Partner Domain
+Party Problem ABE,Party Problem ABE,"他の当事者に報告されている技術援助と問題処理に焦点を当てています。
+このABEはまだ暫定的です",Business Partner Domain,1,Business Partner Domain
+Party Product Specification and Offering ABE,Party Product Specification and Offering ABE,Party製品仕様とABEの提供は、役割の再生締約国に、製品専用と製品の製品を順守して請求され、その請求などの製品の提供を表しています。サブアバは、2つのドメイン内のエンティティの交差点を表します。たとえば、PartyRoleProductofferingは、ProductOfferingとPartyRoleエンティティ間の交差点です。 •これらのABESは、製品の特定と製品の製品が搭乗され、企業によって市場に提供されている場合、または製品が別の当事者から調達されたときにのみ提供されます。 •abesは、ライフサイクルを管理するプロセスを含むドメインに存在する必要があります。 ABESのライフサイクルを管理するプロセス（エンティティを使用する/更新/削除エンティティを使用するものと削除）は、別のパーティーからのオンボードおよびオフボード製品の製品などのビジネスパートナドメインにあります。,Business Partner Domain,1,Business Partner Domain
+Party Role Product Offering ABE,Party Role Product Offering ABE,ABEを提供するパーティーロール製品は、役割がProductOfferings with withの関与締約国を表しています。,Business Partner Domain,2,Party Product Specification and Offering ABE
+Example Party Role Product Offering Entities ABE,Example Party Role Product Offering Entities ABE,パーティの役割製品の提供製品の提供ABEには、PartyRoleProductofferingsのより明確なモデリングの例が含まれています。,Business Partner Domain,3,Party Role Product Offering ABE
+Party Role Product Specification ABE,Party Role Product Specification ABE,Party Role Product Specification ABEは、役割が製品専用の関与締約国を表します。,Business Partner Domain,2,Party Product Specification and Offering ABE
+Example Party Role Product Spec Entities ABE,Example Party Role Product Spec Entities ABE,パーティの役割製品仕様エンティティABEには、PartyRoleProductspecificationのより明確なモデリングの例が含まれています。,Business Partner Domain,3,Party Role Product Specification ABE
+Party Revenue & Settlement ABE,Party Revenue & Settlement ABE,"党収益と和解A​​BEは、収益の共有と和解で構成されています。
+ABEパーティーの決済はまだ予備的です。",Business Partner Domain,1,Business Partner Domain
+Party Revenue Sharing ABE,Party Revenue Sharing ABE,収益の分配は収益の分配、パートナー、会社の従業員、または企業間の企業間であるステークホルダー間の企業の間の企業に対する顧客またはその他の当事者によって支払われる金額の配布です。収益分配の目的は、関係者に関連する当事者に共有収益を使用しています。収益が企業と1人以上の締約国によって共有される前に、彼らは関与する当事者間での収益がどのように共有されるかを特定する党収入分配契約に入ります。当事者の収益分担ABEには、パーティー収入分担モデル、党収益分配契約、党収益株式、および党収益共有調整が含まれています。当事者収益分配モデルには、1つ以上の他の当事者との収益が企業によってどのように共有されているかを定義する収益共有モデルが含まれています。収益共有モデルは重要な要素収益分配契約です。当事者の収益分配契約ABEは、企業と製品の製品が企業によって何らかの形で利用可能にされている他の1人以上の関係者との間で収益がどのように共有されるかを指定する契約を含んでいます。当事者収益シェアABEは、使用法、請求書、商品価格、および収益が共有される方法を指定する既存の成果物を使用しています。当事者の収益株式調整ABEは、2組の党収入共有記録に対する整合と合意を表します。各ABEは、今後のセクションでさらに説明される。,Business Partner Domain,2,Party Revenue & Settlement ABE
+Party Revenue Share ABE,Party Revenue Share ABE,当事者の収益株式ABEは、収益分配契約に関与する当事者間で共有されている収益量を表しています。収益シェアは、使用法、請求書、商品価格、および適用請求率などの既存のアーティファクトを使用して決定されます。収益シェアは、パーティーやパーティーの請求書/請求書への支払いをもたらす可能性があります。また、当事者から送受信された請求書/請求書、または当事者の口座残高へのクレジット/デビットの削減または増加として表示されてもよい。収入共有モデルは、企業や他の当事者の間でどのように分割される可能性があるかを決定するさまざまな収益共有モデルがあります。収益共有モデルの種類に基づいて、さまざまな決定要因が最終的な請求書/請求書または支払いを計算するために使用されます。定額料金と使用状況に基づく収益モデルは、ティアリング、コミットメント、プログレッシブ、それぞれのマルチパーティのバリエーションと共にこれらに限定されない、数多くのモデルだけです。パーティーの収益分配契約は、製品提供の収益シェアが決定される期間を定義しています。,Business Partner Domain,3,Party Revenue Sharing ABE
+Party Revenue Share Reconciliation ABE,Party Revenue Share Reconciliation ABE,当事者収益分配調整ABEは、2組の党収入共有記録を整列させ合意していることを保証します。たとえば、企業は、当事者の収益に含まれている当事者と共有されていると判断された収益シェアと比較された他の当事者からの請求書を受け取ることができます。調整には、支払われるもの、請求書または口座残高、食い違いの識別、解決、売上高の調整、および不一致の解決の追跡の識別、承認、貸借対照表の比較が含まれます。,Business Partner Domain,3,Party Revenue Sharing ABE
+Party Revenue Sharing Agreement ABE,Party Revenue Sharing Agreement ABE,当事者収益分配契約ABEは、企業が企業によって何らかの方法で利用可能にされる企業と1人以上の他の締約国の間で収益がどのように共有されるかを指定する契約を表します。たとえば、企業は、他の当事者に代わって製品を利用可能にしたり、自分のオファリングを開発するための他のパーティーのオファーを使用したりすることがあります。 1つ以上の当事者との収益分配契約に参入するための基礎として使用されるテンプレートパーティーの収益分配契約が含まれています。それは、継承、該当する契約承認承認、契約書、契約額などを使用します。 ABEの焦点は、契約の項目と契約の項目を関連付け、契約項目の更新と、修正をモデルに関連付けて契約項目に関連付けることで、契約契約項目を契約と更新しています。,Business Partner Domain,3,Party Revenue Sharing ABE
+Party Revenue Sharing Model ABE,Party Revenue Sharing Model ABE,当事者収益共有モデルABEには、パーティー収入共有モデルとその仕様が含まれており、その仕様は、収益が1つ以上の他の当事者と企業によってどのように共有されているかを定義します。収益共有モデルは重要な要素収益分配契約です。商品提供価格ABEエンティティは、売上高の金額を表すために使用されます。たとえば、企業はオファリングのために10ユーロを請求し、Application Developerなどの別のパーティーでフラット4ユーロを共有することがあります。設定可能な製品のために、売上高は、オファリングを獲得したパーティーによって選択されたそれらの機能に依存するかもしれません。この場合、共有された収益はパーティーの製品の構成によっても支配されています。,Business Partner Domain,3,Party Revenue Sharing ABE
+Party Settlement ABE,Party Settlement ABE,それは、提供された製品/サービス/リソースの使用/繰り返し手数料の結果として、企業または当事者が企業に支払われる金額を表す企業のグループです。 PartySetterMetは契約によって管理されており、企業やその他のMVNOS、ディーラー、小売業者、コンテンツプロバイダーなどの間に作成できます。,Business Partner Domain,2,Party Revenue & Settlement ABE
+Party Service Level Agreement ABE,Party Service Level Agreement ABE,"パーティーサービスレベル契約ABEは、他の1つ以上の当事者を持つSLAを表します。詳細については協定ABEを参照してください。
+このABEはまだ暫定的です",Business Partner Domain,1,Business Partner Domain
+Party Statistic ABE,Party Statistic ABE,"パーティー統計ABEは、パーティー使用パターン、収益性統計の分析を表します。
+このABEは完全には開発されていません",Business Partner Domain,1,Business Partner Domain
+Party Strategy & Plan ABE,Party Strategy & Plan ABE,"Marketsales、Party Performance、競合他社の分析など、他のABESからの入力を伴う他の当事者とのビジネス関係の戦略と計画。
+このABEは完全には開発されていません",Business Partner Domain,1,Business Partner Domain
+Common Domain,Common Domain,一般的なドメインは、他のFrameWorxドメインをサポートし、（すなわち一般的な）または「所有する」に固有のものではないビジネスの役割、情報および活動（例えば、事業体、ビジネスプロセス、機能、論理的アプリケーション、インターフェース、メトリックなど）を表しています。特定のドメイン、または2つ以上の他のドメインから参照または利用されている。,Common Domain,0,top
+Account ABE,Account ABE,アカウントABEには、アカウントを説明する基本属性と関係を指定するために必要なすべてのエンティティが含まれています。,Common Domain,1,Common Domain
+Agreement ABE,Agreement ABE,契約は、サービスレベル契約や顧客価格契約など、書面または口頭であり、時には法律によって執行可能な契約または取り決めを表しています。合意には、製品、サービス、および資源などの他の多くの事業体、および/またはその仕様が含まれます。,Common Domain,1,Common Domain
+Commitment ABE,Commitment ABE,ビジネスインタラクションABEから派生したコミットメントABEは、サービス、製品、資源、あるいはその他の納品についての締約国間の相互合意を反映しています。コミットメント調達の役割,Common Domain,2,Agreement ABE
+Base Types ABE,Base Types ABE,お金や日付範囲のような小さな単純なオブジェクト。平等は身元に基づいていません。,Common Domain,1,Common Domain
+Base Types Example ABE,Base Types Example ABE,属性の種類の基本タイプエンティティの使用例,Common Domain,2,Base Types ABE
+Business Interaction ABE,Business Interaction ABE,ビジネスインタラクションABEは、企業と個人や組織（または組織の一部）などの1つ以上の他の事業体との間の配置、契約、または通信を表しています。インタラクションは、要求、応答、および通知の形式を取ります。,Common Domain,1,Common Domain
+Disputed Amount ABE,Disputed Amount ABE,企業を支払う必要がある金額を変更するための外部パーティー（顧客または他の従事者）による要求。,Common Domain,2,Business Interaction ABE
+Calendar ABE,Calendar ABE,時間関連機能を提供するために使用されるエンティティを表します。これには、スケジューリング、時間の競合、および時間ベースのプレゼンテーションサポートが含まれます。,Common Domain,1,Common Domain
+Schedule Definition ABE,Schedule Definition ABE,,Common Domain,2,Calendar ABE
+Capacity ABE,Capacity ABE,一般化されたABEと製品、サービス、および資源に対する能力と需要の需要を提供する特殊化。容量はある程度の機能を提供する能力です。例えば、ネットワーク容量の1つの尺度は、5月の月の間に一定量の帯域幅を提供するためのネットワークの能力である。,Common Domain,1,Common Domain
+Catalog ABE,Catalog ABE,エンティティ、連合、製品、サービス、およびリソースカタログABESのコンポーネントによって共通のカタログ仕様およびカタログエンティティ、属性、および関連付けを表す一般化ABE。,Common Domain,1,Common Domain
+Entity Catalog ABE,Entity Catalog ABE,エンティティカタログABEは、仕様とエンティティとその属性、およびEntityCatalogSpecification、FederatedCatalogSpecification、EntityCatalog、およびFederatedCatalogの関連付けを表します。,Common Domain,2,Catalog ABE
+Communication Interaction ABE,Communication Interaction ABE,通信対話ABEは、ある期間中に2つ以上の人間および/またはマシン間の通信中の情報の交換を記述する通信インタランスを特定するために必要なすべてのエンティティを含む。コミュニケーションインターラクションは、顧客、サプライヤー...またはリソースの役割を果たす締約国に関係している可能性があります。したがって、ABE«CommunicationInteraction ABE»は、«共通のビジネスエンティティドメイン»にあります。,Common Domain,1,Common Domain
+Configuration and Profiling ABE,Configuration and Profiling ABE,構成（プロファイルとも呼ばれる）は、特性仕様および関連製品/サービス/リソースの仕様および特性および関連製品/サービス/リソースエンティティに関して、リソース、サービス、または製品がどのように機能または機能するかを定義しています。構成は、1つ以上の部分を含んでいてもよい（原子/複合パターンを使用することによって実現されるが、単一のエンティティ構成回復として表される）、各部分は0以上のフィールドを含み得る。各フィールドは、静的または動的に定義されている属性を持つことができます。これらのフィールドのいくつかは固定値を持ち、他のものは選択され得る値（例えば、EntitySpec / Entityおよび/またはPassityPec / PassityValueパターンを使用して）を実行できる値を提供します。,Common Domain,1,Common Domain
+Digital Identity ABE,Digital Identity ABE,.\doc\Figure DI.02 - Credential Hierarchy.docx,Common Domain,1,Common Domain
+Location ABE,Location ABE,位置ABEは、顧客の住所、障害がある機器の現場など、設備のサイトや、機器を修理することができる最寄りの人物などのサイトや位置を表しています。場所は、座標および/またはアドレスおよび/または物理的表現の形をとることができる。,Common Domain,1,Common Domain
+Geographic Place ABE,Geographic Place ABE,地理的な場所を定義し、それをマップにマークするか、またはアドレスを指定することを可能にするために使用されるエンティティのグループ。,Common Domain,2,Location ABE
+Geographic Address ABE,Geographic Address ABE,場所の地理的アドレスを表すために使用されるエンティティのグループ。,Common Domain,3,Geographic Place ABE
+Symbology ABE,Symbology ABE,線、表面、点などの一連のオブジェクトは、何かを表すために使用されます。,Common Domain,3,Geographic Place ABE
+Local Place ABE,Local Place ABE,地域座標系に関係がある場所を決定する一連のエンティティ。それはSIDモデルの他の部分へのリンクポイントを提供します。,Common Domain,2,Location ABE
+OpenGisSFS ABE,OpenGisSFS ABE,企業、政府機関、および大学で構成された国際業界コンソーシアムで定義された幾何学的標準（OGC）で定義されている一連の企業、政府機関、および大学は、公に利用可能なインターフェース基準を開発するためのコンセンサスプロセスに参加しています。,Common Domain,2,Location ABE
+Metric ABE,Metric ABE,メトリックABEは、単位と値を含む測定基準、および値がどのように決定されるかを定義します。それはまた、メトリックを評価するために使用されるしきい値としきい値に違反した結果を含みます。他のプロジェクトは、Metric Abeを何らかの形で使用して専門とし、PM（Performance Management）、RA（収益保証）、SLA（サービスレベル契約）などのメトリックABEを使用して専門としています。,Common Domain,1,Common Domain
+Example Metric Entities ABE,Example Metric Entities ABE,これはメートル基本例を含むABEです,Common Domain,2,Metric ABE
+Metric Definition ABE,Metric Definition ABE,メトリック定義ABEには、MetricDefinition自体、MetricDefinitionCategory、MetricDefinitionDimensionなどのメトリック定義を説明する主なエンティティが含まれています。,Common Domain,2,Metric ABE
+Metric Definition Dimension ABE,Metric Definition Dimension ABE,メトリック定義ディメンションABEには、メトリックコンテキスト内のディメンションを記述するすべてのエンティティが含まれています。,Common Domain,3,Metric Definition ABE
+Metric Definition Measure ABE,Metric Definition Measure ABE,MetricDefMeasureは、エンティティの特定の側面の尺度を指定し、メトリック定義の主要部分です。メトリック定義メジャーABEには、関連しきい値、通知、および結果などのMetricDefMeasureを記述するすべてのエンティティが含まれています。,Common Domain,2,Metric ABE
+Metric Definition Measure Threshold ABE,Metric Definition Measure Threshold ABE,メトリック定義メジャースレッショルドABEには、MetricDefMeasureに使用されるしきい値を記述するすべてのエンティティが含まれています。,Common Domain,3,Metric Definition Measure ABE
+Metric Measure ABE,Metric Measure ABE,メトリックメジャーABEは、メトリグメトリックなどのメトリック定義に従って措置を記述するエンティティを含む。,Common Domain,2,Metric ABE
+Metric Monitoring ABE,Metric Monitoring ABE,メトリック監視ABEには、MetricMeasurementJobなどのメトリック措置の監視を可能にするすべてのエンティティが含まれています。,Common Domain,2,Metric ABE
+Metric Collection ABE,Metric Collection ABE,メトリック収集ABEは初期化されていますが、反復中にさらに研究されていなければなりません。,Common Domain,3,Metric Monitoring ABE
+Metric Job ABE,Metric Job ABE,メトリックジョブABEには、メトリックの測定ジョブの違いの種類に対応するエンティティが含まれています。,Common Domain,3,Metric Monitoring ABE
+Party ABE,Party ABE,当事者は、関心がある、または企業の観点から直接的または間接的に価値を提供する個人、組織、または組織単位を表しています（企業はプロバイダー、サービスプロバイダまたはオペレーターとして理解されるべきではありません）。したがって、パーティーは企業と1つ以上の役割を果たしています。これは、企業が興味を持っている唯一のパーティーが興味があり、そのシステムで検討することを指定するために紹介されています。役割はPartyRoleの概念によって表されます。パーティーによって行われた役割の例には、競合他社、販売見通しなどの役割の例に含まれます。•顧客、ユーザー、従業員など、顧客、ユーザー、従業員などの関心があります。または、サービスプロバイダ、オペレータ、クラウドブローカー、インフラストラクチャプロバイダ、アプリケーション開発者などの間接的に。,Common Domain,1,Common Domain
+Contact Medium ABE,Contact Medium ABE,電話、ファックス、電子メールなど、PartyRoleまたはPartyAccount / BillingAccountContactにアクセスできるさまざまな手段。,Common Domain,2,Party ABE
+Currency ABE,Currency ABE,通貨モデル内の主なエンティティをグループ化します。,Common Domain,2,Party ABE
+Identification ABE,Identification ABE,個人や組織によって使用されるさまざまな形態の識別、集合的にパーティーと呼ばれています。,Common Domain,2,Party ABE
+Party Community ABE,Party Community ABE,パーティーコミュニティABEは、コミュニティ、コミュニティにコミュニティを犯し、コミュニティに貢献し、コミュニティから資産を消費することができる党ロールであるコミュニティで構成されています。,Common Domain,2,Party ABE
+Party Demographic ABE,Party Demographic ABE,人口統計は、彼らのサイズ、成長、密度、分布、ならびに誕生、結婚、病気、そして死に関する統計を含む、個人および組織の研究に対処する。人口統計データは、市場セグメントのメイクアップ、サイズ、顧客の分類、ランキングなど、決定を下すことを可能にする当事者に関する情報です。人口統計は、「何」情報を提供し、2つのカテゴリに分類することができます：個々の人口統計と組織の人口統計。,Common Domain,2,Party ABE
+Party Organization ABE,Party Organization ABE,パーティー組織をモデル化するために使用されます。,Common Domain,2,Party ABE
+Party Profile ABE,Party Profile ABE,マーケッジとマーケティングキャンペーンの策定と標的化の締約国グループに使用される特性。パーティーProfileTypeは、1つ以上のPartyRoleScificationsを分類するために使用されます。 PartyProfLietypeは、1つ以上の地理的エリアに定義できます。プロファイルは、1つまたは複数のProductofferingsと1つ以上の市場セグメントをターゲットにすることができます。 PartyProfileLitesは、人口統計学的に基づくことができます（または定義された）。,Common Domain,2,Party ABE
+Party Role Examples ABE,Party Role Examples ABE,当事者がプレイする可能性がある一連のパーティロールのセットです。,Common Domain,2,Party ABE
+Party Role Group ABE,Party Role Group ABE,パーティーロールグループABEは、PartyRolegrougsを指定するために使用されるすべてのビジネスエンティティを含みます。,Common Domain,2,Party ABE
+Permission ABE,Permission ABE,Pemission ABEには、権限の仕様を記述するためのすべてのビジネスエンティティが含まれており、権限の範囲を含めて付与された効果的な権限。,Common Domain,2,Party ABE
+Skill ABE,Skill ABE,個人または組織が所有しているスキルとスキルの仕様のカタログ。,Common Domain,2,Party ABE
+Party Payment ABE,Party Payment ABE,パーティー支払いABEには、PaymentMethodやBankAccountなどの支払いを説明するために必要なすべてのエンティティが含まれています。,Common Domain,1,Common Domain
+Bank ABE,Bank ABE,銀行ABEは銀行に関連する才能を包括しています。,Common Domain,2,Party Payment ABE
+Payment Method ABE,Payment Method ABE,支払い方法ABEには、すべての種類の支払い方法が含まれています。 PaymentMethodは、Partyが支払いを提供する方法、例えば現金、クレジット、転送です。,Common Domain,2,Party Payment ABE
+Party Privacy ABE,Party Privacy ABE,Party Privacy Profile Abeには、Party Privacy Management Processingが指定するためのパーティープライバシー管理プロセスが使用しているすべてのエンティティが含まれています。,Common Domain,1,Common Domain
+Party Privacy Profile ABE,Party Privacy Profile ABE,パーティーのプライバシープロファイルABEには、パーティーのプライバシー管理プロセスが独自のプライバシーのために行われた選択を指定するためのすべてのエンティティが含まれています。,Common Domain,2,Party Privacy ABE
+Party Privacy Profile Type ABE,Party Privacy Profile Type ABE,パーティーのプライバシープロファイルABEには、パーティーのプライバシー管理プロセスが指定するためのパーティープライバシー管理プロセスで使用されているすべてのエンティティが含まれています - プライバシールール、 - プライバシールール自体。,Common Domain,2,Party Privacy ABE
+Performance ABE,Performance ABE,製品および/またはサービスおよび/またはリソースが機能している方法の尺度を表します。,Common Domain,1,Common Domain
+Performance Category ABE,Performance Category ABE,,Common Domain,2,Performance ABE
+Performance Category Specification ABE,Performance Category Specification ABE,,Common Domain,3,Performance Category ABE
+Performance Monitoring ABE,Performance Monitoring ABE,,Common Domain,2,Performance ABE
+Performance Collection ABE,Performance Collection ABE,,Common Domain,3,Performance Monitoring ABE
+Performance Production ABE,Performance Production ABE,,Common Domain,3,Performance Monitoring ABE
+Performance Specification ABE,Performance Specification ABE,,Common Domain,2,Performance ABE
+Performance Threshold ABE,Performance Threshold ABE,,Common Domain,2,Performance ABE
+Policy ABE,Policy ABE,ポリシードメインは、仕様（例えば、テンプレート）を定義する一連の階層化されたABESと、他のドメインの実体の動作と定義を管理するのに使用できるポリシーエンティティの定義で構成されています。ポリシーは3つのプライマリフォームを取ります。最初のものは、他のエンティティの定義、変更、および構成を管理するためのポリシーの使用方法の定義です。 2つ目は、ポリシー自体の管理方法の定義です。 3つ目は、アプリケーションのポリシーを使用してエンティティを管理する方法です。,Common Domain,1,Common Domain
+Policy Application ABE,Policy Application ABE,ポリシーアプリケーションABEは、ポリシーエンティティを使用して他のエンティティの構成を管理できる概念とアプリケーションコンポーネントを定義します。これは、ポリシーの意思決定機能、およびポリシーを強制して実行するエンティティを提供するためのエンティティで構成されています。また、NGOSSポリシーシステムを構築するために必要なエンティティも含まれています。これらには、ポリシーコンポーネントを大規模な分散システムに拡大することができるように、ポリシーの管理と使用状況を調整するためのエンティティが含まれます。,Common Domain,2,Policy ABE
+Policy Server ABE,Policy Server ABE,,Common Domain,3,Policy Application ABE
+PolicyApp Role ABE,PolicyApp Role ABE,,Common Domain,3,Policy Application ABE
+Policy Framework ABE,Policy Framework ABE,,Common Domain,2,Policy ABE
+Policy Framework Spec ABE,Policy Framework Spec ABE,ポリシー仕様ABEには、ポリシーエンティティの不変特性と動作を定義するエンティティが含まれています。これにより、複数のインスタンスを単一の仕様エンティティから派生させることができます。この派生では、各インスタンスは、その関連テンプレートで定義されている不変特性と動作を使用します。このドメインには、政策、そのコンポーネント、および複数の政策をグループ化できる方法の仕様が含まれています。,Common Domain,2,Policy ABE
+Policy Management ABE,Policy Management ABE,ポリシー管理ABEには、他のドメイン内の他のエンティティを管理するために使用されるエンティティが含まれています。これには、他の一般的なビジネスエンティティサブドメイン（例えば、場所およびパーティー）、およびその他の兄弟ドメイン（例えば、製品、サービス、およびリソース）のエンティティが含まれます。,Common Domain,2,Policy ABE
+Policy Structure ABE,Policy Structure ABE,ポリシーABEには、ポリシーのさまざまなコンポーネントを表すために使用されるエンティティが含まれています。これらのコンポーネントは、次のように定義されたトリプレットであるPolicyRuleの概念を中心にします。 。このABEの新規な特徴は、同じトリプレットを使用して条件および行動句を形成することができるということです。このABEはまた、政治量とその構成要素をグループ化して綴る能力を含んでいます。,Common Domain,2,Policy ABE
+Policy Action ABE,Policy Action ABE,,Common Domain,3,Policy Structure ABE
+Policy Condition ABE,Policy Condition ABE,,Common Domain,3,Policy Structure ABE
+Policy Event ABE,Policy Event ABE,,Common Domain,3,Policy Structure ABE
+Policy Statement ABE,Policy Statement ABE,,Common Domain,3,Policy Structure ABE
+Policy Value ABE,Policy Value ABE,,Common Domain,3,Policy Structure ABE
+Policy Variable ABE,Policy Variable ABE,,Common Domain,3,Policy Structure ABE
+Project ABE,Project ABE,プロジェクトマネージャによって使用されるツールを表して、品質、費用、および時間の企業の目標が計画およびスケジューリング作業によって達成されるようにします。プロジェクトの一般的な業界の定義、作業内訳構造、およびプロジェクトマネージャへのサポートを提供します。,Common Domain,1,Common Domain
+Activity ABE,Activity ABE,,Common Domain,2,Project ABE
+EntitiesToBeFixedInPh4 ABE,EntitiesToBeFixedInPh4 ABE,,Common Domain,2,Project ABE
+Project Calendar ABE,Project Calendar ABE,,Common Domain,2,Project ABE
+Project Element ABE,Project Element ABE,,Common Domain,2,Project ABE
+Project Resource ABE,Project Resource ABE,,Common Domain,2,Project ABE
+Project Role ABE,Project Role ABE,,Common Domain,2,Project ABE
+Project Scope ABE,Project Scope ABE,,Common Domain,2,Project ABE
+SCRUM Blade ABE,SCRUM Blade ABE,,Common Domain,2,Project ABE
+Work Breakdown Structure ABE,Work Breakdown Structure ABE,,Common Domain,2,Project ABE
+Work Order ABE,Work Order ABE,,Common Domain,2,Project ABE
+Root Business Entities ABE,Root Business Entities ABE,ビジネスビューの基礎としてまとめて役立つ一連の共通のビジネスエンティティ。この一連のエンティティは、SIDフレームワークの異なるドメイン内のエンティティを互いに関連付けることを可能にし、情報フレームワークに全体的な全体的なコヒーレンスを提供します。,Common Domain,1,Common Domain
+Association ABE,Association ABE,EntitySpecification /エンティティパターンを使用して作成された暗黙的なサブクラスと同様に、関連付けられているSIDエンティティ（クラスとサブクラス）の間で関連付けを動的に作成できるパターン。,Common Domain,2,Root Business Entities ABE
+Characteristic ABE,Characteristic ABE,パターン（ABEの内容）を使用すると、エンティティがその関連付けを介して作成されるエンティティの種類に固有の属性をextitySpecificationに介して作成でき、RootEntityTypeとの関連付けを介して特定のエンティティに固有の属性を作成できます。 RootEntityTypeはSIDのエンティティです。たとえば、これらのエンティティのすべてのインスタンスに適用される製品、顧客、および製品専用のエンティティ（RootEntityTypeのインスタンス）に対して特性を定義できます。,Common Domain,2,Root Business Entities ABE
+Characteristic Pricing ABE,Characteristic Pricing ABE,価格設定は、特性分類とその関連する特性分割の組み合わせに基づくことを可能にします。,Common Domain,3,Characteristic ABE
+Entity Identification ABE,Entity Identification ABE,Dynamicallに使用できるエンティティのコレクションは、任意のタイプのエンティティに対してさまざまな識別フォーマットを指定し、エンティティに関連付けられている識別インスタンスを表します。,Common Domain,2,Root Business Entities ABE
+Entity Specification Action ABE,Entity Specification Action ABE,関連エンティティ仕様のアクションとワークフローを定義するために使用できるエンティティのコレクション。,Common Domain,2,Root Business Entities ABE
+External System Capability ABE,External System Capability ABE,フルフィルメント、課金、保証、ポリシー、および請求などの外部システム機能を定義するために使用できるエンティティの集まり。,Common Domain,2,Root Business Entities ABE
+Root Entity Attachment ABE,Root Entity Attachment ABE,画像や文書のような関連するルートエンティティ添付ファイルを定義するために使用できるエンティティのコレクション。,Common Domain,2,Root Business Entities ABE
+Entity Specification Attachment Example Instances ABE,Entity Specification Attachment Example Instances ABE,EntitySpecificationAttachmentsを拡張するために使用できる添付ファイル例エンティティの集まり。,Common Domain,3,Root Entity Attachment ABE
+Root Entity Group ABE,Root Entity Group ABE,ルートエンティティグループABEは、RootEntityRelationshipのインスタンス数を減らすために、ルートエンティティグループのグループをRootEntityRelationshipエンティティを使用することを代替として関連付けることができます。また、グループからルートエンティティを選択することもできます。たとえば、7チャンネルパックのうち3つを選択してください。そして、グループのルートエンティティメンバを制限する式を定義すること。例えば、チャネルパック3またはチャネルパック4のいずれも選択することができるが、両方ではない。,Common Domain,2,Root Business Entities ABE
+Test ABE,Test ABE,テストは、特に広範囲の使用にされる前に、エンティティの品質、性能、または信頼性を確立することを目的とした手順です。テストは、エンティティの正しい機能に関連する問題を診断するために使用された後にエンティティの上で実行されてもよい。したがって、テストは、製品、サービス、またはリソースに対して実行されてもよい。テストは3つのカテゴリに分けられます。•プロアクティブ/制御。実体上の履行プロセス中に確立されているテスト、および一般に、エンティティの寿命を通して継続的に実行されます。これらのテストは、エンティティを消費者に提供する前に、テスト中のエンティティの正しい機能を確立するためにしばしば使用されます。これらの試験の結果は任意の時間に照会することができる。 •オンデマンド/制御。特定の時点で要求されたテストでは、それはまた将来の時点で実際に実行されるようにスケジュールされ得る。これらのテストは通常​​保証プロセスの一部として実行されます。それらは問題を検出するため、またはテスト中のエンティティによって提供される機能の消費者になされた品質、性能、または信頼性の約束を保証するために使用されます。これらのテストは、それらが「管理されている」という意味で制御され、中断され、再開され、その結果が要求される可能性がある。 •オンデマンド/制御不能すぐに実行されるように要求されたテスト、およびテストが完了してリアルタイムを返すまでの要求がブロックされているテスト。これらのテストは、それらが「管理されていない」という点で制御されていません。テストABEは製品テストABE、サービステストABE、およびリソーステストABEに特化しています。,Common Domain,1,Common Domain
+Usage ABE,Usage ABE,その意図された目的のために製品、サービスまたはリソースを採用することの発生は、ビジネスにとって関心があり、それに適用される料金を与えることができる。使用属性を表す特性で構成されています。,Common Domain,1,Common Domain
+IP Detail Record ABE,IP Detail Record ABE,,Common Domain,2,Usage ABE
+Usage Example Instances ABE,Usage Example Instances ABE,,Common Domain,2,Usage ABE
+Usage Spec ABE,Usage Spec ABE,,Common Domain,2,Usage ABE
+Users and Roles ABE,Users and Roles ABE,ユーザーと役割ABEは、ユーザーと役割の種類とその製品、サービス、およびリソースの使用への関与を表しています。,Common Domain,1,Common Domain

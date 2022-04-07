@@ -13,7 +13,8 @@
             "tables": {
                 "tam":{"tableName":"TAM","caption":"Application Framework (TAM)","logic":"getPageData","rollupFind":false},
                 "etom":{"tableName":"eTOM","caption":"Business Process Framework (eTOM)","logic":"getPageData","rollupFind":false},
-                "sid_abe":{"tableName":"SID_ABE","caption":"Information_Framework (SID)","logic":"getPageData","rollupFind":true},
+                "sid_abe":{"tableName":"SID_ABE","caption":"Information_Framework (SID) ABE","logic":"getPageData","rollupFind":true},
+                "sid_be":{"tableName":"SID_BE","caption":"Information_Framework (SID) BE","logic":"getPageData","rollupFind":true},
                 "oda_functional_blocks":{"tableName":"ODA_Functional_Blocks","caption":"ODA Functional Blocks","logic":"getPageData","rollupFind":false},
                 "end_to_end_business_flows":{"tableName":"End_to_End_Business_Flows","caption":"End to End Business Flows","logic":"getPageData","rollupFind":false},
                 "open_apis":{"tableName":"Open_APIs","caption":"Open APIs","logic":"getPageData","rollupFind":false},
@@ -32,7 +33,8 @@
             "tables": {
                 "tam":{"tableName":"TAM","caption":"Application Framework (TAM)","logic":"getPageData","rollupFind":false},
                 "etom":{"tableName":"eTOM","caption":"Business Process Framework (eTOM)","logic":"getPageData","rollupFind":false},
-                "sid_abe":{"tableName":"SID_ABE","caption":"Information_Framework (SID)","logic":"getPageData","rollupFind":true},
+                "sid_abe":{"tableName":"SID_ABE","caption":"Information_Framework (SID) ABE","logic":"getPageData","rollupFind":true},
+                "sid_be":{"tableName":"SID_BE","caption":"Information_Framework (SID) BE","logic":"getPageData","rollupFind":true},
                 "oda_functional_blocks":{"tableName":"ODA_Functional_Blocks","caption":"ODA Functional Blocks","logic":"getPageData","rollupFind":false},
                 "end_to_end_business_flows":{"tableName":"End_to_End_Business_Flows","caption":"End to End Business Flows","logic":"getPageData","rollupFind":false},
                 "open_apis":{"tableName":"Open_APIs","caption":"Open APIs","logic":"getPageData","rollupFind":false},
