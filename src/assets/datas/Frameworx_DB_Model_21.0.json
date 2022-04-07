@@ -75,8 +75,18 @@
         },
         {
             "action": "Import-CSV",
+            "sql": "INSERT INTO SID_BE VALUES ($ID ,$LEVEL ,$PARENT, $NAME ,'','' ,$DESCRIPTION ,'',substr($DESCRIPTION, 1, 150),$DOMAIN,'','','');",
+            "file": "./src/assets/datas/Information_Framework_SID_Excel_Format_v21.0_BES.csv"
+        },
+        {
+            "action": "Import-CSV",
             "sql": "INSERT INTO MAPPING VALUES ($FROM_TABLE ,$FROM_KEY ,$TO_TABLE ,$TO_KEY ,$SOURCE ,$MATURITY_LEVEL ,$MEMO );",
-            "file": "./src/assets/datas/Information_Framework_SID_Excel_Format_v21.0_Mapping.csv"
+            "file": "./src/assets/datas/Information_Framework_SID_Excel_Format_v21.0_ABESMapping.csv"
+        },
+        {
+            "action": "Import-CSV",
+            "sql": "INSERT INTO MAPPING VALUES ($FROM_TABLE ,$FROM_KEY ,$TO_TABLE ,$TO_KEY ,$SOURCE ,$MATURITY_LEVEL ,$MEMO );",
+            "file": "./src/assets/datas/Information_Framework_SID_Excel_Format_v21.0_BESMapping.csv"
         }
     ]
 }
