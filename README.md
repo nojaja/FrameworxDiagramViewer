@@ -31,6 +31,7 @@ $ npm install
 [Open_APIs](https://docs.google.com/spreadsheets/d/1rYSE8yqqOCIfLxa8LlfjQfRCbhf8LNjrjjMaQXak6Ws/edit?usp=sharing)  
 [Legacy_Systems](https://docs.google.com/spreadsheets/d/1P4WQxQnO-gbPkVZ2d85T9I0dClw9Lm3rQ_cvSmyYz88/edit?usp=sharing)  
 [mapping](https://docs.google.com/spreadsheets/d/1Qr4PD75e1VRMx_4Lk09ibswxMdJakM-TKNvpWBcHNtI/edit?usp=sharing)  
+[knowledge]https://docs.google.com/spreadsheets/d/178cfC_nIaiE6DM3bUmlbgEnPl1JXI2VU_VAjlGjCqD0/edit?usp=sharing
 
 Export to csv  
 and put ```src/assets/datas/*.csv```

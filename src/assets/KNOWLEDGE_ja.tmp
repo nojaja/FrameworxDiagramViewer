@@ -1,16 +1,17 @@
     <h1 id="name">{{data.title}}</h1>
-    <h4 id="type" translate="no">Information_Framework (SID BE)</h4>
-    <h4 id="domain" translate="no">Domain: {{data.domain}}</h4>
-    <h4 id="identifier" translate="no">Identifier: {{data.name}}</h4>
-    
+    <h4 id="type" translate="no">ナレッジ</h4>
+    <h4 id="domain" translate="no">ドメイン: {{data.domain}}</h4>
+    <h4 id="identifier" translate="no">ID: {{data.name}}</h4>
+        
     {{#if data.parent}}
-    <h4 id="parent" translate="no">Parent Identifier: <a class="parentlink elementlink" data-id="{{data.parent}}" data-type="sid_abe" >{{data.parent}}</a></h4>
+    <h4 id="parent" translate="no">上位ID: <a class="parentlink elementlink" data-id="{{data.parent}}" data-type="{{data.table}}" >{{data.parent}}</a></h4>
     {{/if}}
 
     {{#oc data}}{{/oc}}
-    <h3 translate="no">Overview</h3>
+    <h3 translate="no">概要</h3>
     <p id="description">{{breaklines data.overview}}</p>
-    <h3 translate="no">Relationships</h3>
+    <h3 translate="no">関連要素</h3>
+
     <p id="relationData">
     {{#each data.relationData}}
         <b>{{this.caption}}</b><br />
@@ -28,7 +29,7 @@
         <table>
             <thead>
                 <tr>
-                    <th>ID</th><th>Name</th><th>Description</th>
+                    <th>ID</th><th>名称</th><th>概要</th>
                 </tr>
             </thead>
             <tbody>
@@ -40,7 +41,7 @@
                         {{else}}
                         <span class="message fa-stack maturity_level_1" style="font-size: 0.6em;">
                             <i class="fa fa-question-circle fa-stack-2x"></i>
-                            <span class="remark">source:Auto  <br />maturity_level:1 <br />Guessed from this parent hierarchy</span>
+                            <span class="remark">source:Auto  <br />maturity_level:1 <br />上位階層からの自動推測</span>
                         </span>
                         {{/ifEquals}}
                         {{#each this.reasonData}}

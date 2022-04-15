@@ -101,7 +101,7 @@ export class Dao {
             }
             return datascource
         } catch (error) {
-            console.error("getPageData", this.preparesTemplate.PageData({ table: this.getTableInfo(table).tableName }), error)
+            console.error(`getPageData(table=${table} id=${id}): `,this.preparesTemplate.PageData({ table: this.getTableInfo(table).tableName }), error)
         }
     }
 
@@ -132,7 +132,7 @@ export class Dao {
 
     //ページのに関連する子要素の取得
     async getRelationData(table, id) {
-        if (!this.tableExists(table)) throw new Error(this.getTableInfo(table).tableName + ' TABLES not exist')
+        if (!this.tableExists(table)) throw new Error(`getRelationData(table=${table} id=${id}): ` + this.getTableInfo(table).tableName + ` TABLES not exist `)
         const result = {}
         for (const relationTable in this.tables) {
             if (this.getTableInfo(table).tableName == this.getTableInfo(relationTable).tableName) continue

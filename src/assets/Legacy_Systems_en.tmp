@@ -11,7 +11,6 @@
     <h3 translate="no">Functionality</h3>
     <p id="functionality">{{breaklines data.functionality}}</p>
 
-    {{#log data}}{{/log}}
     {{#if data.SYSTEM_DOCUMENT}}
     <h3 translate="no">Document</h3>
     <p id="functionality"><a target="_blank" href="{{data.SYSTEM_DOCUMENT}}">{{breaklines data.SYSTEM_DOCUMENT}}</a></p>

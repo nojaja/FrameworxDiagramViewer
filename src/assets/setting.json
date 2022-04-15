@@ -15,11 +15,13 @@
                 "etom":{"tableName":"eTOM","caption":"Business Process Framework (eTOM)","logic":"getPageData","rollupFind":false},
                 "sid_abe":{"tableName":"SID_ABE","caption":"Information_Framework (SID) ABE","logic":"getPageData","rollupFind":true},
                 "sid_be":{"tableName":"SID_BE","caption":"Information_Framework (SID) BE","logic":"getPageData","rollupFind":true},
+                "sid_attribute":{"tableName":"SID_Attribute","caption":"Information_Framework (SID) Attribute","logic":"getPageData","rollupFind":true},
                 "oda_functional_blocks":{"tableName":"ODA_Functional_Blocks","caption":"ODA Functional Blocks","logic":"getPageData","rollupFind":false},
                 "end_to_end_business_flows":{"tableName":"End_to_End_Business_Flows","caption":"End to End Business Flows","logic":"getPageData","rollupFind":false},
                 "open_apis":{"tableName":"Open_APIs","caption":"Open APIs","logic":"getPageData","rollupFind":false},
                 "legacy_systems":{"tableName":"Legacy_Systems","caption":"Target Systems","logic":"getPageData","rollupFind":true},
-                "functions":{"tableName":"Functions","caption":"Functionality","logic":"getPageData","rollupFind":false}
+                "functions":{"tableName":"Functions","caption":"Functionality","logic":"getPageData","rollupFind":false},
+                "knowledge":{"tableName":"KNOWLEDGE","caption":"Knowledge","logic":"getPageData","rollupFind":false}
             },
             "prepares": {
                 "PageData": "SELECT ID as name, NAME as title, LEVEL, DESCRIPTION as overview, MATURITY_LEVEL as maturity, FUNCTION as functionality, PARENT as parent, TYPE as category, DOMAIN as domain,* FROM {{{table}}} WHERE ID=$id",
@@ -35,11 +37,13 @@
                 "etom":{"tableName":"eTOM","caption":"Business Process Framework (eTOM)","logic":"getPageData","rollupFind":false},
                 "sid_abe":{"tableName":"SID_ABE","caption":"Information_Framework (SID) ABE","logic":"getPageData","rollupFind":true},
                 "sid_be":{"tableName":"SID_BE","caption":"Information_Framework (SID) BE","logic":"getPageData","rollupFind":true},
+                "sid_attribute":{"tableName":"SID_Attribute","caption":"Information_Framework (SID) Attribute","logic":"getPageData","rollupFind":true},
                 "oda_functional_blocks":{"tableName":"ODA_Functional_Blocks","caption":"ODA Functional Blocks","logic":"getPageData","rollupFind":false},
                 "end_to_end_business_flows":{"tableName":"End_to_End_Business_Flows","caption":"End to End Business Flows","logic":"getPageData","rollupFind":false},
                 "open_apis":{"tableName":"Open_APIs","caption":"Open APIs","logic":"getPageData","rollupFind":false},
                 "legacy_systems":{"tableName":"Legacy_Systems","caption":"現行システム","logic":"getPageData","rollupFind":true},
-                "functions":{"tableName":"Functions","caption":"所有機能","logic":"getPageData","rollupFind":false}
+                "functions":{"tableName":"Functions","caption":"所有機能","logic":"getPageData","rollupFind":false},
+                "knowledge":{"tableName":"KNOWLEDGE","caption":"ナレッジ","logic":"getPageData","rollupFind":false}
             },
             "prepares": {
                 "test": "select sql from sqlite_master where type='table';",

@@ -1,0 +1,4 @@
+ID,NAME,DESCRIPTION,SOURCE,MEMO,DOMAIN,LEVEL,PARENT
+login,ログイン管理,ログインに関するTMFでの表記はないが、下記の判断で関連TAMを推測できる,test,,,1,top
+login.1,認証や本人特定,TAM定義外、部分的にSecurityManagement?,test,,,1,login
+login.2,認可やロールに関する処理,SecurityManagement?,,,,1,login

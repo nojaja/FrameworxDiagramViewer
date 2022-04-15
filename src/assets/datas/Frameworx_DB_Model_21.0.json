@@ -80,6 +80,11 @@
         },
         {
             "action": "Import-CSV",
+            "sql": "INSERT INTO SID_Attribute VALUES ($ID ,$LEVEL ,$PARENT, $NAME ,'','' ,$DESCRIPTION ,'',substr($DESCRIPTION, 1, 150),$DOMAIN,'','','');",
+            "file": "./src/assets/datas/Information_Framework_SID_Excel_Format_v21.0_Attribute.csv"
+        },
+        {
+            "action": "Import-CSV",
             "sql": "INSERT INTO MAPPING VALUES ($FROM_TABLE ,$FROM_KEY ,$TO_TABLE ,$TO_KEY ,$SOURCE ,$MATURITY_LEVEL ,$MEMO );",
             "file": "./src/assets/datas/Information_Framework_SID_Excel_Format_v21.0_ABESMapping.csv"
         },
@@ -87,6 +92,21 @@
             "action": "Import-CSV",
             "sql": "INSERT INTO MAPPING VALUES ($FROM_TABLE ,$FROM_KEY ,$TO_TABLE ,$TO_KEY ,$SOURCE ,$MATURITY_LEVEL ,$MEMO );",
             "file": "./src/assets/datas/Information_Framework_SID_Excel_Format_v21.0_BESMapping.csv"
+        },
+        {
+            "action": "Import-CSV",
+            "sql": "INSERT INTO MAPPING VALUES ($FROM_TABLE ,$FROM_KEY ,$TO_TABLE ,$TO_KEY ,$SOURCE ,$MATURITY_LEVEL ,$MEMO );",
+            "file": "./src/assets/datas/Information_Framework_SID_Excel_Format_v21.0_AttributeMapping.csv"
+        },
+        {
+            "action": "Import-CSV",
+            "sql": "INSERT INTO KNOWLEDGE VALUES ($ID ,$LEVEL ,$PARENT, $NAME ,'','' ,$DESCRIPTION ,'',substr($DESCRIPTION, 1, 150),$DOMAIN,'','','',$SOURCE,$MEMO);",
+            "file": "./src/assets/datas/Knowledge.csv"
+        },
+        {
+            "action": "Import-CSV",
+            "sql": "INSERT INTO MAPPING VALUES ($FROM_TABLE ,$FROM_KEY ,$TO_TABLE ,$TO_KEY ,$SOURCE ,$MATURITY_LEVEL ,$MEMO );",
+            "file": "./src/assets/datas/Knowledge_Mapping.csv"
         }
     ]
 }

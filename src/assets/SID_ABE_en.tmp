@@ -1,5 +1,5 @@
     <h1 id="name">{{data.title}}</h1>
-    <h4 id="type" translate="no">Information_Framework (SID)</h4>
+    <h4 id="type" translate="no">Information_Framework (SID ABE)</h4>
     <h4 id="domain" translate="no">Domain: {{data.domain}}</h4>
     <h4 id="identifier" translate="no">Identifier: {{data.name}}</h4>
     

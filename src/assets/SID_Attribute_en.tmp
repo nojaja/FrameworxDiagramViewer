@@ -1,10 +1,10 @@
     <h1 id="name">{{data.title}}</h1>
-    <h4 id="type" translate="no">Information_Framework (SID BE)</h4>
+    <h4 id="type" translate="no">Information_Framework (SID Attribute)</h4>
     <h4 id="domain" translate="no">Domain: {{data.domain}}</h4>
     <h4 id="identifier" translate="no">Identifier: {{data.name}}</h4>
     
     {{#if data.parent}}
-    <h4 id="parent" translate="no">Parent Identifier: <a class="parentlink elementlink" data-id="{{data.parent}}" data-type="sid_abe" >{{data.parent}}</a></h4>
+    <h4 id="parent" translate="no">Parent Identifier: <a class="parentlink elementlink" data-id="{{data.parent}}" data-type="sid_be" >{{data.parent}}</a></h4>
     {{/if}}
 
     {{#oc data}}{{/oc}}
