@@ -26,6 +26,9 @@ export class CustomHandlebarsFactory {
         Handlebars.getPageTemplate = async (URL) => {
             return await CustomHandlebarsFactory.getPageTemplate(Handlebars, URL)
         }
+        Handlebars.registerPartialURL = async (PartialName, URL) => {
+            return await CustomHandlebarsFactory.registerPartial(Handlebars, PartialName, URL)
+        }
 
         return Handlebars
     }
@@ -38,6 +41,11 @@ export class CustomHandlebarsFactory {
             HandlebarsInstance.pageCache[URL] = HandlebarsInstance.compile(response);
         }
         return HandlebarsInstance.pageCache[URL]
+    }
+
+    static async registerPartial(HandlebarsInstance, PartialName, URL) {
+        const response = await (await fetch(URL, { method: "get" })).text();
+        HandlebarsInstance.registerPartial(PartialName, response);
     }
 }
 

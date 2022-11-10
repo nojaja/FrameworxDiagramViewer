@@ -3,6 +3,7 @@
         "ja"
     ],
     "default": {
+        "title": "FrameworxFinder",
         "q": "3.2",
         "type": "TAM",
         "bpmn-modeler-url": "https://nojaja.github.io/bpmn-modeler/?q="

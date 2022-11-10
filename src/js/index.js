@@ -126,8 +126,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // ページの読み込み完了イベントのハンドリング
 window.addEventListener('load', async (event) => {
-  const footer = await (await fetch("./assets/footer_" + language + ".tmp", { method: "get" })).text();
-  Handlebars.registerPartial('footer', footer);
+  Handlebars.registerPartialURL('footer', "./assets/footer_" + language + ".tmp");
 
   //初回表示時の描画
   const id = await getParam("q")
@@ -135,6 +134,8 @@ window.addEventListener('load', async (event) => {
   const serialized_filter = await getParam("f")
   const addfilters = (serialized_filter) ? JSON.parse(atob(serialized_filter)) : {}
   filter.setFilters(addfilters);
+
+  Array.from(document.getElementsByClassName('initdispnone')).forEach(element => {element.style.display = 'block'});
 
   pageGen(type, id);
 });
@@ -207,6 +208,8 @@ let pageGen = async function (table, id, scroll) {
     updateFilter()
   })
   selectCheckbox.setValues(filter.getFilters())
+
+  document.title = _setting.default.title + " | " + data.title;
 }
 
 //SVGリンクイベント作成
