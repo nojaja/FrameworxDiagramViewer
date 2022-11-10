@@ -9,7 +9,7 @@
 
     {{#oc data}}{{/oc}}
     <h3 translate="no">概要</h3>
-    <p id="description">{{breaklines data.overview}}</p>
+    <p id="description">{{md data.overview}}</p>
     <h3 translate="no">関連要素</h3>
 
     <p id="relationData">

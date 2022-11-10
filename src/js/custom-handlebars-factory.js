@@ -1,6 +1,14 @@
 
 import _Handlebars from "handlebars";
 import promisedHandlebars from "promised-handlebars";
+import md from 'markdown-it';
+
+const mdInstance = md({
+    html: true,
+    breaks: false,
+    linkify: true,
+    typography: true
+  })
 
 export class CustomHandlebarsFactory {
     constructor() {
@@ -9,9 +17,14 @@ export class CustomHandlebarsFactory {
         const Handlebars = promisedHandlebars(require('handlebars'), { Promise: Promise })
         // 改行をBRに変換する
         Handlebars.registerHelper("breaklines", function (text) {
-            text = Handlebars.Utils.escapeExpression(text);
-            text = text.replace(/(\r\n|\n|\r)/gm, "<br />");
-            return new Handlebars.SafeString(text);
+            const ret_text = Handlebars.Utils.escapeExpression(text);
+            const ret = ret_text.replace(/(\r\n|\n|\r)/gm, "<br />");
+            return new Handlebars.SafeString(ret);
+        });
+        // コンテンツをmdとしてレンダリングする
+        Handlebars.registerHelper("md", function (text) {
+            const ret_text = mdInstance.render(text.trim())
+            return new Handlebars.SafeString(ret_text);
         });
 
         Handlebars.registerHelper('ifEquals', function (arg1, arg2, options) {
