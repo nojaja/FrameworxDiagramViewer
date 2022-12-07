@@ -1,25 +1,17 @@
-    <p id="relationData">
+    <h1 id="name" translate="no">TAM一覧</h1>
         <table>
-        {{#sql "test2" null}}
-            {{#ifEquals row 0}}
             <thead>
                 <tr>
-                    {{#each columnNames}}
-                    <th>{{this}}</th>
-                    {{/each}}
+                    <th>ID</th><th>名称</th><th>概要</th>
                 </tr>
             </thead>
             <tbody>
-            {{/ifEquals}}
+            {{#each data.children}}
                 <tr>
-                    {{#each context}}
-                    <td>{{this}}</td>
-                    {{/each}}
+                    <td><div><a class="parentlink elementlink" data-id="{{name}}" data-type="{{table}}" >{{name}}</a></div></td>
+                    <td><div>{{title}}</div></td>
+                    <td><div>{{breaklines brief}}</div></td>
                 </tr>
+            {{/each}}
             </tbody>
-        {{/sql}}
         </table>
-        <br />
-    </p>
-    
-    

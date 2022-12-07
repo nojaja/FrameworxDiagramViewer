@@ -8,6 +8,8 @@
     <h4 id="parent" translate="no">Parent Identifier: <a class="parentlink elementlink" data-id="{{data.parent}}" data-type="{{data.table}}" >{{data.parent}}</a></h4>
     {{else}}
     {{svg 'eTOM_Overview_en.drawio.svg'}}
+    <br>
+    <a href="?q=1&type=etomlist">List View</a>
     {{/if}}
 
     {{#oc data}}{{/oc}}

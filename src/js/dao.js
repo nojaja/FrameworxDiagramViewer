@@ -32,7 +32,7 @@ export class Dao {
         console.log("Dao constructor", datafile_url, tables, prepares)
         this.preparesTemplate = {}
         for (const querName in this.prepares) {
-            console.log('querName:' + querName + ' :' + this.prepares[querName]);
+            console.log('load prepare :' + querName + ' :' + this.prepares[querName]);
             this.preparesTemplate[querName] = Handlebars.compile(this.prepares[querName]);
         }
     }
@@ -81,7 +81,7 @@ export class Dao {
     }
 
     //ページのデータ取得
-    async getPageData(table, id) {
+    async getPageData(table, id, all) {
         if (!this.tableExists(table)) throw new Error(this.getTableInfo(table).tableName + ' TABLES not exist')
         this.db = this.db || await this.database()
         try {
@@ -96,7 +96,7 @@ export class Dao {
             if (stmt.step()) { //primary keyで検索するので結果行は1:0
                 datascource = stmt.getAsObject();
                 datascource.table = table
-                datascource.children = await this.getChildData(table, id) //紐づく子供の取得
+                datascource.children = await this.getChildData(table, id, all) //紐づく子供の取得
                 datascource.relationData = await this.getRelationData(table, id)
             }
             return datascource
@@ -106,13 +106,15 @@ export class Dao {
     }
 
     //ページのに関連する子要素の取得
-    async getChildData(table, id) {
+    async getChildData(table, id, all) {
         if (!this.tableExists(table)) throw new Error(this.getTableInfo(table).tableName + ' TABLES not exist')
         this.db = this.db || await this.database()
 
         try {
             // Prepare an sql statement
-            const stmt = this.db.prepare(this.preparesTemplate.ChildData({ table: this.getTableInfo(table).tableName }))
+            const stmt = (all)? 
+                this.db.prepare(this.preparesTemplate.AllChildData({ table: this.getTableInfo(table).tableName })):
+                this.db.prepare(this.preparesTemplate.ChildData({ table: this.getTableInfo(table).tableName }));
 
             // Bind values to the parameters and fetch the results of the query
             //const result = stmt.getAsObject({'$id' : id});

@@ -7,6 +7,7 @@ import '@fortawesome/fontawesome-free/js/solid';
 import '@fortawesome/fontawesome-free/js/regular';
 import CustomHandlebarsFactory from "./custom-handlebars-factory.js";
 import Dao from "./dao.js";
+import Site from "./site.js";
 import DefaultSetting from "../assets/default_setting.json";
 import SelectStepper from "./select-stepper.js";
 import SelectCheckbox from "./select-checkbox.js";
@@ -52,11 +53,11 @@ const getSetting = async function () {
         //console.log(setting)
         return setting
       } else {
-        console.log(response.statusText); // => Error Message
+        console.error(response.statusText); // => Error Message
         return {}
       }
     }).catch((response) => {
-      console.log(response); // => "TypeError: ~"
+      console.error(response); // => "TypeError: ~"
       return {}
     });
   }
@@ -81,8 +82,14 @@ const language = function () {
     window.navigator.userLanguage ||
     window.navigator.browserLanguage;
   const languages = DefaultSetting.languages
-  console.log(languages)
+  console.log(`Browser-Accept-Language: ${languages}`)
   return (languages.indexOf(language) != -1) ? language : "en"
+}()
+
+const site_promise = async function () {
+  const _setting = await getSetting()
+  const siteconf = _setting.site[language]
+  return new Site(siteconf.pages)
 }()
 
 const dao_promise = async function () {
@@ -109,12 +116,12 @@ document.addEventListener('DOMContentLoaded', function () {
       //各ノードのクリックイベントのハンドリング
       $node.on('click', function () {
         //ノードのID表示用のURLをhistoryに追加して、再描画
-        const type = getParam("type")
+        const pagename = getParam("type")
         $node.attr('data-q', data.name)
-        $node.attr('data-type', type)
+        $node.attr('data-type', pagename)
         $node.attr('data-domain', data.domain)
-        window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${data.name}&type=${type}`)
-        pageGen(type, data.name);
+        window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${data.name}&type=${pagename}`)
+        pageGen(pagename, data.name);
       });
       $node.find('.leftEdge').removeClass('leftEdge');
       $node.find('.rightEdge').removeClass('rightEdge');
@@ -130,53 +137,75 @@ window.addEventListener('load', async (event) => {
 
   //初回表示時の描画
   const id = await getParam("q")
-  const type = await getParam("type")
+  const pagename = await getParam("type")
   const serialized_filter = await getParam("f")
   const addfilters = (serialized_filter) ? JSON.parse(atob(serialized_filter)) : {}
   filter.setFilters(addfilters);
 
   Array.from(document.getElementsByClassName('initdispnone')).forEach(element => {element.style.display = 'block'});
 
-  pageGen(type, id);
+  pageGen(pagename, id);
 });
 
 // ページ移動 イベントをハンドリング
 window.addEventListener('popstate', async (event) => {
   //移動先のパラメータで再描画
   const id = await getParam("q")
-  const type = await getParam("type")
-  pageGen(type, id);
+  const pagename = await getParam("type")
+  pageGen(pagename, id);
 });
 
 //ページの描画処理
-let pageGen = async function (table, id, scroll) {
+let pageGen = async function (pagename, id, scroll) {
   const dao = await dao_promise
+  const site = await site_promise
   const _setting = await getSetting()
 
   //表示ロジックの取得
-  const logic = (dao.getTableInfo(table)) ? dao.getTableInfo(table).logic : "";
+  const fileName = (site.getPageInfo(pagename)) ? site.getPageInfo(pagename).fileName : "";
+  const tableName = (site.getPageInfo(pagename)) ? site.getPageInfo(pagename).tableName : "";
+
+  
+  const logic = async (tableName, id) => {
+    const logicname = (site.getPageInfo(pagename)) ? site.getPageInfo(pagename).logic : "";
+    console.log('logicname:', logicname)
+    if(logicname == "getListData") return await dao.getPageData(tableName, id, true)
+    if(logicname == "getPageData") return await dao.getPageData(tableName, id)
+    return {}
+  }
+
   //表示データの取得
-  const data = (logic == "getPageData") ? await dao.getPageData(table, id) : {}
+  const data = await logic(tableName, id)
 
   /*filter処理*/
-  console.log('data', data)
-  console.log('data.relationData', data.relationData)
-  console.log('data.children', data.children)
-  console.log('filters', filter.getFilters())
+  console.log('fileName:', fileName)
+  console.log('tableName:', tableName)
+  console.log('data:', data)
+  console.log('data.relationData:', data.relationData)
+  console.log('data.children:', data.children)
+  console.log('filters:', filter.getFilters())
 
   //data.relationDataに対してfilter_logicを適用
+  if(data.relationData)
   for (const [dataset, record] of Object.entries(data.relationData)) {
     const recordtmp = filter.unique_filter_logic(record.children, ["title"], (oldrecord, newrecord) => { return newrecord.basefromid == newrecord.fromid /*basefromidと同じものを優先する*/ })
     data.relationData[dataset].children = filter.filter_logic(recordtmp)
   }
   //data.childrenに対してfilter_logicを適用
-  data.children_org = data.children
-  data.children = filter.filter_logic2(data.children)
+  if(data.children){
+    data.children_org = data.children
+    data.children = filter.filter_logic2(data.children)
+  }
   pagedata = data;
 
-  const tableName = (dao.getTableInfo(table)) ? dao.getTableInfo(table).tableName : table;
-  const url = "./assets/" + tableName + "_" + language + ".tmp";
-  const template = await Handlebars.getPageTemplate(url)
+  const url = (data) => {
+    console.log("url",data)
+    if(data.ID){
+      return "./assets/" + fileName + "_" + language + ".tmp";
+    }
+    return "./assets/" + 404 + "_" + language + ".tmp";
+  }
+  const template = await Handlebars.getPageTemplate(url(data))
   document.getElementById("content_body").innerHTML = await template({ data: data })
   //画面遷移したら上部に移動
   if (scroll != false) {
