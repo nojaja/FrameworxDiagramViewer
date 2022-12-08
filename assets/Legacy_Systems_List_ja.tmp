@@ -1,0 +1,17 @@
+    <h1 id="name" translate="no">システム一覧</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th><th>名称</th><th>概要</th>
+                </tr>
+            </thead>
+            <tbody>
+            {{#each data.children}}
+                <tr>
+                    <td><div><a class="parentlink elementlink" data-id="{{name}}" data-type="{{table}}" >{{name}}</a></div></td>
+                    <td><div>{{title}}</div></td>
+                    <td><div>{{breaklines brief}}</div></td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>

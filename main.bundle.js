@@ -90341,6 +90341,10 @@ class CustomHandlebarsFactory {
             return new Handlebars.SafeString(ret_text);
         });
 
+        /**
+         * 
+         * ex.{{#ifEquals this.source "consideration"}}
+         */
         Handlebars.registerHelper('ifEquals', function (arg1, arg2, options) {
             return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
         });
@@ -90483,8 +90487,10 @@ class Dao {
         if (!this.tableExists(table)) throw new Error(this.getTableInfo(table).tableName + ' TABLES not exist')
         this.db = this.db || await this.database()
         try {
+            const tableName = this.getTableInfo(table).tableName;
+            console.log("dao.getPageData: tableName: ",tableName," id: ", id," all:", all)
             // Prepare an sql statement
-            const stmt = this.db.prepare(this.preparesTemplate.PageData({ table: this.getTableInfo(table).tableName }));
+            const stmt = this.db.prepare(this.preparesTemplate.PageData({ table: tableName }));
 
             // Bind values to the parameters and fetch the results of the query
             //const result = stmt.getAsObject({'$id' : id});
@@ -90954,10 +90960,9 @@ let pageGen = async function (pagename, id, scroll) {
   const fileName = (site.getPageInfo(pagename)) ? site.getPageInfo(pagename).fileName : "";
   const tableName = (site.getPageInfo(pagename)) ? site.getPageInfo(pagename).tableName : "";
 
-  
   const logic = async (tableName, id) => {
     const logicname = (site.getPageInfo(pagename)) ? site.getPageInfo(pagename).logic : "";
-    console.log('logicname:', logicname)
+    console.log('id: ',id,'logicname:', logicname)
     if(logicname == "getListData") return await dao.getPageData(tableName, id, true)
     if(logicname == "getPageData") return await dao.getPageData(tableName, id)
     return {}
@@ -91555,4 +91560,4 @@ class Site {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=map/main.0b77850064f815d71779.js.map
+//# sourceMappingURL=map/main.f9f6030d47093d4418fa.js.map

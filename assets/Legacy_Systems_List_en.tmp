@@ -1,0 +1,18 @@
+    <h1 id="name" translate="no">System List</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th><th>Name</th><th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+            {{#each data.children}}
+                <tr>
+                    <td><div><a class="parentlink elementlink" data-id="{{name}}" data-type="{{table}}" >{{name}}</a></div></td>
+                    <td><div>{{title}}</div></td>
+                    <td><div>{{breaklines brief}}</div></td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+
