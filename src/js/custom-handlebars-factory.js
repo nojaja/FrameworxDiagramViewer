@@ -27,6 +27,10 @@ export class CustomHandlebarsFactory {
             return new Handlebars.SafeString(ret_text);
         });
 
+        /**
+         * 
+         * ex.{{#ifEquals this.source "consideration"}}
+         */
         Handlebars.registerHelper('ifEquals', function (arg1, arg2, options) {
             return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
         });

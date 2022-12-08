@@ -165,10 +165,9 @@ let pageGen = async function (pagename, id, scroll) {
   const fileName = (site.getPageInfo(pagename)) ? site.getPageInfo(pagename).fileName : "";
   const tableName = (site.getPageInfo(pagename)) ? site.getPageInfo(pagename).tableName : "";
 
-  
   const logic = async (tableName, id) => {
     const logicname = (site.getPageInfo(pagename)) ? site.getPageInfo(pagename).logic : "";
-    console.log('logicname:', logicname)
+    console.log('id: ',id,'logicname:', logicname)
     if(logicname == "getListData") return await dao.getPageData(tableName, id, true)
     if(logicname == "getPageData") return await dao.getPageData(tableName, id)
     return {}
