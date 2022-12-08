@@ -85,8 +85,10 @@ export class Dao {
         if (!this.tableExists(table)) throw new Error(this.getTableInfo(table).tableName + ' TABLES not exist')
         this.db = this.db || await this.database()
         try {
+            const tableName = this.getTableInfo(table).tableName;
+            console.log("dao.getPageData: tableName: ",tableName," id: ", id," all:", all)
             // Prepare an sql statement
-            const stmt = this.db.prepare(this.preparesTemplate.PageData({ table: this.getTableInfo(table).tableName }));
+            const stmt = this.db.prepare(this.preparesTemplate.PageData({ table: tableName }));
 
             // Bind values to the parameters and fetch the results of the query
             //const result = stmt.getAsObject({'$id' : id});

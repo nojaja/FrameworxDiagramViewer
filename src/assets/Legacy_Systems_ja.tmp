@@ -4,7 +4,13 @@
     <h4 id="category" translate="no">カテゴリー: {{data.category}}</h4>
     <h4 id="identifier" translate="no">ID: {{data.name}}</h4>
     
+    
+    {{#ifEquals data.parent "top"}}
+    <h4 id="parent" translate="no">上位ID: <a class="parentlink elementlink" data-id="{{data.parent}}" data-type="Legacy_Systems_List" >{{data.parent}}</a></h4>
+    {{else}}
     <h4 id="parent" translate="no">上位ID: <a class="parentlink elementlink" data-id="{{data.parent}}" data-type="{{data.table}}" >{{data.parent}}</a></h4>
+    {{/ifEquals}}
+
     {{#oc data}}{{/oc}}
     <h3 translate="no">概要</h3>
     <p id="description">{{breaklines data.overview}}</p>

@@ -1,9 +1,9 @@
 ID,LEVEL,PARENT,NAME,TYPE,FUNCID,CATEGORY,DESCRIPTION,FUNCTION,BRIEF_DESCRIPTION,DOMAIN,MATURITY_LEVEL,DEV_OWNER,OPE_OWNER,SYSTEM_OWNER,SYSTEM_DOCUMENT
 top,0,,-,,,,,,,,,,,,
 S00001.0001,1,top,a-tel customer management,,,,,,,,,,,,https://www.google.com/search?q=customer+management&oq=customer+management
-S00001.0002,1,top,a-tel customer management2,,,,,,,,,,,,https://www.google.com/search?q=customer+management&oq=customer+management
-S00001.0003,1,top,a-tel customer management3,,,,,,,,,,,,https://www.google.com/search?q=customer+management&oq=customer+management
-S00001.0004,1,top,a-tel customer management4,,,,,,,,,,,,https://www.google.com/search?q=customer+management&oq=customer+management
+S00001.0002,1,S00001.0001,a-tel customer management2,,,,,,,,,,,,https://www.google.com/search?q=customer+management&oq=customer+management
+S00001.0003,1,S00001.0001,a-tel customer management3,,,,,,,,,,,,https://www.google.com/search?q=customer+management&oq=customer+management
+S00001.0004,1,S00001.0001,a-tel customer management4,,,,,,,,,,,,https://www.google.com/search?q=customer+management&oq=customer+management
 S00002.0001,1,top,a-tel order management,,,,,,,,,,,,https://www.google.com/search?q=a-tel+order+management
 S00003.0002,1,top,a-tel member service2,,,,,,,,,,,,
 S00003.0003,1,top,a-tel member service3,,,,,,,,,,,,
