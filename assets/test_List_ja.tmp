@@ -1,0 +1,25 @@
+    <p id="relationData">
+        <table>
+        {{#sql "test2" null}}
+            {{#ifEquals row 0}}
+            <thead>
+                <tr>
+                    {{#each columnNames}}
+                    <th>{{this}}</th>
+                    {{/each}}
+                </tr>
+            </thead>
+            <tbody>
+            {{/ifEquals}}
+                <tr>
+                    {{#each context}}
+                    <td>{{this}}</td>
+                    {{/each}}
+                </tr>
+            </tbody>
+        {{/sql}}
+        </table>
+        <br />
+    </p>
+    
+    

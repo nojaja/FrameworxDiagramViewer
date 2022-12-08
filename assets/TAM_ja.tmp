@@ -9,6 +9,8 @@
     <h4 id="parent" translate="no">上位ID: <a class="parentlink elementlink" data-id="{{data.parent}}" data-type="{{data.table}}" >{{data.parent}}</a></h4>
     {{else}}
     {{svg 'TAM_Overview_ja.drawio.svg'}}
+    <br>
+    <a href="?type=tamlist">一覧表示</a>
     {{/if}}
 
     {{#oc data}}{{/oc}}
