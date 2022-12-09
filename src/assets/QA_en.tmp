@@ -1,0 +1,29 @@
+    <h1 id="name">{{data.name}} - {{data.title}}</h1>
+    <h4 id="type" translate="no">FAQ</h4>
+    <h4 id="identifier" translate="no">Identifier: {{data.name}}</h4>
+    {{#if data.parent}}
+    <h4 id="parent" translate="no">上位ID: <a class="parentlink elementlink" data-id="{{data.parent}}" data-type="{{data.table}}" >{{data.parent}}</a></h4>
+    {{/if}}
+    <h3 translate="no">Overview</h3>
+    <p id="description">{{md data.overview}}</p>
+    <h3 translate="no">Relationships</h3>
+    <p id="relationData">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th><th>名称</th><th>概要</th>
+                </tr>
+            </thead>
+            <tbody>
+            {{#each data.children_org}}
+                {{#if this.hidden }}<tr id="{{this.hash}}" class="hidden">{{else}}<tr id="{{this.hash}}">{{/if}}
+                    <td><div><a class="parentlink elementlink" data-id="{{this.name}}" data-type="{{this.table}}" >{{this.name}}</a></div></td>
+                    <td><div>{{this.title}}</div></td>
+                    <td><div>{{md brief}}</div></td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </p>
+
+    {{> footer }}
