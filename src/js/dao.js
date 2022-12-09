@@ -80,9 +80,28 @@ export class Dao {
         return (this.tables[table.toLowerCase()])
     }
 
-    //ページのデータ取得
+    /**
+     * ページのデータ取得
+     * @param {*} table 
+     * @param {*} id 
+     * @param {*} all 
+     * @returns {
+     *      name,
+     *      id,
+     *      parent,
+     *      type,
+     *      children:[<Array>],
+     *      relationData:{
+     *          <tableName>:{
+     *              caption,
+     *              tableName,
+     *              children:[<Array>]
+     *              }
+     *          }
+     *      }
+     */
     async getPageData(table, id, all) {
-        if (!this.tableExists(table)) throw new Error(this.getTableInfo(table).tableName + ' TABLES not exist')
+        if (!this.tableExists(table)) throw new Error(table + ' TABLES not exist')
         this.db = this.db || await this.database()
         try {
             const tableName = this.getTableInfo(table).tableName;

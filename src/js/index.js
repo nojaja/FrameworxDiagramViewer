@@ -274,6 +274,7 @@ function createDataset2ClickEvent(elements) {
         const id = node_element.dataset.id
         const type = node_element.dataset.type
         window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${id}&type=${type}`)
+        filter.resetFilter('LEVEL');//画面切り替えたらLEVELのフィルタは初期化
         pageGen(type, id);
         return false
       }
@@ -292,11 +293,12 @@ async function updateFilter() {
 
   const updatelist = []
   //data.relationDataに対してfilter_logicを適用
+  //updatelistに表示非表示の情報が入る
   for (const [dataset, record] of Object.entries(pagedata.relationData)) {
     const recordtmp = filter.unique_filter_logic(record.children, ["title"], (oldrecord, newrecord) => { return newrecord.basefromid == newrecord.fromid /*basefromidと同じものを優先する*/ })
     Array.prototype.push.apply(updatelist, filter.filter_logic(recordtmp))
   }
-
+  //表示非表示のリストを使ってdomに反映する
   for (let j = 0; j < updatelist.length; j++) {
     const element = document.getElementById(updatelist[j].hash)
     if(element==null)continue
@@ -313,9 +315,10 @@ async function updateFilter() {
     const recordtmp = filter.unique_filter_logic(record.children, ["title"], (oldrecord, newrecord) => { return newrecord.basefromid == newrecord.fromid /*basefromidと同じものを優先する*/ })
     pagedata.relationData[dataset].children = filter.filter_logic(recordtmp)
   }
-  //data.childrenに対してfilter_logicを適用
+  //pagedata.childrenに対してfilter_logic(oc用のfilter処理)を適用
   pagedata.children = filter.filter_logic2(pagedata.children_org)
 
+  //pagedata.children_orgに対してfilter_logicを適用
   pagedata.children_org = filter.filter_logic(pagedata.children_org)
   for (let j = 0; j < pagedata.children_org.length; j++) {
     const element = document.getElementById(pagedata.children_org[j].hash)
