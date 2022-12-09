@@ -192,7 +192,7 @@ let pageGen = async function (pagename, id, scroll) {
   }
   //data.childrenに対してfilter_logicを適用
   if(data.children){
-    data.children_org = data.children
+    data.children_org = filter.filter_logic(data.children)
     data.children = filter.filter_logic2(data.children)
   }
   pagedata = data;
@@ -316,6 +316,18 @@ async function updateFilter() {
   //data.childrenに対してfilter_logicを適用
   pagedata.children = filter.filter_logic2(pagedata.children_org)
 
+  pagedata.children_org = filter.filter_logic(pagedata.children_org)
+  for (let j = 0; j < pagedata.children_org.length; j++) {
+    const element = document.getElementById(pagedata.children_org[j].hash)
+    if(element==null)continue
+    if (pagedata.children_org[j].hidden) {
+      element.classList.add("hidden");
+    } else {
+      element.classList.remove("hidden");
+    }
+    element.hidden = pagedata.children_org[j].hidden
+  }
+
   const element = document.getElementById('chart-container')
   updateOc(element,pagedata)
 
@@ -323,6 +335,11 @@ async function updateFilter() {
   //組織図のクリックイベント作成
   const node_elements = document.getElementsByClassName("node")
   createDataset2ClickEvent(node_elements)
+
+  
+  console.log('data:', pagedata)
+  console.log('data.relationData:', pagedata.relationData)
+  console.log('data.children:', pagedata.children)
 
   return true
 }
@@ -337,7 +354,7 @@ function updateOc(targetElement,datas) {
       $node.attr('data-domain', data.domain)
     }
   }).$chartContainer[0]
-  targetElement.outerHTML = chartContainer.outerHTML
+  if(targetElement) targetElement.outerHTML = chartContainer.outerHTML
 }
 
 //tree表示する
