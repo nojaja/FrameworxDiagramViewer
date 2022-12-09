@@ -25804,7 +25804,7 @@ module.exports = exports;
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "../node_modules/css-loader/dist/runtime/api.js");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".orgchart { \n  background-image:none;\n  background: white; \n}\n/* excluding leaf node */\n.orgchart .node:not(:only-child)::after {\n  height: 15px;\n  background-color: rgba(0,0,0,.8);\n}\n/* excluding root node */\n.orgchart > ul > li > ul li > .node::before {\n  height: 15px;\n  background-color: rgba(0,0,0,.8);\n}\n\n.orgchart .hierarchy::before {\n  border-top: 2px solid rgba(0,0,0,.8);\n}\n\n.orgchart .node .title {\n  background-color: rgba(0,0,0,.8);\n}\n\n.orgchart .node .content {\n  height: 50px;\n  width: 130px;\n  word-break: break-word;\n  white-space: break-spaces;\n  vertical-align: middle;\n  display: table-cell;\n  font-size: .75rem;\n  font-weight: 700;\n  border: 1px solid rgba(0,0,0,.8);\n  --background: linear-gradient(to bottom right, #f1f1f1, #afafaf);\n  background-color: #ffffe0;\n  box-shadow: 5px 5px 5px 0 rgb(0 0 0 / 50%);\n}\n\n.orgchart .node[data-domain=\"Market Sales Domain\"] .title {\n  background-color: rgb(247,161,162);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Customer Domain\"] .title {\n  background-color: rgb(246,236,19);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Product Domain\"] .title {\n  background-color: rgb(255,209,115);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Resource Domain\"] .title {\n  background-color: rgb(188,230,247);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Service Domain\"] .title {\n  background-color: rgb(125,196,112);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Business Partner Domain\"] .title {\n  background-color: rgb(188,188,217);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Enterprise Domain\"] .title {\n  background-color: rgb(211,211,211);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Common Domain\"] .title {\n  background-color: rgb(255,153,204);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Integration Domain\"] .title {\n  background-color: rgb(210,180,140);\n  border: 1px solid rgba(0,0,0,.8);\n}\nh1 {\n  display: block;\n  font-size: 2em;\n  margin-block-start: 0.67em;\n  margin-block-end: 0.67em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\nh3 {\n  display: block;\n  font-size: 1.17em;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\np {\n  display: block;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 5px;\n  margin-inline-end: 0px;\n}\n\n.elementlink {\n  cursor: pointer;\n}\n\n.parentlink {\n  color: navy;\n  text-decoration: underline;\n}\n\n.leftbar {\n  position: absolute;\n  top: 0px;\n  left: 0;\n  width: 20%;\n  height: 100%;\n  background-color: #323232;\n  --padding-top: 5em;\n  z-index: 0;\n  text-decoration: none;\n  color: white;\n  overflow: overlay;\n}\n\n.leftbaritem {\n  padding-left: 1em;\n  font-size: 90%;\n}\n.leftbar a {\n  text-decoration: none;\n  color: white;\n}\n.leftbar .title {\n  background-color: #161616;\n  font-weight: bold;\n  padding-top: 10px;\n  padding-bottom: 10px;\n  padding-left: 0px;\n  width: 100%;\n  margin-inline-start: 0px;\n  margin-block-start: 0em;\n}\n\n.content_body {\n  position: absolute;\n  top: 0px;\n  left: 21%;\n  width: 79%;\n  height: 100%;\n  overflow: overlay;\n}\n.content_body > div {\n  padding-right: 5%;\n}\n\ntable {\n  border-color: grey;\n  border-collapse: collapse;\n  border-spacing: 0;\n  display: block;\n  margin-bottom: 1rem;\n  overflow: visible;\n}\nthead {\n  display: table-header-group;\n  vertical-align: middle;\n  border-color: inherit;\n}\ntbody {\n  display: table-row-group;\n  vertical-align: middle;\n  border-color: inherit;\n}\ntr {\n  border-top: 1px solid #ccc;\n  display: table-row;\n}\ntr:nth-child(2n) {\n  background-color: #f8f8f8;\n}\nth {\n  border: 1px solid #ddd;\n  padding: 6px 13px;\n  font-weight: 700;\n}\ntd {\n  border: 1px solid #ddd;\n  padding: 6px 13px;\n  display: table-cell;\n}\n\n.message span.remark {\n  display: none;\n}\n.message:hover span.remark {\n  background: none repeat scroll 0 0 #EEFFEE;\n  border: 1px solid #CCCCCC;\n  color: #000000;\n  display: block;\n  margin: 0.5em;\n  padding: 0.5em;\n  position: absolute;\n  top: 20px;\n  left: 10px;\n  z-index: 1;\n}\n\n.maturity_level_5 {\n  color: royalblue;\n}\n.maturity_level_4 {\n  color: royalblue;\n}\n.maturity_level_3 {\n  color: forestgreen;\n}\n.maturity_level_2 {\n  color: forestgreen;\n}\n.maturity_level_1 {\n  color: darkorange;\n}\n\nul {\n  display: block;\n  list-style-type: disc;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  padding-inline-start: 0px;\n}\n\n.filter-list li,\nul li {\n  word-wrap: break-word;\n  margin: 0;\n}\n\n.choices__inner {\n  background-color: #323232;\n  border: 1px solid #fff;\n  border-radius: 2px;\n  padding: 0px 10px;\n  width: 60%;\n}\n\n.choices__list--multiple .choices__item {\n  background-color: #010b0c;\n  border: 1px solid #000000;\n  color: #fff;\n}\n.choices__input {\n  /* background-color: #f9f9f9; */\n  background-color: #323232;\n  color: white;\n}\n.choices__list--dropdown, .choices__list[aria-expanded] {\n  /* background-color: #fff; */\n  background-color: #323232;\n  width: 80%;\n}\n.choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item {\n  padding: 0px;\n}\n.choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {\n  /* background-color: #f2f2f2; */\n  background-color: #323232;\n}\n.choices__list--multiple .choices__item.is-highlighted {\n  background-color: #161616;\n  border: 1px solid #020202;\n}\n\n.choices[data-type*=select-multiple] .choices__button,\n.choices[data-type*=text] .choices__button {\n  border-left: 1px solid #323232;\n\n}\n\n.selectstepper {\n  border: 1px solid #eee;\n  display: inline-block;\n  overflow: visible;\n  height: 2.1em;\n  background: #fff;\n  padding: 1px;\n  font-size: .65rem;\n}\n\n.selectstepper select {\n  height: 100%;\n  text-align: center;\n  border: 0;\n  background: transparent;\n  color: #000;\n  appearance: none;\n}\n\n.selectstepper button {\n  width: 1.4em;\n  font-weight: 300;\n  height: 100%;\n  line-height: 0.1em;\n  font-size: 1.4em;\n  padding: 0.2em !important;\n  background: #eee;\n  color: #333;\n  border: none;\n}\n\ntable {\n  border-collapse: collapse;\n}\ntr {\n  background: #eee;\n  border-bottom: 1px solid #fff;\n}\ntr, td {\n  padding: 0;\n}\n\ntr.hidden td div {\n  max-height: 0;\n  padding: 0 10px;\n  box-sizing: border-box;\n  overflow: hidden;\n  transition: max-height 0.3s, padding 0.3s;\n}\ntr td div {\n  padding: 10px 10px;\n  transition: max-height 0.6s, padding 0.6s;\n}", ""]);
+exports.push([module.i, ".orgchart { \n  background-image:none;\n  background: white; \n}\n/* excluding leaf node */\n.orgchart .node:not(:only-child)::after {\n  height: 15px;\n  background-color: rgba(0,0,0,.8);\n}\n/* excluding root node */\n.orgchart > ul > li > ul li > .node::before {\n  height: 15px;\n  background-color: rgba(0,0,0,.8);\n}\n\n.orgchart .hierarchy::before {\n  border-top: 2px solid rgba(0,0,0,.8);\n}\n\n.orgchart .node .title {\n  background-color: rgba(0,0,0,.8);\n}\n\n.orgchart .node .content {\n  height: 50px;\n  width: 130px;\n  word-break: break-word;\n  white-space: break-spaces;\n  vertical-align: middle;\n  display: table-cell;\n  font-size: .75rem;\n  font-weight: 700;\n  border: 1px solid rgba(0,0,0,.8);\n  --background: linear-gradient(to bottom right, #f1f1f1, #afafaf);\n  background-color: #ffffe0;\n  box-shadow: 5px 5px 5px 0 rgb(0 0 0 / 50%);\n}\n\n.orgchart .node[data-domain=\"Market Sales Domain\"] .title {\n  background-color: rgb(247,161,162);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Customer Domain\"] .title {\n  background-color: rgb(246,236,19);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Product Domain\"] .title {\n  background-color: rgb(255,209,115);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Resource Domain\"] .title {\n  background-color: rgb(188,230,247);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Service Domain\"] .title {\n  background-color: rgb(125,196,112);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Business Partner Domain\"] .title {\n  background-color: rgb(188,188,217);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Enterprise Domain\"] .title {\n  background-color: rgb(211,211,211);\n  border: 1px solid rgba(0,0,0,.8);\n  color: #000;\n}\n.orgchart .node[data-domain=\"Common Domain\"] .title {\n  background-color: rgb(255,153,204);\n  border: 1px solid rgba(0,0,0,.8);\n}\n.orgchart .node[data-domain=\"Integration Domain\"] .title {\n  background-color: rgb(210,180,140);\n  border: 1px solid rgba(0,0,0,.8);\n}\nh1 {\n  display: block;\n  font-size: 2em;\n  margin-block-start: 0.67em;\n  margin-block-end: 0.67em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\nh3 {\n  display: block;\n  font-size: 1.17em;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  font-weight: bold;\n}\np {\n  display: block;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 5px;\n  margin-inline-end: 0px;\n}\n\n.elementlink {\n  cursor: pointer;\n}\n\n.parentlink {\n  color: navy;\n  text-decoration: underline;\n}\n\n.leftbar {\n  position: absolute;\n  top: 0px;\n  left: 0;\n  width: 20%;\n  height: 100%;\n  background-color: #323232;\n  --padding-top: 5em;\n  z-index: 0;\n  text-decoration: none;\n  color: white;\n  overflow: overlay;\n}\n\n.leftbaritem {\n  padding-left: 1em;\n  font-size: 90%;\n}\n.leftbar a {\n  text-decoration: none;\n  color: white;\n}\n.leftbar .title {\n  background-color: #161616;\n  font-weight: bold;\n  padding-top: 10px;\n  padding-bottom: 10px;\n  padding-left: 0px;\n  width: 100%;\n  margin-inline-start: 0px;\n  margin-block-start: 0em;\n}\n\n.content_body {\n  position: absolute;\n  top: 0px;\n  left: 21%;\n  width: 79%;\n  height: 100%;\n  overflow: overlay;\n}\n.content_body > div {\n  padding-right: 5%;\n}\n\ntable {\n  border-color: grey;\n  border-collapse: collapse;\n  border-spacing: 0;\n  display: block;\n  margin-bottom: 1rem;\n  overflow: visible;\n}\nthead {\n  display: table-header-group;\n  vertical-align: middle;\n  border-color: inherit;\n}\ntbody {\n  display: table-row-group;\n  vertical-align: middle;\n  border-color: inherit;\n}\ntr {\n  border-top: 1px solid #ccc;\n  display: table-row;\n}\ntr:nth-child(2n) {\n  background-color: #f8f8f8;\n}\nth {\n  border: 1px solid #ddd;\n  padding: 6px 13px;\n  font-weight: 700;\n}\ntd {\n  border: 1px solid #ddd;\n  padding: 6px 13px;\n  display: table-cell;\n}\n\n.message span.remark {\n  display: none;\n}\n.message:hover span.remark {\n  background: none repeat scroll 0 0 #EEFFEE;\n  border: 1px solid #CCCCCC;\n  color: #000000;\n  display: block;\n  margin: 0.5em;\n  padding: 0.5em;\n  position: absolute;\n  top: 20px;\n  left: 10px;\n  z-index: 1;\n}\n\n.maturity_level_5 {\n  color: royalblue;\n}\n.maturity_level_4 {\n  color: royalblue;\n}\n.maturity_level_3 {\n  color: forestgreen;\n}\n.maturity_level_2 {\n  color: forestgreen;\n}\n.maturity_level_1 {\n  color: darkorange;\n}\n\nul {\n  display: block;\n  list-style-type: disc;\n  margin-block-start: 1em;\n  margin-block-end: 1em;\n  margin-inline-start: 0px;\n  margin-inline-end: 0px;\n  padding-inline-start: 0px;\n}\n\n.filter-list li,\nul li {\n  word-wrap: break-word;\n  margin: 0;\n}\n\n.choices__inner {\n  background-color: #323232;\n  border: 1px solid #fff;\n  border-radius: 2px;\n  padding: 0px 10px;\n  width: 60%;\n}\n\n.choices__list--multiple .choices__item {\n  background-color: #010b0c;\n  border: 1px solid #000000;\n  color: #fff;\n}\n.choices__input {\n  /* background-color: #f9f9f9; */\n  background-color: #323232;\n  color: white;\n}\n.choices__list--dropdown, .choices__list[aria-expanded] {\n  /* background-color: #fff; */\n  background-color: #323232;\n  width: 80%;\n}\n.choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item {\n  padding: 0px;\n}\n.choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {\n  /* background-color: #f2f2f2; */\n  background-color: #323232;\n}\n.choices__list--multiple .choices__item.is-highlighted {\n  background-color: #161616;\n  border: 1px solid #020202;\n}\n\n.choices[data-type*=select-multiple] .choices__button,\n.choices[data-type*=text] .choices__button {\n  border-left: 1px solid #323232;\n\n}\n\n.selectstepper {\n  border: 1px solid #eee;\n  display: inline-block;\n  overflow: visible;\n  height: 2.1em;\n  background: #fff;\n  padding: 1px;\n  font-size: .65rem;\n}\n\n.selectstepper select {\n  height: 100%;\n  text-align: center;\n  border: 0;\n  background: transparent;\n  color: #000;\n  appearance: none;\n}\n\n.selectstepper button {\n  width: 1.4em;\n  font-weight: 300;\n  height: 100%;\n  line-height: 0.1em;\n  font-size: 1.4em;\n  padding: 0.2em !important;\n  background: #eee;\n  color: #333;\n  border: none;\n}\n\ntable {\n  border-collapse: collapse;\n}\ntr {\n  background: #eee;\n  border-bottom: 1px solid #fff;\n}\ntr, td {\n  padding: 0;\n}\n\ntr.hidden {\n  border-top: 0px solid #ccc;\n  border-bottom: 0px solid #fff;\n}\n\ntr.hidden td{\n  border: 0px solid #ddd;\n}\n\ntr.hidden td div {\n  max-height: 0;\n  padding: 0 10px;\n  box-sizing: border-box;\n  overflow: hidden;\n  transition: max-height 0.3s, padding 0.3s;\n}\ntr td div {\n  padding: 10px 10px;\n  transition: max-height 0.6s, padding 0.6s;\n}", ""]);
 // Exports
 module.exports = exports;
 
@@ -90690,6 +90690,7 @@ class Filter {
 
     /**
      * filter処理の実行
+     * 該当するレコードにhidden属性を追加する方式 tableの部分はこの方式
      * select * from dataList where ( table == filter_id ) or ( filter_category like filter_id)
      * @param {*} dataList 
      * @returns 
@@ -90707,6 +90708,12 @@ class Filter {
         });
         return result
     }
+    /**
+     * filter処理の実行
+     * 該当するレコードを削除する方式 ocの部分はこの方式
+     * @param {*} dataList 
+     * @returns 
+     */
     filter_logic2(dataList) {
         const result = dataList.filter((data)=>this.filter(data));
         return result
@@ -90718,7 +90725,7 @@ class Filter {
             let filters_count = 0
             for (const [filter_id, value] of Object.entries(filter)) {
                 if (filter_category == "LEVEL") {
-                    if (data["table"] == filter_id.toLowerCase()) {
+                    if (data["table"].toLowerCase() == filter_id.toLowerCase()) {
                         if (data[filter_category] != value) return false;//filterに不一致
                     }
                 } else {
@@ -90987,7 +90994,7 @@ let pageGen = async function (pagename, id, scroll) {
   }
   //data.childrenに対してfilter_logicを適用
   if(data.children){
-    data.children_org = data.children
+    data.children_org = filter.filter_logic(data.children)
     data.children = filter.filter_logic2(data.children)
   }
   pagedata = data;
@@ -91111,6 +91118,18 @@ async function updateFilter() {
   //data.childrenに対してfilter_logicを適用
   pagedata.children = filter.filter_logic2(pagedata.children_org)
 
+  pagedata.children_org = filter.filter_logic(pagedata.children_org)
+  for (let j = 0; j < pagedata.children_org.length; j++) {
+    const element = document.getElementById(pagedata.children_org[j].hash)
+    if(element==null)continue
+    if (pagedata.children_org[j].hidden) {
+      element.classList.add("hidden");
+    } else {
+      element.classList.remove("hidden");
+    }
+    element.hidden = pagedata.children_org[j].hidden
+  }
+
   const element = document.getElementById('chart-container')
   updateOc(element,pagedata)
 
@@ -91118,6 +91137,11 @@ async function updateFilter() {
   //組織図のクリックイベント作成
   const node_elements = document.getElementsByClassName("node")
   createDataset2ClickEvent(node_elements)
+
+  
+  console.log('data:', pagedata)
+  console.log('data.relationData:', pagedata.relationData)
+  console.log('data.children:', pagedata.children)
 
   return true
 }
@@ -91132,7 +91156,7 @@ function updateOc(targetElement,datas) {
       $node.attr('data-domain', data.domain)
     }
   }).$chartContainer[0]
-  targetElement.outerHTML = chartContainer.outerHTML
+  if(targetElement) targetElement.outerHTML = chartContainer.outerHTML
 }
 
 //tree表示する
@@ -91560,4 +91584,4 @@ class Site {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=map/main.f9f6030d47093d4418fa.js.map
+//# sourceMappingURL=map/main.5a7d52026724d82325ec.js.map
