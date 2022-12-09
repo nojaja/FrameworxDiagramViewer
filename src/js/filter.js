@@ -37,6 +37,7 @@ export class Filter {
 
     /**
      * filter処理の実行
+     * 該当するレコードにhidden属性を追加する方式 tableの部分はこの方式
      * select * from dataList where ( table == filter_id ) or ( filter_category like filter_id)
      * @param {*} dataList 
      * @returns 
@@ -54,6 +55,12 @@ export class Filter {
         });
         return result
     }
+    /**
+     * filter処理の実行
+     * 該当するレコードを削除する方式 ocの部分はこの方式
+     * @param {*} dataList 
+     * @returns 
+     */
     filter_logic2(dataList) {
         const result = dataList.filter((data)=>this.filter(data));
         return result
@@ -65,7 +72,7 @@ export class Filter {
             let filters_count = 0
             for (const [filter_id, value] of Object.entries(filter)) {
                 if (filter_category == "LEVEL") {
-                    if (data["table"] == filter_id.toLowerCase()) {
+                    if (data["table"].toLowerCase() == filter_id.toLowerCase()) {
                         if (data[filter_category] != value) return false;//filterに不一致
                     }
                 } else {

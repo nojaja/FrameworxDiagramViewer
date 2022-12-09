@@ -1,4 +1,15 @@
     <h1 id="name" translate="no">TAM一覧</h1>
+    
+        <span class="selectstepper" data-category="LEVEL"><button>-</button>
+        <select id="{{data.table}}" name="{{data.table}}" disabled>
+        <option value="" selected> ALL Level Mapping </option>
+        <option value="1"> Level 1 Mapping </option>
+        <option value="2"> Level 2 Mapping </option>
+        <option value="3"> Level 3 Mapping </option>
+        <option value="4"> Level 4 Mapping </option>
+        </select>
+        <button>+</button></span>
+        
         <table>
             <thead>
                 <tr>
@@ -6,10 +17,10 @@
                 </tr>
             </thead>
             <tbody>
-            {{#each data.children}}
-                <tr>
-                    <td><div><a class="parentlink elementlink" data-id="{{name}}" data-type="{{table}}" >{{name}}</a></div></td>
-                    <td><div>{{title}}</div></td>
+            {{#each data.children_org}}
+                {{#if this.hidden }}<tr id="{{this.hash}}" class="hidden">{{else}}<tr id="{{this.hash}}">{{/if}}
+                    <td><div><a class="parentlink elementlink" data-id="{{this.name}}" data-type="{{this.table}}" >{{this.name}}</a></div></td>
+                    <td><div>{{this.title}}</div></td>
                     <td><div>{{breaklines brief}}</div></td>
                 </tr>
             {{/each}}
