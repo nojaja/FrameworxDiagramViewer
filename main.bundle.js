@@ -90482,9 +90482,28 @@ class Dao {
         return (this.tables[table.toLowerCase()])
     }
 
-    //ページのデータ取得
+    /**
+     * ページのデータ取得
+     * @param {*} table 
+     * @param {*} id 
+     * @param {*} all 
+     * @returns {
+     *      name,
+     *      id,
+     *      parent,
+     *      type,
+     *      children:[<Array>],
+     *      relationData:{
+     *          <tableName>:{
+     *              caption,
+     *              tableName,
+     *              children:[<Array>]
+     *              }
+     *          }
+     *      }
+     */
     async getPageData(table, id, all) {
-        if (!this.tableExists(table)) throw new Error(this.getTableInfo(table).tableName + ' TABLES not exist')
+        if (!this.tableExists(table)) throw new Error(table + ' TABLES not exist')
         this.db = this.db || await this.database()
         try {
             const tableName = this.getTableInfo(table).tableName;
@@ -90751,6 +90770,13 @@ class Filter {
         }
         //serialize出来るようにobjectにする
         this.filters[filter_category] = [...filter].reduce((l, [k, v]) => Object.assign(l, { [k]: v }), {})
+        console.log("setFilter", this.filters)
+        return true
+    }
+
+    //指定したカテゴリのフィルターを空にする
+    async resetFilter(filter_category) {
+        this.filters[filter_category] = {}
         console.log("setFilter", this.filters)
         return true
     }
@@ -91076,6 +91102,7 @@ function createDataset2ClickEvent(elements) {
         const id = node_element.dataset.id
         const type = node_element.dataset.type
         window.history.pushState({}, document.title, `${window.location.origin}${window.location.pathname}?q=${id}&type=${type}`)
+        filter.resetFilter('LEVEL');//画面切り替えたらLEVELのフィルタは初期化
         pageGen(type, id);
         return false
       }
@@ -91094,11 +91121,12 @@ async function updateFilter() {
 
   const updatelist = []
   //data.relationDataに対してfilter_logicを適用
+  //updatelistに表示非表示の情報が入る
   for (const [dataset, record] of Object.entries(pagedata.relationData)) {
     const recordtmp = filter.unique_filter_logic(record.children, ["title"], (oldrecord, newrecord) => { return newrecord.basefromid == newrecord.fromid /*basefromidと同じものを優先する*/ })
     Array.prototype.push.apply(updatelist, filter.filter_logic(recordtmp))
   }
-
+  //表示非表示のリストを使ってdomに反映する
   for (let j = 0; j < updatelist.length; j++) {
     const element = document.getElementById(updatelist[j].hash)
     if(element==null)continue
@@ -91115,9 +91143,10 @@ async function updateFilter() {
     const recordtmp = filter.unique_filter_logic(record.children, ["title"], (oldrecord, newrecord) => { return newrecord.basefromid == newrecord.fromid /*basefromidと同じものを優先する*/ })
     pagedata.relationData[dataset].children = filter.filter_logic(recordtmp)
   }
-  //data.childrenに対してfilter_logicを適用
+  //pagedata.childrenに対してfilter_logic(oc用のfilter処理)を適用
   pagedata.children = filter.filter_logic2(pagedata.children_org)
 
+  //pagedata.children_orgに対してfilter_logicを適用
   pagedata.children_org = filter.filter_logic(pagedata.children_org)
   for (let j = 0; j < pagedata.children_org.length; j++) {
     const element = document.getElementById(pagedata.children_org[j].hash)
@@ -91584,4 +91613,4 @@ class Site {
 /***/ })
 
 /******/ });
-//# sourceMappingURL=map/main.5a7d52026724d82325ec.js.map
+//# sourceMappingURL=map/main.460430755ea6663a5c57.js.map
