@@ -102,6 +102,13 @@ export class Filter {
         return true
     }
 
+    //指定したカテゴリのフィルターを空にする
+    async resetFilter(filter_category) {
+        this.filters[filter_category] = {}
+        console.log("setFilter", this.filters)
+        return true
+    }
+
     setFilters(filters) {
         this.filters = filters
     }
