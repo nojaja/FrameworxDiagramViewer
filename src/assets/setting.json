@@ -23,7 +23,7 @@
                 "legacy_systems_list":{"fileName":"Legacy_Systems","tableName":"Legacy_Systems","logic":"getListData"},
                 "functions":{"fileName":"Functions","tableName":"Functions","logic":"getPageData"},
                 "knowledge":{"fileName":"KNOWLEDGE","tableName":"KNOWLEDGE","logic":"getPageData"},
-                "faq":{"fileName":"QA","tableName":"QA","logic":"getPageData"},
+                "faq":{"fileName":"QA","tableName":"faq","logic":"getPageData"},
                 "tamlist":{"fileName":"TAM_List","tableName":"TAM","logic":"getListData"},
                 "etomlist":{"fileName":"eTOM_List","tableName":"eTOM","logic":"getListData"}
             }

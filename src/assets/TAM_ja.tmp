@@ -10,7 +10,7 @@
     {{else}}
     {{svg 'TAM_Overview_ja.drawio.svg'}}
     <br>
-    <a href="?type=tamlist">一覧表示</a>
+    <a class="parentlink elementlink" data-id="1" data-type="tamlist">一覧表示</a>
     {{/if}}
 
     {{#oc data}}{{/oc}}

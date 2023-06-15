@@ -9,7 +9,7 @@
     {{else}}
     {{svg 'eTOM_Overview_ja.drawio.svg'}}
     <br>
-    <a href="?q=1&type=etomlist">一覧表示</a>
+    <a class="parentlink elementlink" data-id="1" data-type="etomlist">一覧表示</a>
     {{/if}}
 
     {{#oc data}}{{/oc}}
