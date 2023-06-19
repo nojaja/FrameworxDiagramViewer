@@ -25,7 +25,8 @@
                 "knowledge":{"fileName":"KNOWLEDGE","tableName":"KNOWLEDGE","logic":"getPageData"},
                 "faq":{"fileName":"QA","tableName":"faq","logic":"getPageData"},
                 "tamlist":{"fileName":"TAM_List","tableName":"TAM","logic":"getListData"},
-                "etomlist":{"fileName":"eTOM_List","tableName":"eTOM","logic":"getListData"}
+                "etomlist":{"fileName":"eTOM_List","tableName":"eTOM","logic":"getListData"},
+                "function_list":{"fileName":"Function_List","tableName":"Functions","logic":"getListData"}
             }
         },
         "ja":{
@@ -44,7 +45,8 @@
                 "knowledge":{"fileName":"KNOWLEDGE","tableName":"KNOWLEDGE","logic":"getPageData"},
                 "faq":{"fileName":"QA","tableName":"faq","logic":"getPageData"},
                 "tamlist":{"fileName":"TAM_List","tableName":"TAM","logic":"getListData"},
-                "etomlist":{"fileName":"eTOM_List","tableName":"eTOM","logic":"getListData"}
+                "etomlist":{"fileName":"eTOM_List","tableName":"eTOM","logic":"getListData"},
+                "function_list":{"fileName":"Function_List","tableName":"Functions","logic":"getListData"}
             }
         }
     },

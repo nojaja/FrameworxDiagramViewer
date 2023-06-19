@@ -25,8 +25,12 @@
             "file": "./src/assets/datas/GB929F_Functional_Framework_Functional_Decomposition_Domain_v21.0.0.csv"
         },
         {
+            "action": "Execute-SQL",
+            "sql": "INSERT INTO Functions VALUES ('top' ,'1' ,'-','' ,'','','' ,'' ,'' ,'' ,'1','','','' );"
+        },
+        {
             "action": "Import-CSV",
-            "sql": "INSERT INTO Functions VALUES ($FunctionIdentifier ,'1','',$FrameworxFunction ,'','',$FrameworxDomain ,$VerticalGroup ,$Description ,substr($Description, 1, 150) ,'1','','',$Issue );",
+            "sql": "INSERT INTO Functions VALUES ($FunctionIdentifier ,'1','top',$FrameworxFunction ,'','',$FrameworxDomain ,$VerticalGroup ,$Description ,substr($Description, 1, 150) ,'1','','',$Issue );",
             "file": "./src/assets/datas/GB929F_Functional_Framework_Functional_Decomposition_Functions_v21.0.0.csv"
         },
         {
