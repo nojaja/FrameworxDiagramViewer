@@ -1,3 +1,11 @@
+.material-symbols-outlined {
+  font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 20;
+}
+
 .orgchart { 
   background-image:none;
   background: white; 
@@ -342,4 +350,13 @@ tr.hidden td div {
 tr td div {
   padding: 10px 10px;
   transition: max-height 0.6s, padding 0.6s;
+}
+
+details {
+  border: 1px solid #323232;
+  padding: 10px;
+}
+
+details summary {
+  cursor: pointer;
 }

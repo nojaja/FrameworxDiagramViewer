@@ -2,10 +2,9 @@ const path = require('path')
 const src = __dirname + "/src"
 const dist = __dirname + "/docs"
 const webpack = require('webpack')
+const CopyPlugin = require('copy-webpack-plugin')
+const FontminPlugin = require('fontmin-webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const CopyFilePlugin = require('copy-webpack-plugin')
-const WriteFilePlugin = require('write-file-webpack-plugin')
-const HardSourceWebpackPlugin = require('hard-source-webpack-plugin')
 const zlib = require('zlib')
 const Initdb  = require('db-initializer-sqlite3')
 const initdb = new Initdb()
@@ -14,60 +13,67 @@ module.exports = {
   mode: process.env.NODE_ENV === 'production' ? 'development' : 'production',
   devtool: 'source-map',
   devServer: {
-    disableHostCheck: true,
-    contentBase: dist,
-    public: process.env.URL || ''
+    static: {
+      directory: path.join(__dirname, 'docs'),
+    },
   },
-  context: src,
-  entry: {
-    'main': './js/index.js'
-  },
+  entry: './src/js/index.js',
   output: {
-		globalObject: 'self',
-    filename: './[name].bundle.js',
-    sourceMapFilename: './map/[id].[chunkhash].js.map',
-    chunkFilename: './chunk/[id].[chunkhash].js',
-    path: dist,
-    publicPath:""
+	globalObject: 'self',
+    filename: 'main.bundle.js',
+    path: path.resolve(__dirname, 'docs'),
   },
   resolve: {
     alias: {
       '@': path.resolve(src, '/js/')
+    },
+    fallback: {
+      "fs": false
     }
   },
   module: {
     rules: [{
-      test: /\.css$/,
+      test: /\.css$/i,
       use: ['style-loader', 'css-loader']
+    //}, {
+    //  test: /\.(woff|woff2|eot|ttf)$/,
+    //  use: ['file-loader']
     }, {
-      test: /\.(woff|woff2|eot|ttf)$/,
-      use: ['file-loader']
-    }, {
-      test: /\.(svg)$/,
-      use: ['raw-loader']
-    }
-  ]
-  },
-  node: {
-    fs: 'empty'
+      test: /\.svg$/i,
+      type: 'asset/source'
+    }]
   },
   plugins: [
-    //new HardSourceWebpackPlugin(),
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
       'window.jQuery': 'jquery'
     }),
+    // new FontminPlugin({
+    //   autodetect: true,
+    //   glyphs: [
+    //     'account_tree',
+    //     'mediation',
+    //     'domain',
+    //     'precision_manufacturing',
+    //     'database',
+    //     'extension',
+    //     'power',
+    //     'host',
+    //     'live_help'
+    //   ],
+    //   allowedFilesRegex: /material-symbols-outlined.*\.woff2$/
+    // }),
     new HtmlWebpackPlugin({
       inject: true,
       chunks: ['main'],
-      template: './html/index.html',
-      filename: './index.html'
+      template: 'src/html/index.html',
+      filename: 'index.html'
     }),
-    new CopyFilePlugin(
-        [
+    new CopyPlugin({
+      patterns: [
             {
-                from: '../node_modules/sql.js/dist/sql-wasm.wasm',
+                from: 'node_modules/sql.js/dist/sql-wasm.wasm',
                 to: dist+"/[name].[ext].gz",
                 transform(content, absoluteFrom) {
                   const gz = zlib.gzipSync("data:application/octet-stream;base64," + content.toString('base64'));// 圧縮
@@ -75,52 +81,31 @@ module.exports = {
                 }
             },
             {
-              context: 'assets/',
-              from: '*.json',
-              to: dist
+          	  from: 'src/assets/*.json',
+              to: '[name][ext]'
             },
+        {
+          from: 'src/css/*.css',
+          to: '[path][name][ext]'
+        },
             {
-              context: 'assets/',
-              from: '*.json',
-              to: dist
-            },
-            {
-              context: 'assets/',
-              from: '_locales/**/*.*',
-              to: dist
-            },
-            {
-              context: 'assets/',
-              from: 'icons/*.*',
-              to: dist
-            },
-            {
-                from: 'css/*.css',
-                to: dist
-            },
-            {
-                from: 'assets/*.*',
-                to: dist,
+                from: 'src/assets/*',
+                to: 'assets/[name][ext]',
                 globOptions: {
                   dot: true,
                   gitignore: true,
-                  ignore: ["**/*.db","**/*.json"]
+                  ignore: ['**/*.db', '**/*.json']
                 }
             },
             {
-                from: 'assets/datas/*.json',
-                to: dist+"/assets/[name].db.gz",
-                transform(content, absoluteFrom) {
-                  return initdb.init(require(absoluteFrom)).then(function (savedata) {
-                          const gz = zlib.gzipSync(savedata);// 圧縮
-                          return gz;
-                        }
-                    );
-                }
+                from: 'src/assets/datas/*.json',
+                to: 'assets/[name].db.gz',
+          async transform(content, absoluteFrom) {
+            const savedata = await initdb.init(require(absoluteFrom));
+            return zlib.gzipSync(savedata);
+          }
             }
-        ],
-        { copyUnmodified: true }
-    ),
-    new WriteFilePlugin()
+        ]
+    }),
   ]
 }

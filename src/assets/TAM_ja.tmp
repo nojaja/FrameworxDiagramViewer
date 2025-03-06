@@ -21,7 +21,8 @@
     <h3 translate="no">関連要素</h3>
     <p id="relationData">
     {{#each data.relationData}}
-        <b>{{this.caption}}</b><br />
+        <details open>
+        <summary><b>{{this.caption}}</b></summary><br />
 
         <span class="selectstepper" data-category="LEVEL"><button>-</button>
         <select id="{{this.tableName}}" name="{{this.tableName}}" disabled>
@@ -72,6 +73,7 @@
             {{/each}}
             </tbody>
         </table>
+        </details>
         <br />
     {{/each}}
     </p>

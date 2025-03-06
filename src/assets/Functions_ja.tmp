@@ -1,15 +1,24 @@
     <h1 id="name">{{data.name}} - {{data.title}}</h1>
-    <h4 id="type" translate="no">Functionality</h4>
+    <h4 id="type" translate="no">Functional Framework</h4>
     <h4 id="category" translate="no">カテゴリー: {{data.category}}</h4>
     <h4 id="identifier" translate="no">ID: {{data.name}}</h4>
     <h4 id="maturity_level" translate="no">成熟度: {{data.maturity}}</h4>
    
+    {{#if data.parent}}
+    <h4 id="parent" translate="no">上位ID: <a class="parentlink elementlink" data-id="{{data.parent}}" data-type="{{data.table}}" >{{data.parent}}</a></h4>
+    {{else}}
+    <br>
+    <a class="parentlink elementlink" data-id="1" data-type="Function_List">一覧表示</a>
+    {{/if}}
+
+    {{#oc data}}{{/oc}}
     <h3 translate="no">概要</h3>
-    <p id="description">{{breaklines data.overview}}</p>
+    <p id="description">{{md data.overview}}</p>
     <h3 translate="no">関連要素</h3>
     <p id="relationData">
     {{#each data.relationData}}
-        <b>{{this.caption}}</b><br />
+        <details open>
+        <summary><b>{{this.caption}}</b></summary><br />
 
         <span class="selectstepper" data-category="LEVEL"><button>-</button>
         <select id="{{this.tableName}}" name="{{this.tableName}}" disabled>
@@ -60,6 +69,7 @@
             {{/each}}
             </tbody>
         </table>
+        </details>
         <br />
     {{/each}}
     </p>
