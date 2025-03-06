@@ -1,10 +1,11 @@
 
 import OrgChart from 'orgchart';
 import 'orgchart/dist/css/jquery.orgchart.min.css'
+//import '@fortawesome/fontawesome-free/js/fontawesome';
+//import '@fortawesome/fontawesome-free/js/solid';
+//import '@fortawesome/fontawesome-free/js/regular';
+import 'material-symbols/outlined.css';
 import '../css/style.css'
-import '@fortawesome/fontawesome-free/js/fontawesome';
-import '@fortawesome/fontawesome-free/js/solid';
-import '@fortawesome/fontawesome-free/js/regular';
 import CustomHandlebarsFactory from "./custom-handlebars-factory.js";
 import Dao from "./dao.js";
 import Site from "./site.js";

@@ -10,7 +10,6 @@
   "author": "nojaja <free.riccia@gmail.com> (https://github.com/nojaja)",
   "license": "MIT",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.4",
     "@sqlite.org/sqlite-wasm": "^3.45.3-build3",
     "handlebars": "^4.7.7",
     "jquery": "^3.7.1",
@@ -25,7 +24,10 @@
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^7.1.2",
     "db-initializer-sqlite3": "^1.0.3",
+    "file-loader": "^6.2.0",
+    "fontmin-webpack": "^4.0.0",
     "html-webpack-plugin": "^4.5.2",
+    "material-symbols": "^0.29.0",
     "punycode": "^2.3.1",
     "stream-browserify": "^3.0.0",
     "style-loader": "^4.0.0",

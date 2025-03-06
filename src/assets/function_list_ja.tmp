@@ -1,0 +1,19 @@
+    <h1 id="name" translate="no">Functionality一覧</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th><th>名称</th><th>概要</th>
+                </tr>
+            </thead>
+            <tbody>
+            {{#each data.children}}
+                {{#ifEquals name "top"}}{{else}}
+                <tr>
+                    <td><div><a class="parentlink elementlink" data-id="{{name}}" data-type="{{table}}" >{{name}}</a></div></td>
+                    <td><div>{{title}}</div></td>
+                    <td><div>{{breaklines brief}}</div></td>
+                </tr>
+                {{/ifEquals}}
+            {{/each}}
+            </tbody>
+        </table>
