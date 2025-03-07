@@ -25,7 +25,6 @@
     "css-loader": "^7.1.2",
     "db-initializer-sqlite3": "^1.0.3",
     "file-loader": "^6.2.0",
-    "fontmin-webpack": "^4.0.0",
     "html-webpack-plugin": "^4.5.2",
     "material-symbols": "^0.29.0",
     "punycode": "^2.3.1",

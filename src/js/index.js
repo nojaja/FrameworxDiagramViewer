@@ -1,10 +1,8 @@
 
 import OrgChart from 'orgchart';
 import 'orgchart/dist/css/jquery.orgchart.min.css'
-//import '@fortawesome/fontawesome-free/js/fontawesome';
-//import '@fortawesome/fontawesome-free/js/solid';
-//import '@fortawesome/fontawesome-free/js/regular';
-import 'material-symbols/outlined.css';
+// デフォルトのフォント設定に対応したCSSを読み込み
+import '../assets/fonts/material-symbols.css';
 import '../css/style.css'
 import CustomHandlebarsFactory from "./custom-handlebars-factory.js";
 import Dao from "./dao.js";
@@ -407,5 +405,3 @@ Handlebars.registerHelper("sql", async function (querName, parameters, options) 
   _parameters['$type'] = type
   return await dao.getResult(querName, _parameters, options.fn)
 });
-
-
