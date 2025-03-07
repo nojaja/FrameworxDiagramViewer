@@ -1,13 +1,13 @@
-const path = require('path')
-const src = __dirname + "/src"
-const dist = __dirname + "/docs"
-const webpack = require('webpack')
-const CopyPlugin = require('copy-webpack-plugin')
-const FontminPlugin = require('fontmin-webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const zlib = require('zlib')
-const Initdb = require('db-initializer-sqlite3')
-const initdb = new Initdb()
+const path = require('path');
+const src = __dirname + "/src";
+const dist = __dirname + "/docs";
+const webpack = require('webpack');
+const CopyPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const zlib = require('zlib');
+const Initdb = require('db-initializer-sqlite3');
+const DownloadFontPlugin = require('./plugins/download-font-plugin');
+const initdb = new Initdb();
 
 module.exports = {
   mode: process.env.NODE_ENV === 'production' ? 'development' : 'production',
@@ -16,6 +16,7 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'docs'),
     },
+    compress: true
   },
   entry: './src/js/index.js',
   output: {
@@ -39,6 +40,13 @@ module.exports = {
       //  test: /\.(woff|woff2|eot|ttf)$/,
       //  use: ['file-loader']
     }, {
+      test: /\.woff2$/,
+      type: 'asset/resource',
+      generator: {
+        filename: 'fonts/[name][ext]'
+      }
+
+    }, {
       test: /\.svg$/i,
       type: 'asset/source'
     }]
@@ -49,26 +57,30 @@ module.exports = {
       jQuery: 'jquery',
       'window.jQuery': 'jquery'
     }),
-    // new FontminPlugin({
-    //   autodetect: true,
-    //   glyphs: [
-    //     'account_tree',
-    //     'mediation',
-    //     'domain',
-    //     'precision_manufacturing',
-    //     'database',
-    //     'extension',
-    //     'power',
-    //     'host',
-    //     'live_help'
-    //   ],
-    //   allowedFilesRegex: /material-symbols-outlined.*\.woff2$/
-    // }),
     new HtmlWebpackPlugin({
       inject: true,
       chunks: ['main'],
       template: 'src/html/index.html',
       filename: 'index.html'
+    }),
+    new DownloadFontPlugin({
+      // フォントの設定（オプション）
+      fill: 0,
+      weight: 300,
+      grade: 0,
+      opticalSize: 20,
+      // 使用するアイコンのリスト
+      icons: [
+        'account_tree',
+        'mediation',
+        'domain',
+        'precision_manufacturing',
+        'database',
+        'extension',
+        'power',
+        'host',
+        'live_help'
+      ]
     }),
     new CopyPlugin({
       patterns: [
