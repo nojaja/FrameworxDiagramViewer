@@ -1,6 +1,6 @@
 const path = require('path');
-const src = __dirname + "/src";
-const dist = __dirname + "/docs";
+const src = path.resolve(__dirname, 'src');
+const dist = path.resolve(__dirname, 'docs');
 const webpack = require('webpack');
 const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -14,38 +14,43 @@ module.exports = {
   devtool: 'source-map',
   devServer: {
     static: {
-      directory: path.join(__dirname, 'docs'),
+      directory: dist
     },
     compress: true
   },
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
+  },
   entry: './src/js/index.js',
   output: {
-    globalObject: 'self',
     filename: 'main.bundle.js',
-    path: path.resolve(__dirname, 'docs'),
+    path: dist
   },
   resolve: {
-    alias: {
-      '@': path.resolve(src, '/js/')
-    },
     fallback: {
-      "fs": false
+      "fs": false,
+      "zlib": require.resolve("browserify-zlib"),
+
+      "assert": require.resolve("assert"),
+      "buffer": require.resolve("buffer"),
+      "stream": require.resolve("stream-browserify"),
+      "path": require.resolve("path-browserify"),
+      "vm": require.resolve("vm-browserify"),
+      "crypto": require.resolve("crypto-browserify"),
     }
   },
   module: {
     rules: [{
       test: /\.css$/i,
       use: ['style-loader', 'css-loader']
-      //}, {
-      //  test: /\.(woff|woff2|eot|ttf)$/,
-      //  use: ['file-loader']
     }, {
       test: /\.woff2$/,
       type: 'asset/resource',
       generator: {
         filename: 'fonts/[name][ext]'
       }
-
     }, {
       test: /\.svg$/i,
       type: 'asset/source'
@@ -53,9 +58,12 @@ module.exports = {
   },
   plugins: [
     new webpack.ProvidePlugin({
+      Buffer: ['buffer', 'Buffer'],
       $: 'jquery',
-      jQuery: 'jquery',
-      'window.jQuery': 'jquery'
+      jQuery: 'jquery'
+    }),
+    new webpack.DefinePlugin({
+      'process.env': '{}'
     }),
     new HtmlWebpackPlugin({
       inject: true,
@@ -86,7 +94,7 @@ module.exports = {
       patterns: [
         {
           from: 'node_modules/sql.js/dist/sql-wasm.wasm',
-          to: dist + "/[name].[ext].gz",
+          to: './[name][ext].gz',
           transform(content, absoluteFrom) {
             const gz = zlib.gzipSync("data:application/octet-stream;base64," + content.toString('base64'));// 圧縮
             return gz;
@@ -118,6 +126,6 @@ module.exports = {
           }
         }
       ]
-    }),
+    })
   ]
-}
+};
