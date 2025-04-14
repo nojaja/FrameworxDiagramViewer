@@ -1,6 +1,6 @@
 const path = require('path');
-const src = __dirname + "/src";
-const dist = __dirname + "/docs";
+const src = path.resolve(__dirname, 'src');
+const dist = path.resolve(__dirname, 'docs');
 const webpack = require('webpack');
 const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -13,14 +13,14 @@ module.exports = {
   devtool: 'source-map',
   devServer: {
     static: {
-      directory: path.join(__dirname, 'docs'),
+      directory: dist
     },
     compress: true
   },
   entry: './src/js/index.js',
   output: {
     filename: 'main.bundle.js',
-    path: path.resolve(__dirname, 'docs'),
+    path: dist
   },
   resolve: {
     fallback: {
@@ -109,7 +109,7 @@ module.exports = {
             return zlib.gzipSync(savedata);
           }
         }
-      ],
-    }),
-  ],
+      ]
+    })
+  ]
 };

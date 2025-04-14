@@ -1,7 +1,5 @@
 # FrameworxDiagramViewer
 
-[![Licence](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE) 
-
 
 ## Feature
 * TreeViewer
@@ -71,3 +69,4 @@ CREATE TABLE Product (ID PRIMARY KEY, CATEGORY , BRAND , PRODUCT_NAME , OWNER );
 ## License
 
 Licensed under the [MIT](LICENSE) License.
+[![Licence](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE) 
