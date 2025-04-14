@@ -6,7 +6,7 @@ const CopyPlugin = require('copy-webpack-plugin')
 const FontminPlugin = require('fontmin-webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const zlib = require('zlib')
-const Initdb  = require('db-initializer-sqlite3')
+const Initdb = require('db-initializer-sqlite3')
 const initdb = new Initdb()
 
 module.exports = {
@@ -19,7 +19,7 @@ module.exports = {
   },
   entry: './src/js/index.js',
   output: {
-	globalObject: 'self',
+    globalObject: 'self',
     filename: 'main.bundle.js',
     path: path.resolve(__dirname, 'docs'),
   },
@@ -35,9 +35,9 @@ module.exports = {
     rules: [{
       test: /\.css$/i,
       use: ['style-loader', 'css-loader']
-    //}, {
-    //  test: /\.(woff|woff2|eot|ttf)$/,
-    //  use: ['file-loader']
+      //}, {
+      //  test: /\.(woff|woff2|eot|ttf)$/,
+      //  use: ['file-loader']
     }, {
       test: /\.svg$/i,
       type: 'asset/source'
@@ -72,40 +72,40 @@ module.exports = {
     }),
     new CopyPlugin({
       patterns: [
-            {
-                from: 'node_modules/sql.js/dist/sql-wasm.wasm',
-                to: dist+"/[name].[ext].gz",
-                transform(content, absoluteFrom) {
-                  const gz = zlib.gzipSync("data:application/octet-stream;base64," + content.toString('base64'));// 圧縮
-                  return gz;
-                }
-            },
-            {
-          	  from: 'src/assets/*.json',
-              to: '[name][ext]'
-            },
+        {
+          from: 'node_modules/sql.js/dist/sql-wasm.wasm',
+          to: dist + "/[name].[ext].gz",
+          transform(content, absoluteFrom) {
+            const gz = zlib.gzipSync("data:application/octet-stream;base64," + content.toString('base64'));// 圧縮
+            return gz;
+          }
+        },
+        {
+          from: 'src/assets/*.json',
+          to: '[name][ext]'
+        },
         {
           from: 'src/css/*.css',
           to: '[path][name][ext]'
         },
-            {
-                from: 'src/assets/*',
-                to: 'assets/[name][ext]',
-                globOptions: {
-                  dot: true,
-                  gitignore: true,
-                  ignore: ['**/*.db', '**/*.json']
-                }
-            },
-            {
-                from: 'src/assets/datas/*.json',
-                to: 'assets/[name].db.gz',
+        {
+          from: 'src/assets/*',
+          to: 'assets/[name][ext]',
+          globOptions: {
+            dot: true,
+            gitignore: true,
+            ignore: ['**/*.db', '**/*.json']
+          }
+        },
+        {
+          from: 'src/assets/datas/*.json',
+          to: 'assets/[name].db.gz',
           async transform(content, absoluteFrom) {
             const savedata = await initdb.init(require(absoluteFrom));
             return zlib.gzipSync(savedata);
           }
-            }
-        ]
+        }
+      ]
     }),
   ]
 }
