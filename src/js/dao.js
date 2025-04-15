@@ -54,9 +54,12 @@ export class Dao {
             }) : await res.arrayBuffer());
 
         const data = new Uint8Array(buf);
-        
+
         // Open the database
-        const instance = await SQLiteManager.initialize(data);
+        const instance = await SQLiteManager.initialize(data, {
+            print: console.log,
+            printErr: console.error
+        });
         this.db = instance.db;
         return instance.db;
     }
@@ -65,7 +68,7 @@ export class Dao {
         if (this.tables[table.toLowerCase()]) return true
         return false
     }
-    
+
     getTableInfo(table) {
         return (this.tables[table.toLowerCase()])
     }
@@ -98,11 +101,11 @@ export class Dao {
             console.log("dao.getPageData: tableName: ", tableName, " id: ", id, " all:", all);
             // Prepare an sql statement
             const stmt = this.db.prepare(this.preparesTemplate.PageData({ table: tableName }));
-            
+
             let datascource = {};
             try {
                 // バインドと実行
-            	stmt.bind({ $id: id });
+                stmt.bind({ $id: id });
                 if (stmt.step()) { //primary keyで検索するので結果行は1:0
                     datascource = stmt.getRowAsObject();
                     datascource.table = table;
@@ -125,7 +128,7 @@ export class Dao {
 
         try {
             // Prepare an sql statement
-            const stmt = (all) ? 
+            const stmt = (all) ?
                 this.db.prepare(this.preparesTemplate.AllChildData({ table: this.getTableInfo(table).tableName })) :
                 this.db.prepare(this.preparesTemplate.ChildData({ table: this.getTableInfo(table).tableName }));
 
@@ -175,19 +178,19 @@ export class Dao {
         try {
             // Prepare an sql statement
             const stmt = this.db.prepare(this.preparesTemplate.RelationChildData({ totable: this.getTableInfo(totable).tableName, ids, ids }));
-            
+
             const children = [];
             try {
                 stmt
                     .bind({
-                    	$fromtable: this.getTableInfo(fromtable).tableName, 
-                    	$totable: this.getTableInfo(totable).tableName 
+                        $fromtable: this.getTableInfo(fromtable).tableName,
+                        $totable: this.getTableInfo(totable).tableName
                     });
                 while (stmt.step()) {
                     const row = stmt.getRowAsObject();
                     row.table = totable;
                     row.basefromid = fromid;
-                //関連性の理由情報取得
+                    //関連性の理由情報取得
                     row.reasonData = await this.getRelationChildReasonData(fromtable, row.fromid, totable, row.name);
                     children.push(row);
                 }
@@ -214,10 +217,10 @@ export class Dao {
             try {
                 stmt
                     .bind({
-                    	$fromtable: this.getTableInfo(fromtable).tableName,
-                    	$fromid: fromid, 
-                    	$totable: this.getTableInfo(totable).tableName, 
-                    	$toid: toid 
+                        $fromtable: this.getTableInfo(fromtable).tableName,
+                        $fromid: fromid,
+                        $totable: this.getTableInfo(totable).tableName,
+                        $toid: toid
                     });
 
                 while (stmt.step()) {
@@ -240,16 +243,16 @@ export class Dao {
         try {
             // Prepare an sql statement
             const stmt = this.db.prepare(this.prepares[querName]);
-            
+
             let row = 0;
             let ret = "";
             try {
                 stmt.bind(parameters);
 
                 while (stmt.step()) {
-                    ret = ret + await callback({ 
-                        row: row, 
-                        columnNames: stmt.getColumnNames(), 
+                    ret = ret + await callback({
+                        row: row,
+                        columnNames: stmt.getColumnNames(),
                         context: stmt.getRowAsObject()
                     });
                     row++;

@@ -2,11 +2,11 @@
 import { default as init } from '@sqlite.org/sqlite-wasm';
 
 class SQLiteManager {
-    static async initialize(data) {
+    static async initialize(data, options) {
         // SQLite モジュールを初期化
         const sqlite3 = await init({
-            print: console.log,
-            printErr: console.error
+            print: options.print || (() => { }),
+            printErr: options.printErr || (() => { })
         });
         const sqlite3_instance = new SQLiteManager(sqlite3, data);
         // sqlite3_instanceにoriginalプロパティを作成
@@ -27,7 +27,9 @@ class SQLiteManager {
         return sqlite3_instance;
     }
 
-    constructor(sqlite3, data) {
+    constructor(sqlite3, data, options = {}) {
+        this.print = options.print || (() => { });
+        this.printErr = options.printErr || (() => { });
         this.sqlite3 = sqlite3;
         // ファイル名生成
         this.currentFilename = "dbfile_" + (0xffffffff * Math.random() >>> 0);
@@ -70,9 +72,9 @@ class SQLiteManager {
         // 元のprepareメソッドを呼び出し
         const stmt = this.original.db.prepare.call(this.db, sql);
         // SQLiteManagerのカスタマイズを適用
-        stmt.getRowAsObject = () => this.getRowAsObject.call(this,stmt);
-        stmt.getAsObject = () => this.getRowAsObject.call(this,stmt); //sql.js
-        
+        stmt.getRowAsObject = () => this.getRowAsObject.call(this, stmt);
+        stmt.getAsObject = () => this.getRowAsObject.call(this, stmt); //sql.js
+
         return stmt;
     }
 
