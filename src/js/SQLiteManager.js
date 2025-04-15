@@ -1,9 +1,9 @@
 // SQLite モジュールをインポート
-import { default as init }  from 'sql.js';
+import { default as init } from 'sql.js';
 import zlib from "zlib";
 
 class SQLiteManager {
-    static async initialize(data) {
+    static async initialize(data, options) {
         const sqlwasm = await fetch('./sql-wasm.wasm.gz').then(async res => new Promise((resolve, reject) => {
             res.arrayBuffer().then((value) => {
                 resolve(zlib.unzipSync(Buffer.from(value)).toString())
@@ -12,8 +12,8 @@ class SQLiteManager {
 
         // SQLite モジュールを初期化
         const sqlite3 = await init({
-            print: console.log,
-            printErr: console.error,
+            print: options.print || (() => { }),
+            printErr: options.printErr || (() => { }),
             // Required to load the wasm binary asynchronously. Of course, you can host it wherever you want
             // You can omit locateFile completely when running in node
             //locateFile: file => `https://sql.js.org/dist/${file}`
@@ -39,7 +39,9 @@ class SQLiteManager {
         return sqlite3_instance;
     }
 
-    constructor(sqlite3, data) {
+    constructor(sqlite3, data, options = {}) {
+        this.print = options.print || (() => { });
+        this.printErr = options.printErr || (() => { });
         this.sqlite3 = sqlite3;
         // データベースを作成
         this.db = new sqlite3.Database(data);
@@ -54,7 +56,7 @@ class SQLiteManager {
         // 元のメソッドを呼び出し
         return this.original.db.prepare.call(this.db, sql);
     }
-    
+
     export() {
         const exportedData = this.db.export();
         return exportedData;

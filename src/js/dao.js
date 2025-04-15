@@ -55,7 +55,10 @@ export class Dao {
         const data = new Uint8Array(buf);
 
         // Open the database
-        const instance = await SQLiteManager.initialize(data);
+        const instance = await SQLiteManager.initialize(data, {
+            print: console.log,
+            printErr: console.error
+        });
         this.db = instance.db;
         return instance.db;
     }
