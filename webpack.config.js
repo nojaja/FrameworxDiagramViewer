@@ -7,7 +7,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const zlib = require('zlib');
 const Initdb = require('db-initializer-sqlite3');
 const DownloadFontPlugin = require('./plugins/download-font-plugin');
-const initdb = new Initdb();
+//const initdb = new Initdb();
+const initdb = new Initdb({
+});
 
 module.exports = {
   devtool: 'source-map',
@@ -16,6 +18,11 @@ module.exports = {
       directory: dist
     },
     compress: true
+  },
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
   },
   entry: './src/js/index.js',
   output: {
@@ -28,9 +35,10 @@ module.exports = {
       "zlib": require.resolve("browserify-zlib"),
       "punycode": require.resolve("punycode"),
       "assert": require.resolve("assert"),
-      "buffer": require.resolve("buffer"),
+      "buffer": require.resolve("buffer/"),
       "stream": require.resolve("stream-browserify"),
-      "util": require.resolve("util")
+      "util": require.resolve("util"),
+      'path': require.resolve("path-browserify")
     }
   },
   module: {
@@ -85,6 +93,13 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
+          from: 'node_modules/@sqlite.org/sqlite-wasm/sqlite-wasm/',
+          to: './',
+          globOptions: {
+            ignore: ['**/*.js', '**/*.mjs']
+          }
+        },
+        {
           from: 'src/assets/*.json',
           to: '[name][ext]'
         },
@@ -105,7 +120,11 @@ module.exports = {
           from: 'src/assets/datas/*.json',
           to: 'assets/[name].db.gz',
           async transform(content, absoluteFrom) {
-            const savedata = await initdb.init(require(absoluteFrom));
+            const json = require(absoluteFrom);
+            const savedata = await initdb.init(json);
+            if (!savedata) {
+              throw new Error(`initdb.init() returned undefined for ${absoluteFrom}`);
+            }
             return zlib.gzipSync(savedata);
           }
         }
